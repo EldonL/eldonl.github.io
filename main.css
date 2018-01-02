@@ -39,6 +39,8 @@ body{
 .DiffSport img:hover{
 	border: white; 
     background-color: black; 
+height: 500px;
+    width: 500px; 
 }
 
 .DiffSport p{
@@ -202,6 +204,8 @@ font-weight: bold;
 }
 
 
+
+/********************************************************************/
 
 
 
