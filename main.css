@@ -1,0 +1,166 @@
+body{
+	background-color: black;
+}
+
+.Bottom{
+	padding-top: 50px;
+	color: white;
+}
+
+
+.DiffSport{
+	background-color: 	#fffaf0; 
+	border: black;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+ 
+.DiffSport img{
+    height: 218px;
+    width: 218px; 
+    border: 1px solid black;
+    padding: 20px;
+    margin: 15px 10px 10px 10px;
+    background-color: white; 
+    display: inline;   
+    text-align: center;
+}
+
+
+.DiffSport img:hover{
+	border: white; 
+    background-color: black; 
+}
+
+.DiffSport p{
+	font-size: 15px;
+}
+
+.desc{
+	padding: 1px;
+	text-align: center; 
+}
+
+.desc p{
+    font-weight:bold;
+}
+
+.dropdown-content1{
+	display: none;
+	position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    color: black;
+}
+
+.Intro{
+	Background-color: black;
+	margin-top: 80px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: white;
+}
+
+.Intro h1{
+	color: gray;
+	font-size: large;
+}
+.Intro p{
+	font-size: 15px;;
+	color: white;
+}
+
+.nav{
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: fixed;  
+  margin-top: -90px;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 55px;
+  background-color: white;
+  opacity: 0.9;
+  filter: alpha(opacity=25); 
+ }
+
+.navbars{
+  background-color: white; 
+  overflow: hidden;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbars li{
+	float: right; 
+}
+
+.navbars a{
+	padding-right:50px;
+	padding-left: 50px;
+	margin-left: 10px;
+	color: black;
+}
+
+.navbars a:hover{
+	  color: white;
+	  background-color: black;
+	  text-decoration: blink;
+	  font-weight: bold;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+}
+
+.nav li {
+  display: inline;
+}
+
+
+.sport{
+	font-size: large;
+	color: black;
+	font-family: "Felix Titling";	
+	font-weight: bold;
+	background-color: white;
+	border: thick black solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-top: 5px;
+	cursor:pointer; 
+	
+	 -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: 6; /* Chrome, Safari, Opera */
+    -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: 6;
+    animation-direction: alternate;   
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:white; left:0px; top:0px;}
+    25%  {background-color:gray; left:200px; top:0px;}
+    50%  {background-color:#87cefa; left:200px; top:200px;}
+
+.sport2{
+	font-family: "Felix Titling";	
+	font-weight: bold;
+	background-color: black;
+	border: thick white solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-top: -10px;
+}
+
+
+table, td {
+	border: 5px black groove;
+	background-color: white; 
+}
+
+
+
