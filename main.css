@@ -130,15 +130,22 @@ body{
 Background-color: black;
 }
 
-.setUpColorWhite{
+.setUpColorGrey{
 Background-color: grey;
 }
 
-.setUpGame{
-	margin-top: 80px;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	color: white;
+.setUpColorYellow{
+Background-color: yellow;
+}
+
+.setUpGameBlack{
+	
+	color: Black;
+}
+
+.setUpGameWhite{
+	
+	color: White;
 }
 
 .setUpTableBasicInfo{
@@ -148,10 +155,10 @@ Background-color: grey;
 
 .setUpTitle
 {
-   height: 600px;
+ font: 50px tahoma;
   text-decoration: underline;  
-  text-shadow: 2px 2px #000000;
   text-transform: uppercase;
+font-weight: bold;
 }
 
 .sport{
