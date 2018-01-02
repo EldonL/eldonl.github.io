@@ -1,12 +1,20 @@
 body{
-	background-color: yellow;
+	background-color: Black;
+
 }
+
+
 
 .Bottom{
 	padding-top: 50px;
 	color: white;
 }
 
+
+.DarkImage{
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('SpideyMainMenu.PNG');
+        height:350px;
+}
 
 .DiffSport{
 	background-color: 	#fffaf0; 
@@ -117,6 +125,35 @@ body{
 }
 
 
+
+.setUpColorBlack{
+Background-color: black;
+}
+
+.setUpColorWhite{
+Background-color: grey;
+}
+
+.setUpGame{
+	margin-top: 80px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: white;
+}
+
+.setUpTableBasicInfo{
+    Background-color: white;
+    color: Black;
+}
+
+.setUpTitle
+{
+   height: 600px;
+  text-decoration: underline;  
+  text-shadow: 2px 2px #000000;
+  text-transform: uppercase;
+}
+
 .sport{
 	font-size: large;
 	color: black;
@@ -139,6 +176,8 @@ body{
     animation-direction: alternate;   
 }
 
+
+
 /* Standard syntax */
 @keyframes example {
     0%   {background-color:white; left:0px; top:0px;}
@@ -156,10 +195,7 @@ body{
 }
 
 
-table, td {
-	border: 5px black groove;
-	background-color: white; 
-}
+
 
 
 
