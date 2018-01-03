@@ -10,7 +10,8 @@ body{
         padding-bottom:20px;
         padding-left:20px;
 	color: white;
-        background-color: grey
+        background-color: cyan
+      
 }
 
 
@@ -18,8 +19,18 @@ body{
 	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('SpideyMainMenu.PNG');
         height:350px;
  background-repeat: no-repeat;
- background-position: center; 
+ background-position: top; 
  background-size: 2000px 425px;
+}
+
+
+
+.DarkImageBottom{
+background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('GoogleCardBoard.JPG');
+height:350px;
+ background-repeat: no-repeat;
+ background-position: Top; 
+ background-size: 2000px 300px;
 }
 
 .DiffSport{
@@ -195,9 +206,8 @@ height: 500px;
 .setUpImageThank img{
     height: 100px;
     width: 100px; 
-   padding: 15px;
-    display: inline;   
-    text-align: center;
+    padding: 7px;  
+    
 }
 
 
@@ -228,7 +238,7 @@ color: Black
 	color: black;
 	font-family: "Felix Titling";	
 	font-weight: bold;
-	background-color: white;
+	background-color: cyan;
 	border: thick black solid;
 	padding-right: 5px;
 	padding-left: 5px;
