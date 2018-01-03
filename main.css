@@ -12,11 +12,11 @@ body{
 
 
 .DarkImage{
-	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('SpideyMainMenu.PNG');
+	background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9) ), url('GoogleCardBoard.JPG');
         height:350px;
  background-repeat: no-repeat;
- background-position: top; 
- background-size: 2000px 900px;
+ background-position: center; 
+ background-size: 3000px 500px;
 }
 
 .DiffSport{
