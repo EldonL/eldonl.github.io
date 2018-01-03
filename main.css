@@ -16,7 +16,7 @@ body{
         height:350px;
  background-repeat: no-repeat;
  background-position: center; 
- background-size: 2000px 400px;
+ background-size: 2000px 425px;
 }
 
 .DiffSport{
@@ -171,7 +171,7 @@ text-align: left
     width: 350px; 
   
 
-    
+    padding: 15px;
     display: inline;   
     text-align: center;
 }
@@ -202,7 +202,7 @@ height: 500px;
   text-decoration: underline;  
   text-transform: uppercase;
 font-weight: bold;
-Background-color: grey;
+Background-color: white;
 color: Black
 }
 
