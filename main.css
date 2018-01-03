@@ -6,8 +6,11 @@ body{
 
 
 .Bottom{
-	padding-top: 50px;
+	padding-top: 20px;
+        padding-bottom:20px;
+        padding-left:20px;
 	color: white;
+        background-color: grey
 }
 
 
@@ -189,6 +192,20 @@ height: 500px;
 }
 
 
+.setUpImageThank img{
+    height: 100px;
+    width: 100px; 
+   padding: 15px;
+    display: inline;   
+    text-align: center;
+}
+
+
+.setUpImageThankLumo img{
+
+    width: 200px; 
+ 
+}
 
 
 .setUpTableBasicInfo{
