@@ -12,8 +12,11 @@ body{
 
 
 .DarkImage{
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('SpideyMainMenu.PNG');
+	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('SpideyMainMenu.PNG');
         height:350px;
+ background-repeat: no-repeat;
+ background-position: top; 
+ background-size: 2000px 900px;
 }
 
 .DiffSport{
@@ -97,7 +100,7 @@ height: 500px;
 .navbars{
   background-color: white; 
   overflow: hidden;
-  font-size: 15px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
 }
@@ -160,16 +163,15 @@ text-align: left
 	 
 	border: black;
 	text-align: center;
-	padding-top: 60px;
-	padding-bottom: 60px;
+	
 }
  
 .setUpImage img{
-    height: 218px;
-    width: 218px; 
+    height: 650px;
+    width: 650px; 
   
     padding: 20px;
-    margin: 15px 10px 10px 10px;
+    
     
     display: inline;   
     text-align: center;
@@ -201,10 +203,12 @@ height: 500px;
   text-decoration: underline;  
   text-transform: uppercase;
 font-weight: bold;
+Background-color: grey;
+color: Black
 }
 
 .sport{
-	font-size: large;
+	 font: 100px tahoma;
 	color: black;
 	font-family: "Felix Titling";	
 	font-weight: bold;
@@ -234,9 +238,9 @@ font-weight: bold;
     50%  {background-color:#87cefa; left:200px; top:200px;}
 
 .sport2{
-	font-family: "Felix Titling";	
+	font: 100px tahoma;	
 	font-weight: bold;
-	background-color: black;
+	background-color: red;
 	border: thick white solid;
 	padding-right: 5px;
 	padding-left: 5px;
