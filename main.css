@@ -124,7 +124,7 @@ min-width: 1200px;
 }
 
 .navbars li{
-	float: right; 
+	float: left; 
 }
 
 .navbars a{
