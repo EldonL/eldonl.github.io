@@ -84,7 +84,10 @@ height: 500px;
 .FixPos{
     position: fixed; 
     margin-top: -80px;
-width: 1500px;
+min-width: 1800px;
+ overflow: hidden;
+  white-space: nowrap;
+direction: rtl;
 
 }
 
