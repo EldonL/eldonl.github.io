@@ -16,11 +16,13 @@ body{
 
 
 .DarkImage{
-	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('SpideyMainMenu.PNG');
+	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('GoogleCardBoard.JPG');
         height:350px;
  background-repeat: no-repeat;
- background-position: top; 
- background-size: 2000px 425px;
+ background-position: bottom; 
+ background-size: cover;
+background-attachment: fixed;
+
 }
 
 
@@ -89,7 +91,7 @@ height: 500px;
 
 .Intro{
 	Background-color: black;
-	margin-top: 80px;
+	
 	padding-top: 50px;
 	padding-bottom: 50px;
 	color: white;
