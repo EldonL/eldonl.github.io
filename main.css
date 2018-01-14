@@ -155,18 +155,30 @@ Background-color: black;
 Background-color: grey;
 }
 
+
+.setUpColorOrange{
+Background-color:orange;
+}
+
 .setUpColorYellow{
 Background-color: yellow;
 }
 
+
+
 .setUpDescription{
 font: 20px Arial;
-text-align: left
+text-align: left;
+padding-top: 10px;
 }
 
 .setUpGameBlack{
 	
 	color: Black;
+}
+
+.setUpGameOrange{
+	color: Orange;
 }
 
 .setUpGameWhite{
@@ -176,7 +188,7 @@ text-align: left
 
 
 .setUpImage{
-	 
+	padding-bottom: 5px;
 	border: black;
 	text-align: center;
 	
