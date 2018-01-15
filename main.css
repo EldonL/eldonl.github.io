@@ -1,3 +1,11 @@
+.avatar {
+    vertical-align: middle;
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+
 body{
 	background-color: Black;
 
@@ -172,6 +180,7 @@ height: 500px;
 .nav li {
   display: inline;
 }
+
 
 
 
