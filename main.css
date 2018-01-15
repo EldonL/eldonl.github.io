@@ -33,7 +33,7 @@ body{
 
 
 .DarkImage{
-	background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('GoogleCardBoard.JPG');
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('GoogleCardBoard.JPG');
         height:650px;
  background-repeat: no-repeat;
  background-position: bottom; 
@@ -96,7 +96,7 @@ height: 500px;
 	display: none;
 	position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 160px;
     color: black;
 }
 
