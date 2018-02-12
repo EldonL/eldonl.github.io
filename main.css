@@ -58,6 +58,18 @@ background-attachment: fixed;
 }
 
 
+.DarkImageLoveathon{
+	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('LoveathonLogo.png');
+        height:600px;
+      
+       text-align: center;
+ background-repeat: no-repeat;
+ background-position: top; 
+ background-size: contain;
+background-attachment: fixed;
+
+}
+
 
 .DarkImageBottom{
 background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('GoogleCardBoard.JPG');
@@ -195,11 +207,18 @@ Background-color: Fuchsia;
 color: black; 
 }
 
+
+
+
 .setUpColorGrey{
 Background-color: grey;
 color: black;
 }
 
+.setUpColorLemonChiffon{
+Background-color: LemonChiffon;
+color: white; 
+}
 
 .setUpColorOrange{
 Background-color:orange;
@@ -210,6 +229,7 @@ color: black;
 Background-color: yellow;
 color: black; 
 }
+
 
 
 
