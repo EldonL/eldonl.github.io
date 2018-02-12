@@ -47,7 +47,7 @@ body{
 
 
 .DarkImage{
-	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('coolbackground.JPG');
+	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('coolbackground.JPG');
         height:700px;
    
  background-repeat: no-repeat;
@@ -61,15 +61,30 @@ background-attachment: fixed;
 .DarkImageLoveathon{
 	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('LoveathonLogo.png');
         height:600px;
-      
+   
        text-align: center;
  background-repeat: no-repeat;
  background-position: top; 
  background-size: contain;
 background-attachment: fixed;
 
+
 }
 
+
+
+.DarkImageLumoHacks{
+	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('GoogleCardBoard.JPG');
+        height:600px;
+      
+       text-align: center;
+ background-repeat: no-repeat;
+ background-position: top; 
+ background-size: contain;
+background-attachment: fixed;
+GoogleCardBoard.JPG
+
+}
 
 .DarkImageBottom{
 background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('GoogleCardBoard.JPG');
