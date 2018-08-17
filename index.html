@@ -14,7 +14,7 @@
   <div class="text-center">
    <div class="nav"> 
 <a name="BackToTop"></a>
-         <a href="https://eldonl.github.io/eldonl.github.io/"><p class="sport">Eldon's VR Portfolio</p></a>               
+         <a href="https://eldonl.github.io/eldonl.github.io/"><p class="sport">Eldon Lin's Portfolio</p></a>               
    <ul class="navbars">
           <li><a href="https://www.linkedin.com/in/eldon-lin-38a181b0">Contact me through LinkedIn</a></li>
           <li><a href="https://www.sfu.ca/coop/programs/eng/contactus.html">Contact me through Co-op Office</a></li>
@@ -23,8 +23,9 @@
    
 	<ul class="navbars">
            <li><a href="#SpideyHero">SpideyHero</a></li>
-	  <li><a href="#Loveathon">3rd place game at the Loveathon-Just Get Over It</a></li>
-  	  <li><a href="#Lumania">LumoHacks-Lumania</a></li>
+ 	  <li><a href="#ShapeRecognitionforAR">Shape Recognition for AR</a></li>
+	  <li><a href="#Loveathon">Loveathon</a></li>
+  	  <li><a href="#Lumania">LumoHacks</a></li>
           <li><a href="#Submarine">Submarine</a></li>
         </ul> 
 
@@ -37,8 +38,7 @@
 	<div class="text-center">
 		<div class="DarkImage">
 		   <div class="IntroPos">
-			<h3>Welcome to Eldon's Homepage of everything Virtual!</h3>
-			<h1>Virtual Reality is the new reality</h1>
+			<h3>Welcome to Eldon's Homepage of VR, AR and games!</h3>
 		        <img src="scroll-down.gif" Height="180"/>
 			
 		   </div>
@@ -55,7 +55,7 @@
    <div class="setUpGameWhite">
        	<div class="text-center">
     	 <div class="setUpTitle"><a name="SpideyHero">Spidey Hero </a></div>
-		<div class="setUpTitle">*New Content Coming August 2018*</div>
+		<div class="setUpTitle">*New Content Coming August 19*</div>
            <div class="setUpTableBasicInfo">
 <a href="#BackToTop">Back to top</a>
               <table>
@@ -70,13 +70,15 @@
 		</thead> 
 	       </table>
                </div>
-	<video <video width="750" height="650" controls>
+	
+             <video <video width="750" height="650" controls poster ="SpideyMainMenu.PNG">
 		<source src="2018-04-23 SpideyHeroVideoEdited.mp4" type="video/mp4">
 <p>Your browswer does support our format, please click link below</p>
+           
 	</video>
         <div><a href="https://youtu.be/vVZ1uagKTfQ">Click here if video does not work</a></div>
    
-    	    <div class="setUpDescription">Sept 2017-Present: You are a superhero with Spiderman powers. You must complete your training to join
+    	    <div class="setUpDescription">Sept 2017-Present. Made In Unity: You are a superhero with Spiderman powers. You must complete your training to join
              the Avengers. However, while you are training, real evil arises. With the AI installed in your suit by none other then
               Mr.Stark himself, you must battle your way through with what you have installed by destroying pumpkin bombs, and swing objects around!
               There are currently two levels for the user to play as Spidey Hero! The first level starts of as a
@@ -192,7 +194,76 @@ are the airplane in the web sling scene, the boxes in the websling scene, the we
     </div>
 
 
+<div class="setUpColorBlack">
+   <div class="setUpGameWhite">
+       	<div class="text-center">
+    	 <div class="setUpTitle"><a name="ShapeRecognitionforAR">Shape Recognition for AR  </a></div>
+<div class="setUpTitle">*New Content Coming September*</div>
 
+           <div class="setUpTableBasicInfo">
+<a href="#BackToTop">Back to top</a>
+              <table>
+                <thead>
+                    <tr>
+    	     		<td><h2>Platform</h2><p>Windows<p></td>
+      	     		<td><h2>Players</h2><p>Anyone<p></td>
+	     		<td><h2>Genres</h2><p>Education<p></td>
+	     		<td><h2>Age Rating</h2><p>All Ages<p></td> 
+                        <td><h2>Context</h2><p>School Project- C++/OpenCV<p></td>
+             	    </tr>   
+		</thead> 
+	       </table>
+               </div>
+
+    
+
+    	    <div class="setUpDescription">Jun-Aug 2018. Made in Visual Studios-The purpose of this project is to implement AR into the school system to teach children to recognize shape in a more interactive way. 
+To make it interactive, the children will show shape(s) in front of a webcam that is playing live video. The program will then identify and label the shape. The AR part comes into play when a 3D overlay is drawn over the shape</div>
+
+<h1>ScreenShots</h1>
+<div class="setUpImage">
+ <table>
+    <thead>
+	<tr>	
+		<td><a href="482MicrosoftShape.JPG">
+      		<img src="482MicrosoftShape.JPG"/></a></td>
+     		<td><a href="482OculusShape.JPG">
+      		<img src="482OculusShape.JPG"/></a></td>
+	</tr>
+
+	<tr>
+		<td>Labeling Microsoft logo</td>
+		<td>Labeling Oculus logo in white and black</td>
+	</tr>
+
+	<tr>	
+		<td><a href="482SpiderManShape.JPG">
+      		<img src="482SpiderManShape.JPG"/></a></td>
+     		<td><a href="482GrayShapes.JPG">
+      		<img src="482GrayShapes.JPG"/></a></td>
+	</tr>
+
+	<tr>
+		<td>Labeling Spiderman's face</td>
+		<td>Labeling grayed shapes</td>
+	</tr>
+
+    </thead>
+ </table>
+</div>       
+
+
+
+<div class="Challenges">
+ 	<div>Process</div>
+		<h1> This project was done in a group of 3. My task was to figure out how to label, identify and draw a 3D overlay on the shapes during a live video. 
+I first started with just a still image that has multiple shapes saved as a PNG file. I would convert these images to gray scale and then binarized them using the gaussian
+filter and Canny threshold. I then tried to connect to the webcam and tried taking a picture and see if the shapes are being recognized. Once the previous steps were completed, I now had to figure out how to make the program recognize shapes LIVE, which means
+I needed to create a loop for the program to recognize the contours of the shapes each frame. The twist to labeling and drawing a 3D overlay on the shapes during live video is that the overlay must follow the shape. This issue was solved
+by making the drawing and labeling in the same loop as the contour recognition section.
+
+		</h1>
+</div>
 
 
 
@@ -217,13 +288,13 @@ are the airplane in the web sling scene, the boxes in the websling scene, the we
 	       </table>
                </div>
 
-      <video <video width="750" height="650" controls>
+       <video <video width="750" height="650" controls poster ="LoveathonMainMenu.PNG">
 		<source src="2018-04-24 SFULoveathon.mp4" type="video/mp4">
 	</video>
        <div><a href="https://youtu.be/2eVfeaquPtg">Click here if video does not work</a></div>
 
 
-    	    <div class="setUpDescription">Feb 2018-The theme of that hackathon is Love. We made a game called "Just Get Over It". If you have ever been in love, you know
+    	    <div class="setUpDescription">Feb 2018. Made In Unity-The theme of that hackathon is Love. We made a game called "Just Get Over It". If you have ever been in love, you know
 there are different stages. We created two stages- Denial and Anger. In the Denial level, you must shoot at incoming love boxes the says "Get Over It" and  "Try to get back together". The Anger level lets you hit a box with a heart shape to let your anger out! 
 I would like to thank the my teammates-"VR Team", Circuit Stream for lending me the Oculus Rift, Simon Fraser Student Society and the Software Systems Student Society for hosting this 12 hours Systems Hack- "Loveathon". We got placed in 3rd out of 17 teams</div>
 
@@ -298,12 +369,12 @@ and we finished what we imagine into (virtual) reality!
 		</thead> 
 	       </table>
                </div>
- <video <video width="750" height="650" controls>
+ <video <video width="750" height="650" controls poster ="SayingHiToFriend.PNG">
 		<source src="LumaniaVidEdited.mp4" type="video/mp4">
 	</video>
        <div><a href="https://youtu.be/O586XjidD1c">Click here if video does not work</a></div>
 	
-    	    <div class="setUpDescription">September 2017: This game was created at a Hackathon called LumoHacks. The topic for my group was
+    	    <div class="setUpDescription">September 2017. Made In Unity: This game was created at a Hackathon called LumoHacks. The topic for my group was
 "Mental distress and depression in young people". This game helps people with mental health. Each day for 30 days, the user follows a friend-a gender of the user's choice-who
 will lead the user into different doors. Each door leads the user to a new task that boost their confidence. The user will play this game at the same time 
 everyday to help them get used to a daily routine.  Currently we have one task called "The Dancing Challenge" that encourages the 
@@ -380,7 +451,7 @@ so my teammates can start hacking right away. Our tasks were split up accordingl
 	       </table>
                </div>
 
-    	    <div class="setUpDescription">April 2017: Navigate the submarine and destroy all the mines to win. If you hit a mine, you lose! Thanks to Circuit Stream for
+    	    <div class="setUpDescription">April 2017. Made In Unity: Navigate the submarine and destroy all the mines to win. If you hit a mine, you lose! Thanks to Circuit Stream for
             teaching me this game!</div>
 
 <h1>ScreenShots</h1>
