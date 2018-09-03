@@ -352,9 +352,8 @@ padding-left: 20px;
 
 .setUpImage img:hover{
 	
-    background-color: black; 
-height: 500px;
-    width: 500px; 
+    background-color: yellow; 
+
 }
 
 .setUpImage p{
