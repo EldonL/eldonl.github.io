@@ -1,27 +1,43 @@
-body{
-    font-family:Arial, Helvetica, sans-serif
-}
-
 .background-pattern-odd{
     background: #E9F1FA;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3em;
+    padding-left: 3em;
 }
 
 .background-pattern-even{
     background: #FFFFFF;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3em;
+    padding-left: 3em;
 }
 
-.topnav-bar .logo a{
-    color: #00ABEF;
-
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0px; 
 }
 
-.topnav-bar .logo a hover{
-    color: #FFFFFF
+.hero {    
+    display: flex; 
+}
+
+
+h1{
+    font-size: 5rem;
+}
+
+p{
+    font-size: 1.2rem;
+
 }
 
 .topnav-bar a {
     color: #000000;
     text-decoration: none;
+    font-size: 1rem;
+
 }
 
 .topnav-bar a:hover {
@@ -30,35 +46,30 @@ body{
 
 .topnav-bar .icon{
     display: none;
+    float:left;
 }
 
-.hero {    
-    display: flex; 
-}
-
-h1{
-    font-size: 128px;
-}
-
-p{
-    font-size: 24px;
-}
-
-
-@media screen and (max-width:768px){
-    .topnav-bar a {
-        display: none;
-    }
-
-    .topnav-bar .logo a{
-        display:block;
-    }
+.topnav-bar .logo a{
+    color: #00ABEF;
     
-    .topnav-bar .icon{
-        float:right;
-        display:block;
-    }
+}
 
+.topnav-bar .logo a hover{
+    color: #FFFFFF
+}
+
+
+.topnav-bar-right{
+    float: right
+    
+}
+
+.topnav-bar-right a{
+    padding-right: 4em;
+}
+
+
+@media screen and (max-width:1024px){
     .hero{
         display: inline;
 
@@ -68,6 +79,23 @@ p{
         text-align:left;
 
     }
+
+    .topnav-bar a {
+        display: none;
+    }
+
+    .topnav-bar .icon{
+        float:right;
+        display:block;
+    }
+
+    .topnav-bar .logo a{
+        display:block;
+    }
+    
+
+
+
    
 }
 
