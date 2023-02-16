@@ -1,1 +1,29 @@
+.professional-experiences-section .container .content{
+    text-align: right;
+    width: 20em;
+}
+
+.professional-experiences-section .container .jobs{
+    display: grid;
+    grid-template-columns: repeat(2,25em);
+    margin-bottom:8em;
+}
+
+.professional-experiences-section .container .jobs img{
+    width: 20em;
+}
+
+.professional-experiences-section .container .jobs.left{
+    grid-template-areas: "left right";
+
+}
+
+.professional-experiences-section .container .jobs.left .content{
+    text-align: left;
+    width: 20em;
+}
+
+.professional-experiences-section .container .jobs.left img{
+    grid-area: left;
+}
 
