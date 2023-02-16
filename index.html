@@ -1,844 +1,247 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<link href="bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="main.css" rel="stylesheet" type="text/css"/>
-<script src="Javascript/app.js"></script>
-<meta http-equiv="Content-Language" content="en-ca" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <body>
-<button type="button" onclick="myFunction()">Bro Click me</button>
-<div id="hiddenMessage" style="display:none">
-	<p id="hiddenMessage" style="display:none">You are cruising</p>
-	<button id ="countDownButton" onClick="countDown()">10</button>
-</div>
-<button onClick="TurnOnLight()">Turn On Light</button>
-<img id="myImage" src="LoveathonAnger.png" style="width:100px">
-<button onClick="TurnOffLight()">Turn Off Light</button>
-	<div class="text-center">
-		<div class="nav">
-			<a name="BackToTop"></a>
-			<a href="index.html"><p class="sport">asdfEldon's Portfolio</p></a>
+    <div class="navbar">
+        <div class="container">
+            <a href="home.html">/*ELDON_LIN*/</a>
+            <i id="mobile-menu" class="bi bi-list" ></i>
+
+            <nav>
+                <i id="mobile-exit" class="bi bi-x-lg"></i>
+                <ul class="navigation">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Personal Projects</a></li>
+                    <li><a href="#">Professional Experience</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>   
+    
+    <section class="hero-section">
+        <div class="container">
+            <div class="left-col">
+                <h1 class="header">Eldon Lin</h1>
+                <p class="subHeader">Software Engineer, XR developer</p>
+                <a href="#" class="call-to-action">Contact</a>
+            </div>
+            <div class="right-col">
+                <img src="images_videos/headshot_orig.png" class="hero-img" alt="Selfie">
+            </div>
+        </div>
+    </section>
+
+    <section class="about-me-section">
+        <div class="container">
+            <h2 class="header">About Me</h2>
+            <div class="right-col">
+                <img src="images_videos/selfie.PNG" class="about-me-img" alt="Selfie-cartoon">
+            </div>
+            <div class="left-col">
+                <div class="bg">
+                    <p>I am passionate about building application that educate, entertain or engage audiences about all the fantastic innovations the tech industry has to offer</p>
+                    <p>Here you can find all the tools and platforms I have developer on and as well as personal projects and professional experiences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="header">Skills</h2>
+            <ul>
+                <li>
+                    <div class="subheader">
+                        <i class="bi bi-chat"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>C#</li>
+                            <li>C++</li>
+                            <li>HTML/CSS/Bootstrap</li>
+                            <li>Javascript</li>
+                            <li>Python</li>
+                       </ul>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="subheader">
+                        <i class="bi bi-wrench"></i>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>Unity</li>
+                            <li>Git</li>
+                            <li>SourceTree</li>
+                            <li>Gitlab</li>
+                            <li>Github</li>
+                            <li>Figma</li>
+                            <li>Vuforia</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="subheader">
+                        <i class="bi bi-pc-display-horizontal"></i>
+                        <h3>Platforms</h3>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>Meta Quest 1+2</li>
+                            <li>WebGL</li>
+                            <li>Android</li>
+                            <li>Oculus Rift</li>
+                            <li>Oculus Go (this is ancient history)</li>
+                            <li>Google Cardboard (also ancient history)</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="personal-projects-section">
+        <div class="container">
+            <h2 class="header">Personal Projects</h2>
+            <div id="personalProjectsTabsContainer">
+                <button class="btn active" onclick="filterSelection('all')">All</button>
+                <button class="btn" onclick="filterSelection('vr')">VR</button>
+                <button class="btn" onclick="filterSelection('webgl')">WebGL</button>
+                <button class="btn" onclick="filterSelection('ar')">AR</button>
+                <button class="btn" onclick="filterSelection('vr')">Website</button>
+            </div>
+            <div class="personalProjectFilteredContainer">
+                <div class="filterDiv vr">
+                    <a href="#"><img src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" alt="Tech Stars Hunt"></a>
+                    <div class="bottom">
+                        <p class="title">Horizon World-Tech Stars Hunt</p>
+                        <p class="date">May - Jun 2022</p>
+                    </div>
+                </div>
+                <div class="filterDiv webgl">
+                    <a href="#"><img src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoCoverImage.PNG" alt="Ninjago"></a>
+                    <div class="bottom">
+                        <p class="title">Ninjago Concentration Bouncy Lego</p>
+                        <p class="date">Oct 2021</p>
+                    </div>
+                </div>
+                <div class="filterDiv ar">
+                    <a href="#"><img src="images_videos/PersonalProjects/SportsBookAlive/BookAliveIntro.PNG" alt="Sports Book Alive"></a>
+                    <div class="bottom">
+                        <p class="title">Life of Kobe Bryant - Sports Book Alive</p>
+                        <p class="date">Mar 2021</p>
+                    </div>
+                </div>
+                <div class="filterDiv vr">
+                    <a href="#"><img src="images_videos/PersonalProjects/BabushkaMemories/BabushkaPiano.PNG" alt="Babushkas Memories"></a>
+                    <div class="bottom">
+                        <p class="title">Babushka's Memories</p>
+                        <p class="date">Jan 2019</p>
+                    </div>
+                </div>
+                <div class="filterDiv vr">
+                    <a href="#"><img src="images_videos/PersonalProjects/TheLateLateAnimals/TheLateLateAnimalsTitle.PNG" alt="LateLateAnimals"></a>
+                    <div class="bottom">
+                        <p class="title">The Late Late Animals</p>
+                        <p class="date">Dec 2018-Jan 2019</p>
+                    </div>
+                </div>
+                <div class="filterDiv vr">
+                    <a href="#"><img src="images_videos/PersonalProjects/WinningEarthBack/SpideyHeroCarChaseScene.PNG" alt="WinningEarthBack"></a>
+                    <div class="bottom">
+                        <p class="title">W.E.B Winning earth back</p>
+                        <p class="date">Sep 2017-Dec 2018</p>
+                    </div>
+                </div>
+                <div class="filterDiv ar">
+                    <a href="#"><img src="images_videos/PersonalProjects/ShapeRecognitionForAR/482SpiderManShape.JPG" alt="ShapeRecognitionAR"></a>
+                    <div class="bottom">
+                        <p class="title">Shape Recognition for AR</p>
+                        <p class="date">Jun-Aug 2018</p>
+                    </div>
+                </div>
+                <div class="filterDiv vr">
+                    <a href="#"><img src="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" alt="JustGetOverIt"></a>
+                    <div class="bottom">
+                        <p class="title">Just Get Over It</p>
+                        <p class="date">Feb 2018</p>
+                    </div>
+                </div>
+                <div class="filterDiv vr">
+                    <a href="#"><img src="images_videos/PersonalProjects/Lumania/SayingHiToFriend.PNG" alt="Lumania"></a>
+                    <div class="bottom">
+                        <p class="title">Lumania</p>
+                        <p class="date">Sep 2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="professional-experiences-section">
+        <div class="container">
+            <h2 class="header">Professional Experiences</h2>
+            <ul>
+                <li>
+                    <div class="bg">
+                        <img src="images_videos/ProfessionalExperience/virtro.png" alt="Virtro logo" class="left-col-image">
+                        <div class="right-col-text">
+                            <h4>Virtro Technology Inc</h4>
+                            <h4>XR Developer</h4>
+                            <h5>Sep 2018-Present</h5>
+                            <button class="btn">More info</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg">
+                        <img src="images_videos/ProfessionalExperience/underthegui.jpg" alt="UTG logo" class="right-col-image">
+                        <div class="left-col-text">
+                            <h4>Under The GUI Academy</h4>
+                            <h4>Instructor</h4>
+                            <h5>Sep 2019-Jun 2021</h5>
+                            <button class="btn">More info</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg">
+                        <img src="images_videos/ProfessionalExperience/plannet-logix.jpg.crdownload" alt="PlanNetLogix Logo" class="left-col-image">
+                        <div class="right-col-text">
+                            <h4>PlanNet Logix (Co-op)</h4>
+                            <h4>Quality Assurance</h4>
+                            <h5>Sep 2016-Aug 2017</h5>
+                            <button class="btn">More info</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="container">
+            <a href="home.html">/*ELDON_LIN*/</a>
+            <div class="right-col">
+                <a href="https://www.linkedin.com/in/eldon-lin-38a181b0"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.youtube.com/channel/UC-igukaTIJFHYS8TNkcJ4lA"><i class="bi bi-youtube"></i></a>
+                <i class="bi bi-envelope"></i>
+            </div>
+        </div>
+    </section>
 
-
-			<div class="dropdown">
-				<button class="dropbtn">Projects</button>
-				<div class="dropdown-content">
-					<a href="#HorizonWorldTechStarHunt">Horizon World Builder Track - Tech Stars Hunt (Winner)</a>
-					<a href="#NINJAGOConcentrationBouncyLego">Lego NINJAGO one button challenge</a>
-					<a href="#SportsBookAlive">Sports Book Alive - Life Of Kobe Bryant</a>
-					<a href="#BabushkaMemories">Babushka's Memories</a>
-					<a href="#TheLateLateAnimals">The Late Late Animals</a>
-					<a href="#SpideyHero">W.E.B-Winning Earth Back</a>
-					<a href="#ShapeRecognitionforAR">Shape Recognition for AR</a>
-					<a href="#Loveathon">Loveathon (Winner)</a>
-					<a href="#Lumania">LumoHacks</a>
-				</div>
-			</div>
-
-			<div class="dropdown">
-				<button class="dropbtn">Contact</button>
-				<div class="dropdown-content">
-					<a href="https://www.linkedin.com/in/eldon-lin-38a181b0">LinkedIn</a>
-					<a href="https://www.youtube.com/channel/UC-igukaTIJFHYS8TNkcJ4lA">Youtube</a>
-				</div>
-			</div>
-
-
-
-
-		</div>
-
-	</div>
-
-
-
-	<div class="Intro">
-		<div class="text-center">
-			<div class="DarkImage">
-				<div class="IntroPos">
-					<h3>Welcome to Eldon's Homepage of everything XR!</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	</div>
-	<div class="setUpColorBlack">
-		<div class="setUpGameWhite">
-			<div class="text-center">
-				<div class="setUpTitle"><a name="HorizonWorldTechStarHunt">Horizon World Tech Stars Hunt</a><h2>**Winner - Category "Special Award 2"**</h2></div>
-
-				<div class="setUpTableBasicInfo">
-					<a href="#BackToTop">Back to top</a>
-					<table>
-						<thead>
-							<tr>
-								<td><h2>Platform</h2><p>Meta Quest 2</p><p></p></td>
-								<td><h2>Players</h2><p>up to 8</p><p></p></td>
-								<td><h2>Genres</h2><p>Adventure</p><p></p></td>
-								<td><h2>Age Rating</h2><p>13+</p><p></p></td>
-								<td><h2>Context</h2><p>Horizon World Builder Track Competition</p><p></p></td>
-							</tr>
-						</thead>
-					</table>
-				</div>
-				<video <video width="750" height="650" controls poster ="TechStarsHuntCoverImage.PNG">
-				<source src="TechStarsHuntVideo.mp4" type="video/mp4">
-				</video>
-				<div><a href="https://youtu.be/hLZEAn5Pl-Y">Click here if video does not work</a></div>
-				<div class="setUpDescription">May-June 2022.Builder track competition. Theme was Adventure. 3 games in 1. A) Collect start tickets to unlock mystery boxes to learn tech history. B) Walk around to see how many names you recognize. C)Figure out which game the shape of this maze is based on </div>
-				<div><a href="https://www.oculus.com/vr/5299600303432788/">Play game</a></div>
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-				<tr>
-				<td><a href="TechStarsHuntclock.PNG">
-				<img src="TechStarsHuntclock.PNG"/></a></td>
-				<td><a href="TechStarsHuntwindmill.PNG">
-				<img src="TechStarsHuntwindmill.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Space and time history</td>
-				<td>Windmill history</td>
-				</tr>
-
-				<tr>
-				<td><a href="TechStarsHuntMoreClock.PNG">
-				<img src="TechStarsHuntMoreClock.PNG"/></a></td>
-				<td><a href="TechStarsHuntHome.PNG">
-				<img src="TechStarsHuntHome.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Time history</td>
-				<td>Homebase</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-				<div class="Challenges"><div>Process</div>
-					<h1>From past game jams experience, getting the game to work was not enough, I had to make it look good as well. However, with no experience in building horizon world, I had to learn the code basics first and whitebox. I knew I wanted to do tech history, but how do I execute it? I first started off just making "mystery boxes" and when I collide with it, it will open up and show a piece of tech history. I then started adding "stars" which acts as tickets to open the box. The problem was the user had no idea what they were collecting, so I made a ticket board where the user can view what tickets they have. At the time my world was just mystery boxes and stars. That was boring, so I decided to use a maze, but not just any maze- a pacman shaped maze! And if anyone recognize the shape of the maze, I encouraged them to take a picture and share what they think the maze shape is based on. I was running out of time at the end and making mystery boxes was getting hard, so I started placing objects around the world that showed tech history with the name of the person on it. This allowed users to not only look for star tickets but just casually walk around the world and challenge themselves to see how many names they recognize. I hope to add more mystery boxes when the judging period is over. 
-					</h1>
-					</div>
-
-	<div class="setUpColorBlack">
-		<div class="setUpGameWhite">
-			<div class="text-center">
-				<div class="setUpTitle"><a name="NINJAGOConcentrationBouncyLego">NINJAGO Concentration Bouncy Lego </a></div>
-
-				<div class="setUpTableBasicInfo">
-					<a href="#BackToTop">Back to top</a>
-					<table>
-						<thead>
-							<tr>
-								<td><h2>Platform</h2><p>WebGL</p><p></p></td>
-								<td><h2>Players</h2><p>Anyone</p><p></p></td>
-								<td><h2>Genres</h2><p>Casual</p><p></p></td>
-								<td><h2>Age Rating</h2><p>All Ages</p><p></p></td>
-								<td><h2>Context</h2><p>Gamejam</p><p></p></td>
-							</tr>
-						</thead>
-					</table>
-				</div>
-				<video <video width="750" height="650" controls poster ="NinjagoCoverImage.PNG">
-				<source src="NinjagoGamePlay.mp4" type="video/mp4">
-				</video>
-				<div><a href="https://youtu.be/Ls3yPvEdUpY">Click here if video does not work</a></div>
-				<div class="setUpDescription">Oct 2021. Unity 2021 Lego Ninjago One Button Game Challenge. Don't let the ball drop and try to beat your own highscore of the day! Master wu will be encouraging you along the way. Your ninja companions are watching you from above </div>
-				<div><a href="https://ideas.lego.com/challenges/c83ecffd-4db6-4bf9-a951-f39f90a0b481/application/aca23c4a-94c0-40bc-a8ee-bf2a31423b0d">Game Jam Link</a></div>
-				<div><a href="https://play.unity.com/mg/lego/ninjago-concentration-bouncy-lego">Play game</a></div>
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-				<tr>
-				<td><a href="NinjagoHighScore.PNG">
-				<img src="NinjagoHighScore.PNG"/></a></td>
-				<td><a href="NinjagoEnd.PNG">
-				<img src="NinjagoEnd.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>High score screen</td>
-				<td>End screen when game is over</td>
-				</tr>
-
-				<tr>
-				<td><a href="NinjagoMasterWu.PNG">
-				<img src="NinjagoMasterWu.PNG"/></a></td>
-				<td><a href="NinjagoCannon.PNG">
-				<img src="NinjagoCannon.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Master Wu</td>
-				<td>Cannon</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-				<div class="Challenges"><div>Process</div>
-					<h1>I first had to think of a game that I would thoroughly enjoy making using "one button" I remember loving the retro game silver ball so I wanted to make same similar where I prevent a ball from falling down. I had a lot of trouble making sure the ball stays with in the boundary and at the same time making the game look fun with different ways to collect points. From the images you can see there are Master Wu, cannon to spice up the game!
-					</h1>
-					</div>
-
-				<div class="setUpColorBlack">
-				<div class="setUpGameWhite">
-				<div class="text-center">
-				<div class="setUpTitle"><a name="SportsBookAlive">Sports Book Alive - Life of Kobe Bryant </a></div>
-				<div class="setUpTableBasicInfo">
-				<a href="#BackToTop">Back to top</a>
-				<table>
-				<thead>
-				<tr>
-				<td><h2>Platform</h2><p>Android<p></td>
-				<td><h2>Players</h2><p>1 player<p></td>
-				<td><h2>Genres</h2><p>Education<p></td>
-				<td><h2>Age Rating</h2><p>All Ages<p></td>
-				<td><h2>Context</h2><p>XR 30 Day Challenge - Circuit Stream<p></td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-
-				<video <video width="750" height="650" controls poster ="BookAliveIntro.PNG">
-				<source src="BookAlive30DayChallengeCompressed.mp4" type="video/mp4">
-				<p>Your browser does not support our format, please click link below</p>
-
-				</video>
-				<div><a href="https://youtu.be/rvJgwtpeeyk">Click here if video does not work</a></div>
-				<div class="setUpDescription">March 2021. I particpated in XR 30 day challenge held by Circuit stream. Topic: "Using AR, create an interaction with an everyday object."</div>
-				<div class="setUpDescription">When I transit to school or work everyday before pandemic hit, I always bring a book with me. So I made an AR project using Vuforia to make a Kobe Bryant book come alive!</div>
-
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-
-				<tr>
-
-				<td><a href="BookAliveIncreaseSize.PNG">
-				<img src="BookAliveIncreaseSize.PNG"/></a></td>
-
-				<td><a href="BookAliveAudioMixer.PNG">
-				<img src="BookAliveAudioMixer.PNG"/></a></td>
-
-				</tr>
-
-				<tr>
-				<td>How I increased size of each sprite using the same script</td>
-				<td>AudioMixer to fade out audio</td>
-				</tr>
-
-				<tr>
-				<td><a href="BookAliveScene.PNG">
-				<img src="BookAliveScene.PNG"/></a></td>
-
-				<td><a href="BookAliveSpriteSlideShow.PNG">
-				<img src="BookAliveSpriteSlideShow.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Adding in the sprite database from vuforia into my scene</td>
-				<td>How I allowed differen amount of spirtes for each database image</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-				<div class="Challenges"><div>Process</div>
-
-				<div class="setUpDescription">(1) I started off prototyping to make sure that the database images from Vuforia would be detected by making a 3D object appear such as a cube or sphere </div>
-				<div class="setUpDescription">(2)Once I was sure all images will be detected I tried to make sure a single 2D sprite image can appear. Then I tried adding more sprites to see if detecing an image can make multiple images appear-spoiler alert: it did! </div>
-				<div class="setUpDescription">(3) Then I attempted to use animations to make a "slide show", but that failed miserably. So I decdied to use code instead. I created a Sprite array and use coroutines to change sprites every x amount of seconds specified in the inspector.</div>
-				<div class="setUpDescription">(4) Once the images appeared, I tried to make any audio play sound when an image is detected.</div>
-				<div class="setUpDescription">(5) Then once I know audio works I started looking for audios on Youtube (then used Youtube to mp3 converter and then mp3 cutter)</div>
-				<div class="setUpDescription">(6) I noticed that when an image stops getting detected and using audioSource.Stop(), the audio stop abruptly, sounding weird. So I decided to fade the audio out using a AudioMixer.</div>
-				<div class="setUpDescription">(7) Then I started adding extra affects such as making images rotate and particle affects. Since each image detected may have different amount of sprites, or the time it takes to change sprites are different, I made sure to make those values public so I can edit the seconds/numbers in the inspector.  </div>
-
-				<div class="setUpDescription"></div>
-				<div class="setUpDescription">Thank you to Circuit Stream! The reason why I got into XR</div>
-
-				<div class="setUpDescription"></div>
-				<div class="setUpDescription">Tools/References</div>
-				<div class="setUpDescription">(1)Unity 2019.4.10f1 </div>
-				<div class="setUpDescription">(2)Vuforia </div>
-				<div class="setUpDescription">(3)YouTube.com for audio </div>
-				<div class="setUpDescription">(4)Google.com for images </div>
-				<div class="setUpDescription">(5)https://ytmp3.cc/youtube-to-mp3/</div>
-				<div class="setUpDescription">(6)https://mp3cut.net/ </div>
-				<div class="setUpDescription">(7)https://www.remove.bg/ </div>
-				<div class="setUpDescription">(8)https://gamedevbeginner.com/how-to-fade-audio-in-unity-i-tested-every-method-this-ones-the-best/</div>
-
-				</div>
-				<div class="setUpColorBlack">
-				<div class="setUpGameWhite">
-				<div class="text-center">
-				<div class="setUpTitle"><a name="BabushkaMemories">Babushka's Memories </a></div>
-
-				<div class="setUpTableBasicInfo">
-				<a href="#BackToTop">Back to top</a>
-				<table>
-				<thead>
-				<tr>
-				<td><h2>Platform</h2><p>Oculus GO<p></td>
-				<td><h2>Players</h2><p>Anyone<p></td>
-				<td><h2>Genres</h2><p>Puzzle<p></td>
-				<td><h2>Age Rating</h2><p>All Ages<p></td>
-				<td><h2>Context</h2><p>Gamejam<p></td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-				<video <video width="750" height="650" controls poster ="BabushkaPiano.PNG">
-				<source src="BabushkaMemories.mp4" type="video/mp4">
-				</video>
-				<div><a href="https://youtu.be/Lcw3avA4RSY">Click here if video does not work</a></div>
-				<div class="setUpDescription">Jan 2019. Global Game Jam 2019. Theme is "What home means to you".  In a team of 7 (5 developers and 2 modelers) we came up with helping grandma (Babushka) by going to the past and fix the broken memories, because home means a collection of memories. </div>
-				<div><a href="https://globalgamejam.org/2019/games/babushkas-memories">Game Jam Link</a></div>
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-				<tr>
-				<td><a href="BabushkaChildObject.PNG">
-				<img src="BabushkaChildObject.PNG"/></a></td>
-				<td><a href="BabushkaRaycast.PNG">
-				<img src="BabushkaRaycast.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Child object when selected</td>
-				<td>Highlight objects when selected by raycast</td>
-				</tr>
-
-				<tr>
-				<td><a href="BabushkaUnfinished.PNG">
-				<img src="BabushkaUnfinished.PNG"/></a></td>
-				<td><a href="BabushkaUnfinished2.PNG">
-				<img src="BabushkaUnfinished2.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Unfinished ceiling and grandma</td>
-				<td>Windows were not added yet, still testing code</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-
-
-				<div class="Challenges">
-				<div>Process</div>
-				<h1> My role as the developer was in charge of setting up a vr environment, upload the build the oculus, generate keystores and make raycast select objects and what happens to them when selected. At first I attended the
-				gamejam with only 1 other member (a former co-worker). We were lucky to have met 5 other developers and artist. We had so much fun together that we decided to meet up after the game jam to fix on some bugs
-				that we did not get to resolve during the game jam.
-				</h1>
-				</div>
-
-
-				<div class="setUpColorBlack">
-				<div class="setUpGameWhite">
-				<div class="text-center">
-				<div class="setUpTitle"><a name="TheLateLateAnimals">The Late Late Animals </a></div>
-				<div class="setUpTableBasicInfo">
-				<a href="#BackToTop">Back to top</a>
-				<table>
-				<thead>
-				<tr>
-				<td><h2>Platform</h2><p>Oculus GO<p></td>
-				<td><h2>Players</h2><p>1 player<p></td>
-				<td><h2>Genres</h2><p>Casual<p></td>
-				<td><h2>Age Rating</h2><p>All Ages<p></td>
-				<td><h2>Context</h2><p>Unity Global Student Challenge<p></td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-
-				<video <video width="750" height="650" controls poster ="TheLateLateAnimalsTitle.PNG">
-				<source src="TheLateLateAnimals.mp4" type="video/mp4">
-				<p>Your browser does support our format, please click link below</p>
-
-				</video>
-				<div><a href="https://youtu.be/DEpJTUx7I7M">Click here if video does not work</a></div>
-
-				<div><a href="https://connect.unity.com/p/animal-power-title-subject-to-change">Click here to check out my game at Unity Global Student Challenge</a></div>
-
-				<div class="setUpDescription">Dec 2018-Jan 2019. I particpated in the Unity Global Student Challenge 2019. Projects must revolve
-				around the theme of "Teach people something new." I decided to teach people about nocturnal animals, because at night when we are asleep
-				we do not see enough what is happening at night so we may not appreciate what is happening out there. From this game, you will get to
-				learn the foods that some of the nocturnal animals eat and some of there superpowers! All the assets I used are described in the Unity Global Student Challenge submission page</div>
-
-				<div class="setUpDescription">Thank you to Oculus Start for providing an Oculus GO for me!</div>
-
-				<div class="setUpDescription">This game has cinemachine and timeline implemented at the beginning of the game. I combined this feature with the properties of a minimap</div>
-
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-
-				<tr>
-
-				<td><a href="BatPowerGif.gif">
-				<img src="BatPowerGif.gif"/></a></td>
-
-				<td><a href="RaccoonGif.gif">
-				<img src="RaccoonGif.gif"/></a></td>
-
-				</tr>
-
-				<tr>
-				<td>The initial setup of a bat power</td>
-				<td>Initial Setup of a Raccon Power</td>
-				</tr>
-
-				<tr>
-				<td><a href="beginninggif.gif">
-				<img src="beginninggif.gif"/></a></td>
-
-				<td><a href="CinemachineSetup.PNG">
-				<img src="CinemachineSetup.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Initial Test scene of picking an animal</td>
-				<td>Setting up start up scene for cinemachine and timeline</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-
-				<div class="setUpColorBlack">
-				<div class="setUpGameWhite">
-				<div class="text-center">
-				<div class="setUpTitle"><a name="SpideyHero">W.E.B-Winning Earth Back </a></div>
-				<div class="setUpTableBasicInfo">
-				<a href="#BackToTop">Back to top</a>
-				<table>
-				<thead>
-				<tr>
-				<td><h2>Platform</h2><p>Oculus Rift<p></td>
-				<td><h2>Players</h2><p>1 player<p></td>
-				<td><h2>Genres</h2><p>Action<p></td>
-				<td><h2>Age Rating</h2><p>10+<p></td>
-				<td><h2>Context</h2><p>Personal Project/Vr Class-C#<p></td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-
-				<video <video width="750" height="650" controls poster ="SpideyHeroCarChaseScene.PNG">
-				<source src="WEB-WinningEarthBack.mp4" type="video/mp4">
-				<p>Your browswer does support not our format, please click link below</p>
-
-				</video>
-				<div><a href="https://youtu.be/Gmvag2vpSNg">Click here if video does not work</a></div>
-
-				<div class="setUpDescription">Sept 2017-Dec 2018. Made In Unity: You are a superhero with web powers. You must battle your way through by collecting weapons, deflecting pumpkin bombs and destroying PufferFish Robots!
-				There are currently 3 levels for the user to play! </div>
-				<div class="setUpDescription">Level1: The weapons got stolen by the enemies. You must collect them by swinging the boxes into an airplane!</div>
-				<div class="setUpDescription">Level2:An innocent target practice shooting at balloons turns into a showdown between you and MegaGoblin. Destroy the pumpkin bombs before you reach zero health!</div>
-				<div class="setUpDescription">Level3:You are 10 000 feet above ground standing on a Spidey plane. PufferFish robots are chasing you. Destroy them before they destroy you!</div>
-				<div class="setUpDescription">Thanks to Circuit Stream for providing feedback from September to December 2017, I have learned alot from them!</div>
-
-
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-
-				<tr>
-
-				<td><a href="SpideyHeroSwing.PNG">
-				<img src="SpideyHeroSwing.PNG"/></a></td>
-
-				<td><a href="SpideyHeroGoblinBattle.PNG">
-				<img src="SpideyHeroGoblinBattle.PNG"/></a></td>
-
-				</tr>
-
-				<tr>
-				<td>Swinging boxes</td>
-				<td>Shooting at pumpkin bombs</td>
-				</tr>
-
-				<tr>
-				<td><a href="SpideyHeroPufferFish.PNG">
-				<img src="SpideyHeroPufferFish.PNG"/></a></td>
-
-				<td><a href="SpideyHeroWin.PNG">
-				<img src="SpideyHeroWin.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Battling PufferFish Robot master</td>
-				<td>Winning scene</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-				<div class="Challenges"><div>Process</div>
-				<h1>Biggest challenge was transferring what I imagined on paper into reality. Since this game was my idea, I was the only person
-				who knew how I want the scene to look like. For each scene I create, I would first draw it on paper, then write a flow chart of how the weapons would work.
-				Then I do a test run with basic shapes and then will either import fbx objects from the asset store or create them from Blender/Maya. The objects made in Blender/Maya
-				are the airplane in the web sling scene and Puffer Fish robot scene, the boxes in the websling scene, the web in the main menu,
-				the Puffer Fish Robots, and the balloons in the shooting scene.
-				</h1>
-
-
-				<div class="setUpImage">
-				<table>
-				<thead>
-
-				<tr>
-				<td><a href="SpideyHeroDraftMainMenu.JPG">
-				<img src="SpideyHeroDraftMainMenu.JPG"/></a></td>
-
-				<td><a href="SpideyHeroMainMenuWEBGoodCopy.PNG">
-				<img src="SpideyHeroMainMenuWEBGoodCopy.PNG"/></a></td>
-
-
-				</tr>
-
-				<tr>
-				<td><p>Draft of main menu</p></td>
-				<td><p>Final copy of main menu</p>  </td>
-				</tr>
-
-				<tr>
-
-				<td><a href="SpideyHeroDraftShootingScene.JPG">
-				<img src="SpideyHeroDraftShootingScene.JPG"/></a></td>
-
-				<td><a href="SpideyHeroGoodCopyShootingScene.PNG">
-				<img src="SpideyHeroGoodCopyShootingScene.PNG"/></a></td>
-
-				</tr>
-
-				<tr>
-				<td><p>Draft of the shooting Scene</p></td>
-				<td><p>Final copy of Shooting Scene</p>  </td>
-				</tr>
-
-
-				<tr>
-				<td><a href=" SpideyHeroDraftWebSling.JPG">
-				<img src=" SpideyHeroDraftWebSling.JPG"/></a></td>
-
-				<td><a href="SpideyHeroGoodCopyWebSling.PNG">
-				<img src="SpideyHeroGoodCopyWebSling.PNG"/></a></td>
-
-				</tr>
-
-				<tr>
-				<td><p>Draft of Web Sling scene</p></td>
-				<td><p>Final copy of Web Sling scene</p>  </td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-
-
-				</div>
-				</div>
-				</div>
-				</div>
-
-
-				<div class="setUpColorBlack">
-				<div class="setUpGameWhite">
-				<div class="text-center">
-				<div class="setUpTitle"><a name="ShapeRecognitionforAR">Shape Recognition for AR  </a></div>
-
-				<div class="setUpTableBasicInfo">
-				<a href="#BackToTop">Back to top</a>
-				<table>
-				<thead>
-				<tr>
-				<td><h2>Platform</h2><p>Windows<p></td>
-				<td><h2>Players</h2><p>Anyone<p></td>
-				<td><h2>Genres</h2><p>Education<p></td>
-				<td><h2>Age Rating</h2><p>All Ages<p></td>
-				<td><h2>Context</h2><p>School Project- C++/OpenCV<p></td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-				<video <video width="750" height="650" controls poster ="482OculusShape.JPG">
-				<source src="ShapeRecognitionEdit.mp4" type="video/mp4">
-				</video>
-				<div><a href="https://youtu.be/JyDyCFmObiU">Click here if video does not work</a></div>
-
-
-				<div class="setUpDescription">Jun-Aug 2018. Made in Visual Studios-The purpose of this project is to implement AR into the school system to teach children to recognize shape in a more interactive way.
-				To make it interactive, the children will show shape(s) in front of a webcam that is playing live video. The program will then identify and label the shape. The AR part comes into play when a 3D overlay is drawn over the shape</div>
-
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-				<tr>
-				<td><a href="482MicrosoftShape.JPG">
-				<img src="482MicrosoftShape.JPG"/></a></td>
-				<td><a href="482OculusShape.JPG">
-				<img src="482OculusShape.JPG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Labeling Microsoft logo</td>
-				<td>Labeling Oculus logo in white and black</td>
-				</tr>
-
-				<tr>
-				<td><a href="482SpiderManShape.JPG">
-				<img src="482SpiderManShape.JPG"/></a></td>
-				<td><a href="482GrayShapes.JPG">
-				<img src="482GrayShapes.JPG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Labeling Spiderman's face</td>
-				<td>Labeling grayed shapes</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-
-
-				<div class="Challenges">
-				<div>Process</div>
-				<h1> This project was done in a group of 3. My task was to figure out how to label, identify and draw a 3D overlay on the shapes during a live video.
-				I first started with just a still image that has multiple shapes saved as a PNG file. I would convert these images to gray scale and then binarized them using the gaussian
-				filter and Canny threshold. I then tried to connect to the webcam and tried taking a picture and see if the shapes are being recognized. Once the previous steps were completed, I now had to figure out how to make the program recognize shapes LIVE, which means
-				I needed to create a loop for the program to recognize the contours of the shapes each frame. The twist to labeling and drawing a 3D overlay on the shapes during live video is that the overlay must follow the shape. This issue was solved
-				by making the drawing and labeling in the same loop as the contour recognition section.
-
-				</h1>
-				</div>
-
-
-
-
-				<div class="setUpColorBlack">
-				<div class="setUpGameWhite">
-				<div class="text-center">
-				<div class="setUpTitle"><a name="Loveathon">Just Get Over It  </a> <h2>**3rd Place**</h2></div>
-
-				<div class="setUpTableBasicInfo">
-				<a href="#BackToTop">Back to top</a>
-				<table>
-				<thead>
-				<tr>
-				<td><h2>Platform</h2><p>Oculus Rift<p></td>
-				<td><h2>Players</h2><p>1 player<p></td>
-				<td><h2>Genres</h2><p>Action<p></td>
-				<td><h2>Age Rating</h2><p>All Ages<p></td>
-				<td><h2>Context</h2><p>Hackathon-C#<p></td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-
-				<video <video width="750" height="650" controls poster ="LoveathonMainMenu.PNG">
-				<source src="2018-04-24 SFULoveathon.mp4" type="video/mp4">
-				</video>
-				<div><a href="https://youtu.be/2eVfeaquPtg">Click here if video does not work</a></div>
-
-
-				<div class="setUpDescription">Feb 2018. Made In Unity-The theme of that hackathon is Love. We made a game called "Just Get Over It". If you have ever been in love, you know
-				there are different stages. We created two stages- Denial and Anger. In the Denial level, you must shoot at incoming love boxes the says "Get Over It" and  "Try to get back together". The Anger level lets you hit a box with a heart shape to let your anger out!
-				I would like to thank the my teammates-"VR Team", Circuit Stream for lending me the Oculus Rift, Simon Fraser Student Society and the Software Systems Student Society for hosting this 12 hours Systems Hack- "Loveathon". We got placed in 3rd out of 17 teams</div>
-
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-				<tr>
-				<td><a href="LoveathonMainMenu.PNG">
-				<img src="LoveathonMainMenu.PNG"/></a></td>
-				<td><a href="LoveathonShots.PNG">
-				<img src="LoveathonShots.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Main Menu</td>
-				<td>Denial Level. Love boxes charging towards you</td>
-				</tr>
-
-				<tr>
-				<td><a href="LoveathonShooting.PNG">
-				<img src="LoveathonShooting.PNG"/></a></td>
-				<td><a href="LoveathonAnger.PNG">
-				<img src="LoveathonAnger.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Shooting at the love boxes</td>
-				<td>Anger Level</td>
-				</tr>
-
-				</thead>
-				</table>
-				</div>
-
-
-
-				<div class="Challenges">
-				<div>Process</div>
-				<h1> My teamates- Karina and Mike- and I called our team the "VR Team". It's not fancy, but it tells you what we do exactly! This is our second time working together.
-				The first time was at the <a href="#Lumania">LumoHacks-Lumania</a>. With our experience from the first hackathon, we had an idea on how to split up the task. However,
-				coming up with the idea and trying to execute it was extremely hard due to the time constraint. Luckily, the tasks we split up were according to our strengths
-				and we finished what we imagine into (virtual) reality!
-				</h1>
-
-				<h1>Eldon (That's me!)- Setup Oculus Rift, create base class for interactions with the rift, programmed interactions in the main menu, created the button in the main menu, programmed the Denial Scene for love boxes to be destroyed</h1>
-				<h1>Karina- Designer, audio, programmed instantiation of bullets and love boxes, movement of bullets and movement of love boxes and presented the game</h1>
-				<h1>Mike- Created interactions in the Anger Scene, animated the hands, demonstrated the game</h1>
-
-
-
-				</div>
-
-
-
-
-				<div class="setUpColorBlack">
-				<div class="setUpGameWhite">
-				<div class="text-center">
-				<div class="setUpTitle"><a name="Lumania">Lumania</a></div>
-				<div class="setUpTableBasicInfo">
-				<a href="#BackToTop">Back to top</a>
-				<table>
-				<thead>
-				<tr>
-				<td><h2>Platform</h2><p>Google Cardboard-Android<p></td>
-				<td><h2>Players</h2><p>1 player<p></td>
-				<td><h2>Genres</h2><p>Casual<p></td>
-				<td><h2>Age Rating</h2><p>All Ages<p></td>
-				<td><h2>Context</h2><p>Hackathon-C#<p></td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-				<video <video width="750" height="650" controls poster ="SayingHiToFriend.PNG">
-				<source src="LumaniaVidEdited.mp4" type="video/mp4">
-				</video>
-				<div><a href="https://youtu.be/O586XjidD1c">Click here if video does not work</a></div>
-
-				<div class="setUpDescription">September 2017. Made In Unity: This game was created at a Hackathon called LumoHacks. The topic for my group was
-				"Mental distress and depression in young people". This game helps people with mental health. Each day for 30 days, the user follows a friend-a gender of the user's choice-who
-				will lead the user into different doors. Each door leads the user to a new task that boost their confidence. The user will play this game at the same time
-				everyday to help them get used to a daily routine.  Currently we have one task called "The Dancing Challenge" that encourages the
-				user to dance along with a dancing rabbit! This game was placed top 15 out of 60 teams! Huge thanks to my teamates Karina,Mike and Warren </div>
-
-				<h1>ScreenShots</h1>
-				<div class="setUpImage">
-				<table>
-				<thead>
-				<tr>
-				<td><a href="ChooseFriendScene.PNG">
-				<img src="ChooseFriendScene.PNG"/></a></td>
-				<td><a href="SayingHiToFriend.PNG">
-				<img src="SayingHiToFriend.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Choosing a Friend- by Mike</td>
-				<td>Friend introduction- by Karina and Warren</td>
-				</tr>
-
-				<tr>
-				<td><a href="DoorOpening.PNG">
-				<img src="DoorOpening.PNG"/></a></td>
-				<td><a href="DanceScene.PNG">
-				<img src="DanceScene.PNG"/></a></td>
-				</tr>
-
-				<tr>
-				<td>Selecting a daily challenge- by Eldon</td>
-				<td>Dancing challenge- by Karina and Mike</td>
-				</tr>
-				</thead>
-				</table>
-				</div>
-
-
-				<div class="Challenges"><div>Process</div>
-				<h1>Two of our members were using Unity for the first time. So the tasks we assigned to each other must match our
-				abilities to ensure we can finish it within 24 hours. three weeks before the hackathon started, I reviewed how Google VR works and began setting up and testing GoogleVRForUnity.unitypackage using Android Studio
-				so my teammates can start hacking right away. Our tasks were split up accordingly:
-				<h1>Eldon: Setup the player with GoogleVrPackage, setup Unity Collaborate(was free at the time),getting the player to choose a door and change scene when entering </h1>
-				<h1>Karina: Voice of the friend, music for the dancing scene, getting the animation of the friend to work, selecting a good looking texture for the doors</h1>
-				<h1>Mike: Selecting a friend at the main menu, timer for the dancing scene, text for explaning what to do in the dancing scene</h1>
-				<h1>Warren: Finding the "friend" from the asset store, getting the animation of the friend to work, getting the sound of friend to work </h1>
-				<h1></h1>
-
-
-
-				</div>
-
-				</div>
-				</div>
-				</div>
-
-
-
-				<div class="Bottom"><p><a name="Contacts">Contacts<p>
-				<div class="setUpImageThank">
-
-				<table>
-				<thead>
-
-				<tr>
-				<td><a href="https://www.linkedin.com/in/eldon-lin-38a181b0"><img src="linkedinlogo.png"/></a></td>
-				<td><a href="https://www.youtube.com/channel/UC-igukaTIJFHYS8TNkcJ4lA"><img src="youtubelogo.jpg"/></a></td>
-				<td><a href="https://twitter.com/EldonVRAR"><img src="twitterlogo.jpg"/></a></td>
-				</tr>
-
-
-				</thead>
-				</table>
-				</div>
-				<a href="#BackToTop">Back to top</a>
-				</div>
-
-
-				</div>
-
-
-				</div>
-
-
-				</div>
-
-
-			</div>
-			</div>
-		</div>
-	</div>
 </body>
+
 </html>
-
-
