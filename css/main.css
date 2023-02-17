@@ -29,7 +29,7 @@ body .bg-even{
 }
 
 .container .header{
-    font-size: 3em;
+    font-size: 4em;
     padding-top: 0.1em;
     text-align: center;
 }
@@ -65,7 +65,7 @@ body .bg-even{
 }
 
 .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
-    font-size: 1.5em;
+    font-size: 1.75em;
     margin-top: 0em;
 }
 
@@ -91,13 +91,23 @@ body .bg-even{
     font-size: 1.5em;
 }
 
+.skills-section .container {
+    display: grid;
 
 
+}
 
 .skills-section .container .all-info{
-    text-align: center;
+
     display: grid;
     justify-content: center;
+    align-items: center;   
+
+}
+
+.skills-section .container .all-info .skills-info{
+    display: grid;
+    justify-content: left;
     align-items: center;
 }
 
@@ -107,25 +117,23 @@ body .bg-even{
    justify-content: left;
    align-items: center;
    line-height: 0%;    
+   font-size: 3em;
+   gap: 0.5em;
 }
-
-.skills-section .container .all-info  .skills-info .subheader .image{
-    font-size: 2em;
-
-}
-
 
 .skills-section .container .all-info  .skills-info .subheader .text{
     color: var(--primary-color);
-    font-size: 2em;
+
+
 }
 
 .skills-section .container .all-info  .skills-info .list .list-info{
     list-style-type:disc;
     list-style-position: inside;
     display: inline-block;
-    text-align: left;
-    width: 20em;
+    text-align: left;  
+    font-size:2.5em;
+    line-height: 1.5em;
 }
 
 
