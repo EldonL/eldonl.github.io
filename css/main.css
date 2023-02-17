@@ -80,7 +80,7 @@ body .bg-even{
     place-content: space-between;
 }
 
-.navbar .container .navigation{
+.navbar .container nav{
     display: none;
 }
 
