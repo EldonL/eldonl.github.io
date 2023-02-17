@@ -1,29 +1,170 @@
-.professional-experiences-section .container .content{
-    text-align: right;
-    width: 20em;
+:root{
+    --primary-color: #00ABEF;
+    --secondary-color:#E9F1FA;
+    --additional-color: #FFFFFF;
 }
 
-.professional-experiences-section .container .jobs{
+.about-me-section .container .image img{
+    border-radius: 35%;
+    padding-left: 1em;
+}
+
+.about-me-section .container .content{
+    background-color: var(--primary-color);
+    width: 6em;
+    padding: 1em;
+    border-radius: 1em;
+    margin-left: 2em;
+}
+
+body{
+   margin:0; 
+   background: var(--secondary-color);
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body .bg-even{
+    background: var(--additional-color);
+}
+
+.container .header{
+    font-size: 3em;
+    padding-top: 0.1em;
+    text-align: center;
+}
+
+.hero-section{
+    text-align: center;
+}
+
+.hero-section .container .call-to-action{
+    border-radius: 5em;
+    border: none;
+    color: var(--additional-color);
+    background-color: var(--primary-color);
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding: 0.6em 3em;
+ }
+ 
+
+.hero-section .container img{
+    border-radius:35%;
+    width: 20em;
+ }
+
+.hero-section .container .left-col .hero-theHeaders{
+    padding-left: 0.5em;
+}
+
+.hero-section .container .left-col .hero-theHeaders .hero-header{
+    font-size: 5em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.hero-section .container .left-col .hero-theHeaders .hero-subHeader{
+    font-size: 1.5em;
+    margin-top: 0em;
+}
+
+
+
+.navbar {
+    padding: 1em 1em 0em 1em;
+}
+
+.navbar .container{
+    display:flex;
+    place-content: space-between;
+}
+
+.navbar .container .navigation{
+    display: none;
+}
+
+.navbar .logo{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+
+
+
+.skills-section .container .all-info{
+    text-align: center;
     display: grid;
-    grid-template-columns: repeat(2,25em);
-    margin-bottom:8em;
+    justify-content: center;
+    align-items: center;
 }
 
-.professional-experiences-section .container .jobs img{
-    width: 20em;
+
+.skills-section .container .all-info  .skills-info .subheader{
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   line-height: 0%;    
 }
 
-.professional-experiences-section .container .jobs.left{
-    grid-template-areas: "left right";
+.skills-section .container .all-info  .skills-info .subheader .image{
+    font-size: 2em;
 
 }
 
-.professional-experiences-section .container .jobs.left .content{
+
+.skills-section .container .all-info  .skills-info .subheader .text{
+    color: var(--primary-color);
+    font-size: 2em;
+}
+
+.skills-section .container .all-info  .skills-info .list .list-info{
+    list-style-type:disc;
+    list-style-position: inside;
+    display: inline-block;
     text-align: left;
     width: 20em;
 }
 
-.professional-experiences-section .container .jobs.left img{
-    grid-area: left;
+
+
+
+ul{
+    list-style-type: none;
 }
 
+
+
+
+@media screen and (min-width: 786px){
+    .professional-experiences-section .container .content{
+        text-align: right;
+        width: 20em;
+    }
+    
+    .professional-experiences-section .container .jobs{
+        display: grid;
+        grid-template-columns: repeat(2,25em);
+        margin-bottom:8em;
+    }
+    
+    .professional-experiences-section .container .jobs img{
+        width: 20em;
+    }
+    
+    .professional-experiences-section .container .jobs.left{
+        grid-template-areas: "left right";
+    
+    }
+    
+    .professional-experiences-section .container .jobs.left .content{
+        text-align: left;
+        width: 20em;
+    }
+    
+    .professional-experiences-section .container .jobs.left img{
+        grid-area: left;
+    }
+}
