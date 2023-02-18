@@ -31,15 +31,15 @@ function AddClass(element, name){
 //hide elements not selected
 function RemoveClass(element, name){
     var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for(i =0; i < arr2.length; i++){
-       while(arr1.indexOf(arr2[i]) > -1) {
-        console.log(i + " something");
-        arr1.splice(arr1.indexOf(arr2[i], 1));
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
        }
     }
-    element.class = arr1.join(" ");
+    element.className = arr1.join(" ");
+
 }
 
 //Add active class to the current control button to highlight it
