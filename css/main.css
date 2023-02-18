@@ -4,19 +4,6 @@
     --additional-color: #FFFFFF;
 }
 
-.about-me-section .container .image img{
-    border-radius: 35%;
-    padding-left: 1em;
-}
-
-.about-me-section .container .content{
-    background-color: var(--primary-color);
-    width: 6em;
-    padding: 1em;
-    border-radius: 1em;
-    margin-left: 2em;
-}
-
 body{
    margin:0; 
    background: var(--secondary-color);
@@ -33,6 +20,27 @@ body .bg-even{
     padding-top: 0.1em;
     text-align: center;
 }
+
+.navbar {
+    padding: 1em 1em 0em 1em;
+}
+
+.navbar .container{
+    display:flex;
+    place-content: space-between;
+}
+
+.navbar .container nav{
+    display: none;
+}
+
+.navbar .logo{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
 
 .hero-section{
     text-align: center;
@@ -69,26 +77,17 @@ body .bg-even{
     margin-top: 0em;
 }
 
-
-
-.navbar {
-    padding: 1em 1em 0em 1em;
+.about-me-section .container .image img{
+    border-radius: 35%;
+    padding-left: 1em;
 }
 
-.navbar .container{
-    display:flex;
-    place-content: space-between;
-}
-
-.navbar .container nav{
-    display: none;
-}
-
-.navbar .logo{
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    color: var(--primary-color);
-    font-size: 1.5em;
+.about-me-section .container .content{
+    background-color: var(--primary-color);
+    width: 6em;
+    padding: 1em;
+    border-radius: 1em;
+    margin-left: 2em;
 }
 
 
@@ -133,6 +132,38 @@ body .bg-even{
 
 
 
+.personal-projects-section .container .filterTabs {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.personal-projects-section .container .filterTabs .btnFilterTab{
+    background-color: #438DAA;
+    color: #FFFFFF;
+    font-size: 2.5em;
+    padding: 0.25em 0.75em;
+    cursor: pointer;
+    border:none;
+    outline: none;
+
+}
+
+.personal-projects-section .container .filterTabs .btnFilterTab.active{
+    background-color: var(--primary-color);
+
+}
+
+.personal-projects-section .container .personalProjectFilteredContainer{
+    overflow: hidden;
+}
+
+.personal-projects-section .container .personalProjectFilteredContainer .filterDiv{
+    display:none;
+}
+
+.personal-projects-section .container .personalProjectFilteredContainer .show{
+    display:block;
+}
 
 ul{
     list-style-type: none;
