@@ -56,6 +56,13 @@ body .bg-even{
     font-size: 1.2em;
     margin-bottom: 0.5em;
     padding: 0.6em 3em;
+    opacity:1;
+    -webkit-transition: .4s ease-in-out;
+    transition:.4s ease-in-out;
+ }
+
+ .hero-section .container .call-to-action:hover{
+    opacity: 0.5;
  }
  
 
@@ -158,6 +165,11 @@ body .bg-even{
     background-color: var(--primary-color);
 
 }
+
+.personal-projects-section .container .filterTabs .btnFilterTab:hover{
+    opacity:.5;
+}
+
 
 .personal-projects-section .container .personalProjectFilteredContainer{
     overflow: hidden;
