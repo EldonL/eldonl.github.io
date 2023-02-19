@@ -8,12 +8,14 @@ body{
    margin:0; 
    background: var(--secondary-color);
    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 
 body .bg-even{
     background: var(--additional-color);
 }
+
 
 .container .header{
     font-size: 4em;
@@ -117,8 +119,6 @@ body .bg-even{
 
 .skills-section .container .all-info  .skills-info .subheader .text{
     color: var(--primary-color);
-
-
 }
 
 .skills-section .container .all-info  .skills-info .list .list-info{
@@ -132,9 +132,16 @@ body .bg-even{
 
 
 
-.personal-projects-section .container .filterTabs {
+.personal-projects-section .container .container-filter-tabs{
+    display:flex;
+    justify-content:center;
+    padding-left:1em;
+}
+
+.personal-projects-section .container .container-filter-tabs .filterTabs {
     display:flex;
     flex-wrap:wrap;
+ 
 }
 
 .personal-projects-section .container .filterTabs .btnFilterTab{
@@ -145,7 +152,6 @@ body .bg-even{
     cursor: pointer;
     border:none;
     outline: none;
-
 }
 
 .personal-projects-section .container .filterTabs .btnFilterTab.active{
@@ -155,10 +161,40 @@ body .bg-even{
 
 .personal-projects-section .container .personalProjectFilteredContainer{
     overflow: hidden;
+    padding-left: 1em;
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .filterDiv{
     display:none;
+    text-align: center;
+}
+
+
+
+.personal-projects-section .container .personalProjectFilteredContainer .image{
+    width:30em;
+    height:30em;
+    object-fit: cover;
+    opacity:1;
+    -webkit-transition: .4s ease-in-out;
+    transition:.4s ease-in-out;
+
+}
+
+.personal-projects-section .container .personalProjectFilteredContainer .image:hover{
+    opacity:.5;
+}
+
+.personal-projects-section .container .personalProjectFilteredContainer .bottom{
+    line-height: 0.5em;
+}
+
+.personal-projects-section .container .personalProjectFilteredContainer .bottom .title{
+    font-size: 1.75em;
+}
+
+.personal-projects-section .container .personalProjectFilteredContainer .bottom .date{
+    font-size: 1.5em;
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .show{
