@@ -4,6 +4,8 @@
     --additional-color: #FFFFFF;
     --professional-exp-work-width-small: 20em;
     --professional-exp-work-width-medium: 30em;
+    --professional-exp-work-width-large: 50em;
+
 }
 
 body{
@@ -228,21 +230,26 @@ body .bg-even{
 }
 
 .professional-experiences-section .container .all-jobs .jobs{
-    background-color: var(--primary-color);
     text-align: center;
     width:var(--professional-exp-work-width-small);
     padding-bottom: 1.5em;
+    display: grid;
+    grid-template-columns: auto;
 }
 
 .professional-experiences-section .container .all-jobs .jobs .work-image{
     width:var(--professional-exp-work-width-small);
     height:30em;
     object-fit: cover;
+
+
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content{
     text-align: center;
     color: #FFFFFF;
+    background-color: var(--primary-color);
+    padding: 1em 0em;
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content .companyName{
@@ -317,27 +324,34 @@ ul{
     }
 
     
-    .professional-experiences-section .container .all-jobs .jobs{
-        display: grid;
-        grid-template-columns: repeat(2,25em);
-        margin-bottom:8em;
+     .professional-experiences-section .container .all-jobs .jobs{
+
+        grid-template-columns: repeat(2, var(--professional-exp-work-width-large)
+        );    
+        justify-content: center;         
     }
-    
-    .professional-experiences-section .container .all-jobs .jobs img{
-        width: 20em;
+
+    .professional-experiences-section .container .all-jobs .jobs .work-image{
+        width: var(--professional-exp-work-width-large)
+  
     }
-    
+
+
+   
     .professional-experiences-section .container .all-jobs .jobs.right{
         grid-template-areas: "left right";
     
     }
     
-    .professional-experiences-section .container .all-jobs .jobs.right .content{
-        width: 20em;
-    }
-    
-    .professional-experiences-section .container .all-jobs .jobs.right img{
+    .professional-experiences-section .container .all-jobs .jobs.right .work-image{
         grid-area: right;
+  
     }
-    
+
+  
+    .professional-experiences-section .container .all-jobs .jobs .content .btn{
+        margin-top: 7em;
+        padding: 0.1em 3em;
+
+    }
 }
