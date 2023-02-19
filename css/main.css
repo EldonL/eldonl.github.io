@@ -173,7 +173,9 @@ body .bg-even{
 
 .personal-projects-section .container .personalProjectFilteredContainer{
     overflow: hidden;
-    padding-left: 1em;
+    padding-left: 1em;        
+    display: grid;
+    grid-template-columns: auto;
 
 }
 
@@ -222,7 +224,7 @@ ul{
 
 
 
-@media screen and (min-width: 786px){
+@media screen and (min-width: 1024px){
     .professional-experiences-section .container .content{
         text-align: right;
         width: 20em;
@@ -256,15 +258,21 @@ ul{
 
         display: grid;
         grid-template-columns: 50% 50%;
+
     }
     
 }
 
 @media screen and (min-width: 1440px){  
+    .navbar .container nav{
+        display: flex;
+    }
+    
     .personal-projects-section .container .personalProjectFilteredContainer{
 
         display: grid;
         grid-template-columns: 33% 33% 33%;
+        
     }
     
 }
