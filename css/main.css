@@ -90,6 +90,7 @@ button{
 .navbar .container nav .navigation li a{
     text-decoration: none;
     font-size: 1.5em;
+    color: #000000;
 }
 
 .navbar .container nav .navigation li a:hover{
@@ -477,6 +478,17 @@ ul{
   
     }
 
+    .professional-experiences-section .container .all-jobs .jobs .content .companyName{
+        font-size: 2.25em
+    }
+    
+    .professional-experiences-section .container .all-jobs .jobs .content .jobPosition{
+        font-size: 2em
+    }
+    
+    .professional-experiences-section .container .all-jobs .jobs .content .timeLine{
+        font-size: 1.75em
+    }
   
     .professional-experiences-section .container .all-jobs .jobs .content .btn{
         margin-top: 7em;
