@@ -28,10 +28,10 @@ body .bg-even{
 }
 
 .navbar {
-    padding: 1em 1em 0em 1em;
+    padding: 0em 1em 0em 1em;
 }
 
-.navbar .container{
+.navbar .container .mobile-menu-container{
     display:flex;
     place-content: space-between;
 }
@@ -54,6 +54,14 @@ body .bg-even{
 
 }
 
+.navbar .container .nav-mobile{
+    margin:0em;
+}
+
+.navbar .container .mobile-menu-container .bi-list{
+    font-size: 6em;
+}
+
 .navbar .container nav .exit-circle{   
     font-size: 6em;
     text-align: right;
@@ -61,8 +69,9 @@ body .bg-even{
     cursor: pointer;
 }
 
+
 .navbar .container nav .navigation{
-    line-height: 6em;
+
     text-align: right;
 }
 
@@ -278,8 +287,6 @@ body .bg-even{
     width:var(--professional-exp-work-width-small);
     height:30em;
     object-fit: cover;
-
-
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content{
@@ -367,10 +374,42 @@ ul{
 }
 
 @media screen and (min-width: 1440px){  
-    .navbar .container nav{
-        display: none;
+
+    .navbar .container{
+        display:flex;
+        align-items:center;
+        
     }
+
+    .navbar .container .bi-list{
+        display:none;   
+    }
+
     
+    .navbar .container nav{
+        display:block;
+    }
+
+        
+    .navbar .container nav.menu-btn{
+        display: block;
+    }
+
+    .navbar .container nav .exit-circle{
+        display:none;
+    }
+ 
+
+    .navbar .container nav .navigation{    
+        display:flex;  
+        flex-wrap: wrap;
+        column-gap:10em;
+        text-align:left;
+        padding-left: 30em;     
+
+    }
+
+
     .personal-projects-section .container .personalProjectFilteredContainer{
 
         display: grid;
