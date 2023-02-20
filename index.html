@@ -13,10 +13,12 @@
     <div class="navbar bg-odd">
         <div class="container">
             <a class="logo" onclick="OnLogoClick()">/*ELDON_LIN*/</a>
-            <i id="mobile-menu" class="bi bi-list" ></i>
+            <i id="mobile-menu" class="bi bi-list" onclick="OnMobileMenuClick()"></i>
 
-            <nav>
-                <i id="mobile-exit" class="bi bi-x-lg"></i>
+            <nav id="nav-mobile">
+                <div class="exit-circle">
+                    <i id="mobile-exit" class="bi bi-x-circle-fill" onclick="OnMobileExitClick()"></i>
+                </div>
                 <ul class="navigation">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Skills</a></li>

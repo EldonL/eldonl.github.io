@@ -63,3 +63,17 @@ function OnLogoClick(){
 function OnLinkClick(url){
     window.open(url);
 }
+
+const mobileButton = document.getElementById('mobile-menu');
+const nav = document.getElementById('nav-mobile');
+const mobileBtnExit = document.getElementById('mobile-exit');
+
+function OnMobileMenuClick(){
+    nav.classList.add('menu-btn');
+}
+
+function OnMobileExitClick(){
+    nav.classList.remove('menu-btn');
+}
+
+

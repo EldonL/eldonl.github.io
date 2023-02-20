@@ -36,8 +36,44 @@ body .bg-even{
     place-content: space-between;
 }
 
+.navbar .container nav.menu-btn{
+    display: block;
+    position:fixed;
+    z-index: 999;
+    width: 66%;
+    right:0;
+    top: 0;
+    background: var(--additional-color);
+    height: 100vh;
+    padding-right: 4em;
+    padding-top: 2em;
+}
+
 .navbar .container nav{
-    display: none;
+    display:none;
+
+}
+
+.navbar .container nav .exit-circle{   
+    font-size: 6em;
+    text-align: right;
+
+    cursor: pointer;
+}
+
+.navbar .container nav .navigation{
+    line-height: 6em;
+    text-align: right;
+}
+
+
+.navbar .container nav .navigation li a{
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar .container nav .navigation li a:hover{
+    font-weight: bold;
 }
 
 .logo{
@@ -332,7 +368,7 @@ ul{
 
 @media screen and (min-width: 1440px){  
     .navbar .container nav{
-        display: flex;
+        display: none;
     }
     
     .personal-projects-section .container .personalProjectFilteredContainer{
