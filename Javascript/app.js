@@ -4,6 +4,9 @@ backgroundColor();
 filterSelection('all')
 
 
+let lastModifiedText = document.lastModified;
+document.getElementById("last-modified").innerHTML = lastModifiedText;
+
 function backgroundColor(){
     for(i=0; i<bgControlled.length; i++){
         if(i%2==0){
@@ -91,6 +94,7 @@ function OnMobileMenuClick(){
 function OnMobileExitClick(){
     nav.classList.remove('responsive-side-menu');
 }
+
 
 jQuery(document).ready(function($) {
     var alterClass = function() {

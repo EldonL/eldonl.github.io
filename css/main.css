@@ -34,10 +34,15 @@ button{
     text-align: center;
 }
 
+.maintenance .container{
+    font-size: 5em;
+    text-align: center;
+
+}
+
 .navbar {
     padding: 1em 1em 0em 1em;
 }
-
 
 
 .navbar .container .mobile-menu-container{
@@ -369,6 +374,11 @@ button{
     display:flex;
     justify-content: center;
     gap:1em;
+}
+
+.footer-section .container .lastModified{
+    display:flex;
+    justify-content: center;
 }
 
 
