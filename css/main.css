@@ -350,7 +350,7 @@ button{
     line-height: 4em;
 } 
 
-.footer-section .container .right-col{
+.footer-section .container .contact-links{
     font-size: 3em;
     display:flex;
     justify-content: center;
@@ -365,13 +365,14 @@ ul{
 
 
 @media screen and (min-width: 1024px){
+
     .skills-section .container .all-info{
 
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;   
-        column-gap: 10%;
+        column-gap: 3%;
     }
     
     .personal-projects-section .container .personalProjectFilteredContainer{
@@ -430,9 +431,9 @@ ul{
     .navbar .container nav .navigation{    
         display:flex;  
         flex-wrap: wrap;
-        column-gap:10em;
+        column-gap:5em;
         text-align:left;
-        padding-left: 30em;     
+        padding-left: 15em;     
 
     }
 
@@ -482,4 +483,15 @@ ul{
         padding: 0.1em 3em;
 
     }
+
+    .footer-section{
+        padding-left: 1em;
+    }
+
+    .footer-section .container{
+        display:flex;
+        column-gap: 30%;
+    } 
+
+ 
 }
