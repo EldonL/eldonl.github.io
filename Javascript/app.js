@@ -1,4 +1,23 @@
+const nav = document.getElementById('nav-mobile');
+const bgControlled = document.getElementsByClassName('bg-js-controlled');
+backgroundColor();
 filterSelection('all')
+
+
+function backgroundColor(){
+    for(i=0; i<bgControlled.length; i++){
+        if(i%2==0){
+            bgControlled[i].classList.add('bg-odd');
+
+        }
+        else{
+            bgControlled[i].classList.add('bg-even');
+
+        }
+
+    }
+}
+
 function filterSelection(filterType){
  
     var elementsName, i;
@@ -64,9 +83,9 @@ function OnLinkClick(url){
     window.open(url);
 }
 
-const mobileButton = document.getElementById('mobile-menu');
-const nav = document.getElementById('nav-mobile');
-const mobileBtnExit = document.getElementById('mobile-exit');
+
+
+
 
 function OnMobileMenuClick(){
     nav.classList.add('responsive-side-menu');
@@ -75,5 +94,7 @@ function OnMobileMenuClick(){
 function OnMobileExitClick(){
     nav.classList.remove('responsive-side-menu');
 }
+
+
 
 
