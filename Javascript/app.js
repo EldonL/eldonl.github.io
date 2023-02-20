@@ -84,9 +84,6 @@ function OnLinkClick(url){
 }
 
 
-
-
-
 function OnMobileMenuClick(){
     nav.classList.add('responsive-side-menu');
 }
@@ -95,6 +92,18 @@ function OnMobileExitClick(){
     nav.classList.remove('responsive-side-menu');
 }
 
-
+jQuery(document).ready(function($) {
+    var alterClass = function() {
+      var ww = document.body.clientWidth;
+      if (ww > 1440) {
+        OnMobileExitClick();
+      } 
+    };
+    $(window).resize(function(){
+      alterClass();
+    });
+    //Fire it when the page first loads:
+    alterClass();
+  });
 
 
