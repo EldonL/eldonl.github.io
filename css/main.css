@@ -45,7 +45,7 @@ button{
     place-content: space-between;
 }
 
-.navbar .container nav.menu-btn{
+.navbar .container nav.responsive-side-menu{
     display: block;
     position:fixed;
     z-index: 999;
@@ -420,7 +420,7 @@ ul{
     }
 
         
-    .navbar .container nav.menu-btn{
+    .navbar .container nav.responsive-side-menu{
         display: block;
     }
 

@@ -69,11 +69,11 @@ const nav = document.getElementById('nav-mobile');
 const mobileBtnExit = document.getElementById('mobile-exit');
 
 function OnMobileMenuClick(){
-    nav.classList.add('menu-btn');
+    nav.classList.add('responsive-side-menu');
 }
 
 function OnMobileExitClick(){
-    nav.classList.remove('menu-btn');
+    nav.classList.remove('responsive-side-menu');
 }
 
 
