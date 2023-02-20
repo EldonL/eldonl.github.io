@@ -38,6 +38,8 @@ button{
     padding: 0em 1em 0em 1em;
 }
 
+
+
 .navbar .container .mobile-menu-container{
     display:flex;
     place-content: space-between;
@@ -80,6 +82,8 @@ button{
 .navbar .container nav .navigation{
 
     text-align: right;
+    display:grid;
+    row-gap: 5em;
 }
 
 
