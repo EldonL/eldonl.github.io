@@ -149,17 +149,29 @@ button{
     margin-top: 0em;
 }
 
-.about-me-section .container .image img{
+.about-me-section .container .about-elements{
+    display:grid;
+    grid-template-columns: 15em 15em;
+    justify-content: center;
+    padding-right:15em;
+}
+
+.about-me-section .container .about-elements .image img{
     border-radius: 35%;
     padding-left: 1em;
 }
 
-.about-me-section .container .content{
+.about-me-section .container .about-elements .content{
     background-color: var(--primary-color);
-    width: 6em;
+    width: 10em;
     padding: 1em;
     border-radius: 1em;
     margin-left: 2em;
+    color:#FFFFFF;
+    align-self: center;
+    font-size: 1.5em;
+    position:relative;
+    bottom:3em;
 }
 
 
@@ -265,7 +277,7 @@ button{
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .bottom{
-    line-height: 0.5em;
+
     padding-bottom: 1em;
 }
 
@@ -359,6 +371,7 @@ button{
     gap:1em;
 }
 
+
 ul{
     list-style-type: none;
 }
@@ -367,6 +380,8 @@ ul{
 
 
 @media screen and (min-width: 1024px){
+    
+
     
     .skills-section .container .all-info{
 
