@@ -20,6 +20,13 @@ body .bg-even{
     background: var(--additional-color);
 }
 
+.bi{
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
 
 .container .header{
     font-size: 4em;
@@ -66,7 +73,7 @@ body .bg-even{
     font-size: 6em;
     text-align: right;
 
-    cursor: pointer;
+
 }
 
 
@@ -90,6 +97,7 @@ body .bg-even{
     font-family: 'Courier New', Courier, monospace;
     color: var(--primary-color);
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 
