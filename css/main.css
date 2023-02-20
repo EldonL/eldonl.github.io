@@ -128,7 +128,7 @@ button{
  }
  
 
-.hero-section .container img{
+.hero-section .container .right-col .hero-img{
     border-radius:35%;
     width: 20em;
  }
@@ -366,7 +366,7 @@ ul{
 
 
 @media screen and (min-width: 1024px){
-
+    
     .skills-section .container .all-info{
 
         display: flex;
@@ -441,10 +441,29 @@ ul{
     .hero-section .container{
         display:flex;
         justify-content: center;
+        align-items: flex-start;   
         column-gap: 10em;
     }
 
+    .hero-section{
+        padding-top: 6em;
+    }
 
+    .hero-section .container .left-col .hero-theHeaders .hero-header{
+        font-size: 7em;
+    }
+
+    .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
+        font-size: 2.5em;
+    }
+
+    .hero-section .container .left-col .call-to-action{
+        font-size:2em;
+    }
+
+    .hero-section .container .right-col .hero-img{
+        font-size:1.5em;
+    }
 
     .personal-projects-section .container .personalProjectFilteredContainer{
 
