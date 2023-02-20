@@ -55,3 +55,7 @@ for(var i = 0; i < btns.length; i++) {
         
     });
 }
+
+function OnLogoClick(){
+    window.location="index.html";
+}
