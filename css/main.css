@@ -102,7 +102,7 @@ button{
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     color: var(--primary-color);
-    font-size: 1.5em;
+    font-size: 2em;
     cursor: pointer;
 }
 
@@ -433,9 +433,9 @@ ul{
     .navbar .container nav .navigation{    
         display:flex;  
         flex-wrap: wrap;
-        column-gap:5em;
+        column-gap:3em;
         text-align:left;
-        padding-left: 15em;     
+   
 
     }
 
@@ -448,6 +448,10 @@ ul{
 
     .hero-section{
         padding-top: 6em;
+    }
+
+    .hero-section .container .left-col{
+        text-align: left;
     }
 
     .hero-section .container .left-col .hero-theHeaders .hero-header{
