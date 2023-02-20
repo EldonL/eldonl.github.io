@@ -35,7 +35,7 @@ button{
 }
 
 .navbar {
-    padding: 0em 1em 0em 1em;
+    padding: 1em 1em 0em 1em;
 }
 
 
@@ -386,6 +386,11 @@ ul{
 }
 
 @media screen and (min-width: 1440px){  
+
+    .navbar {
+        padding: 1em 1em 0em 5em;
+    }
+    
 
     .navbar .container{
         display:flex;
