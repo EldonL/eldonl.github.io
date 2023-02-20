@@ -426,6 +426,11 @@ ul{
 
     }
 
+    .hero-section .container{
+        display:flex;
+        justify-content: center;
+        column-gap: 10em;
+    }
 
     .personal-projects-section .container .personalProjectFilteredContainer{
 
