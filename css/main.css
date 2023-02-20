@@ -365,12 +365,22 @@ ul{
 
 
 @media screen and (min-width: 1024px){
+    .skills-section .container .all-info{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;   
+        column-gap: 10%;
+    }
+    
     .personal-projects-section .container .personalProjectFilteredContainer{
 
         display: grid;
         grid-template-columns: 50% 50%;
 
     }
+    
 
     .professional-experiences-section .container .all-jobs .jobs{
 
@@ -431,6 +441,8 @@ ul{
         justify-content: center;
         column-gap: 10em;
     }
+
+
 
     .personal-projects-section .container .personalProjectFilteredContainer{
 
