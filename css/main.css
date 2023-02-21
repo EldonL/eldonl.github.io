@@ -58,7 +58,7 @@ button{
     right:0;
     top: 0;
     background: var(--additional-color);
-    height: 300vh;
+    height: 150vh;
     padding-right: 4em;
     padding-top: 2em;
 }
