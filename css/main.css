@@ -268,8 +268,8 @@ button{
 
 
 .personal-projects-section .container .personalProjectFilteredContainer .image{
-    width:30em;
-    height:30em;
+    width:20em;
+    height:20em;
     object-fit: cover;
     opacity:1;
     -webkit-transition: .4s ease-in-out;
@@ -409,6 +409,12 @@ ul{
 
     }
     
+    .personal-projects-section .container .personalProjectFilteredContainer .image{
+        width:30em;
+        height:30em;
+
+    }
+
 
     .professional-experiences-section .container .all-jobs .jobs{
 
@@ -502,7 +508,7 @@ ul{
         
     }
 
-    
+       
      .professional-experiences-section .container .all-jobs .jobs{
 
         grid-template-columns: repeat(2, var(--professional-exp-work-width-large)
@@ -514,8 +520,7 @@ ul{
         width: var(--professional-exp-work-width-large)
   
     }
-
-
+    
    
     .professional-experiences-section .container .all-jobs .jobs.right{
         grid-template-areas: "left right";
