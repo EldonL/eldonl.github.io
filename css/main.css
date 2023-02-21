@@ -58,7 +58,7 @@ button{
     right:0;
     top: 0;
     background: var(--additional-color);
-    height: 100vh;
+    height: 300vh;
     padding-right: 4em;
     padding-top: 2em;
 }
@@ -77,7 +77,7 @@ button{
 }
 
 .navbar .container nav .exit-circle{   
-    font-size: 6em;
+    font-size: 4em;
     text-align: right;
 
 
@@ -88,7 +88,7 @@ button{
 
     text-align: right;
     display:grid;
-    row-gap: 5em;
+    row-gap: 3em;
 }
 
 
