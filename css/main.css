@@ -85,12 +85,12 @@ button{
 }
 
 
-/* .navbar .container nav .navigation{
+.navbar .container nav .navigation{
 
     text-align: right;
     display:grid;
     row-gap: 3em;
-} */
+}
 
 
 .navbar .container nav .navigation li a{
@@ -467,7 +467,7 @@ ul{
         display:flex;  
         flex-wrap: wrap;
         column-gap:3em;
-
+        text-align:left;
    
 
     }
