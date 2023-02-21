@@ -47,7 +47,8 @@ button{
 
 .navbar .container .mobile-menu-container{
     display:flex;
-    place-content: space-between;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .container nav.responsive-side-menu{
@@ -214,7 +215,7 @@ button{
     list-style-position: inside;
     display: inline-block;
     text-align: left;  
-    font-size:2.5em;
+    font-size:2em;
     line-height: 1.5em;
 }
 
@@ -431,15 +432,16 @@ ul{
 
 @media screen and (min-width: 1440px){  
 
-    .navbar {
+    /* .navbar {
         padding: 1em 1em 0em 5em;
-    }
+    } */
     
 
     .navbar .container{
         display:flex;
-        align-items:center;
-        column-gap: 25em;
+        justify-content: space-between;
+        align-items: center;
+        
     }
 
     .navbar .container .bi-list{
@@ -556,7 +558,8 @@ ul{
 
     .footer-section .container{
         display:flex;
-        column-gap: 30%;
+        justify-content: space-between;
+        align-items: center;
     } 
 
  
