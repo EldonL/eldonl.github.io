@@ -150,7 +150,7 @@ button{
 }
 
 .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
-    font-size: 1.75em;
+    font-size: 1.5em;
     margin-top: 0em;
 }
 
@@ -287,11 +287,11 @@ button{
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .bottom .title{
-    font-size: 1.75em;
+    font-size: 1.5em;
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .bottom .date{
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .show{
