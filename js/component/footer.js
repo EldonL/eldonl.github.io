@@ -66,14 +66,7 @@ class Footer extends HTMLElement {
       let lastModifiedText = document.lastModified;
       this.shadowRoot.getElementById("last-modified").innerHTML = lastModifiedText;
     }
-  
-    // connectedCallback() {
 
-    //   const 
-      
-    // }
-
-   
   }
   
 customElements.define('footer-component', Footer);

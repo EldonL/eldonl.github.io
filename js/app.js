@@ -1,4 +1,4 @@
-const nav = document.getElementById('nav-mobile');
+
 const bgControlled = document.getElementsByClassName('bg-js-controlled');
 backgroundColor();
 filterSelection('all')
@@ -96,6 +96,9 @@ function OnLinkClick(url){
 }
 
 
+
+
+
 function OnMobileMenuClick(){
     nav.classList.add('responsive-side-menu');
 }
@@ -103,7 +106,6 @@ function OnMobileMenuClick(){
 function OnMobileExitClick(){
     nav.classList.remove('responsive-side-menu');
 }
-
 
 jQuery(document).ready(function($) {
     var alterClass = function() {

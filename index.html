@@ -8,6 +8,7 @@
     <title>Eldon Lin Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
     <script src="js/component/logo.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -25,28 +26,8 @@
     </section>
 
 
-    <div class="navbar bg-odd">
-        <div class="container">
-            <div class="mobile-menu-container">
-                <a class="logo" onclick="OnLogoClick()">/*ELDON_LIN*/</a>
-                <i id="mobile-menu" class="bi bi-list" onclick="OnMobileMenuClick()"></i>
-            </div>
-           
+    <header-component></header-component>
 
-            <nav id="nav-mobile">
-                <div class="exit-circle">
-                    <i id="mobile-exit" class="bi bi-x-circle-fill" onclick="OnMobileExitClick()"></i>
-                </div>
-                <ul class="navigation">
-                    <li><a href="#about" onclick="OnMobileExitClick()">About</a></li>
-                    <li><a href="#skill" onclick="OnMobileExitClick()">Skills</a></li>                    
-                    <li><a href="#professionalexperience" onclick="OnMobileExitClick()">Professional Experience</a></li>
-                    <li><a href="#personalproject" onclick="OnMobileExitClick()">Personal Projects</a></li>
-                    <li><a href="#contact" onclick="OnMobileExitClick()">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>   
     
     <section class="hero-section bg-js-controlled">
         <div class="container">
@@ -254,9 +235,10 @@
         </div>
     </section>
 
+    <section class="bg-js-controlled">
+        <footer-component></footer-component>
+    </section>
 
-    <footer-component></footer-component>
-   
 
 </body>
 

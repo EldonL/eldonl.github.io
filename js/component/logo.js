@@ -11,6 +11,7 @@ logoTemplate.innerHTML = `
 }
   </style>
   <a class="logo" onclick="OnLogoClick()">/*ELDON_LIN*/</a>
+  
 `;
 
 
@@ -18,10 +19,12 @@ logoTemplate.innerHTML = `
 class Logo extends HTMLElement {
     constructor() {
       super();
+
       const shadowRoot = this.attachShadow({ mode: 'open' });
   
       shadowRoot.appendChild(logoTemplate.content);
       
+
     }
   
 
