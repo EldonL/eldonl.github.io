@@ -21,8 +21,10 @@ class Logo extends HTMLElement {
       super();
 
       const shadowRoot = this.attachShadow({ mode: 'open' });
-  
-      shadowRoot.appendChild(logoTemplate.content);
+      var node = logoTemplate
+      var clone = node.cloneNode(true);
+
+      shadowRoot.appendChild(clone.content);
       
 
     }
@@ -30,6 +32,7 @@ class Logo extends HTMLElement {
 
   }
   
-customElements.define('logo-component', Logo);
 
 
+
+  customElements.define('logo-component', Logo);
