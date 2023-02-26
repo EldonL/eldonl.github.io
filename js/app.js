@@ -4,8 +4,7 @@ backgroundColor();
 filterSelection('all')
 
 
-let lastModifiedText = document.lastModified;
-document.getElementById("last-modified").innerHTML = lastModifiedText;
+
 
 function backgroundColor(){
     for(i=0; i<bgControlled.length; i++){

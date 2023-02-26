@@ -104,13 +104,7 @@ button{
     color:var(--primary-color);
 }
 
-.logo{
-    text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
-    color: var(--primary-color);
-    font-size: 2em;
-    cursor: pointer;
-}
+
 
 
 .hero-section{
@@ -359,28 +353,7 @@ button{
     color: #FFFFFF;
 }
 
-.footer-section{
-    padding-bottom: 2em;
-    padding-top: 2em;
 
-}
-
-.footer-section .container{
-    text-align: center;
-    line-height: 4em;
-} 
-
-.footer-section .container .contact-links{
-    font-size: 3em;
-    display:flex;
-    justify-content: center;
-    gap:1em;
-}
-
-.footer-section .container .lastModified{
-    display:flex;
-    justify-content: center;
-}
 
 
 ul{
@@ -552,15 +525,6 @@ ul{
 
     }
 
-    .footer-section{
-        padding-left: 1em;
-    }
-
-    .footer-section .container{
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-    } 
 
  
 }
