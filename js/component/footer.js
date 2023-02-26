@@ -3,6 +3,10 @@ const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <style>
+  .bi{
+    cursor: pointer;
+}
+
   .footer-section{
     padding-bottom: 2em;
     padding-top: 2em;

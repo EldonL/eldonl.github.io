@@ -4,6 +4,10 @@ headerTemplate.innerHTML = `
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <style>
+.bi{
+    cursor: pointer;
+}
+
 .navbar {
     padding: 1em 1em 0em 1em;
 }
