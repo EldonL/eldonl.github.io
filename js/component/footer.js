@@ -1,6 +1,7 @@
 const footerTemplate = document.createElement('template');
 
 footerTemplate.innerHTML = `
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <style>
   .footer-section{
     padding-bottom: 2em;
@@ -43,7 +44,7 @@ footerTemplate.innerHTML = `
             <div class="contact-links">
                 <a onclick="OnLinkClick('https://www.linkedin.com/in/eldon-lin-38a181b0')"><i class="bi bi-linkedin"></i></a>
                 <a onclick="OnLinkClick('https://www.youtube.com/channel/UC-igukaTIJFHYS8TNkcJ4lA')"><i class="bi bi-youtube"></i></a>
-                <i class="bi bi-envelope"></i>
+
             </div>
             <div class="lastModified">              
                     <p>last modified:</p>
@@ -68,39 +69,11 @@ class Footer extends HTMLElement {
   
     // connectedCallback() {
 
-    //   // var oldLink= this.shadowRoot.getElementById('oldLink');
-    //   // console.log(oldLink);
-    //   // var newLink= this.getAttribute('href');
-    //   // console.log(newLink);
-    //  // oldLink.href = newLink;
-    //   // console.log(this.getAttributeNode);
-
-    //   var class2= this.getElementsByClassName("aclass2");
-    //   var class3= this.getElementsByClassName("aclass3");
-    //   var oldLink2= this.shadowRoot.getElementById('oldLink2');
-    //   var oldLink3= this.shadowRoot.getElementById('oldLink3');
-    //   // console.log("class2:" + class2);
-    //   // console.log("class3: " + class3);
-    //   // console.log("oldLink2: " + oldLink2);
-    //   // console.log("oldLink3: " + oldLink3);
-    //   console.log("class2.href:" + class2[0].href);
-    //   console.log("class3.href:" + class3[0].href);
-    //   oldLink2.href=class2[0].href;
-    //   oldLink3.href=class3[0].href;
-    //   console.log(oldLink2.href);
-    //   console.log(oldLink3.href);
+    //   const 
       
     // }
 
-    // static get observedAttributes() { 
-    //   return ['href']; 
-    // }
-
-    // attributeChangedCallback(name, oldValue, newValue) {
-    //   console.log("name:" + name + " oldValue: " +oldValue + " newValue: " + newValue);
-    //   var oldLink= this.shadowRoot.getElementById('oldLink');
-    //   oldLink.href = newValue;
-    // }
+   
   }
   
 customElements.define('footer-component', Footer);
