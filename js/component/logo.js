@@ -21,7 +21,7 @@ class Logo extends HTMLElement {
       super();
 
       const shadowRoot = this.attachShadow({ mode: 'open' });
-      var node = logoTemplate
+      var node = logoTemplate;
       var clone = node.cloneNode(true);
 
       shadowRoot.appendChild(clone.content);
