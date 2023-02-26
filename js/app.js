@@ -97,31 +97,5 @@ function OnLinkClick(url){
 
 
 
-const nav = document.getElementById('nav-mobile');
-
-function OnMobileMenuClick(){
-    console.log("OnMobileMenuClick()");
-    nav.classList.add('responsive-side-menu');
-}
-
-function OnMobileExitClick(){
-    console.log("OnMobileExitClick()");
-    nav.classList.remove('responsive-side-menu');
-}
-
-jQuery(document).ready(function($) {
-    console.log("jquery");
-    var alterClass = function() {
-      var ww = document.body.clientWidth;
-      if (ww > 1440) {
-        OnMobileExitClick();
-      } 
-    };
-    $(window).resize(function(){
-      alterClass();
-    });
-    //Fire it when the page first loads:
-    alterClass();
-  });
 
 

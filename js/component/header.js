@@ -68,6 +68,10 @@ headerTemplate.innerHTML = `
     color:var(--primary-color);
     
 }
+
+ul{
+    list-style-type: none;
+}
 @media screen and (min-width: 1440px){  
     .navbar .container{
         display:flex;
@@ -104,9 +108,7 @@ headerTemplate.innerHTML = `
 
     }
 
-    ul{
-        list-style-type: none;
-    }
+
 
 }
 
@@ -124,11 +126,11 @@ headerTemplate.innerHTML = `
             <i id="mobile-exit" class="bi bi-x-circle-fill" onclick="OnMobileExitClick()"></i>
         </div>
         <ul class="navigation">
-            <li><a href="#about" onclick="OnMobileExitClick()">About</a></li>
-            <li><a href="#skill" onclick="OnMobileExitClick()">Skills</a></li>                    
-            <li><a href="#professionalexperience" onclick="OnMobileExitClick()">Professional Experience</a></li>
-            <li><a href="#personalproject" onclick="OnMobileExitClick()">Personal Projects</a></li>
-            <li><a href="#contact" onclick="OnMobileExitClick()">Contact</a></li>
+            <li><a href="index.html#about" onclick="OnMobileExitClick()">About</a></li>
+            <li><a href="index.html#skill" onclick="OnMobileExitClick()">Skills</a></li>                    
+            <li><a href="index.html#professionalexperience" onclick="OnMobileExitClick()">Professional Experience</a></li>
+            <li><a href="index.html#personalproject" onclick="OnMobileExitClick()">Personal Projects</a></li>
+            <li><a href="index.html#contact" onclick="OnMobileExitClick()">Contact</a></li>
         </ul>
     </nav>
 </div>
@@ -143,11 +145,38 @@ class Header extends HTMLElement {
       const shadowRoot = this.attachShadow({ mode: 'open' });
   
       shadowRoot.appendChild(headerTemplate.content);
-
+      const navMobile = shadowRoot.getElementById('nav-mobile');
+      nav = navMobile;
     }
 
   }
   
 customElements.define('header-component', Header);
 
+var nav;
 
+
+function OnMobileMenuClick(){
+    console.log("OnMobileMenuClick()");
+    nav.classList.add('responsive-side-menu');
+}
+
+function OnMobileExitClick(){
+    console.log("OnMobileExitClick()");
+    nav.classList.remove('responsive-side-menu');
+}
+
+jQuery(document).ready(function($) {
+    console.log("jquery");
+    var alterClass = function() {
+      var ww = document.body.clientWidth;
+      if (ww > 1440) {
+        OnMobileExitClick();
+      } 
+    };
+    $(window).resize(function(){
+      alterClass();
+    });
+    //Fire it when the page first loads:
+    alterClass();
+  });
