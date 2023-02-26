@@ -143,7 +143,7 @@ class Header extends HTMLElement {
       const shadowRoot = this.attachShadow({ mode: 'open' });
   
       shadowRoot.appendChild(headerTemplate.content);
-      const nav = this.shadowRoot.getElementById('nav-mobile');
+
     }
 
   }
