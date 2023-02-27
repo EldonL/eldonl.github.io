@@ -4,6 +4,16 @@ personalProjectIntroTemplate.innerHTML = `
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <style>
   
+
+
+  .title .arrows{
+    display:flex;
+  }
+
+  .title .header{
+    font-size:2em;
+  }
+
   .subinfo .subtitle{
     color:blue;
   }
@@ -16,10 +26,7 @@ personalProjectIntroTemplate.innerHTML = `
 
   <div class="container">
   <div class="title">
-      <h1 class="header">
-          <slot name="title"></slot>
-      </h1>
-      <div class="arrows">
+    <div class="arrows">
           <div class="left-arrow">
               <p>prev project</p>
               <i class="bi bi-arrow-left"></i>
@@ -29,6 +36,10 @@ personalProjectIntroTemplate.innerHTML = `
               <i class="bi bi-arrow-right"></i>
           </div>
       </div>
+      <div class="header">
+        <h1><slot name="title"></slot></h1>
+      </div>
+     
   </div>
   <div class="coverImage">
       <slot name="webpageImage"></slot>
