@@ -1,22 +1,81 @@
 const personalProjectIntroTemplate = document.createElement('template');
 
 personalProjectIntroTemplate.innerHTML = `
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+  
+  .subinfo .subtitle{
+    color:blue;
+  }
 
-  <h1><slot name="title"></slot></h1>
-  <slot name="videoNoWork"></slot>
-  <slot name="websiteButton"></slot>
-  <slot name="webpageImage"></slot>
-  <slot name="webpageVideo"></slot>
-  <h2>Description</h2>
-  <p><slot name="description"></slot></p>
-  <h4>Platform</h4>
-  <p><slot name="platform"></slot></p>
-  <h4>Language</h4>
-  <p><slot name="languages"></slot></p>
-  <h4>Tools</h4>
-  <p><slot name="tools"></slot></p>
-  <h4>TimeLine</h4>
-  <p><slot name="timeline"></slot></p>
+  .subinfo .content{
+    color:red;
+  }
+
+  </style>
+
+  <div class="container">
+  <div class="title">
+      <h1 class="header">
+          <slot name="title"></slot>
+      </h1>
+      <div class="arrows">
+          <div class="left-arrow">
+              <p>prev project</p>
+              <i class="bi bi-arrow-left"></i>
+          </div>
+          <div class="right-arrow">
+              <p>next project</p>
+              <i class="bi bi-arrow-right"></i>
+          </div>
+      </div>
+  </div>
+  <div class="coverImage">
+      <slot name="webpageImage"></slot>
+  </div>
+  <div class="coverVideo">
+      <slot name="webpageVideo"></slot>
+  </div>
+  <div class="description">
+      <div class="websiteButtons">
+          <slot name="videoNoWork"></slot>
+          <slot name="websiteButton"></slot>
+      </div>
+      <div class="descriptionSection">
+          <h2 class="header">Description</h2>
+          <p class="content">
+              <slot name="description"></slot>
+          </p>
+      </div>
+      <div class="subinfo">
+          <div class="platform">
+              <h4 class="subtitle">Platform</h4>
+              <p class="content">
+                  <slot name="platform"></slot>
+              </p>
+          </div>
+          <div class="language">
+              <h4 class="subtitle">Language</h4>
+              <p class="content">
+                  <slot name="languages"></slot>
+              </p>
+          </div>
+          <div class="tools">
+              <h4 class="subtitle">Tools</h4>
+              <p class="content">
+                  <slot name="tools"></slot>
+              </p>
+          </div>
+          <div class="timeline">
+              <h4 class="subtitle">TimeLine</h4>
+              <p class="content">
+                  <slot name="timeline"></slot>
+              </p>
+          </div>
+      </div>
+     
+
+  </div>
 `;
 
 
