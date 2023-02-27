@@ -10,16 +10,32 @@
     <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
     <script src="js/component/logo.js" defer></script>
-    <script src="js/component/personalproject.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectdescription.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
     <header-component></header-component>
-    <personalproject-component>
-        <span slot ="title">asdf</span>
-        <span slot="heading">Web Terms</span>
-    </personalproject-component>
+    <section class="title bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Tech Stars Hunt</span>
+        </personalprojectintro-component>
+        <button>click here if video does not play</button>
+        <button>website</button>
+
+        <personalprojectdescription-component>
+            <img src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage">
+            <span slot ="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+            <span slot ="platform">Meta Quest 2</span>
+            <span slot ="languages">Codeblocks</span>
+            <span slot ="tools">Horizon World</span>
+            <span slot ="timeline">May 2022-June 2022</span>
+        </personalprojectdescription-component>
+    </section>
+
+
+
     <section class="footer-section bg-js-controlled" id="contact">
         <footer-component></footer-component>
     </section>
