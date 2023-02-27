@@ -4,14 +4,24 @@ personalProjectIntroTemplate.innerHTML = `
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <style>
   
-
-
+ 
+   
   .title .arrows{
     display:flex;
+    justify-content:center;
+    column-gap: 3em;
+  }
+
+  .title .arrows .arrow .text{
+    font-size: 1.25em;
+  }
+
+  .title .arrows .arrow .bi{
+    font-size: 6em;
   }
 
   .title .header{
-    font-size:2em;
+    font-size:1.75em;
   }
 
   .subinfo .subtitle{
@@ -27,12 +37,12 @@ personalProjectIntroTemplate.innerHTML = `
   <div class="container">
   <div class="title">
     <div class="arrows">
-          <div class="left-arrow">
-              <p>prev project</p>
+          <div class="arrow left-arrow">
+              <p class="text">prev project</p>
               <i class="bi bi-arrow-left"></i>
           </div>
-          <div class="right-arrow">
-              <p>next project</p>
+          <div class="arrow right-arrow">
+              <p class="text">next project</p>
               <i class="bi bi-arrow-right"></i>
           </div>
       </div>
