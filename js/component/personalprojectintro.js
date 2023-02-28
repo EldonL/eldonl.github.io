@@ -26,8 +26,9 @@ personalProjectIntroTemplate.innerHTML = `
   }
 
   .title .header{
-    font-size:1.75em;
+    font-size:4em;
     text-align: center;
+    font-weight:bold;
   }
 
   .covers{
@@ -57,32 +58,33 @@ personalProjectIntroTemplate.innerHTML = `
     font-size:1.5em;
   }
 
-  .description .subinfo{
+  .description .subinfos{
     padding-top: 1em;
   }
 
 
-  .description .subinfo .subtitle{
+  .description .subinfos .subtitle{
     font-size:2em;
     font-weight:bold;
     padding-top: 0.5em;
     padding-bottom: 0.1em;
   }
 
-  .description .subinfo .content{
+  .description .subinfos .content{
     font-size:1.5em;
   }
 
   @media screen and (min-width: 1440px){  
     .title .arrows{
       float:right;
-      padding-top: 9em;
+      padding-top: 2em;
+      padding-right:1em;
     }
 
       .title .header{
         text-align:center;
         float:left;
-        font-size: 5em;
+        font-size: 7em;
         padding-left:1em;
     }
 
@@ -90,8 +92,40 @@ personalProjectIntroTemplate.innerHTML = `
       clear:both;
 
     }
-      
 
+    .websiteButtons{
+      display:flex;
+      
+    }
+
+
+    
+    .description .descriptionSection .header{
+      font-size:6em;
+
+    }
+
+    .description .descriptionSection .content{
+      font-size:4em;
+      width:20em;
+    }
+  
+    .description .subinfos .subtitle{
+      font-size:4em;
+      padding-right:0.5em;
+
+    }
+    
+  
+    .description .subinfos .content{
+      font-size:4em;
+    }
+
+    .description .subinfos .subinfo{
+      display:flex;
+      align-items:flex-end;
+    }
+  
   }
 
 
@@ -110,7 +144,7 @@ personalProjectIntroTemplate.innerHTML = `
           </div>
       </div>
       <div class="header">
-        <h1><slot name="title"></slot></h1>
+        <div><slot name="title"></slot></div>
       </div>
      
   </div>
@@ -139,27 +173,27 @@ personalProjectIntroTemplate.innerHTML = `
               <slot name="description"></slot>
           </div>
       </div>
-      <div class="subinfo">
-          <div class="platform">
-              <div class="subtitle">Platform</div>
+      <div class="subinfos">
+          <div class="platform subinfo">
+              <div class="subtitle">Platform:</div>
               <div class="content">
                   <slot name="platform"></slot>
               </div>
           </div>
-          <div class="language">
-              <div class="subtitle">Language</div>
+          <div class="language subinfo">
+              <div class="subtitle">Language:</div>
               <div class="content">
                   <slot name="languages"></slot>
               </div>
           </div>
-          <div class="tools">
-              <div class="subtitle">Tools</div>
+          <div class="tools subinfo">
+              <div class="subtitle">Tools:</div>
               <div class="content">
                   <slot name="tools"></slot>
               </div>
           </div>
-          <div class="timeline">
-              <div class="subtitle">TimeLine</div>
+          <div class="timeline subinfo">
+              <div class="subtitle">TimeLine:</div>
               <div class="content">
                   <slot name="timeline"></slot>
               </div>
