@@ -76,6 +76,8 @@ headerTemplate.innerHTML = `
 ul{
     list-style-type: none;
 }
+
+
 @media screen and (min-width: 1440px){  
     .navbar .container{
         display:flex;

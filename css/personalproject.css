@@ -34,16 +34,34 @@
     opacity:0.5;
   }
 
-  @media screen and (min-width: 1440px){  
+
+
+  @media screen and (min-width: 1024px){
     .intro .coverimage{
-      width:80em;
-      height:50em;
+      width:45em;
+      height:20em;
+
 
     }
   
     .intro .covervideo{
-      width:80em;
-      height:50em;
+      width:45em;
+      height:20em;
+
+    }
+  }
+
+  @media screen and (min-width: 1440px){  
+    .intro .coverimage{
+      width:113em;
+      height:45em;
+
+
+    }
+  
+    .intro .covervideo{
+      width:113em;
+      height:45em;
 
     }
       

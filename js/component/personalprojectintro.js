@@ -26,52 +26,92 @@ personalProjectIntroTemplate.innerHTML = `
   }
 
   .title .header{
-    font-size:4em;
-    text-align: center;
+    font-size:3.25em;
+    padding-left:1rem;
     font-weight:bold;
   }
 
   .covers{
-    text-align: center;
+    padding-left:1em;
   }
 
   .websiteButtons{
-    text-align: center;
+    padding-left:1em;
   }
 
   .websiteButtons .websiteButton{
       padding-top: 1em;
   }
 
-  .description{
+  .descriptionsection .description{
     padding-left: 1em;
     padding-top: 1em;
   }
 
-  .description .descriptionSection .header{
+  .descriptionsection .description .header{
     font-size:3em;
     font-weight:bold;
     padding-bottom: 0.1em;
   }
 
-  .description .descriptionSection .content{
+  .descriptionsection .description .content{
     font-size:1.5em;
   }
 
-  .description .subinfos{
+  .descriptionsection .subinfos{
     padding-top: 1em;
+    padding-left: 1em;
   }
 
 
-  .description .subinfos .subtitle{
+  .descriptionsection .subinfos .subtitle{
     font-size:2em;
     font-weight:bold;
     padding-top: 0.5em;
     padding-bottom: 0.1em;
   }
 
-  .description .subinfos .content{
+  .descriptionsection .subinfos .content{
     font-size:1.5em;
+  }
+
+  @media screen and (min-width: 1024px){
+    .title{
+      text-align:center;
+    }
+
+    .covers{
+      text-align:center;
+    }
+    
+    .descriptionsection{
+      text-align:center;
+    }
+
+    .descriptionsection .description .content{
+      text-align:left;
+    }
+    .descriptionsection .subinfos .subtitle{
+      font-size:2em;
+    }
+    
+  
+    .descriptionsection .subinfos .content{
+      font-size:2em;
+    }
+
+    .descriptionsection .subinfos{
+      display:grid;
+      justify-content:center;
+    }
+    
+    .descriptionsection .subinfos .subinfo{
+      display:flex;
+      align-items:flex-end;
+      justify-content:left;
+      flex-wrap:wrap;
+
+    }
   }
 
   @media screen and (min-width: 1440px){  
@@ -85,7 +125,7 @@ personalProjectIntroTemplate.innerHTML = `
         text-align:center;
         float:left;
         font-size: 7em;
-        padding-left:1em;
+        padding-left:1rem;
     }
 
     .covers{
@@ -95,35 +135,43 @@ personalProjectIntroTemplate.innerHTML = `
 
     .websiteButtons{
       display:flex;
-      
+      column-gap:1em;
     }
 
+    .descriptionsection{
+      display:flex;
+      justify-content:space-between;
+      padding-right:1em;
+    }
 
     
-    .description .descriptionSection .header{
-      font-size:6em;
+    .descriptionsection .description .header{
+      font-size:4em;
 
     }
 
-    .description .descriptionSection .content{
-      font-size:4em;
-      width:20em;
+    .descriptionsection .description .content{
+      font-size:2.5em;
+      width:30em;
     }
   
-    .description .subinfos .subtitle{
-      font-size:4em;
+    .descriptionsection .subinfos .subtitle{
+      font-size:2em;
       padding-right:0.5em;
+      padding-top: 0em;
 
     }
     
   
-    .description .subinfos .content{
-      font-size:4em;
+    .descriptionsection .subinfos .content{
+      font-size:2em;
     }
 
-    .description .subinfos .subinfo{
+    .descriptionsection .subinfos .subinfo{
       display:flex;
       align-items:flex-end;
+      flex-wrap:wrap;
+
     }
   
   }
@@ -133,7 +181,7 @@ personalProjectIntroTemplate.innerHTML = `
 
   <div class="container">
   <div class="title">
-    <div class="arrows">
+      <div class="arrows">
           <div class="arrow left-arrow">
               <div class="text">prev project</div>
               <i class="bi bi-arrow-left"></i>
@@ -144,65 +192,74 @@ personalProjectIntroTemplate.innerHTML = `
           </div>
       </div>
       <div class="header">
-        <div><slot name="title"></slot></div>
+          <div>
+              <slot name="title"></slot>
+          </div>
       </div>
-     
+
   </div>
   <div class="covers">
-    <div class="coverImage">
-        <slot name="webpageImage"></slot>
-    </div>
-    <div class="coverVideo">
-        <slot name="webpageVideo"></slot>
-    </div>
+      <div class="coverImage">
+          <slot name="webpageImage"></slot>
+      </div>
+      <div class="coverVideo">
+          <slot name="webpageVideo"></slot>
+      </div>
   </div>
 
 
-  <div class="websiteButtons">
-          <div class="websiteButton">
-              <slot name="videoNoWork"></slot>
-          </div>
-          <div class="websiteButton">
-              <slot name="websiteButton"></slot>
-          </div>
-    </div>
-    <div class="description">
-      <div class="descriptionSection">
+  <div class="descriptionsection">
+      <div class="description">
           <div class="header">Description</div>
           <div class="content">
               <slot name="description"></slot>
           </div>
       </div>
-      <div class="subinfos">
-          <div class="platform subinfo">
-              <div class="subtitle">Platform:</div>
-              <div class="content">
-                  <slot name="platform"></slot>
+      <div class=buttonsubinfo>
+          <div class="websiteButtons">
+              <div class="websiteButton">
+                  <slot name="videoNoWork"></slot>
+              </div>
+              <div class="websiteButton">
+                  <slot name="websiteButton"></slot>
               </div>
           </div>
-          <div class="language subinfo">
-              <div class="subtitle">Language:</div>
-              <div class="content">
-                  <slot name="languages"></slot>
+          <div class="subinfos">
+              <div class="platform subinfo">
+                  <div class="subtitle">Platform:</div>
+                  <div class="content">
+                      <slot name="platform"></slot>
+                  </div>
               </div>
-          </div>
-          <div class="tools subinfo">
-              <div class="subtitle">Tools:</div>
-              <div class="content">
-                  <slot name="tools"></slot>
+              <div class="language subinfo">
+                  <div class="subtitle">Language:</div>
+                  <div class="content">
+                      <slot name="languages"></slot>
+                  </div>
               </div>
-          </div>
-          <div class="timeline subinfo">
-              <div class="subtitle">TimeLine:</div>
-              <div class="content">
-                  <slot name="timeline"></slot>
+              <div class="tools subinfo">
+                  <div class="subtitle">Tools:</div>
+                  <div class="content">
+                      <slot name="tools"></slot>
+                  </div>
+              </div>
+              <div class="timeline subinfo">
+                  <div class="subtitle">TimeLine:</div>
+                  <div class="content">
+                      <slot name="timeline"></slot>
+                  </div>
               </div>
           </div>
       </div>
-    </div>
-     
-
   </div>
+
+
+
+
+
+
+
+</div>
 `;
 
 
