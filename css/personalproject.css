@@ -1,0 +1,11 @@
+.intro .coverimage{
+    width:20em;
+    height:14em;
+    object-fit:cover;
+  }
+
+  .intro .covervideo{
+    width:20em;
+    height:14em;
+    object-fit:cover;
+  }

@@ -6,8 +6,10 @@ personalProjectIntroTemplate.innerHTML = `
   
   .bi{
     cursor: pointer;
-}
-   
+  }
+
+
+  
   .title .arrows{
     display:flex;
     justify-content:center;

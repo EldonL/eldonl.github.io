@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Stars Hunt - Eldon Lin Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
     <script src="js/app.js" defer></script>
     <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
@@ -22,8 +23,10 @@
             <span slot ="title">Tech Stars Hunt</span>
             <button slot="videoNoWork">Click here if video does not play</button>
             <button slot="websiteButton">Visit Game</button>
-            <img src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage">
-            <video src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntVideo.mp4" slot="webpageVideo"></video>
+            <img class="coverimage" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage">
+            <video class="covervideo" poster="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntHome.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntVideo.mp4" type="video/mp4" >your browser does not support the video
+            </video>
             <span slot ="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
             <span slot ="platform">Meta Quest 2</span>
             <span slot ="languages">Codeblocks</span>
