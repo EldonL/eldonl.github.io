@@ -73,7 +73,26 @@ personalProjectIntroTemplate.innerHTML = `
     font-size:1.5em;
   }
 
+  @media screen and (min-width: 1440px){  
+    .title .arrows{
+      float:right;
+      padding-top: 9em;
+    }
 
+      .title .header{
+        text-align:center;
+        float:left;
+        font-size: 5em;
+        padding-left:1em;
+    }
+
+    .covers{
+      clear:both;
+
+    }
+      
+
+  }
 
 
   </style>
@@ -82,11 +101,11 @@ personalProjectIntroTemplate.innerHTML = `
   <div class="title">
     <div class="arrows">
           <div class="arrow left-arrow">
-              <p class="text">prev project</p>
+              <div class="text">prev project</div>
               <i class="bi bi-arrow-left"></i>
           </div>
           <div class="arrow right-arrow">
-              <p class="text">next project</p>
+              <div class="text">next project</div>
               <i class="bi bi-arrow-right"></i>
           </div>
       </div>
