@@ -30,6 +30,10 @@ personalProjectIntroTemplate.innerHTML = `
     text-align: center;
   }
 
+  .covers{
+    text-align: center;
+  }
+
   .subinfo .subtitle{
     color:blue;
   }
@@ -57,12 +61,15 @@ personalProjectIntroTemplate.innerHTML = `
       </div>
      
   </div>
-  <div class="coverImage">
-      <slot name="webpageImage"></slot>
+  <div class="covers">
+    <div class="coverImage">
+        <slot name="webpageImage"></slot>
+    </div>
+    <div class="coverVideo">
+        <slot name="webpageVideo"></slot>
+    </div>
   </div>
-  <div class="coverVideo">
-      <slot name="webpageVideo"></slot>
-  </div>
+
   <div class="description">
       <div class="websiteButtons">
           <slot name="videoNoWork"></slot>
