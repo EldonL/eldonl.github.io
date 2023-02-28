@@ -42,6 +42,10 @@ personalProjectStarTemplate.innerHTML = `
     .starblocks .starblock .contentimages{
       display:grid;  
     }
+    .starblocks .starblock .contentimages .aimage{
+
+      text-align:left;
+    }
     
   }
 
