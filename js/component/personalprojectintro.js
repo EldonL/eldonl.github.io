@@ -34,13 +34,47 @@ personalProjectIntroTemplate.innerHTML = `
     text-align: center;
   }
 
-  .subinfo .subtitle{
-    color:blue;
+  .websiteButtons{
+    text-align: center;
   }
 
-  .subinfo .content{
-    color:red;
+  .websiteButtons .websiteButton{
+      padding-top: 1em;
   }
+
+  .description{
+    padding-left: 1em;
+    padding-top: 1em;
+  }
+
+  .description .descriptionSection .header{
+    font-size:3em;
+    font-weight:bold;
+    padding-bottom: 0.1em;
+  }
+
+  .description .descriptionSection .content{
+    font-size:1.5em;
+  }
+
+  .description .subinfo{
+    padding-top: 1em;
+  }
+
+
+  .description .subinfo .subtitle{
+    font-size:2em;
+    font-weight:bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.1em;
+  }
+
+  .description .subinfo .content{
+    font-size:1.5em;
+  }
+
+
+
 
   </style>
 
@@ -70,43 +104,49 @@ personalProjectIntroTemplate.innerHTML = `
     </div>
   </div>
 
-  <div class="description">
-      <div class="websiteButtons">
-          <slot name="videoNoWork"></slot>
-          <slot name="websiteButton"></slot>
-      </div>
+
+  <div class="websiteButtons">
+          <div class="websiteButton">
+              <slot name="videoNoWork"></slot>
+          </div>
+          <div class="websiteButton">
+              <slot name="websiteButton"></slot>
+          </div>
+    </div>
+    <div class="description">
       <div class="descriptionSection">
-          <h2 class="header">Description</h2>
-          <p class="content">
+          <div class="header">Description</div>
+          <div class="content">
               <slot name="description"></slot>
-          </p>
+          </div>
       </div>
       <div class="subinfo">
           <div class="platform">
-              <h4 class="subtitle">Platform</h4>
-              <p class="content">
+              <div class="subtitle">Platform</div>
+              <div class="content">
                   <slot name="platform"></slot>
-              </p>
+              </div>
           </div>
           <div class="language">
-              <h4 class="subtitle">Language</h4>
-              <p class="content">
+              <div class="subtitle">Language</div>
+              <div class="content">
                   <slot name="languages"></slot>
-              </p>
+              </div>
           </div>
           <div class="tools">
-              <h4 class="subtitle">Tools</h4>
-              <p class="content">
+              <div class="subtitle">Tools</div>
+              <div class="content">
                   <slot name="tools"></slot>
-              </p>
+              </div>
           </div>
           <div class="timeline">
-              <h4 class="subtitle">TimeLine</h4>
-              <p class="content">
+              <div class="subtitle">TimeLine</div>
+              <div class="content">
                   <slot name="timeline"></slot>
-              </p>
+              </div>
           </div>
       </div>
+    </div>
      
 
   </div>

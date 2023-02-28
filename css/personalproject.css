@@ -1,11 +1,36 @@
+:root{
+    --primary-color: #00ABEF;
+    --secondary-color:#E9F1FA;
+    --additional-color: #FFFFFF;
+
+
+}
+
 .intro .coverimage{
-    width:20em;
-    height:14em;
+    width:25em;
+    height:12em;
     object-fit:cover;
   }
 
   .intro .covervideo{
-    width:20em;
-    height:14em;
+    width:25em;
+    height:12em;
     object-fit:cover;
   }
+
+  .intro button {
+    background-color: var(--primary-color);
+    border-radius: 5em;
+    border:none;
+    padding: 0.1em 1.2em;
+    opacity:1;
+    -webkit-transition: .4s ease-in-out;
+    transition:.4s ease-in-out;
+    color: var(--additional-color);
+    font-size:2em;
+  }
+
+  .intro button:hover{
+    opacity:0.5;
+  }
+
