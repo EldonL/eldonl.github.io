@@ -34,6 +34,11 @@
     opacity:0.5;
   }
 
+  .intro .star .starimage{
+    width:20em;
+    height:20em;
+    object-fit:contain;
+  }
 
 
   @media screen and (min-width: 1024px){
