@@ -49,7 +49,7 @@ personalProjectIntroTemplate.innerHTML = `
   }
 
   .descriptionsection .description .header{
-    font-size:3em;
+    font-size:2.5em;
     font-weight:bold;
     padding-bottom: 0.1em;
   }
@@ -146,7 +146,7 @@ personalProjectIntroTemplate.innerHTML = `
 
     
     .descriptionsection .description .header{
-      font-size:4em;
+      font-size:3.5em;
 
     }
 
