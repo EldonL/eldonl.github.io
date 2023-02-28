@@ -10,13 +10,29 @@
     <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
     <script src="js/component/logo.js" defer></script>
+    <script src="js/component/workintro.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
     <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <workintro-component>
+            <div slot="title">Virtro Technology Inc</div>
+            <div slot="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis turpis at eros luctus, in dictum est scelerisque. Aliquam at lorem quis ante blandit gravida. Integer sed quam eu sem laoreet placerat. Quisque velit risus, elementum ut porttitor vel, facilisis et ipsum. Ut ut convallis ipsum. Cras dignissim nibh et finibus finibus.</div>
+            <button slot="websiteButton" onclick="OnLinkClick('https://www.virtro.ca/')">Visit Site</button>
+            <img class="starimage" src="images_videos/ProfessionalExperience/virtro.png" slot="workimage">
+        </workintro-component>
+    </section>
+
+
+
     <section class="footer-section bg-js-controlled" id="contact">
         <footer-component></footer-component>
     </section>
+
+
+    
+    
 </body>
 </html>
