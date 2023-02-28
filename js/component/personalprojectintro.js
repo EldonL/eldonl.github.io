@@ -4,7 +4,9 @@ personalProjectIntroTemplate.innerHTML = `
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <style>
   
- 
+  .bi{
+    cursor: pointer;
+}
    
   .title .arrows{
     display:flex;
@@ -18,10 +20,12 @@ personalProjectIntroTemplate.innerHTML = `
 
   .title .arrows .arrow .bi{
     font-size: 6em;
+
   }
 
   .title .header{
     font-size:1.75em;
+    text-align: center;
   }
 
   .subinfo .subtitle{
