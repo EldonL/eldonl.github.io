@@ -8,7 +8,9 @@ workIntroTemplate.innerHTML = `
     cursor: pointer;
   }
 
-
+  .container{
+    padding-bottom: 1em;
+  }
   
   .title .arrows{
     display:flex;
@@ -29,71 +31,71 @@ workIntroTemplate.innerHTML = `
     font-size:3.25em;
     padding-left:1rem;
     font-weight:bold;
+    text-align:center;
   }
 
 
-  .descriptionsection .description{
-    padding-left: 1em;
-    padding-top: 1em;
-  }
-
-  .descriptionsection .description .header{
-    font-size:2.5em;
-    font-weight:bold;
-    padding-bottom: 0.1em;
+  .descriptionsection  .workImage{
+    text-align:center;
   }
 
 
-  .descriptionsection .subinfos .content{
-    font-size:1.5em;
-  }
+  .descriptionsection .description {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    display:grid;
+    row-gap:2em;
+    text-align:center;
 
-  @media screen and (min-width: 1024px){
-    .title{
-      text-align:center;
-      clear:both;
-    }
-
-    
-    .descriptionsection{
-      text-align:center;
-    }
-
-    .descriptionsection .description .content{
-      text-align:left;
-    }
 
   }
+  
+  .descriptionsection .description .content{
+    text-align:left;
+  }
+
+
+
+
+
 
   @media screen and (min-width: 1440px){  
     .title .arrows{
-      float:right;
+      justify-content:right;
       padding-top: 2em;
       padding-right:1em;
     }
 
       .title .header{
         text-align:center;
-        float:left;
-        font-size: 7em;
-        padding-left:1rem;
+        clear:both;
+        font-size: 10em;
+
     }
 
-    .websiteButtons{
-      display:flex;
-      column-gap:1em;
-    }
 
     .descriptionsection{
       display:flex;
-      justify-content:space-between;
-      padding-right:1em;
+
+      text-align:left;
+      justify-content:center;
+    }
+
+    .descriptionsection .description {
+      padding-left: 0em;
+      padding-top: 0em;
+      padding-bottom: 0em;
+      display:grid;
+      row-gap:9em;
+
+
     }
 
     
     .descriptionsection .description .content{
       font-size:2.5em;
       width:30em;
+      text-align:left;
     }
   
   
@@ -102,15 +104,15 @@ workIntroTemplate.innerHTML = `
 
   </style>
 
-  <div class="container">
+<div class="container">
   <div class="title">
       <div class="arrows">
           <div class="arrow left-arrow">
-              <div class="text">prev project</div>
+              <div class="text">prev company</div>
               <i class="bi bi-arrow-left"></i>
           </div>
           <div class="arrow right-arrow">
-              <div class="text">next project</div>
+              <div class="text">next company</div>
               <i class="bi bi-arrow-right"></i>
           </div>
       </div>
@@ -133,17 +135,10 @@ workIntroTemplate.innerHTML = `
             <slot name="websiteButton"></slot>
           </div>
       </div>
-        <slot name="workimage"></slot>
-      </div>
-    </div>
-
-
-
-
-
-
-
+        <div class="workImage"><slot name="workimage"></slot></div>
+   </div>
 </div>
+
 `;
 
 

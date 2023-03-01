@@ -1,0 +1,40 @@
+:root{
+    --primary-color: #00ABEF;
+    --secondary-color:#E9F1FA;
+    --additional-color: #FFFFFF;
+
+
+}
+
+.intro .worklogo{
+    border-radius: 5em;
+    width:15em;
+    height:15em;
+    object-fit:cover;
+  }
+
+  .intro button {
+    background-color: var(--primary-color);
+    border-radius: 5em;
+    border:none;
+    padding: 0.1em 1.2em;
+    opacity:1;
+    -webkit-transition: .4s ease-in-out;
+    transition:.4s ease-in-out;
+    color: var(--additional-color);
+    font-size:2em;
+  }
+
+  .intro button:hover{
+    opacity:0.5;
+  }
+
+  @media screen and (min-width: 1440px){  
+    .intro .worklogo{
+        border-radius: 5em;
+        width:30em;
+        height:30em;
+
+      }
+}
+
