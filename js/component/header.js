@@ -28,8 +28,8 @@ headerTemplate.innerHTML = `
     top: 0;
     background: var(--additional-color);
     height: 150vh;
-    padding-right: 4em;
-    padding-top: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
 }
 
 .navbar .container nav{

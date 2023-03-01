@@ -31,7 +31,7 @@ workIntroTemplate.innerHTML = `
     font-size:3.25em;
     padding-left:1rem;
     font-weight:bold;
-    text-align:center;
+    text-align:left;
   }
 
 
