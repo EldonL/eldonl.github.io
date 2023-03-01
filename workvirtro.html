@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/work.css">
     <script src="js/app.js" defer></script>
+    <script src="js/filtertab.js" defer></script>
     <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
     <script src="js/component/logo.js" defer></script>
@@ -30,7 +31,7 @@
         <div class="container">
             <h2 class="header">Projects</h2>
             <div class="container-filter-tabs">
-                <div id="workProjectsTabsContainer" class="filterTabs">
+                <div id="tabsContainer" class="filterTabs">
                     <button class="btnFilterTab active" onclick="filterSelection('all')">All</button>
                     <button class="btnFilterTab" onclick="filterSelection('vr')">VR</button>
                     <button class="btnFilterTab" onclick="filterSelection('webgl')">WebGL</button>
@@ -39,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="workProjectFilteredContainer">
+            <div class="workProjectFilteredContainer TabsContainer">
                 <div class="filterDiv vr">
                     <a href="workvirtroprojectjis.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/jis/jislogo.jpg" alt="Tech Stars Hunt"></a>
                     <div class="imagetext">Click to see more</div>
