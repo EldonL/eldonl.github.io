@@ -148,16 +148,16 @@ personalProjectIntroTemplate.innerHTML = `
     
     .descriptionsection .description .header{
       font-size:3.5em;
-
+      text-align:left;
     }
 
     .descriptionsection .description .content{
-      font-size:2.5em;
-      width:30em;
+      font-size:1.5em;
+      width:45em;
     }
   
     .descriptionsection .subinfos .subtitle{
-      font-size:2em;
+      font-size:1.5em;
       padding-right:0.5em;
       padding-top: 0em;
 
@@ -165,7 +165,7 @@ personalProjectIntroTemplate.innerHTML = `
     
   
     .descriptionsection .subinfos .content{
-      font-size:2em;
+      font-size:1.5em;
     }
 
     .descriptionsection .subinfos .subinfo{
