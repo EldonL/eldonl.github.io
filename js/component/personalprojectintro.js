@@ -14,6 +14,7 @@ personalProjectIntroTemplate.innerHTML = `
     display:flex;
     justify-content:center;
     column-gap: 3em;
+    display:none; //display none because we did not figure out a way to not do manual next
   }
 
   .title .arrows .arrow .text{
