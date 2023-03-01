@@ -219,10 +219,10 @@ personalProjectIntroTemplate.innerHTML = `
       <div class=buttonsubinfo>
           <div class="websiteButtons">
               <div class="websiteButton">
-                  <slot name="videoNoWork"></slot>
-              </div>
+                <slot name="websiteButton"></slot>
+              </div>    
               <div class="websiteButton">
-                  <slot name="websiteButton"></slot>
+                  <slot name="videoButton"></slot>
               </div>
           </div>
           <div class="subinfos">
