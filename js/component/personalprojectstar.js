@@ -75,6 +75,10 @@ personalProjectStarTemplate.innerHTML = `
             <div class="aimage"><slot name="action2image"></slot></div>
             <div class="content"><slot name="action3text"></slot></div>
             <div class="aimage"><slot name="action3image"></slot></div>
+            <div class="content"><slot name="action4text"></slot></div>
+            <div class="aimage"><slot name="action4image"></slot></div>
+            <div class="content"><slot name="action5text"></slot></div>
+            <div class="aimage"><slot name="action5image"></slot></div>
         </div>
 
     </div>
@@ -88,6 +92,7 @@ personalProjectStarTemplate.innerHTML = `
             <div class="content"><slot name="result3text"></slot></div>
             <div class="aimage"><slot name="result3image"></slot></div>
             <div class="content"><slot name="result4text"></slot></div>
+            <div class="aimage"><slot name="result4image"></slot></div>
         </div>
 
     </div>
