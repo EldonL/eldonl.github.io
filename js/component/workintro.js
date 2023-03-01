@@ -52,6 +52,8 @@ workIntroTemplate.innerHTML = `
   
   .descriptionsection .description .content{
     text-align:left;
+    padding-left:1em;
+    padding-right:1em;
   }
 
 
