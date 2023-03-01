@@ -54,6 +54,7 @@ workIntroTemplate.innerHTML = `
     text-align:left;
     padding-left:1em;
     padding-right:1em;
+    font-size:1.5em;
   }
 
 
@@ -69,7 +70,7 @@ workIntroTemplate.innerHTML = `
     }
 
       .title .header{
-        text-align:center;
+        text-align:left;
         clear:both;
         font-size: 10em;
 
@@ -80,7 +81,7 @@ workIntroTemplate.innerHTML = `
       display:flex;
 
       text-align:left;
-      justify-content:center;
+      justify-content:left;
     }
 
     .descriptionsection .description {
@@ -88,7 +89,7 @@ workIntroTemplate.innerHTML = `
       padding-top: 0em;
       padding-bottom: 0em;
       display:grid;
-      row-gap:9em;
+      row-gap:1em;
 
 
     }
