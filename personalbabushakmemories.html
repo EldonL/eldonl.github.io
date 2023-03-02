@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babushkas Memories- Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Babushka's Memories</span>
+            <!-- <img class="coverimage" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage"> -->
+            <video class="covervideo" poster="images_videos/PersonalProjects/BabushkaMemories/BabushkaPiano.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/BabushkaMemories/BabushkaMemories.mp4" type="video/mp4" >your browser does not support the video
+            </video>
+            <button slot="websiteButton" onclick="OnLinkClick('https://globalgamejam.org/2019/games/babushkas-memories')">Source Files</button>
+            <button slot="videoButton" onclick="OnLinkClick('https://www.youtube.com/watch?v=Lcw3avA4RSY')">Watch on youtube</button>>
+            <span slot ="description">Your Babushka aka grandma has several memories that she's straining to remember from her past. There are numerous momentos from her past that are damaged that if they were better preserved, would bring her more joy in her home. You must travel back in time to help preserve her memories to make her home a happier place.</span>
+            <span slot ="platform">Oculus GO</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity</span>
+            <span slot ="timeline">Jan 2019</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">Global Game Jam 2019. Theme is "What home means to you". </span>
+                <span slot ="task">In a team of 7 (5 developers and 2 modelers) whom besides one person, it was my first time meeting them. My role as the developer was in charge of setting up a vr environment, upload the build the oculus, generate keystores and make raycast select objects and what happens to them when selected. </span>
+                <span slot ="action1text">One of the first items to interact was pick up a watering can. To make the watering can follow the hand, I decided to child gameobjects to the hand. However, I couldn't just child it to the hand directly, because the watering can and the hand would clip too much. I added another empty gameobject to the hand that was slightly in front of the hand. Then child the watering can to the empty gameobject</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaChildObject.PNG" slot="action1image">
+                <span slot ="action2text">Another item to interact was the cabinet. When the raycast hovers over the cabinet, it would get highlighted. Using a separate material, when the raycast interacts with the cabinet, the material would be enabeld</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaRaycast.PNG" slot="action2image">
+                <span slot ="action3text">Since I was in charge of making the android build. I was in charge of merging as well. As the artists make changes, I would merge them in. Below shows that the grandma's house was still in progress, we still needed a window</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaUnfinished2.PNG" slot="action3image">
+                <span slot ="action4text">And also needed a ceiling and missing materials for the fireplace's particle system</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaUnfinished.PNG" slot="action4image">
+                
+                <span slot ="result1text">When we were all done, I merged everything. And the window, fireplace and ceiling were included</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/babushkaresultwindow.PNG" slot="result1image">
+                <span slot ="result2text">All the interactable items were interactable and highlighted properly such as the piano</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/babushkapianresult.PNG" slot="result2image">
+                <span slot ="result3text">and the bird cage</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/babushkaresultbirdcage.PNG" slot="result3image">
+                <span slot ="result4text">and grandma</span>
+                <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/babushkaresultgrandma.PNG" slot="result4image">
+                <span slot ="result5text">We had so much meeting and working together, most of us continued working together after. It was a great team effort and I made great friends</span>
+              
+
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
