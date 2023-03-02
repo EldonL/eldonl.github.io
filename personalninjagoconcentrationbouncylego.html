@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninjago Concentration Bouncy Lego- Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Ninjago Concentration Bouncy Lego</span>
+            <!-- <img class="coverimage" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage"> -->
+            <video class="covervideo" poster="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoCoverImage.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoGamePlay.mp4" type="video/mp4" >your browser does not support the video
+            </video>
+            <button slot="websiteButton" onclick="OnLinkClick('https://play.unity.com/mg/lego/ninjago-concentration-bouncy-lego')">Play Game</button>
+            <button slot="videoButton" onclick="OnLinkClick('https://ideas.lego.com/challenges/c83ecffd-4db6-4bf9-a951-f39f90a0b481/application/aca23c4a-94c0-40bc-a8ee-bf2a31423b0d')">View Game Jam</button>>
+            <span slot ="description">Don't let the ball drop and try to beat your own high score of the day! Master Wu will be encouraging you along the way. Your ninja companions are watching you from above. If you hit the following, you will get the following points: Small rotator:100 points Large rotator:125 points, Master Wu: 500 points, Swallowed by cannon: 875 points. Be careful: Each objects bounciness is different which causes your lego to bounce with the different forces. Even the cannon has been tinkered by your enemies, so it may not always shoot the lego piece the way you expect...so Concentrate! Hold the spacebar to move. Release the spacebar to stop moving. Everytime you press the spacebar you alternate direction.</span>
+            <span slot ="platform">WebGL</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity, Unity's Lego Template</span>
+            <span slot ="timeline">Oct 2021</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">Unity 2021 Lego Ninjago One Button Game Challenge.</span>
+                <span slot ="task">I first had to think of a game that I would thoroughly enjoy making using "one button". I remember loving the retro game silver ball so I wanted to make something similar where I prevent a ball from falling down.</span>
+                <span slot ="action1text">I prototyped what my environment may look like because I wanted to get a sense of how a lego can bounce off of the lego assets. Below is one of my earlier prototypes</span>
+                <img class="starimage" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoEarlyPrototype.PNG" slot="action1image">
+                <span slot ="action2text">I wanted to simulate a functionality in the retro game where the silver ball gets sucked into a hole and comes out of another hole. I replaced the hole with a cannon</span>
+                <video class="starimage" poster="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoCannon.PNG" slot="action2image" controls>
+                    <source src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/LegoFireInTheHold.mp4" type="video/mp4" >your browser does not support the video
+                </video>            
+                <span slot ="action3text">I also wanted objects for the lego ball to bounce off of, but I wanted these items to be "fun" and have sound effects such as Master Wu saying "Woo!" when he gets collided with. Depending on which item it was bounced off of, it would have a different score. I used an abstract class so that I have similar properties such as score, sound and text. Then I would have child classes such as MasterWuCollidable and RotatorCollidable</span>
+                <img class="starimage" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoMasterWu.PNG" slot="action3image">
+                <span slot ="action4text">I would have a gamemanager to display the score and display some fun text based on which object the lego ball collided with. These text are in the abstract parent class where the collidables inherit. </span>
+                <img class="starimage" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoScore.PNG" slot="action4image">
+
+                
+                <span slot ="result1text">Once all the functionality was done, I made sure to include a end menu that would display the score</span>
+                <img class="starimage" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoEnd.PNG" slot="result1image">
+                <span slot ="result2text">And a high score menu so the user would want to continue playing to beat the high score</span>
+                <img class="starimage" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoHighScore.PNG" slot="result2image">
+                <span slot ="result3text">The final result of the game looks like this.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/ninjagoFinal.PNG" slot="result3image">
+               
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
