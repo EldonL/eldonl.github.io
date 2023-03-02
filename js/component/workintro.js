@@ -8,6 +8,12 @@ workIntroTemplate.innerHTML = `
     cursor: pointer;
   }
 
+  .directory{
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1.25em;
+   }
+
   .container{
     padding-bottom: 1em;
   }
@@ -97,8 +103,8 @@ workIntroTemplate.innerHTML = `
 
     
     .descriptionsection .description .content{
-      font-size:2.5em;
-      width:30em;
+      font-size:1.5em;
+      width:45em;
       text-align:left;
     }
   
@@ -109,6 +115,7 @@ workIntroTemplate.innerHTML = `
   </style>
 
 <div class="container">
+<p class="directory">professional experiences</p>
   <div class="title">
       <div class="arrows">
           <div class="arrow left-arrow">
