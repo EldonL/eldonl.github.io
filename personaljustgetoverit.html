@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just get over it- Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Just Get Over It</span>
+            <!-- <img class="coverimage" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage"> -->
+            <video class="covervideo" poster="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/JustGetOverIt/2018-04-24 SFULoveathon.mp4" type="video/mp4" >your browser does not support the video
+            </video>
+            <!-- <button slot="websiteButton" onclick="OnLinkClick('https://www.oculus.com/vr/5299600303432788/')">Play game</button> -->
+            <button slot="videoButton" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">Watch on youtube</button>>
+            <span slot ="description">It's Valentine and you just had a bad breakup. You are going through the phases of denail and anger. Shoot sad messages and punch a heart shaped punching bad to get over it!</span>
+            <span slot ="platform">Oculus Rift</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity</span>
+            <span slot ="timeline">Feb 2018</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">Hosted by Simon Fraser Student Society and the Software Systems Student Society. This is the 12 hours Systems Hack- "Loveathon".</span>
+                <span slot ="task">I was in a group of 3 - with 2 other developers. As I was more familiar with VR, my task was to make sure all the vr equipment was ready and my teammates know how to install Unity. I also was the more experienced programmer so I had to help delegate tasks and set up Unity Collaborate as a source repository. The goal was to create a Valentine game and I wanted to make a VR game</span>
+                <span slot ="action1text">The group I was with- we had been in a different hackathon in the past so I knew what tasks to delegate. We needed someone to work on art - but since it's only 12 hours and we were all developers, I tasked one of them to look for assets. I tasked another developer to start working on the anger scene. I started working on the menu scene. The denial scene would come later.</span>
+                <span slot ="action2text">I wanted the user to interact with the menu in the main scene to choose which character they want to be by touching the buttons. I used OnTriggerEnter for the interactions.</span>
+                <span slot ="action2text">In the denial scene, I discussed with my team members on what we wanted, and we thought it would be fun to shoot at incoming objects in VR. I implemented a timer that would spawn anger messages in the form of cubes. I used OnCollisionEnter to have the bullets destroy the anger messages. After x amount of messages have been destroyed, it will change scene to the denial scene</span>
+                
+                <span slot ="result1text">After finishing the funtionality in the main menu scene, I merged my changes with the assets that my team member found which included a grass field scene with bird sounds</span>
+                <img class="starimage" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" slot="result1image">
+                <span slot ="result2text">When the denial scene implementation was done. I merged my changes with the assets my team member found which involved a sci fi gun to replace my cube gun that I was using as whitebox</span>
+                <img class="starimage" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonShots.PNG" slot="result2image">
+                <img class="starimage" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonShooting.PNG" slot="result3image">
+                <span slot ="result4text">The anger scene was not on my branch yet, but I already knew the name of the scene ahead of time so I had already put the name of the anger scene in my branch. Once my team member finished implementing the anger scene, I merged the changes in, did a quick test to make sure the scene change worked and we were done</span>
+                <img class="starimage" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonAnger.PNG" slot="result4image">     
+                <span slot ="result5text">We ended up placing 3rd in the competition</span>
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>

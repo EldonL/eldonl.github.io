@@ -93,6 +93,8 @@ personalProjectStarTemplate.innerHTML = `
             <div class="aimage"><slot name="result3image"></slot></div>
             <div class="content"><slot name="result4text"></slot></div>
             <div class="aimage"><slot name="result4image"></slot></div>
+            <div class="content"><slot name="result5text"></slot></div>
+            <div class="aimage"><slot name="result5image"></slot></div>
         </div>
 
     </div>
