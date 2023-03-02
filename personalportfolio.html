@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio- Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Portfolio</span>
+            <img class="coverimage" src="images_videos/PersonalProjects/Portfolio/coverimage.PNG" slot="webpageImage">
+            <!-- <video class="covervideo" poster="images_videos/PersonalProjects/SportsBookAlive/BookAliveIntro.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/SportsBookAlive/BookAlive30DayChallengeCompressed.mp4" type="video/mp4" >your browser does not support the video
+            </video> -->
+            <!-- <button slot="websiteButton" onclick="OnLinkClick('https://globalgamejam.org/2019/games/babushkas-memories')">Source Files</button> -->
+            <!-- <button slot="videoButton" onclick="OnLinkClick('https://www.youtube.com/watch?v=rvJgwtpeeyk&feature=youtu.be')">Watch on youtube</button>> -->
+            <span slot ="description">This project describes what I have changed to this portfolio site</span>
+            <span slot ="platform">Browsers</span>
+            <span slot ="languages">HTML, CSS,Javascript</span>
+            <span slot ="tools">Visual Studio Code, Bootstrap, Figma</span>
+            <span slot ="timeline">Sep 2016, Feb 2023</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">In Sep 2016, I made a portfolio on github. 7 years later I wanted to improve my website </span>
+                <span slot ="task">In 2016 I only used HTM, CSS and Bootstrap. No Javascript. After 7 years, I wanted to add Javascript so I can add more functionalities to my site. I wanted to prototype what my site could look like using Figma first </span>
+                <span slot ="action1text">In 2016, I started making a basic website where the user can select a project from the navbar.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portfoliooldnavbar.PNG" slot="action1image">
+                <span slot ="action2text">Each section then had a title, description and awful color scheme</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portfolioldprojectsection.PNG" slot="action2image">
+                <span slot ="action3text">The process section was terribly explained and the images had a terrible looking hover effect.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portofliooldhover.PNG" slot="action3image">
+                <span slot ="action4text">I only had one page - the home page. The hero section was just a fancy looking background with a line of text. And the page was not responsive so the text was tiny on mobile and ipad</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/coverimage.PNG" slot="action4image">
+                <span slot ="action5text">In 2023, I decided I have to upgrade my website, create different pages, make it responsive and have a better color scheme. Instead of dark, try light and follow the 60-30-10 rule.</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaUnfinished.PNG" slot="action5image"> -->
+                <span slot ="action6text">I used Figma first to design my ideas first so I know what it would look like on different platforms. Such as pc:</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewfigmapc.PNG" slot="action6image">
+                <span slot ="action7text">ipad</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewfigmaipad.PNG" slot="action7image">
+                <span slot ="action8text">mobile</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewfigmaphone.PNG" slot="action8image">
+                <span slot ="action9text">Now that I knew what I wanted, the first task was to figure out how to implement that navbar and put it on different pages. I learned I can use templates and shadowdom. This allowed me to add the navbar component onto every page instead of copy pasting the same code over and over. At the same time, I learned how to make the site responsive using the media query so that on a mobile, the navbar becomes a burger menu and the menu would open from the side</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewnavbar.PNG" slot="action9image">
+                <span slot ="action10text">After the navbar came the hero section. I learned that a hero section should have a hero image, name, what you do and a call to action button. I learned that the display property can use flex, so I took advantage of that and used flex value when the site is wider than 1440px. If it's smaller than all the elements would just be lined up top to bottom</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewherosection.PNG" slot="action10image">
+                <span slot ="action11text">I then added an about which explains a bit more detail of who I am. After I started working on the personal project section. This was what I looked forward to most because I wanted to learn how to filter tabs. Using W3 schools, I learned I can use javascript to remove class name and get element by id. Using those to my advantage, I can add a "show" class to the projects that should be displayed based on which tab the user selected. I made sure the tabs color scheme were still close to the pages main colors</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewfiltertabs.PNG" slot="action11image">
+                <span slot ="action12text">The professional experience section was very fun to work on because this allowed me to really play around with how responsive UI works. In PC mode, I wanted the company logo and information to be side by side. However, on mobile, I wanted them to be on top of each other. By using the display property, in pc I used the flex value, and in mobile I used the grid value. In PC I would alternate the logo location by taking advantage of the grid-template-area property.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewproexp.PNG" slot="action12image">
+                <span slot ="action13text">The skills section allowed me to add images from bootstrap. The footer allowed me to add some contact info. When the user clicks on the contact logo, I would make use of the window.open so it will open another tab. I make use of window.open only if the link brings users to a different site. If the site is still in my portfolio, I would open in the same tab.</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewproexp.PNG" slot="action13image"> -->
+                <span slot ="action14text">I wanted to alternate the background colors. I did that by creating a bg-controlled class to all the sections. Then using javascript I would alternate adding bg-odd or bg-even class. In my css, if I find a bg-odd I would add the primary background color, if I find a bg-even, I would add a secondary background color.</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewproexp.PNG" slot="action13image"> -->
+                <span slot ="action15text">Creating the pages for personal projects and professional experience was challenging. At this point I already knew about templates and shadow dom. This helped me create a "template" for all my pages, but I did not know how to replace the content. After looking deeper, I learned I can use the slot element. Which is used on this page!</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/Portfolio/portoflionewproexp.PNG" slot="action13image"> -->
+                
+                <span slot ="result1text">This site is the result. You're looking at it. I learned alot about javascript, and new html and css properties and attributes.</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveResult2.PNG" slot="result1image"> -->
+               
+              
+
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>

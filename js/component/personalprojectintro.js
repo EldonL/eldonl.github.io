@@ -8,7 +8,11 @@ personalProjectIntroTemplate.innerHTML = `
     cursor: pointer;
   }
 
-
+   .directory{
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1.25em;
+   }
   
   .title .arrows{
     display:flex;
@@ -181,6 +185,7 @@ personalProjectIntroTemplate.innerHTML = `
   </style>
 
   <div class="container">
+  <p class="directory">personal projects</p>
   <div class="title">
       <div class="arrows">
           <div class="arrow left-arrow">
