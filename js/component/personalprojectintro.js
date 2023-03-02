@@ -78,7 +78,7 @@ personalProjectIntroTemplate.innerHTML = `
 
   @media screen and (min-width: 1024px){
     .title{
-      text-align:center;
+      text-align:left;
     }
 
     .covers{
@@ -123,7 +123,7 @@ personalProjectIntroTemplate.innerHTML = `
     }
 
       .title .header{
-        text-align:center;
+        text-align:left;
         float:left;
         font-size: 7em;
         padding-left:1rem;

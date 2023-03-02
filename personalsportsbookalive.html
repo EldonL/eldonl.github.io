@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Book Alive- Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Sports Book Alive - Life of Kobe Bryant</span>
+            <!-- <img class="coverimage" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage"> -->
+            <video class="covervideo" poster="images_videos/PersonalProjects/SportsBookAlive/BookAliveIntro.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/SportsBookAlive/BookAlive30DayChallengeCompressed.mp4" type="video/mp4" >your browser does not support the video
+            </video>
+            <!-- <button slot="websiteButton" onclick="OnLinkClick('https://globalgamejam.org/2019/games/babushkas-memories')">Source Files</button> -->
+            <button slot="videoButton" onclick="OnLinkClick('https://www.youtube.com/watch?v=rvJgwtpeeyk&feature=youtu.be')">Watch on youtube</button>>
+            <span slot ="description">Have you ever read a book and wished that it came alive right in front of your eyes? This app bring the life of Kobe Bryant alive from one of Kobe's books</span>
+            <span slot ="platform">Android</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity, Vuforia</span>
+            <span slot ="timeline">March 2021</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">XR 30 day challenge held by Circuit stream. Topic: "Using AR, create an interaction with an everyday object." </span>
+                <span slot ="task">When I transit to school or work everyday before the pandemic hit, I always bring a book with me. So I decided for this competition I would make an AR project using Vuforia to make a Kobe Bryant book come alive! </span>
+                <span slot ="action1text">I started off prototyping to make sure that the database images from Vuforia would be detected by making a 3D object appear such as a cube or sphere. Below shows the sprite database from Vuforia being added into my scene</span>
+                <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveScene.PNG" slot="action1image">
+                <span slot ="action2text">Once I was sure all images will be detected I tried to make sure a single 2D sprite image can appear. Then I tried adding more sprites to see if detecting an image can make multiple images appear-spoiler alert: it did!</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaRaycast.PNG" slot="action2image"> -->
+                <span slot ="action3text">Then I attempted to use animations to make a "slide show", but that failed miserably. So I decided to use code instead. I created a Sprite array and use coroutines to change sprites every x amount of seconds specified in the inspector.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveSpriteSlideShow.PNG" slot="action3image">
+                <span slot ="action4text">Once the images appeared, I tried to make any audio play sound when an image was detected.</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaUnfinished.PNG" slot="action4image"> -->
+                <span slot ="action5text">Then once I know audio works I started looking for audios on Youtube (then used Youtube to mp3 converter and then mp3 cutter)</span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaUnfinished.PNG" slot="action5image"> -->
+                <span slot ="action6text">I noticed that when an image stops getting detected and using audioSource.Stop(), the audio stops abruptly, sounding weird. So I decided to fade the audio out using an AudioMixer.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveAudioMixer.PNG" slot="action6image">
+                <span slot ="action7text">Then I started adding extra effects such as making images rotate and particle effects. Since each image detected may have a different amount of sprites, or the time it takes to change sprites are different, I made sure to make those values public so I can edit the seconds/numbers in the inspector.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveIncreaseSize.PNG" slot="action7image">
+                
+                <span slot ="result1text">And now my book is alive!</span>
+                <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveResult2.PNG" slot="result1image">
+                <!-- <span slot ="result2text">All the interactable items were interactable and highlighted properly such as the piano</span> -->
+                <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveResult1.PNG" slot="result2image">
+                <!-- <span slot ="result3text">and the bird cage</span> -->
+                <img class="starimage" src="images_videos/PersonalProjects/SportsBookAlive/BookaliveResult3.PNG" slot="result3image">
+                <!-- <span slot ="result4text">and grandma</span> -->
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/BabushkaMemories/babushkaresultgrandma.PNG" slot="result4image"> -->
+                <span slot ="result5text">Thank you to Circuit Stream for making this competition. One of the main reasons why I enjoy coding is because of Circuit Stream.</span>
+              
+
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
