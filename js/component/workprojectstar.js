@@ -75,6 +75,28 @@ workProjectStarTemplate.innerHTML = `
             <div class="aimage"><slot name="action2image"></slot></div>
             <div class="content"><slot name="action3text"></slot></div>
             <div class="aimage"><slot name="action3image"></slot></div>
+            <div class="content"><slot name="action4text"></slot></div>
+            <div class="aimage"><slot name="action4image"></slot></div>
+            <div class="content"><slot name="action5text"></slot></div>
+            <div class="aimage"><slot name="action5image"></slot></div>
+            <div class="content"><slot name="action6text"></slot></div>
+            <div class="aimage"><slot name="action6image"></slot></div>
+            <div class="content"><slot name="action7text"></slot></div>
+            <div class="aimage"><slot name="action7image"></slot></div>
+            <div class="content"><slot name="action8text"></slot></div>
+            <div class="aimage"><slot name="action8image"></slot></div>
+            <div class="content"><slot name="action9text"></slot></div>
+            <div class="aimage"><slot name="action9image"></slot></div>
+            <div class="content"><slot name="action10text"></slot></div>
+            <div class="aimage"><slot name="action10image"></slot></div>
+            <div class="content"><slot name="action11text"></slot></div>
+            <div class="aimage"><slot name="action11image"></slot></div>
+            <div class="content"><slot name="action12text"></slot></div>
+            <div class="aimage"><slot name="action12image"></slot></div>
+            <div class="content"><slot name="action13text"></slot></div>
+            <div class="aimage"><slot name="action13image"></slot></div>
+            <div class="content"><slot name="action14text"></slot></div>
+            <div class="aimage"><slot name="action14image"></slot></div>
         </div>
 
     </div>
@@ -87,6 +109,10 @@ workProjectStarTemplate.innerHTML = `
             <div class="aimage"><slot name="result2image"></slot></div>
             <div class="content"><slot name="result3text"></slot></div>
             <div class="aimage"><slot name="result3image"></slot></div>
+            <div class="content"><slot name="result4text"></slot></div>
+            <div class="aimage"><slot name="result4image"></slot></div>
+            <div class="content"><slot name="result5text"></slot></div>
+            <div class="aimage"><slot name="result5image"></slot></div>
         </div>
 
     </div>

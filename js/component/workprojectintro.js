@@ -8,13 +8,17 @@ workProjectIntroTemplate.innerHTML = `
     cursor: pointer;
   }
 
-
+   .directory{
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1.25em;
+   }
   
   .title .arrows{
     display:flex;
     justify-content:center;
     column-gap: 3em;
-    display:none; //display none because we did not figure out a way to not do manual next and prev project linking
+    display:none; //display none because we did not figure out a way to not do manual next
   }
 
   .title .arrows .arrow .text{
@@ -78,7 +82,7 @@ workProjectIntroTemplate.innerHTML = `
 
   @media screen and (min-width: 1024px){
     .title{
-      text-align:center;
+      text-align:left;
     }
 
     .covers{
@@ -123,7 +127,7 @@ workProjectIntroTemplate.innerHTML = `
     }
 
       .title .header{
-        text-align:center;
+        text-align:left;
         float:left;
         font-size: 7em;
         padding-left:1rem;
@@ -148,16 +152,16 @@ workProjectIntroTemplate.innerHTML = `
     
     .descriptionsection .description .header{
       font-size:3.5em;
-
+      text-align:left;
     }
 
     .descriptionsection .description .content{
-      font-size:2.5em;
-      width:30em;
+      font-size:1.5em;
+      width:45em;
     }
   
     .descriptionsection .subinfos .subtitle{
-      font-size:2em;
+      font-size:1.5em;
       padding-right:0.5em;
       padding-top: 0em;
 
@@ -165,7 +169,7 @@ workProjectIntroTemplate.innerHTML = `
     
   
     .descriptionsection .subinfos .content{
-      font-size:2em;
+      font-size:1.5em;
     }
 
     .descriptionsection .subinfos .subinfo{
@@ -181,6 +185,7 @@ workProjectIntroTemplate.innerHTML = `
   </style>
 
   <div class="container">
+  <p class="directory">professional experience projects</p>
   <div class="title">
       <div class="arrows">
           <div class="arrow left-arrow">
@@ -219,10 +224,10 @@ workProjectIntroTemplate.innerHTML = `
       <div class=buttonsubinfo>
           <div class="websiteButtons">
               <div class="websiteButton">
-                  <slot name="videoNoWork"></slot>
-              </div>
+                <slot name="websiteButton"></slot>
+              </div>    
               <div class="websiteButton">
-                  <slot name="websiteButton"></slot>
+                  <slot name="videoButton"></slot>
               </div>
           </div>
           <div class="subinfos">
