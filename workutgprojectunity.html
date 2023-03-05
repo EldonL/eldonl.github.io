@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/workproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/workprojectintro.js" defer></script>
+    <script src="js/component/workprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <workprojectintro-component>
+            <span slot ="title">Unity</span>
+            <img class="coverimage" src="images_videos/ProfessionalExperience/utg/unity/unitylogo.webp" slot="webpageImage">
+            <!-- <video class="covervideo" poster="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntVideo.mp4" type="video/mp4" >your browser does not support the video
+            </video> -->
+            <!-- <button slot="videoNoWork" onclick="OnLinkClick('https://www.youtube.com/watch?v=hLZEAn5Pl-Y')">Watch Video</button> -->
+            <button slot="websiteButton" onclick="OnLinkClick('https://utgacademy.com/programs/')">See Unity Programs UTG offers</button>
+            <span slot ="description">Unity is a game engine that allows creators to develop on multiple platforms such as PC, WebGL, Android and many more.</span>
+            <span slot ="platform">PC, WebGL</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity, Unity Collaborate</span>
+            <span slot ="timeline">Sep 2019-Jun 2021</span>
+        </workprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <workprojectstar-component>
+                <span slot ="situation">Teaching Unity 2D and 3D courses to high school students. UN401, UN402, UN501 and UN502 </span>
+                <span slot ="task">Prepare materials to teach each week on the weekends.</span>
+                <span slot ="action1text">Before a semester starts, I would have at least 5 weeks of materials prepped ahead of time. I would read through all the course materials. I would have done the lesson myself first before teaching them to the students. On the first day, if my students are new to Unity, instead of getting them to code, I would tell them to crash Unity. To do this I would show them how to add a gameobject into Unity using a cube or sphere. I would then tell them to add a rigidbody to the gameobject. I would then tell them to duplicate the gameobjects and watch them collide with each other. After that I would tell them to duplicate as many gameobjects as possible and see all the gameobjects crash into each other. They would repeat this until Unity crashes. The purpose of this is for the to used to the inspector,hierarchy and how to press "play" and the difference between game and scene window. Crashing Unity seems to be popular among the students! I would also try to use cartoons to get the students attention. For example, when describing what OnCollisionStay is, not only will I show an example in Unity, I would also show what it may look like in real life such as cartoon characters hugging</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/HugOnCollisionStay.gif" slot="action1image">
+                <span slot ="action2text">Or if I am teaching about inheritance. I would use Pokemon a an example. Pokemons have many characters with similar powers. I would explain how we can have one script that implements the same power in the parent class. Then in the child class we can modify or add to the existing function. I would then show a fun gif just to entertain them</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/RoarOnGround.gif" slot="action2image">
+                <span slot ="action3text">For UN401 and UN402, I got to teach a spaceship game and a platform game respectively. Usually students in these classes have never coded, so I would teach them starter items they can implement such as movement. I would show them how to press W to move forward. I would then challenge them to move in the other directions using A, S, D</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/StayOnGround.gif" slot="action3image">
+                <span slot ="action4text">As time goes on, I would teach them instantiation for shooting bullets, spawning enemies, spawning health and adding explosions using particle systems</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/HealthSpawnerGif.gif" slot="action4image">
+                <span slot ="action5text">For UN501 and UN502, I got to teach a portal game and capture the flag game respectively. For the portal game, I got to show them how to spawn two portals and teleport their character into the portals. They would use raycast to spawn the portal at the location the raycast points at on the terrain. </span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/debugraygif.gif" slot="action5image">
+                <span slot ="action6text">They will use null checks to see if a portal can be spawned and whether the character can teleport to another portal yet. I would teach them to whitebox the portal, meaning use spheres or cubes as portals. Once the functionalities have been implemented then they can start making the portals look good. This was important for me to show them because this is what lots of gaming companies do</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/UN502Chp7Portal.gif" slot="action6image">
+                <span slot ="action7text">In Capture the flag game. Most students have done enough Unity where I can explain topics like left hand rule in Unity, be more picky about variable and function naming conventions(camelcase, pascalcase).</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/chap6-flaggif.gif" slot="action7image">
+                <span slot ="action8text"> I also got to show the navmesh, which allowed AI enemies to follow the player. This was interesting, because some students had made their terrain very detailed, which sometimes caused the baking to take a while! During this time I would have some multiple questions to do as a class while we wait for baking to be done</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/EnemyNavMesh.gif" slot="action8image">
+                <span slot ="result1text">At the end, the students had a choice of making a PC build or a WebGL build to be uploaded to itch io. Seeing the students upload their final product and being proud of themselves brought me a lot of joy. I am so proud of all the students that went all the way to the end. All there work are also on Collaborate so they can continue working on it from home. I would encourage to have good commit messages, following the forat what-where-why so they can keep track of their work</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/webglbuild.PNG" slot="result1image">
+
+            </workprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
