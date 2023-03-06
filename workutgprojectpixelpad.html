@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPad - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/workproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/workprojectintro.js" defer></script>
+    <script src="js/component/workprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <workprojectintro-component>
+            <span slot ="title">PixelPad</span>
+            <img class="coverimage" src="images_videos/ProfessionalExperience/utg/python/pixelpadbanner.jpg" slot="webpageImage">
+            <!-- <video class="covervideo" poster="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntVideo.mp4" type="video/mp4" >your browser does not support the video
+            </video> -->
+            <button slot="videoButton" onclick="OnLinkClick('https://pixelpad.io/app/gmjxoisaayv/')">Play Sample Lesson</button>
+            <button slot="websiteButton" onclick="OnLinkClick('https://pixelpad.io/')">Visit Site</button>
+            <span slot ="description">Pixelpad is a game engine for the browser. Developers get to use Python to program their applications</span>
+            <span slot ="platform">Browser</span>
+            <span slot ="languages">Python</span>
+            <span slot ="tools">PixelPad, Piskel</span>
+            <span slot ="timeline">Sep 2019-Jun 2021</span>
+        </workprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <workprojectstar-component>
+                <span slot ="situation">Teaching PixelPad courses to high school students. This teaches students Python. PY102, PY201, PY202, PY302 </span>
+                <span slot ="task">Prepare materials to teach each week on the weekends.</span>
+                <span slot ="action1text">Before a semester starts, I would have at least 5 weeks of materials prepped ahead of time. I would read through all the course materials. I would have done the lesson myself first before teaching them to the students. Each lesson, I would have goals for the day, class challenge and a summary of wheat we learned</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/python/goals.PNG" slot="action1image">
+                <span slot ="action2text">Most students in pixelpad are elementary students. Therefore, it is most of their first time coding or using a computer. Things like creating classes, variables and finding sprites to use may be a lesson in itself.</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/python/scripts.PNG" slot="action2image">
+                <span slot ="action3text">For first time programmers, I would get them to practice creating an object and get them to place the objects in different locations on the screen. This allowed them to practice variables, coordinates and getting used to the PixelPad interface without worrying about attaching sprites or functionalities</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/python/powerupchallenge.PNG" slot="action3image">
+                <span slot ="action4text">Students' favorite part is finding sprites, because they get to add a "costume" for their characters. I would show them to find images online or they can draw their own images from piskel - a free sprite editor site. Getting sprites itself can be a lesson. This is due to the student not yet famliar with how to save and import an image. I would patiently show them how this step works</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/python/sprites.PNG" slot="action4image">
+                <span slot ="action5text">Of all the lessons to teach, the hardest part may have been arrays. Up to this point, students have been duplicating code if they needed to create multiple objects. In order for them to understand arrays, I would do an example as well as show an image representation of an array. In the example below, I was showing them how their home base has health reduced by looping through an array of enemies and teammates</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/python/array.PNG" slot="action5image">
+                <span slot ="action6text">The elementary students were born in the technology. Therefore, when they have a laptop in front of them, their first reaction is to go to their favorite website to play their games. My job was to make the lesson fun and have challenges that they can enjoy. The goals must be clear and concise. THe challenges must not be too long where they would give up. I would include bonus challenges in case some students finish fast.</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/utg/python/classchallenge.PNG" slot="action6image">
+                <span slot ="result1text">The last day of classes is the best, because the parents get to come in and see their final product. Seeing the students showing off and being proud of their work is so satisfying for instructors like me.</span>
+                <!-- <img class="starimage" src="images_videos/ProfessionalExperience/utg/unity/webglbuild.PNG" slot="result1image"> -->
+
+            </workprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
