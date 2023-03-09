@@ -37,12 +37,20 @@
 
         <section class="star bg-js-controlled">
             <workprojectstar-component>
-                <span slot ="situation">Lorem ipsum dolor sit amet. Eum adipisci quae non similique nihil et nobis totam ex recusandae vitae et ipsum commodi aut perferendis fugiat eos provident autem? </span>
-                <span slot ="task">Lorem ipsum dolor sit amet. Eum adipisci quae non similique nihil et nobis totam ex recusandae vitae et ipsum commodi aut perferendis fugiat eos provident autem?</span>
-                <span slot ="action1text">Lorem ipsum dolor sit amet. Eum adipisci quae non similique nihil et nobis totam ex recusandae vitae et ipsum commodi aut perferendis fugiat eos provident autem?</span>
-                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/virtro.png" slot="action1image">                
-                <span slot ="result1text">Lorem ipsum dolor sit amet. Eum adipisci quae non similique nihil et nobis totam ex recusandae vitae et ipsum commodi aut perferendis fugiat eos provident autem?</span>
-                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/virtro.png" slot="result1image">
+                <span slot ="situation">Migrate VR projects to Unity 2020LTS and start using OpenXR as the Oculus was deprecating legacy CAPI/VRAPI in Unity 2019.4LTS.</span>
+                <span slot ="task">My task were to update Oculus Integration, update Unity 2019 to Unity 2020 and publish to applab</span>
+                <span slot ="action1text">Before updating to Unity 2020, I had to read all the Unity release notes and find the version best for our app. I could not just choose the newest release because there may be issues with VR. I also learned new features in 2020 and had to present them to other developers. Some interesting features was that during prefab view I can see other gameobjects in the scene view at the same time, most recently visited scenes can be selected, and enter safe mode when errors are found in the project while opening the editor. I documented all the steps down in case I need to go back to this as reference for another project. The steps I documented included what versions I tested, how I opened the project, what errors and warning I saw and how I resolved them</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/hca/document.PNG" slot="action1image">                
+                <span slot ="action2text">In addition, I had to make sure the app in the editor and the build was functioning in Unity 2019. Once I knew everything was functioning, I updated to Unity 2020. This allowed me to understand what bugs were considered "broken". Below is an example of me testing putting soap on hand during 2019.4LTS </span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/hca/handsoap.PNG" slot="action2image">                
+                <span slot ="action3text">After updating and opening the project, I encountered my first error - I entered safe mode and saw this error "Multiple precompiled assemblies with the same name Newtonsoft.Json.dll included or the current platform." I tracked down where the duplication was and deleted one of them</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/hca/safemode.png" slot="action3image">                
+                <span slot ="action4text">I then started checking if the game can be played and immediately encountered numerous errors I didn't see in 2019.4LTS. I could not change scenes, I could not talk to AIC, the microphone that detects if the user is speaking was not functioning. I noticed that there were "prefabs missing" in the inspector. I found out that when updating Unity, the dlls we used were not properly updated. I reimport the dll by selecting the reimport feature in Unity on the dlls. This resolved all the issues including the microphone</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/hca/mic.PNG" slot="action4image">                
+                <span slot ="result1text">I published the app to Oculus applab. Made sure all the requirements are in such as privacy policy and retrieved all the screenshots required.</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/hca/applab.PNG" slot="result1image">
+                <span slot ="result2text">Below is an example of what the result of me testing the game before publishing.</span>
+                <img class="starimage" src="images_videos/ProfessionalExperience/virtro/hca/denturecleaning.PNG" slot="result2image">
 
             </workprojectstar-component>
         </section>
