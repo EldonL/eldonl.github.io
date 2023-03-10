@@ -80,7 +80,7 @@ personalProjectIntroTemplate.innerHTML = `
     font-size:1.5em;
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 760px){
     .title{
       text-align:left;
     }
