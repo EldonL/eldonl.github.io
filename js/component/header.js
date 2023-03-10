@@ -57,7 +57,7 @@ headerTemplate.innerHTML = `
 
     text-align: right;
     display:grid;
-    row-gap: 3em;
+    row-gap: 1.1em;
 }
 
 
