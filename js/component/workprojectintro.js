@@ -80,7 +80,7 @@ workProjectIntroTemplate.innerHTML = `
     font-size:1.5em;
   }
 
-  @media screen and (min-width: 760px){
+  @media screen and (min-width: 1024px){
     .title{
       text-align:left;
     }
