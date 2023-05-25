@@ -34,7 +34,7 @@
     opacity:0.5;
   }
 
-  .intro .star .starimage{
+  .intro .diarypost .diarypostimage{
     width:20em;
     height:20em;
     object-fit:contain;
@@ -42,33 +42,11 @@
 
 
   @media screen and (min-width: 1024px){
-    .intro .coverimage{
-      width:45em;
-      height:20em;
 
-
-    }
-  
-    .intro .covervideo{
-      width:45em;
-      height:20em;
-
-    }
   }
 
   @media screen and (min-width: 1440px){  
-    .intro .coverimage{
-      width:113em;
-      height:45em;
 
-
-    }
-  
-    .intro .covervideo{
-      width:113em;
-      height:45em;
-
-    }
       
 
   }

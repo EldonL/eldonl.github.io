@@ -8,25 +8,10 @@ blogIntroTemplate.innerHTML = `
     cursor: pointer;
   }
 
-   .directory{
-    text-align: left;
-    padding-left: 1em;
-    font-size: 1.25em;
-   }
-  
-  .title .arrows{
-    display:flex;
-    justify-content:center;
-    column-gap: 3em;
-    display:none; //display none because we did not figure out a way to not do manual next
-  }
 
-  .title .arrows .arrow .text{
-    font-size: 1.25em;
-  }
 
-  .title .arrows .arrow .bi{
-    font-size: 6em;
+  .title{
+    display: grid;
 
   }
 
@@ -35,95 +20,20 @@ blogIntroTemplate.innerHTML = `
     padding-left:1rem;
     font-weight:bold;
   }
-
-  .covers{
-    padding-left:1em;
-  }
-
-  .websiteButtons{
-    padding-left:1em;
-  }
-
-  .websiteButtons .websiteButton{
-      padding-top: 1em;
-  }
-
-  .descriptionsection .description{
-    padding-left: 1em;
-    padding-top: 1em;
-  }
-
-  .descriptionsection .description .header{
-    font-size:2.5em;
-    font-weight:bold;
-    padding-bottom: 0.1em;
-  }
-
-  .descriptionsection .description .content{
-    font-size:1.5em;
-  }
-
-  .descriptionsection .subinfos{
-    padding-top: 1em;
-    padding-left: 1em;
+  .title .info{
+    display: grid;
+    padding-left:1rem;
   }
 
 
-  .descriptionsection .subinfos .subtitle{
-    font-size:2em;
-    font-weight:bold;
-    padding-top: 0.5em;
-    padding-bottom: 0.1em;
-  }
 
-  .descriptionsection .subinfos .content{
-    font-size:1.5em;
-  }
+
+
 
   @media screen and (min-width: 1024px){
     .title{
-      text-align:left;
-    }
+      display: grid;
 
-    .covers{
-      text-align:center;
-    }
-    
-    .descriptionsection{
-      text-align:center;
-    }
-
-    .descriptionsection .description .content{
-      text-align:left;
-    }
-    .descriptionsection .subinfos .subtitle{
-      font-size:2em;
-    }
-    
-  
-    .descriptionsection .subinfos .content{
-      font-size:2em;
-    }
-
-    .descriptionsection .subinfos{
-      display:grid;
-      justify-content:center;
-    }
-    
-    .descriptionsection .subinfos .subinfo{
-      display:flex;
-      align-items:flex-end;
-      justify-content:left;
-      flex-wrap:wrap;
-
-    }
-  }
-
-  @media screen and (min-width: 1440px){  
-    .title .arrows{
-      float:right;
-      padding-top: 2em;
-      padding-right:1em;
     }
 
       .title .header{
@@ -133,51 +43,34 @@ blogIntroTemplate.innerHTML = `
         padding-left:1rem;
     }
 
-    .covers{
-      clear:both;
 
-    }
 
-    .websiteButtons{
-      display:flex;
-      column-gap:1em;
-    }
-
-    .descriptionsection{
-      display:flex;
+    .title .info{
+      display: flex;
       justify-content:space-between;
-      padding-right:1em;
+      padding-left:0rem;
     }
+ 
+    .title .info .datetext{
+      padding-left:1rem;
+      font-size: 1.5em;
+   }
+ 
+ 
+    .title .info .websiteButtons{
+     text-align: right;
+ 
+   }
+ 
 
-    
-    .descriptionsection .description .header{
-      font-size:3.5em;
-      text-align:left;
-    }
 
-    .descriptionsection .description .content{
-      font-size:1.5em;
-      width:45em;
-    }
-  
-    .descriptionsection .subinfos .subtitle{
-      font-size:1.5em;
-      padding-right:0.5em;
-      padding-top: 0em;
+  }
 
-    }
-    
-  
-    .descriptionsection .subinfos .content{
-      font-size:1.5em;
-    }
+  @media screen and (min-width: 1440px){  
 
-    .descriptionsection .subinfos .subinfo{
-      display:flex;
-      align-items:flex-end;
-      flex-wrap:wrap;
+   
 
-    }
+
   
   }
 
@@ -185,51 +78,20 @@ blogIntroTemplate.innerHTML = `
   </style>
 
   <div class="container">
-  <p class="directory">professional experience projects</p>
-  <div class="title">
-      <div class="arrows">
-          <div class="arrow left-arrow">
-              <div class="text">prev project</div>
-              <i class="bi bi-arrow-left"></i>
-          </div>
-          <div class="arrow right-arrow">
-              <div class="text">next project</div>
-              <i class="bi bi-arrow-right"></i>
-          </div>
-      </div>
+  <p class="directory">blogs</p>
+  <div class="title">      
       <div class="header">
-          <div>
               <slot name="title"></slot>
-          </div>
       </div>
-
-  </div>
-  <div class="covers">
-      <div class="coverImage">
-          <slot name="webpageImage"></slot>
-      </div>
-      <div class="coverVideo">
-          <slot name="webpageVideo"></slot>
+      <div class="info">
+            <div class="datetext">
+                <slot name="date"><slot>
+             </div>
+             <div class="websiteButtons">
+                <slot name="vlogbutton"></slot>
+             </div>
       </div>
   </div>
-
-
-  <div class="descriptionsection">
-      <div class="description">
-          <div class="header">Description</div>
-          <div class="content">
-              <slot name="description"></slot>
-          </div>
-      </div>
-      
-  </div>
-
-
-
-
-
-
-
 </div>
 `;
 

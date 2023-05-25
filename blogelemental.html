@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Multiplayer Elemental - Eldon Lin Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/blogproject.css">
     <script src="js/app.js" defer></script>
     <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
@@ -20,13 +20,12 @@
     <header-component></header-component>
     <section class="intro bg-js-controlled">
         <blogintro-component>
-            <span slot ="title">Multiplayer Blog - Part 1</span>
-            <img class="coverimage" src="images_videos/ProfessionalExperience/virtro/jis/jisbanner.png" slot="webpageImage">
-            <!-- <video class="covervideo" poster="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageVideo" controls>
-                <source src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntVideo.mp4" type="video/mp4" >your browser does not support the video
-            </video> -->
-
+            <span slot ="title">Multiplayer on Meta</span>
+            <span slot="date">May 24, 2023</span>
+            <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">Watch vlog instead</span>
+           
         </blogintro-component>
+    </section>
 
 
         <section class="diarypost bg-js-controlled">
@@ -61,8 +60,7 @@
             </blogcontent-component>
         </section>
 
-    </section>
-
+ 
 
 
     <section class="footer-section bg-js-controlled" id="contact">
