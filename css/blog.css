@@ -1,0 +1,74 @@
+:root{
+    --primary-color: #00ABEF;
+    --secondary-color:#E9F1FA;
+    --additional-color: #FFFFFF;
+
+
+}
+
+.intro .coverimage{
+    width:20em;
+    height:12em;
+    object-fit:cover;
+  }
+
+  .intro .covervideo{
+    width:20em;
+    height:12em;
+    object-fit:cover;
+  }
+
+  .intro button {
+    background-color: var(--primary-color);
+    border-radius: 5em;
+    border:none;
+    padding: 0.1em 1.2em;
+    opacity:1;
+    -webkit-transition: .4s ease-in-out;
+    transition:.4s ease-in-out;
+    color: var(--additional-color);
+    font-size:2em;
+  }
+
+  .intro button:hover{
+    opacity:0.5;
+  }
+
+  .intro .star .starimage{
+    width:20em;
+    height:20em;
+    object-fit:contain;
+  }
+
+
+  @media screen and (min-width: 1024px){
+    .intro .coverimage{
+      width:45em;
+      height:20em;
+
+
+    }
+  
+    .intro .covervideo{
+      width:45em;
+      height:20em;
+
+    }
+  }
+
+  @media screen and (min-width: 1440px){  
+    .intro .coverimage{
+      width:113em;
+      height:45em;
+
+
+    }
+  
+    .intro .covervideo{
+      width:113em;
+      height:45em;
+
+    }
+      
+
+  }
