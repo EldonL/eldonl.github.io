@@ -20,7 +20,19 @@ blogContentTemplate.innerHTML = `
   .diarypostblocks .diarypostblock .contentimages .aimage{
 
     text-align:center;
+  }  
+  
+  .recentblog .show{
+    color:red;
+    font-size:3em;
+    display: block;
   }
+
+  .filterblog{
+    display: none;
+  }
+
+
 
   @media screen and (min-width: 1024px){
     .diarypostblocks .diarypostblock{
@@ -48,6 +60,7 @@ blogContentTemplate.innerHTML = `
 
 
 </style>
+
 <div class="diarypostblocks">
     <div class="diarypostblock">
 
@@ -100,6 +113,13 @@ blogContentTemplate.innerHTML = `
 
     </div>
 
+
+    <div class="recentblog">
+      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">ONE</span>
+      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">TWO</span>
+      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">THREE</span>
+      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">FOUR</span>
+    </div>
 </div>
 
 `;
@@ -112,8 +132,18 @@ class BlogContent extends HTMLElement {
 
       const shadowRoot = this.attachShadow({ mode: 'open' });
       shadowRoot.appendChild(blogContentTemplate.content);
-      
-
+      var elementsName, i;
+      elementsName = this.shadowRoot.querySelectorAll(".filterblog");
+      console.log(elementsName.length);
+      var length = 3;
+      if(length>elementsName.length)
+      {
+        length = elementsName.length;
+      }
+      for(i=0; i < length; i++){
+        console.log(elementsName[i]);
+        AddClass(elementsName[i], "show");
+      }
     }
   
 
@@ -121,5 +151,18 @@ class BlogContent extends HTMLElement {
   
 
 
+
+ //show filtered elements
+function AddClass(element, name){
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for(i =0; i < arr2.length; i++){
+      if(arr1.indexOf(arr2[i]) == -1) {
+              element.className += " " + arr2[i];
+          
+      }
+  }
+}
 
   customElements.define('blogcontent-component', BlogContent);
