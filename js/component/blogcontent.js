@@ -14,7 +14,7 @@ blogContentTemplate.innerHTML = `
   .diarypostblocks .diarypostblock .contentimages .content{
     font-size: 1.5em;
     text-align:left;
-    padding-top:2em;
+
   }
 
   .diarypostblocks .diarypostblock .contentimages .aimage{
@@ -22,14 +22,17 @@ blogContentTemplate.innerHTML = `
     text-align:center;
   }
 
-  @media screen and (min-width: 1440px){  
+  @media screen and (min-width: 1024px){
     .diarypostblocks .diarypostblock{
-      padding-left:1em;
-      padding-bottom:1em;
-      padding-top:1em;
+      padding-left:20em;
+      padding-right:20em;
+      padding-top:3em;
 
-      grid-template-columns: 15% 85%;
     }
+  }
+
+  @media screen and (min-width: 1440px){  
+
 
 
     .diarypostblocks .diarypostblock .contentimages{

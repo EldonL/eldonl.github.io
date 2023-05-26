@@ -33,7 +33,8 @@ blogIntroTemplate.innerHTML = `
   @media screen and (min-width: 1024px){
     .title{
       display: grid;
-
+      padding-left:20em;
+      padding-right:20em;
     }
 
       .title .header{
