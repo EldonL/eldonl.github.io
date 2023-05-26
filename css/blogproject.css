@@ -6,17 +6,7 @@
 
 }
 
-.intro .coverimage{
-    width:20em;
-    height:12em;
-    object-fit:cover;
-  }
 
-  .intro .covervideo{
-    width:20em;
-    height:12em;
-    object-fit:cover;
-  }
 
   .intro button {
     background-color: var(--primary-color);
@@ -34,10 +24,11 @@
     opacity:0.5;
   }
 
-  .intro .diarypost .diarypostimage{
-    width:20em;
-    height:20em;
+.diarypost .diarypostimage{
+    width:30em;
+    height:30em;
     object-fit:contain;
+
   }
 
 

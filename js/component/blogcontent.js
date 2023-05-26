@@ -14,6 +14,7 @@ blogContentTemplate.innerHTML = `
   .diarypostblocks .diarypostblock .contentimages .content{
     font-size: 1.5em;
     text-align:left;
+    padding-top:2em;
   }
 
   .diarypostblocks .diarypostblock .contentimages .aimage{
@@ -26,7 +27,7 @@ blogContentTemplate.innerHTML = `
       padding-left:1em;
       padding-bottom:1em;
       padding-top:1em;
-      display:grid;
+
       grid-template-columns: 15% 85%;
     }
 
