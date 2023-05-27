@@ -3,7 +3,7 @@ const blogContentTemplate = document.createElement('template');
 blogContentTemplate.innerHTML = `
 <style>
 
-  .diarypostblocks .diarypostblock{
+  .container{
     padding-left:1em;
     padding-bottom:1em;
     padding-top:1em;
@@ -21,26 +21,61 @@ blogContentTemplate.innerHTML = `
 
     text-align:center;
   }  
-  
-  .recentblog .show{
-    color:red;
-    font-size:3em;
-    display: block;
-  }
 
-  .filterblog{
+  .recentblog .filterblog{
     display: none;
   }
 
+  .recentblog{
+    display:grid;
+    justify-content:center;
+  }
+
+  .recentblog .show{
+    display: block;
+
+  }
+  .recentblog .filterblog .image{
+    width:20em;
+    height:20em;
+    object-fit: cover;
+    opacity:1;
+    -webkit-transition: .4s ease-in-out;
+    transition:.4s ease-in-out;
+  }
+
+  .recentblog .filterblog .image:hover{
+     opacity:.5;
+  }
+
+
+
+  .recentblog .filterblog .imagetext{
+    position:relative;
+    text-align: center;
+    bottom: 1.25em;
+    font-size: 1.75em;
+    color:white;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px #000000;
+  }
 
 
   @media screen and (min-width: 1024px){
-    .diarypostblocks .diarypostblock{
+    .container{
       padding-left:20em;
       padding-right:20em;
       padding-top:3em;
 
     }
+
+    .recentblog{
+      display:flex;
+      justify-content:space-between;
+    }
+
+
+
   }
 
   @media screen and (min-width: 1440px){  
@@ -55,12 +90,14 @@ blogContentTemplate.innerHTML = `
       text-align:left;
     }
     
+
+
   }
 
 
 
 </style>
-
+<div class="container">
 <div class="diarypostblocks">
     <div class="diarypostblock">
 
@@ -115,12 +152,19 @@ blogContentTemplate.innerHTML = `
 
 
     <div class="recentblog">
-      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">ONE</span>
-      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">TWO</span>
-      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">THREE</span>
-      <button class="filterblog" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">FOUR</span>
+      <div class="filterblog">
+        <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png" alt="cover image"></a>
+        <div class="imagetext">Click to see more</div>
+        <div class="bottom">
+            <p class="title">Multiplayer on Meta Part1</p>
+        </div>
+      </div>
+                   
+      
     </div>
 </div>
+</div>
+
 
 `;
 
