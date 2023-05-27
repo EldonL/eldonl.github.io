@@ -22,6 +22,15 @@ blogContentTemplate.innerHTML = `
     text-align:center;
   }  
 
+  .blogclass{
+    padding-top:2em;
+  }
+
+  .blogclass .blogheader{
+    display:flex;
+    justify-content:space-between;
+  }
+  
   .recentblog .filterblog{
     display: none;
   }
@@ -150,18 +159,22 @@ blogContentTemplate.innerHTML = `
 
     </div>
 
-
-    <div class="recentblog">
-      <div class="filterblog">
-        <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png" alt="cover image"></a>
-        <div class="imagetext">Click to see more</div>
-        <div class="bottom">
-            <p class="title">Multiplayer on Meta Part1</p>
+    <div class="blogclass">
+        <div class="blogheader">
+          <div class="blogheaderleft">Recent blogs</div>
+          <div class="blogheaderright">See all blogs</div>
         </div>
-      </div>
-                   
-      
+        <div class="recentblog">
+          <div class="filterblog">
+            <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png" alt="cover image"></a>
+            <div class="imagetext">Click to see more</div>
+            <div class="bottom">
+              <p class="title">Multiplayer on Meta Part1</p>
+            </div>
+          </div>
+        </div>
     </div>
+    
 </div>
 </div>
 
