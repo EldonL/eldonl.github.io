@@ -194,32 +194,34 @@ blogContentTemplate.innerHTML = `
 `;
 
 
-
+var shadowRoot;
 class BlogContent extends HTMLElement {
     constructor() {
       super();
 
-      const shadowRoot = this.attachShadow({ mode: 'open' });
+      shadowRoot = this.attachShadow({ mode: 'open' });
       shadowRoot.appendChild(blogContentTemplate.content);
-      var elementsName, i;
-      elementsName = this.shadowRoot.querySelectorAll(".filterblog");
-      console.log(elementsName.length);
-      var length = 3;
-      if(length>elementsName.length)
-      {
-        length = elementsName.length;
-      }
-      for(i=0; i < length; i++){
-        console.log(elementsName[i]);
-        AddClass(elementsName[i], "show");
-      }
     }
   
 
   }
   
 
+window.onload=function filterSelection(){
 
+  var elementsName, i;
+  elementsName = this.shadowRoot.querySelectorAll(".filterblog");
+  console.log(elementsName.length);
+  var length = 3;
+  if(length>elementsName.length)
+  {
+    length = elementsName.length;
+  }
+  for(i=0; i < length; i++){
+    console.log(elementsName[i]);
+    AddClass(elementsName[i], "show");
+  }
+}
 
  //show filtered elements
 function AddClass(element, name){
