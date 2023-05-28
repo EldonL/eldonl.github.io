@@ -35,7 +35,7 @@ blogContentTemplate.innerHTML = `
 
 
   
-  .recentblog .filterblog{
+  .recentblog .filterblog:nth-child(n+4){
     display: none;
   }
 
@@ -44,10 +44,7 @@ blogContentTemplate.innerHTML = `
     justify-content:center;
   }
 
-  .recentblog .show{
-    display: block;
 
-  }
   .recentblog .filterblog .image{
     width:20em;
     height:20em;
@@ -184,6 +181,8 @@ blogContentTemplate.innerHTML = `
             </div>
           </div>
         
+
+         
         </div>
     </div>
     
@@ -207,33 +206,6 @@ class BlogContent extends HTMLElement {
   }
   
 
-window.onload=function filterSelection(){
 
-  var elementsName, i;
-  elementsName = this.shadowRoot.querySelectorAll(".filterblog");
-  console.log(elementsName.length);
-  var length = 3;
-  if(length>elementsName.length)
-  {
-    length = elementsName.length;
-  }
-  for(i=0; i < length; i++){
-    console.log(elementsName[i]);
-    AddClass(elementsName[i], "show");
-  }
-}
-
- //show filtered elements
-function AddClass(element, name){
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for(i =0; i < arr2.length; i++){
-      if(arr1.indexOf(arr2[i]) == -1) {
-              element.className += " " + arr2[i];
-          
-      }
-  }
-}
 
   customElements.define('blogcontent-component', BlogContent);
