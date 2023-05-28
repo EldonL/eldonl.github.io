@@ -104,8 +104,8 @@
 
 
 .work-projects-section .container .workProjectFilteredContainer .bottom{
-
-    padding-bottom: 1em;
+    position:relative;
+    bottom: 3em;
 }
 
 .work-projects-section .container .workProjectFilteredContainer .bottom .title{
@@ -114,6 +114,8 @@
 
 .work-projects-section .container .workProjectFilteredContainer .bottom .date{
     font-size: 1.25em;
+    position:relative;
+    bottom: 1em;
 }
 
 .work-projects-section .container .workProjectFilteredContainer .show{

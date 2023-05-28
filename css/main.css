@@ -225,8 +225,8 @@ button{
 
 
 .personal-projects-section .container .personalProjectFilteredContainer .bottom{
-
-    padding-bottom: 1em;
+    position:relative;
+    bottom: 3em;
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .bottom .title{
@@ -235,6 +235,8 @@ button{
 
 .personal-projects-section .container .personalProjectFilteredContainer .bottom .date{
     font-size: 1.25em;
+    position:relative;
+    bottom: 1em;
 }
 
 .personal-projects-section .container .personalProjectFilteredContainer .show{

@@ -29,7 +29,11 @@ blogContentTemplate.innerHTML = `
   .blogclass .blogheader{
     display:flex;
     justify-content:space-between;
+    font-size:1.1em;
+    
   }
+
+
   
   .recentblog .filterblog{
     display: none;
@@ -67,6 +71,13 @@ blogContentTemplate.innerHTML = `
     color:white;
     font-weight: bold;
     text-shadow: 0.5px 0.5px #000000;
+  }
+
+  .recentblog .filterblog .bottom .title{
+    position:relative;
+    bottom:2em;
+    text-align:center;
+    font-size: 1.5em;
   }
 
 
@@ -162,7 +173,7 @@ blogContentTemplate.innerHTML = `
     <div class="blogclass">
         <div class="blogheader">
           <div class="blogheaderleft">Recent blogs</div>
-          <div class="blogheaderright">See all blogs</div>
+          <a href="blog.html"><div class="blogheaderright">See all blogs</div></a>
         </div>
         <div class="recentblog">
           <div class="filterblog">
@@ -172,6 +183,7 @@ blogContentTemplate.innerHTML = `
               <p class="title">Multiplayer on Meta Part1</p>
             </div>
           </div>
+        
         </div>
     </div>
     
