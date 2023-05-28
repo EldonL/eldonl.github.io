@@ -169,8 +169,9 @@ blogContentTemplate.innerHTML = `
 
     <div class="blogclass">
         <div class="blogheader">
-          <div class="blogheaderleft">Recent blogs</div>
-          <a href="blog.html"><div class="blogheaderright">See all blogs</div></a>
+          <div class="blogheaderleft"><slot name="recentblogs"></slot></div>
+          <div class="blogheaderright"><slot name="seeallblogs"></slot></div>
+
         </div>
         <div class="recentblog">
           <div class="filterblog">
