@@ -23,6 +23,11 @@
     display: none;
   }
 
+  .recentblog .show{
+    display: inline;
+  }
+
+
   .recentblog{
     display:grid;
     justify-content:center;
