@@ -21,17 +21,19 @@
   
   .recentblog .filterblog:nth-child(n+4){
     display: none;
+
   }
+
 
   .recentblog{
     display:grid;
-    justify-content:center;
+    grid-template-columns: auto;
   }
 
 
   .recentblog .filterblog .image{
-    width:20em;
-    height:20em;
+    width:12em;
+    height:12em;
     object-fit: cover;
     opacity:1;
     -webkit-transition: .4s ease-in-out;
@@ -48,18 +50,29 @@
     position:relative;
     text-align: center;
     bottom: 1.25em;
-    font-size: 1.75em;
+    font-size: 1.25em;
     color:white;
     font-weight: bold;
     text-shadow: 0.5px 0.5px #000000;
   }
 
-  .recentblog .filterblog .bottom .title{
+  .recentblog .filterblog .bottom{
     position:relative;
     bottom:2em;
-    text-align:center;
-    font-size: 1.5em;
   }
+
+  .recentblog .filterblog .bottom .title{
+
+    text-align:center;
+    font-size: 1em;
+  }
+
+
+  .recentblog .filterblog .blogcontent{
+    display:grid;
+    text-align: center;
+  }
+
 
 
   @media screen and (min-width: 1024px){

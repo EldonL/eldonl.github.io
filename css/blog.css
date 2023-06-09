@@ -6,6 +6,13 @@
 
 }
 
+.morebutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:1em;
+}
+
 .morebutton .viewmorebutton button{
     background-color: var(--primary-color);
     border-radius: 5em;

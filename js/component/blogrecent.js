@@ -15,77 +15,45 @@ blogRecentTemplate.innerHTML = `
         </div>
         <div class="recentblog">
             <div class="filterblog">
-                <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
+                <div class="blogcontent">
+                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
                         alt="cover image"></a>
-                <div class="imagetext">Click to see more</div>
-                <div class="bottom">
-                    <p class="title">Multiplayer on Meta Part1</p>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Multiplayer on Meta Part1</p>
+                    </div>
                 </div>
             </div>
-
             <div class="filterblog">
-                <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-                    alt="cover image"></a>
-                <div class="imagetext">Click to see more</div>
-            <div class="bottom">
-                <p class="title">Multiplayer on Meta Part2</p>
+                <div class="blogcontent">
+                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
+                        alt="cover image"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Multiplayer on Meta Part1</p>
+                    </div>
+                </div>
             </div>
+            <div class="filterblog">
+                <div class="blogcontent">
+                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
+                        alt="cover image"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Multiplayer on Meta Part1</p>
+                    </div>
+                </div>
             </div>
-
-        <div class="filterblog">
-        <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-                alt="cover image"></a>
-        <div class="imagetext">Click to see more</div>
-        <div class="bottom">
-            <p class="title">Multiplayer on Meta Part3</p>
-        </div>
-
-    </div>
-
-
-    <div class="filterblog">
-    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-            alt="cover image"></a>
-    <div class="imagetext">Click to see more</div>
-    <div class="bottom">
-        <p class="title">Multiplayer on Meta Part4</p>
-    </div>
-
-</div>
-
-
-<div class="filterblog">
-<a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-        alt="cover image"></a>
-<div class="imagetext">Click to see more</div>
-<div class="bottom">
-    <p class="title">Multiplayer on Meta Part5</p>
-</div>
-
-</div>
-
-<div class="filterblog" >
-<a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-        alt="cover image"></a>
-<div class="imagetext">Click to see more</div>
-<div class="bottom">
-    <p class="title">Multiplayer on Meta Part6</p>
-</div>
-
-</div>
-
-<div class="filterblog">
-<a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-        alt="cover image"></a>
-<div class="imagetext">Click to see more</div>
-<div class="bottom">
-    <p class="title">Multiplayer on Meta Part7</p>
-</div>
-
-</div>
-
-
-
+            <div class="filterblog">
+                <div class="blogcontent">
+                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
+                        alt="cover image"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Multiplayer on Meta Part1</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
 </div>
