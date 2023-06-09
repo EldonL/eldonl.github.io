@@ -16,11 +16,11 @@ blogRecentTemplate.innerHTML = `
         <div class="recentblog">
             <div class="filterblog">
                 <div class="blogcontent">
-                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
+                    <a href="blogfirstandroidgame.html"><img class="image" src="images_videos/blog/FirstAndroidGame/coverimage.png"
                         alt="cover image"></a>
                     <div class="imagetext">Click to see more</div>
                     <div class="bottom">
-                        <p class="title">Multiplayer on Meta Part1</p>
+                        <p class="title">First Android Game</p>
                     </div>
                 </div>
             </div>
