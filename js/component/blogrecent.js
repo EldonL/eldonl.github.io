@@ -93,10 +93,12 @@ blogRecentTemplate.innerHTML = `
 </div>
 
 </div>
+
+        </div>
+        <div class="morebutton">
     <div class="viewmorebutton">
         <slot name="viewmorebutton"></slot>
     </div>
-        </div>
     </div>
 </div>
 
@@ -119,6 +121,7 @@ class BlogRecent extends HTMLElement {
     shadowRoot.appendChild(link)
     if (window.location.href.includes("eldonl.github.io/blog.html")) {//if main blog page
       shadowRoot.querySelector('link').setAttribute("href", "css/blogrecentmainpage.css")
+      DefaultDisplayBlog(6);
     }
     else {//if blog projects page
       shadowRoot.querySelector('link').setAttribute("href", "css/blogrecentprojectpage.css")
@@ -128,13 +131,23 @@ class BlogRecent extends HTMLElement {
 
 
 }
-  
-function ViewAllBlog(){
+
+function DefaultDisplayBlog(numBlogToShow){
     var elementsName, i;
     elementsName = this.shadowRoot.querySelectorAll(".filterblog");
-    console.log(elementsName.length);
-    for(i=0; i < elementsName.length; i++){       
+    console.log(numBlogToShow);
+    for(i=0; i < numBlogToShow; i++){     
             AddClass(elementsName[i], "show"); 
+    }
+}
+  
+function ViewAllBlog(){
+    var elementsName, i,viewMoreButton;
+    elementsName = this.shadowRoot.querySelectorAll(".filterblog");
+    viewMoreButton = this.shadowRoot.querySelectorAll(".viewmorebutton");
+    for(i=0; i < elementsName.length; i++){     
+            AddClass(elementsName[i], "show");
+    AddClass(viewMoreButton[0], "hide") 
     }
 }
 

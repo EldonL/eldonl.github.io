@@ -71,8 +71,9 @@
     }
 
     .recentblog{
-      display:flex;
-      justify-content:space-between;
+      display: grid;
+
+      grid-template-columns: 50% 50%;
     }
 
 
@@ -80,6 +81,11 @@
   }
 
   @media screen and (min-width: 1440px){  
+    .recentblog{
+      display: grid;     
+
+      grid-template-columns: 33% 33% 33%;
+    }
 
 
 
