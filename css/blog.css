@@ -1,0 +1,27 @@
+:root{
+    --primary-color: #00ABEF;
+    --secondary-color:#E9F1FA;
+    --additional-color: #FFFFFF;
+
+
+}
+
+.morebutton .viewmorebutton button{
+    background-color: var(--primary-color);
+    border-radius: 5em;
+    border:none;
+    padding: 0.1em 1.2em;
+    opacity:1;
+    -webkit-transition: .4s ease-in-out;
+    transition:.4s ease-in-out;
+    color: var(--additional-color);
+    font-size:2em;
+}
+
+.morebutton .viewmorebutton button:hover{
+    opacity:0.5;
+}
+
+.morebutton .hide{
+    display:none;
+}

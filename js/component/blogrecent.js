@@ -84,22 +84,10 @@ blogRecentTemplate.innerHTML = `
 
 </div>
 
-<div class="filterblog">
-<a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-        alt="cover image"></a>
-<div class="imagetext">Click to see more</div>
-<div class="bottom">
-    <p class="title">Multiplayer on Meta Part8</p>
-</div>
 
-</div>
 
         </div>
-        <div class="morebutton">
-    <div class="viewmorebutton">
-        <slot name="viewmorebutton"></slot>
-    </div>
-    </div>
+
 </div>
 
 
@@ -136,6 +124,11 @@ function DefaultDisplayBlog(numBlogToShow){
     var elementsName, i;
     elementsName = this.shadowRoot.querySelectorAll(".filterblog");
     console.log(numBlogToShow);
+    if(numBlogToShow>=elementsName.length){
+        numBlogToShow = elementsName.length;
+        viewMoreButton = document.getElementsByClassName("viewmorebutton");
+        AddClass(viewMoreButton[0], "hide") 
+    }
     for(i=0; i < numBlogToShow; i++){     
             AddClass(elementsName[i], "show"); 
     }
@@ -144,7 +137,7 @@ function DefaultDisplayBlog(numBlogToShow){
 function ViewAllBlog(){
     var elementsName, i,viewMoreButton;
     elementsName = this.shadowRoot.querySelectorAll(".filterblog");
-    viewMoreButton = this.shadowRoot.querySelectorAll(".viewmorebutton");
+    viewMoreButton = document.getElementsByClassName("viewmorebutton");
     for(i=0; i < elementsName.length; i++){     
             AddClass(elementsName[i], "show");
     AddClass(viewMoreButton[0], "hide") 
