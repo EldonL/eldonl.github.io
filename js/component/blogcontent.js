@@ -93,6 +93,28 @@ blogContentTemplate.innerHTML = `
             <div class="aimage"><slot name="action13image"></slot></div>
             <div class="content"><slot name="action14text"></slot></div>
             <div class="aimage"><slot name="action14image"></slot></div>
+            <div class="content"><slot name="action15text"></slot></div>
+            <div class="aimage"><slot name="action15image"></slot></div>
+            <div class="content"><slot name="action16text"></slot></div>
+            <div class="aimage"><slot name="action16image"></slot></div>
+            <div class="content"><slot name="action17text"></slot></div>
+            <div class="aimage"><slot name="action17image"></slot></div>
+            <div class="content"><slot name="action18text"></slot></div>
+            <div class="aimage"><slot name="action18image"></slot></div>
+            <div class="content"><slot name="action19text"></slot></div>
+            <div class="aimage"><slot name="action19image"></slot></div>
+            <div class="content"><slot name="action20text"></slot></div>
+            <div class="aimage"><slot name="action20image"></slot></div>
+            <div class="content"><slot name="action21text"></slot></div>
+            <div class="aimage"><slot name="action21image"></slot></div>
+            <div class="content"><slot name="action22text"></slot></div>
+            <div class="aimage"><slot name="action22image"></slot></div>
+            <div class="content"><slot name="action23text"></slot></div>
+            <div class="aimage"><slot name="action23image"></slot></div>
+            <div class="content"><slot name="action24text"></slot></div>
+            <div class="aimage"><slot name="action24image"></slot></div>
+            <div class="content"><slot name="action25text"></slot></div>
+            <div class="aimage"><slot name="action25image"></slot></div>
         </div>
 
     </div>

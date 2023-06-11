@@ -54,17 +54,30 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/bulletenemycollider.PNG" slot="action8image">                 
                     <span slot ="action9text">Below is how I tested. Notice in the inspector that 20 bullets get spawned and they get disabled at the start, collide with the enemy(capsule) or after 3 seconds</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/bulletobjectpooltest.gif" slot="action9image">
-                    <span slot ="result2text">An example of what the webgl vr version of the interview looked like this.</span>
-                    <img class="diarypostimage" src="images_videos/ProfessionalExperience/virtro/jis/filipvr.PNG" slot="result2image">
-                    <span slot ="result3text">An example of what lobby's webgl version looks like when user is about to select the job they would like to be interviewed for</span>
-                    <img class="diarypostimage" src="images_videos/ProfessionalExperience/virtro/jis/lobbycashierwebgl.PNG" slot="result3image">
-                    <span slot ="result4text">An example of what lobby's vr version looks like when user is about to select the job they would like to be interviewed for</span>
-                    <img class="diarypostimage" src="images_videos/ProfessionalExperience/virtro/jis/lobbybrokervr.PNG" slot="result4image">
-                    <span slot ="result5text">Working on this app has been very rewarding. Especially seeing that this helped real people. Check out <a href=" https://www.vcc.ca/about/college-information/news/article/innovative-pilot-project-helps-vcc-students-beconfident-in-job-interviews.html">Vancouver Community College Media release</a></span>
-                    <!-- <img class="diarypostimage" src="images_videos/ProfessionalExperience/virtro/virtro.png" slot="result5image"> -->
-                   
-       
-           
+                    <span slot ="action10text">Now I know the basics work, I need to created my tasks on JIRA</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/jira.PNG" slot="action10image"> 
+                    <span slot ="action11text">I need to design what I want my game to look like in FIGMA. I made sure to prototype so I know which window opens when a button click occurs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/figma.PNG" slot="action11image"> 
+                    <span slot ="action12text">Now instead of object pooling bullets. I will object pool spawning coins. There are 3 types of coins, each coin is different amount. When the player collides with the coin, coin gets increased. The coins are from the Unity Asset Store: <a href="https://assetstore.unity.com/packages/2d/gui/icons/2d-pixel-item-asset-pack-99645">2D Pixel Item Asset Pack</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/threetypesofcoins.png" slot="action12image">
+                    <span slot ="action13text">The coins are being spawned from an invisible spawner. This spawner should be moving left to right along the x axis. I could of used lerp, but instead I used DOTWEEN</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/dotweenSpawnCode.PNG" slot="action13image"> 
+                    <span slot ="action14text">The code just says, if the spawner collides with pointA then start moving towards point B and vice versa. Gif xxample shows that in the scene view, the spawner selected is going back and forth between point A and point B</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/dotweenSpawn.gif" slot="action14image"> 
+                    <span slot ="action15text">Now I want to animate the enemy by replacing the capsule with a spritesheet. Using piskel, did a quick drawing- a 1 by 2 spritesheet. I exported the sprite sheet. In the inspector, set the sprite mode to multiple. Click Apply and then opened sprite editor </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/spritemodemultiple.PNG" slot="action15image"> 
+                    <span slot ="action16text">Following this <a href="https://learn.unity.com/tutorial/introduction-to-sprite-animations#">Introdcution to Sprite Animation Tutorial</a> I set the type to Grid by Cell Option. Instead of 9 by 3, I entered 1 by 2 </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/spriteeditor.PNG" slot="action16image"> 
+                    <span slot ="action17text">The spritesheeet gets created. I select the two sprites and dragged it into the scene view which prompts me to create an animation</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/potatospriteanimatino.PNG" slot="action17image"> 
+                    <span slot ="action18text">The potato animation result</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/potatoanimation.gif" slot="action18image"> 
+                    <span slot ="action19text">The coin and enemy were all set. I added logic so that if player collides with enemy, player loses a life. If player bullet collides with the enemy, add score. If player collides with coin, add coin. Using the <a href="https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811">Fantasy Wooden GUI</a> as the background</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/scoremanager.PNG" slot="action19image"> 
+                    <span slot ="action20text">My Figma design of my game view vs the result was a little bit different, because I realized my original design seemed messy. Especially a space background didn't make sense since it was potato/tomatos. Made more sense to have a grass background to look like a farm. In addition, the player1 and player2 information at the bottom, it made more sense to have the left and right mirror each other so it's easier to read. Below is figma design</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/figmaGameView.PNG" slot="action20image"> 
+                    <span slot ="action21text">Game result below</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GameGameResult.PNG" slot="action21image"> 
                 </blogcontent-component>
             </section>
 
