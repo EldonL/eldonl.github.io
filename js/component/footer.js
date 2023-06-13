@@ -48,7 +48,7 @@ footerTemplate.innerHTML = `
             <div class="contact-links">
                 <a onclick="OnLinkClick('https://www.linkedin.com/in/eldon-lin-38a181b0')"><i class="bi bi-linkedin"></i></a>
                 <a onclick="OnLinkClick('https://www.youtube.com/channel/UC-igukaTIJFHYS8TNkcJ4lA')"><i class="bi bi-youtube"></i></a>
-
+                <a onclick="OnLinkClick('https://github.com/EldonL')"><i class="bi bi-github"></i></a>
             </div>
             <div class="lastModified">              
                     <p>last modified:</p>
