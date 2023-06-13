@@ -37,17 +37,17 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This blog will describe what I encountered while making my first Android game. I am using 2021.3.16f1. I wasn't familiar on how the UI would look on a phone vs in editor. Below is in Editor</span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/initialtest.png" slot="action1image">                
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/initialtest.PNG" slot="action1image">                
                     <span slot ="action2text">On the phone in vertical mode. You can see the player is in the wrong position. This may be due to the UIs being in world space</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/verticalandroid.jpg" slot="action2image">                
                     <span slot ="action3text">On the phone in horizontal mode. You can see the UI does not span across the phone</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/horizontalandroid.jpg" slot="action3image">                
                     <span slot ="action4text">I was also unsure what happens on a phone when I do GetMouseButtonDown. So I tested out the code below and turns out GetMouseButtonDown is same thing as tap on the phone</span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/moveplayertocameraposition.png" slot="action4image">                
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/moveplayertocameraposition.PNG" slot="action4image">                
                     <span slot ="action5text">So now that I know an android build works on my Samsung Galaxy S10. I need to come up with a game, UI design and decide if my game will stay in one orientation or not -vertical, horizontal or both. I wanted to make a game called tomatos vs potatos. It is similar to Kids Next Door: Operation Graduation or those endless runner space shooting games. The idea is there are Potatos being shot at the player which is the Tomato. Below is an example of Kids next door: Operation Graduation looks like</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/kndoperationgraduation.jpg" slot="action5image">                
                     <span slot ="action6text">While UI design was important, I wanted to get all the basic functionality in - kind of whiteboxing it. My next goal was to have the player spawn bullets using object pooling. I followed the tutorial from <a href="https://learn.unity.com/tutorial/introduction-to-object-pooling#5ff8d015edbc2a002063971d">Introduction to Object Pooling Unity Tutorial</a>. My PlayerBulletPoolInstance script was the same as the tutorial. My Player script is where it is spawning the bullet. Every x amount of seconds I would spawn a bullet, to "spawn" a bullet, I am setting the bullet to the player's position and enable the bullet using SetActive(True). This is because all the bullets have be Instantiated at the Start() in PlayerBulletPoolInstance.cs</span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerShootingBullet.png" slot="action6image">                
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerShootingBullet.PNG" slot="action6image">                
                     <span slot ="action7text">The bullet itself has the logic to move itself upward. In OnEnable() it will wait for 3 seconds before disabling it, because at this point the bullet is already out of the screen. However, if the bullet collides with the enemy, then it will be disabled.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/BulletScript.PNG" slot="action7image"> 
                     <span slot ="action8text">Using a capsule to test as an enemy and a square as a bullet. I added Rigidbody2D component with 0 gravity scale and Collider2D component with IsTrigger enabled to both</span>
@@ -59,7 +59,7 @@
                     <span slot ="action11text">I need to design what I want my game to look like in FIGMA. I made sure to prototype so I know which window opens when a button click occurs</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/figma.PNG" slot="action11image"> 
                     <span slot ="action12text">Now instead of object pooling bullets. I will object pool spawning coins. There are 3 types of coins, each coin is different amount. When the player collides with the coin, coin gets increased. The coins are from the Unity Asset Store: <a href="https://assetstore.unity.com/packages/2d/gui/icons/2d-pixel-item-asset-pack-99645">2D Pixel Item Asset Pack</a></span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/threetypesofcoins.png" slot="action12image">
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/threetypesofcoins.PNG" slot="action12image">
                     <span slot ="action13text">The coins are being spawned from an invisible spawner. This spawner should be moving left to right along the x axis. I could of used lerp, but instead I used DOTWEEN</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/dotweenSpawnCode.PNG" slot="action13image"> 
                     <span slot ="action14text">The code just says, if the spawner collides with pointA then start moving towards point B and vice versa. Gif xxample shows that in the scene view, the spawner selected is going back and forth between point A and point B</span>
