@@ -24,36 +24,7 @@ blogRecentTemplate.innerHTML = `
                     </div>
                 </div>
             </div>
-            <div class="filterblog">
-                <div class="blogcontent">
-                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-                        alt="cover image"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Multiplayer on Meta Part1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="filterblog">
-                <div class="blogcontent">
-                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-                        alt="cover image"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Multiplayer on Meta Part1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="filterblog">
-                <div class="blogcontent">
-                    <a href="blogelemental.html"><img class="image" src="images_videos/blog/MultiPlayerPart1/coverimage.png"
-                        alt="cover image"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Multiplayer on Meta Part1</p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
 </div>
