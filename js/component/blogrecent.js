@@ -20,7 +20,7 @@ blogRecentTemplate.innerHTML = `
                         alt="cover image"></a>
                     <div class="imagetext">Click to see more</div>
                     <div class="bottom">
-                        <p class="title">First Android Game</p>
+                        <p class="title">First Android Game - Part 1</p>
                     </div>
                 </div>
             </div>
