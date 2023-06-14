@@ -115,6 +115,16 @@ blogContentTemplate.innerHTML = `
             <div class="aimage"><slot name="action24image"></slot></div>
             <div class="content"><slot name="action25text"></slot></div>
             <div class="aimage"><slot name="action25image"></slot></div>
+            <div class="content"><slot name="action26text"></slot></div>
+            <div class="aimage"><slot name="action26image"></slot></div>
+            <div class="content"><slot name="action27text"></slot></div>
+            <div class="aimage"><slot name="action27image"></slot></div>
+            <div class="content"><slot name="action28text"></slot></div>
+            <div class="aimage"><slot name="action28image"></slot></div>
+            <div class="content"><slot name="action29text"></slot></div>
+            <div class="aimage"><slot name="action29image"></slot></div>
+            <div class="content"><slot name="action30text"></slot></div>
+            <div class="aimage"><slot name="action30image"></slot></div>
         </div>
 
     </div>

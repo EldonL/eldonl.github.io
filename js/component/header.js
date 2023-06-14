@@ -136,8 +136,8 @@ ul{
             <li><a href="index.html#skill" onclick="OnMobileExitClick()">Skills</a></li>                    
             <li><a href="index.html#professionalexperience" onclick="OnMobileExitClick()">Professional Experience</a></li>
             <li><a href="index.html#personalproject" onclick="OnMobileExitClick()">Personal Projects</a></li>
+            <li><a href="blog.html" onclick="OnMobileExitClick()">Blogs</a></li>
             <li><a href="index.html#contact" onclick="OnMobileExitClick()">Contact</a></li>
-            <li><a href="blog.html" onclick="OnMobileExitClick()">Blog</a></li>
         </ul>
     </nav>
 </div>
