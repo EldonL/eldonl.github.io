@@ -14,9 +14,19 @@ blogRecentTemplate.innerHTML = `
 
         </div>
         <div class="recentblog">
+        <div class="filterblog">
+                <div class="blogcontent">
+                    <a href="blogfirstandroidgame3.html"><img class="image" src="images_videos/blog/FirstAndroidGame/digibccareerfair.png"
+                        alt="cover image"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">First Android Game - Part 3</p>
+                    </div>
+                </div>
+            </div>
             <div class="filterblog">
                 <div class="blogcontent">
-                    <a href="blogfirstandroidgame2.html"><img class="image" src="images_videos/blog/FirstAndroidGame/coverimage.png"
+                    <a href="blogfirstandroidgame2.html"><img class="image" src="images_videos/blog/FirstAndroidGame/mainmenufinal.png"
                         alt="cover image"></a>
                     <div class="imagetext">Click to see more</div>
                     <div class="bottom">

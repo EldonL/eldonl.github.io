@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 3</span>
+                <span slot="date">June 15, 2023</span>
+                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">Watch vlog instead</span> -->
+               
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 3 of making my first Android Game. If you missed part2, you can find it <a href="blogfirstandroidgame2.html">here</a></span>
+                    <span slot ="action2text">It was time to get some ALPHA testers! I happened to be layed off and there was a career fair happening held by DigiBC. So I thought this was a good way to showcase my android experience with this game and have them test. The best part was they would only play for 15 seconds to 1 minute. By watching the recruiters play, I can learn what I need to improve on</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/digibccareerfair.PNG" slot="action2image">
+                    <span slot ="action3text">1) No one knew what to do with their fingers. They didn't know the player could be moved. Even when I tell them the player follows the finger, they initially thought the player will go anywhere, but it is only on the x axis. Therefore I need to consider including a tutorial or some sort of arrow indication.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/moveplayertutorial.PNG" slot="action3image">
+                    <span slot ="action4text">2) They had no clue there was a weapon selection button. I need to notify the user at the beginning</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/selectweaponbutton.PNG" slot="action4image">
+                    <span slot ="action5text">3) No one knew that after clicking a weapon button, then clicking the select button, they needed to select the "x" button to close the window. They all assumed the "select" button was the close button. I should change it so the "select" button is the close button.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/whatyoubuymenuselectclose.PNG" slot="action5image">
+                    <span slot ="action6text">This is it for part 3. Part 4 of my first android game journey will be some improvements from the feedback and possible implementing multiplayer features</span>
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="blog.html">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
