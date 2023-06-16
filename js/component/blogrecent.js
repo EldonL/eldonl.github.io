@@ -16,7 +16,7 @@ blogRecentTemplate.innerHTML = `
         <div class="recentblog">
         <div class="filterblog">
                 <div class="blogcontent">
-                    <a href="blogfirstandroidgame3.html"><img class="image" src="images_videos/blog/FirstAndroidGame/digibccareerfair.png"
+                    <a href="blogfirstandroidgame3.html"><img class="image" src="images_videos/blog/FirstAndroidGame/digibccareerfair.PNG"
                         alt="cover image"></a>
                     <div class="imagetext">Click to see more</div>
                     <div class="bottom">
@@ -26,7 +26,7 @@ blogRecentTemplate.innerHTML = `
             </div>
             <div class="filterblog">
                 <div class="blogcontent">
-                    <a href="blogfirstandroidgame2.html"><img class="image" src="images_videos/blog/FirstAndroidGame/mainmenufinal.png"
+                    <a href="blogfirstandroidgame2.html"><img class="image" src="images_videos/blog/FirstAndroidGame/mainmenufinal.PNG"
                         alt="cover image"></a>
                     <div class="imagetext">Click to see more</div>
                     <div class="bottom">
