@@ -65,7 +65,7 @@ class BlogRecent extends HTMLElement {
     link.setAttribute("href", '');
     link.setAttribute("rel", "stylesheet");
     shadowRoot.appendChild(link)
-    if (window.location.href.includes("eldonl.github.io/blog.html")) {//if main blog page
+    if (window.location.href.includes("eldonl.github.io/index.html")) {//if main blog page
       shadowRoot.querySelector('link').setAttribute("href", "css/blogrecentmainpage.css")
       DefaultDisplayBlog(6);
     }

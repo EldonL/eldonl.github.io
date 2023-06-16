@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eldon Lin Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <link rel="stylesheet" href="css/blog.css">
     <script src="js/app.js" defer></script>
     <script src="js/filtertab.js" defer></script>
     <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
     <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <body>
@@ -260,6 +263,21 @@
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+
+
+    <section class="blogrecent bg-js-controlled" id="blog">
+        <div class="container">
+            <h2 class="header">Blogs</h2>
+            <blogrecent-component>
+            </blogrecent-component>
+
+            <div class="morebutton">
+                <div class="viewmorebutton">
+                    <button onclick="ViewAllBlog()">See all blogs</button>
+                </div>
             </div>
         </div>
     </section>
