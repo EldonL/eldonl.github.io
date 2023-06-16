@@ -65,12 +65,17 @@ class BlogRecent extends HTMLElement {
     link.setAttribute("href", '');
     link.setAttribute("rel", "stylesheet");
     shadowRoot.appendChild(link)
+    console.log("finished appendchild");
     if (window.location.href.includes("eldonl.github.io/index.html")) {//if main blog page
-      shadowRoot.querySelector('link').setAttribute("href", "css/blogrecentmainpage.css")
+        console.log("enter if eldonl.github.io");
+      shadowRoot.querySelector('link').setAttribute("href", "css/blogrecentmainpage.css");
+      console.log("css/glotrecentmainpage.css found");
       DefaultDisplayBlog(6);
+      console.log("display 6");
     }
     else {//if blog projects page
-      shadowRoot.querySelector('link').setAttribute("href", "css/blogrecentprojectpage.css")
+      shadowRoot.querySelector('link').setAttribute("href", "css/blogrecentprojectpage.css");
+      console.log("entered else");
     }
 
   }
@@ -81,7 +86,6 @@ class BlogRecent extends HTMLElement {
 function DefaultDisplayBlog(numBlogToShow){
     var elementsName, i;
     elementsName = this.shadowRoot.querySelectorAll(".filterblog");
-    console.log(numBlogToShow);
     if(numBlogToShow>=elementsName.length){
         numBlogToShow = elementsName.length;
         viewMoreButton = document.getElementsByClassName("viewmorebutton");
