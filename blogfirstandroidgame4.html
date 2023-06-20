@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 4</span>
+                <span slot="date">June 19, 2023</span>
+                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/watch?v=2eVfeaquPtg')">Watch vlog instead</span> -->
+               
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 4 of making my first Android Game. If you missed part4, you can find it <a href="blogfirstandroidgame3.html">here</a></span>
+                    <span slot ="action2text">I am following the tutorial to create photon <a href="https://www.youtube.com/watch?v=93SkbMpWCGo">here</a>.Time to add in Photon so my game be a multiplayer game. First I created an app on Photon dashboard. I selected PUN as the photon type</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon1.PNG" slot="action2image">
+                    <span slot ="action3text">Then imported the Photon unity asset called PUN 2 free<a href="https://assetstore.unity.com/packages/tools/network/pun-2-free-119922">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon2.PNG" slot="action3image">
+                    <span slot ="action4text">2) They had no clue there was a weapon selection button. I need to notify the user at the beginning</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/selectweaponbutton.PNG" slot="action4image">
+                    <span slot ="action5text">3) No one knew that after clicking a weapon button, then clicking the select button, they needed to select the "x" button to close the window. They all assumed the "select" button was the close button. I should change it so the "select" button is the close button.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/whatyoubuymenuselectclose.PNG" slot="action5image">
+                    <span slot ="action6text">4)Some users didn't know what to collect or dodge. They weren't sure if the coins were to be collected or not. I probably need a tutorial</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/coinscollected.gif" slot="action6image">
+                    <span slot ="action7text">To resolve the select button not closing on the what you have to buy menu. I made the select button do what the close button does in addition to what the select button already does. So now when the user selects a weapon then clicks the "select" button, the menu closes and the game continues</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/seelctcloses.PNG" slot="action7image">
+                    <span slot ="action8text">To resolve user not knowing what to collect, dodge or when to press the select button. I added a how to play button and how to play menu in the Start scene</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/HowToPlayMenu.PNG" slot="action8image">
+                    <span slot ="action9text">This is it for part 3. Part 4 of my first android game journey coming soon</span>
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
