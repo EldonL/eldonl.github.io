@@ -55,6 +55,8 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon9.PNG" slot="action9image">
                     <span slot ="action10text">The players movement are synched across the game. However, both are treated as Player1 and the enemies/bullets are not on the network yet. You can't see the other player's bullets and if the other player gets destroyed you won't notice. However, if the other player's network drops, it will disappear from your game</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon10.gif" slot="action10image">
+                    <span slot ="action11text">I wanted to see what happens when I have internet turned off. It appears the OnJoinedLobby() callback function cannot be called but OnConnectedToMaster() will still be called-this may be because according to this <a href="https://doc.photonengine.com/pun/current/gameplay/offlinemode">documentation</a> PhotonNetWork.IsMasterClient is always true when OfflineMode is set to true. With internet turned off, if I press 1 player button, lobby will load and game functions in editor. However, this means OnJoinedLobby() won't get called. I will revisit this again another time. Going to try to get the other items working online and shared across two players such as background/enemies/scoreboard</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon11.PNG" slot="action11image">
 
                 </blogcontent-component>
             </section>
