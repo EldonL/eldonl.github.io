@@ -38,6 +38,7 @@
     opacity:1;
     -webkit-transition: .4s ease-in-out;
     transition:.4s ease-in-out;
+    border-radius: 50%;
   }
 
   .recentblog .filterblog .image:hover{
@@ -49,7 +50,7 @@
   .recentblog .filterblog .imagetext{
     position:relative;
     text-align: center;
-    bottom: 1.25em;
+    bottom: 3em;
     font-size: 1.25em;
     color:white;
     font-weight: bold;
