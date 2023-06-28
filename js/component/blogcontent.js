@@ -125,6 +125,66 @@ blogContentTemplate.innerHTML = `
             <div class="aimage"><slot name="action29image"></slot></div>
             <div class="content"><slot name="action30text"></slot></div>
             <div class="aimage"><slot name="action30image"></slot></div>
+            <div class="content"><slot name="action31text"></slot></div>
+            <div class="aimage"><slot name="action31image"></slot></div>
+            <div class="content"><slot name="action32text"></slot></div>
+            <div class="aimage"><slot name="action32image"></slot></div>
+            <div class="content"><slot name="action33text"></slot></div>
+            <div class="aimage"><slot name="action33image"></slot></div>
+            <div class="content"><slot name="action34text"></slot></div>
+            <div class="aimage"><slot name="action34image"></slot></div>
+            <div class="content"><slot name="action35text"></slot></div>
+            <div class="aimage"><slot name="action35image"></slot></div>
+            <div class="content"><slot name="action36text"></slot></div>
+            <div class="aimage"><slot name="action36image"></slot></div>
+            <div class="content"><slot name="action37text"></slot></div>
+            <div class="aimage"><slot name="action37image"></slot></div>
+            <div class="content"><slot name="action38text"></slot></div>
+            <div class="aimage"><slot name="action38image"></slot></div>
+            <div class="content"><slot name="action39text"></slot></div>
+            <div class="aimage"><slot name="action39image"></slot></div>
+            <div class="content"><slot name="action40text"></slot></div>
+            <div class="aimage"><slot name="action40image"></slot></div>
+            <div class="content"><slot name="action41text"></slot></div>
+            <div class="aimage"><slot name="action41image"></slot></div>
+            <div class="content"><slot name="action42text"></slot></div>
+            <div class="aimage"><slot name="action42image"></slot></div>
+            <div class="content"><slot name="action43text"></slot></div>
+            <div class="aimage"><slot name="action43image"></slot></div>
+            <div class="content"><slot name="action44text"></slot></div>
+            <div class="aimage"><slot name="action44image"></slot></div>
+            <div class="content"><slot name="action45text"></slot></div>
+            <div class="aimage"><slot name="action45image"></slot></div>
+            <div class="content"><slot name="action46text"></slot></div>
+            <div class="aimage"><slot name="action46image"></slot></div>
+            <div class="content"><slot name="action47text"></slot></div>
+            <div class="aimage"><slot name="action47image"></slot></div>
+            <div class="content"><slot name="action48text"></slot></div>
+            <div class="aimage"><slot name="action48image"></slot></div>
+            <div class="content"><slot name="action49text"></slot></div>
+            <div class="aimage"><slot name="action49image"></slot></div>
+            <div class="content"><slot name="action50text"></slot></div>
+            <div class="aimage"><slot name="action50image"></slot></div>
+            <div class="content"><slot name="action51text"></slot></div>
+            <div class="aimage"><slot name="action51image"></slot></div>
+            <div class="content"><slot name="action52text"></slot></div>
+            <div class="aimage"><slot name="action52image"></slot></div>
+            <div class="content"><slot name="action53text"></slot></div>
+            <div class="aimage"><slot name="action53image"></slot></div>
+            <div class="content"><slot name="action54text"></slot></div>
+            <div class="aimage"><slot name="action54image"></slot></div>
+            <div class="content"><slot name="action55text"></slot></div>
+            <div class="aimage"><slot name="action55image"></slot></div>
+            <div class="content"><slot name="action56text"></slot></div>
+            <div class="aimage"><slot name="action56image"></slot></div>
+            <div class="content"><slot name="action57text"></slot></div>
+            <div class="aimage"><slot name="action57image"></slot></div>
+            <div class="content"><slot name="action58text"></slot></div>
+            <div class="aimage"><slot name="action58image"></slot></div>
+            <div class="content"><slot name="action59text"></slot></div>
+            <div class="aimage"><slot name="action59image"></slot></div>
+            <div class="content"><slot name="action60text"></slot></div>
+            <div class="aimage"><slot name="action60image"></slot></div>
         </div>
 
     </div>
