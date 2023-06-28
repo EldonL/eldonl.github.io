@@ -79,6 +79,8 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon25.PNG" slot="action21image">
                     <span slot ="action22text">When we leave the room, the list of rooms needs to be updated. To do that PhotonNetwork.JoinLobby needs to be called again. We can call this in the callback function OnConnectedToMaster(). OnConnectedToMaster() is called because LeaveRoom() is called - remember LeaveRoom() is defined as "Leave the current room and return to the Master Server where you can join or create rooms "</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon26.PNG" slot="action22image">
+                    <span slot ="action23text">The OnRoomListUpdate() callback function gets called in quick successions. So a timer is added to prevent the UpdateRoomList() to be called multiple times</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon27.PNG" slot="action23image">
 
                     <span slot ="action49text">A component called PhotonView is added to the player prefab. This component is needed to be connected on to the server. Any prefab to be spawned on the network must be in the Resources folder. So I moved the Player prefab into the Resources folder</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon6.PNG" slot="action49image">
