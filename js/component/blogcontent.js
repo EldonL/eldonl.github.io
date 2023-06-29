@@ -5,6 +5,7 @@ blogContentTemplate.innerHTML = `
 
   .container{
     padding-left:1em;
+
     padding-bottom:1em;
     padding-top:1em;
   }
@@ -14,7 +15,10 @@ blogContentTemplate.innerHTML = `
   .diarypostblocks .diarypostblock .contentimages .content{
     font-size: 1.5em;
     text-align:left;
+    overflow-wrap: break-word;
 
+
+    
   }
 
   .diarypostblocks .diarypostblock .contentimages .aimage{
@@ -32,10 +36,6 @@ blogContentTemplate.innerHTML = `
 
     }
 
-    .recentblog{
-      display:flex;
-      justify-content:space-between;
-    }
 
 
 
