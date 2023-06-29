@@ -89,6 +89,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon30.PNG" slot="action26image">
                     <span slot ="action27text">After I added an image containing a horizontal layout group which will list out the players in the room.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon31.PNG" slot="action27image">
+                    <span slot ="action28text">With the PlayerItem prefab created, I can spawn the PlayerItem prefab into the game. I made a function called UpdatePlayerList(). This functions will first clear the player List, check if the room exist then spawn all the playersItems into the Panel. This function is called during OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer), OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer),OnJoinedRoom()</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon32.PNG" slot="action28image">
+                    <span slot ="action29text">I would Instantiate the PlayerItemPrefab under "Listing" gameobject. As shown in the gif below, the playerItem are spawned when a player joins or leaves the room</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon33.gif" slot="action29image">
 
                     <span slot ="action49text">A component called PhotonView is added to the player prefab. This component is needed to be connected on to the server. Any prefab to be spawned on the network must be in the Resources folder. So I moved the Player prefab into the Resources folder</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon6.PNG" slot="action49image">
