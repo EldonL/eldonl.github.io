@@ -93,6 +93,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon32.PNG" slot="action28image">
                     <span slot ="action29text">I would Instantiate the PlayerItemPrefab under "Listing" gameobject. As shown in the gif below, the playerItem are spawned when a player joins or leaves the room</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon33.gif" slot="action29image">
+                    <span slot ="action30text">The PlayerItem currently does not display the Player's name. The Photon.RealTime.Player has a property called "NickName". So when UpdatePlayerList is looping through the Photon.RealTime.Player list, I pass in the value from the key value pair player, I would have access to the player which then allows me to get access to Photon.RealTime.Player.NickName</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon34.PNG" slot="action30image">
+                    <span slot ="action31text">All the PlayerItem will display the player's NickName!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon35.PNG" slot="action31image">
 
                     <span slot ="action49text">A component called PhotonView is added to the player prefab. This component is needed to be connected on to the server. Any prefab to be spawned on the network must be in the Resources folder. So I moved the Player prefab into the Resources folder</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon6.PNG" slot="action49image">
