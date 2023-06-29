@@ -113,6 +113,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon42.PNG" slot="action38image">
                     <span slot ="action39text">Now only the local player can see their own arrow buttons</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon43.PNG" slot="action39image">
+                    <span slot ="action40text">The next step is to add a play button that will appear for the host only. The play button will transition all the players in the room to the game scene. In the Update() function, I will check if it is the master client. If yes, enable the Play button, otherwise disable the play button.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon44.PNG" slot="action40image">
+                    <span slot ="action41text">Using PhotonNetwork.LoadLevel("Game") to load into in the game scene when master presses the play button</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon45.PNG" slot="action41image">
+                    <span slot ="action42text">In ConnectToServer.cs, in OnClickConnect() function, I will call PhotonNetwork.AutomaticallySyncScene so that when master presses "Play", ALL users will load into the game scene</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon46.PNG" slot="action42image">
+                    <span slot ="action43text">The Play button will appear in the room for the master!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon47.PNG" slot="action43image">
 
                     <span slot ="action49text">A component called PhotonView is added to the player prefab. This component is needed to be connected on to the server. Any prefab to be spawned on the network must be in the Resources folder. So I moved the Player prefab into the Resources folder</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon6.PNG" slot="action49image">
