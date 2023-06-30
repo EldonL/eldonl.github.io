@@ -137,8 +137,13 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon11.PNG" slot="action50image">
                     <span slot ="action51text">This part was done before following the tutorial to select multiple characters. It was time to sync up the enemies. I moved all the enemies and explosions prefab to the Resources folder. On all of them I added the PhotonView component so they can be read across the network. Also added the PhotonTransformViewClassic and enabled synchronize Position. When I made the build and tested, the client will throw an error when trying to get the explosions: <p style="color:red">ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.</p> The explosions pool objects were 0 for the client.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon12.PNG" slot="action51image">
-                    <span slot ="action52text">Back to select multiple character tutorial. I had to spawn the players in. In the tutorial, their way was to spawn player prefab(s) from the resources folder. I also spawn the player prefab from the resources folder, but only the sprite changes. I am having trouble syncing the sprites. I may need to use RPCs</span>
-                    <!-- <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon47.PNG" slot="action52image"> -->
+                    <span slot ="action52text">Back to select multiple character tutorial. I had to spawn the players in. In the tutorial, their way was to spawn player prefab(s) from the resources folder. I also spawn the player prefab from the resources folder, but only the sprite changes. I am having trouble syncing the sprites. I decided to use RPCs (Remote Procedure Calls)</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon48.PNG" slot="action52image">
+                    <span slot ="action53text">ChangeAvatar() function has a [PunRPC] attribute. I check if the player is myself and then update the sprite based on if it's the master or client. If the player never selected an avatar and pressed play, then set the sprite default to index 0</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon49.PNG" slot="action53image">
+                    <span slot ="action54text">I made sure to assign the body and bodysprites(in the same order from lobby) so that there are sprites to select from. However, after doing all this, only the local player was changed. The other player could not see the actual sprite the other user has</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon50.PNG" slot="action54image">
+                    
 
                 </blogcontent-component>
             </section>
