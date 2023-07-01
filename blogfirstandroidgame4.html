@@ -147,8 +147,12 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon51.PNG" slot="action55image">
                     <span slot ="action56text">When I added if(view.IsMine) in the testScript to spawn the test Prefab around the code in the RPC function, the changes gets applied only to the local one. So I decided to spawn only 1 player - whoever is the master. Then Get ride of view.IsMine check. However, calling the RPC function still has view.IsMine check. Then if it is the master client, assign a yellow sprite otherwise a green sprite. It turns out the RPC function is being called properly, but because I am checking host or client, it will assign the sprite to the player(s). So I should be doing another check, maybe check target player? Similar to how in LobbyManager I check if Local player is the target player then apply LocalChanges</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon52.PNG" slot="action56image">
-                    
-
+                    <span slot ="action57text">After multiple builds, I finally figured it out! I did have to use a similar approach of checking Photon.Realtime.Player with PhotonNetwork.LocalPlayer. Like the PlayerItem in lobby, I assign a variable to the Instantiate function then call SetPlayerInfo which I defined in Player script and pass in the Photon.Realtime.Player</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon53.PNG" slot="action57image">
+                    <span slot ="action58text">The SetPlayerInfo assigns the Photon.Realtime.Player that's passed in to the a local Photon.Realtime.Player. Then I call UpdatePlayerItem(), passing in the player. UpdatePlayerItem() checks if it is itself then calls a RPC function</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon54.PNG" slot="action58image">
+                    <span slot ="action59text">The RPC function checks if the Photon.Realtime.Player contains the PlayerAvatar key. This will exist if the user pressed the arrow button in the lobby. If yes, assign the sprite (which is in a bodySprites array on the Player script). If the arrow button was not pressed, then the sprite is just the first one so index 0 of the bodysprite array</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon55.PNG" slot="action59image">
                 </blogcontent-component>
             </section>
 
