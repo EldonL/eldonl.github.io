@@ -41,7 +41,8 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon56.PNG" slot="action2image">
                     <span slot ="action3text">I disabled the explosions code as the explosions are not synced across yet. The RPC function will call a coroutine. The coroutine is doing the same thing as before I synced the collisions across the network. You can also find a video version on youtube <a href="https://youtu.be/3MLtRu2iGJY">here</a></span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon57.PNG" slot="action3image">
-                    
+                    <span slot ="action4text">Since the boxcollider2D is attached to the parent of the player, and the gameobject being SetActive(false) is on the child. I needed to disable the boxcollider2D and renable to avoid player getting collided with other gameobjects even though the player is invisible. I created a BoxCollider2D variable. In Awake() I would Get the Component of the BoxCollider2D. Then in the Coroutine I would enable and disable it. You can also find a video version on youtube <a href="https://youtu.be/OemQcaoTdDk">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon58.PNG" slot="action4image">
                 </blogcontent-component>
             </section>
 
