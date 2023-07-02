@@ -37,7 +37,10 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This is part 5 of making my first Android Game. If you missed part4, you can find it <a href="blogfirstandroidgame4.html">here</a></span>
-
+                    <span slot ="action2text">Currently when the player collides with the enemy it gets disabled, goes back to its original position and get reneabled. However this does not sync across the network. So I changed the code to call a RPC function in OnTriggerEnter2D</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon56.PNG" slot="action2image">
+                    <span slot ="action3text">I disabled the explosions code as the explosions are not synced across yet. The RPC function will call a coroutine. The coroutine is doing the same thing as before I synced the collisions across the network. You can also find a video version on youtube <a href="https://youtu.be/3MLtRu2iGJY">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon57.PNG" slot="action3image">
                     
                 </blogcontent-component>
             </section>
