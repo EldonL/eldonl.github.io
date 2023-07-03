@@ -43,6 +43,18 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon57.PNG" slot="action3image">
                     <span slot ="action4text">Since the boxcollider2D is attached to the parent of the player, and the gameobject being SetActive(false) is on the child. I needed to disable the boxcollider2D and renable to avoid player getting collided with other gameobjects even though the player is invisible. I created a BoxCollider2D variable. In Awake() I would Get the Component of the BoxCollider2D. Then in the Coroutine I would enable and disable it. You can also find a video version on youtube <a href="https://youtu.be/OemQcaoTdDk">here</a></span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon58.PNG" slot="action4image">
+                    <span slot ="action5text">If the user does not enter a name and decides to click on the Connect button in the mainmenu, nothing will happen. This is bad UI design because the user has no feedback. So I added a error text that will get enabled when this edge case occurs. In ConnectToServer.cs, I added a TextMeshProUGUI variable called errorText. This gameobject is disabled in Awake. It is enabled and its text is changed to "Enter name" when the user does not enter a name and selects connect. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon59.PNG" slot="action5image">
+                    <span slot ="action6text">Now the usr will see this error feedback which is a better design.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon60.PNG" slot="action6image">
+                    <span slot ="action7text">I did the same thing in the Lobby when the user tries to create a room but does not enter a name</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon61.PNG" slot="action7image">
+                    <span slot ="action8text">I noticed in the Lobby, when the "Create" button is pressed, there is no feedback given to the user. So I decided to do the same thing as the main menu and changed "Create" to "Creating" when the user presses the button. However, if the user leaves the room and back to the lobby, the "Creating..." text was still there. This is because I am still in the same scene. So I created a LobbyCreateButton.cs that has a string property called ButtonText. This will update the text on the button. When the button is enabled -which occurs when entering the scene or leaving the room - then the button text displays "Create".</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon62.PNG" slot="action8image">
+                    <span slot ="action9text">In LobbyManager, instead of referencing the TextMeshProUGUI, I create a LobbyCreateButton variable called createButtonText. This way I can reference the ButtonText property.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon63.PNG" slot="action9image">
+                    <span slot ="action10text">The CreateButton will say "Creating..." or "Create" depending on the scenarios I mentioned above</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon64.PNG" slot="action10image">
                 </blogcontent-component>
             </section>
 
