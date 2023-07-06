@@ -65,6 +65,22 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon68.PNG" slot="action14image">
                     <span slot ="action15text">The disabled state of the button looks like this. You can see the video version <a href="https://youtu.be/PXKdG2JMcQo">here</a></span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon69.PNG" slot="action15image">
+                    <span slot ="action16text">Updating the score requires syncing across the network as well. The Asteroid game example from the PUN2 asset had its own score system. So I took a look at that. First I used PlayerOverViewPanel.cs as my example. I created a TestScorePanel.cs script. In the Awake, I create a dictionary that will store the Photon.Realtime.Player ActorNumber as the key and the Score gameobjects as the value. This way I can search for which player's score I want to modify. I would loop through the PlayerList which will contain all the players that had entered the lobby. For each player in the list, I would spawn the Score gameobject. In this case, the ScoreGameobject would be childed to a gameobject that has the horizontal layout group so the score prefab won't overlap. I would then set the text to the player's name, score and lives. These are the initial values at the start of the game</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon70.PNG" slot="action16image">
+                    <span slot ="action17text">OnPlayerPropertiesUpdate would be needed because when SetCustomProperties is called, it will call OnPlayerPropertiesUpdate. In this function I would look for my player in the dictionary and get the score gameobject. I would pass update my score and lives. The score would the most updated because of GetScore().</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon71.PNG" slot="action17image">
+                    <span slot ="action18text">Then there is the PunPlayerScores.cs. This would be the script example I used for TestPlayerScore.cs. The first function would be SetScore. Note that it passes in this Photon.Realtime.Player. This means I won't need to pass in the Photon.Realtime.Player. The script would need to be static in this case. I store "score" in the hashtable score variable. I would then update this player's custom properties by calling SetCustomProperties. This would automatically call OnPlayerPropertiesUpdate() from TestScorePanel.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon72.PNG" slot="action18image">
+                    <span slot ="action19text">Then there AddScore(). Similar to SetScore but it would add to the current score</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon73.PNG" slot="action19image">
+                    <span slot ="action20text">Last is GetScore().This would return this player's score which is stored in the custom properties</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon74.PNG" slot="action20image">
+                    <span slot ="action21text">Last sample script I references was ScoreHelper.cs. I created a TestScoreHelper.cs. In Update(), I would say if the mouse is clicked which is equivalent to if the screen is tapped, check if local player exists then set the score.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon75.PNG" slot="action21image">
+                    <span slot ="action22text">I created a Test Scene. It contains a TestPanel gameobject. This has an Image component, TestScorePanel(Script) component and a Horizontal Layout group component. The ScoreHelper gameobject has the TestScoreHelper(Script) component. The TestPlayerScore.cs is not in the scene, and can be referenced because it is static</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon76.PNG" slot="action22image">
+                    <span slot ="action23text">I made a build with MainMenu, Lobby and TestScene. And the Score was being updated and synced!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon77.gif" slot="action23image">
                 </blogcontent-component>
             </section>
 
