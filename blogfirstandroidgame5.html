@@ -81,6 +81,24 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon76.PNG" slot="action22image">
                     <span slot ="action23text">I made a build with MainMenu, Lobby and TestScene. And the Score was being updated and synced!</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon77.gif" slot="action23image">
+                    <span slot ="action24text">Now I had to move over the same logic to the actual game. I want to sync up the score and coins. Since a lot of code for the scores were based on ScoreManager.Instance - this would not work with this logic. So I had to comment those out. I first created a PlayerTextInformation.cs. This is so I have access to the scores and coins text. Unlike the test I did, the text was the gameobject itself so I could GetComponent TextMeshProUGUI. In this case, I would GetComponent PlayerTextInformation to access the Properties Coin or Score</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon78.PNG" slot="action24image">
+                    <span slot ="action25text">This script is attached to PlayerTextInformation prefab which will contain the players name, lives, coin count and score.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon79.PNG" slot="action25image">
+                    <span slot ="action26text">Using TestPlayerScore.cs as the example, I transferred the same logic over to PlayerInformation.cs and included a const string for coin and score</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon80.PNG" slot="action26image">
+                    <span slot ="action27text">On the Scoreboard prefab. The player's information has been removed, because the PlayerTextInformation will be spawned on to the "UI board Small parchment" which contains a horizontal layout group. The Scoreboard prefab has the ScoreManager(Script) component </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon81.PNG" slot="action27image">
+                    <span slot ="action28text">The ScoreManager.cs is based on TestScorePanel.cs. The difference is instead of GetComponent TextMeshProUGUI to get the Score and Coins, I GetCopmonent PlayerTextInformation and access the Properties Coins and Score</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon82.PNG" slot="action28image">
+                    <span slot ="action29text">Anywhere I was adding score or coins I would change it to the new GetCoin() and GetScore(). This includes the bullet hitting the enemy to add score</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon83.PNG" slot="action29image">
+                    <span slot ="action30text">As well as player collecting coins</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon84.PNG" slot="action30image">
+                    <span slot ="action31text">I tested to see if this working by testing with the editor and on a mobile build. The score appears to be syncing. The coins however was being incremented for both players even if only one player is collecting the coins. Reminder that because of the new photon code, all the codes for when to spawn the enemies, subtracting lives are commented out. The player's names are not implemented yet and the bullets are not synced across the network yet</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon85.gif" slot="action31image">
+                    <span slot ="action32text">I was getting an error when I attempt to GetCoins()</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon86.PNG" slot="action32image">
                 </blogcontent-component>
             </section>
 
