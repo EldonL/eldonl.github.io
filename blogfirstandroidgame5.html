@@ -101,6 +101,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon86.PNG" slot="action32image">
                     <span slot ="action33text">The null reference error was because I deleted the check to see if player collieded with an gameobject with the tag CoinA, CoinB or CoinC. However, when 1 player collects the coins, both player's coins are still increased. I am guessing the reason the score isn't increasing for both players is because the bullets are not synced across the network yet. Therefore, it looks like the score is behaving correctly. This however does not tell me why the coins are increasing.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon87.PNG" slot="action33image">
+                    <span slot ="action34text">Turns out the solution was to add view.IsMine so that the only correct coins count increases for that player.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon88.PNG" slot="action34image">
+                    <span slot ="action35text">Voila! Example of the correct socre and coin count being incremented and synced across the network</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon89.PNG" slot="action35image">
                 </blogcontent-component>
             </section>
 
