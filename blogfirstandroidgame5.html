@@ -89,7 +89,7 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon80.PNG" slot="action26image">
                     <span slot ="action27text">On the Scoreboard prefab. The player's information has been removed, because the PlayerTextInformation will be spawned on to the "UI board Small parchment" which contains a horizontal layout group. The Scoreboard prefab has the ScoreManager(Script) component </span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon81.PNG" slot="action27image">
-                    <span slot ="action28text">The ScoreManager.cs is based on TestScorePanel.cs. The difference is instead of GetComponent TextMeshProUGUI to get the Score and Coins, I GetCopmonent PlayerTextInformation and access the Properties Coins and Score</span>
+                    <span slot ="action28text">The ScoreManager.cs is based on TestScorePanel.cs. The difference is instead of GetComponent TextMeshProUGUI to get the Score and Coins, I GetComponent PlayerTextInformation and access the Properties Coins and Score</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon82.PNG" slot="action28image">
                     <span slot ="action29text">Anywhere I was adding score or coins I would change it to the new GetCoin() and GetScore(). This includes the bullet hitting the enemy to add score</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon83.PNG" slot="action29image">
@@ -123,6 +123,26 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon97.PNG" slot="action42image">
                     <span slot ="action43text">Now I need to set the coins as well</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon98.PNG" slot="action43image">
+                    <span slot ="action44text">Time to get the lives in. The Asteroid sample has a AsteroidGame.cs. This script is not Monobehaviour. AsteroidGame.cs stores data such as const int PLAYER_MAX_LIVES as well as const string PLAYER_LIVES which will be used as the key for our ExitGames.Client.Photon.HashTable </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon99.PNG" slot="action44image">
+                    <span slot ="action45text">Using the sample above, I created a TomatoGame.cs which stores the int PLAYER_MAX_LIVES and string PLAYER_LIVES</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon100.PNG" slot="action45image">
+                    <span slot ="action46text">Then in PlayerItem.cs, I would set the PLAYER_LIVES to PLAYER_MAX_LIVES because this is the default amount of lives before player enters the game. This is so the hashtable value contains the max lives. This is the same idea as what PlayerListEntry.cs did from the Asteroid sample</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon101.PNG" slot="action46image">
+                    <span slot ="action47text">In PlayerTextInformation.cs I would create a Lives property of type string. It would get and set the field lives.text to display the lives on the </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon102.PNG" slot="action47image">
+                    <span slot ="action48text">In ScoreManager.cs, I would set the Lives property to PLAYER_MAX_LIVES in Awake(). This is so the text on the scoreboard shows the number of lives. This is the same idea as the Asteroid sample's PlayerOverViewPanel.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon103.PNG" slot="action48image">
+                    <span slot ="action49text">Before I continue, I did a quick test to make sure the lives are being set to the value I set in PLAYER_MAX_VALUES</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon104.PNG" slot="action49image">
+                    <span slot ="action50text">OnPlayerPropertiesUpdate() I would set the lives the the Photon.Realtime.Player.CustomProperties[TomatoGame.PLAYER_LIVES]. This hopefully would sync the lives up across the network when a SetCustomProperties is called</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon105.PNG" slot="action50image">
+                    <span slot ="action51text">Using the Asteroid sample's Spaceship.cs as the example. In Player.cs of my own script, when the player collides with the enemy, in HitByEnemyRoutine(), I would check if PLAYER_LIVES is in the hashtable for this player, if yes, modify the value of PLAYER_LIVES, if it's less then or equal to 1, set lives to 0, otherwise subtract 1.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon106.PNG" slot="action51image">
+                    <span slot ="action52text">As a comparison, here is Spaceship.cs from Asteroid sample. They are using PhotonNetwork.LocalPlayer.CustomProperties. This would result in the same player the way I did it. I just happen to have the player passed into the parameter.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon108.PNG" slot="action52image">
+                    <span slot ="action53text">From the build, you can see the lives are synced up. The screen is showing the editor, but the player moving is the mobile, and when the lives are decreased, the editor see the lives decreasing as well</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon107.gif" slot="action53image">
                 </blogcontent-component>
             </section>
 
