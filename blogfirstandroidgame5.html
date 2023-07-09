@@ -143,6 +143,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon108.PNG" slot="action52image">
                     <span slot ="action53text">From the build, you can see the lives are synced up. The screen is showing the editor, but the player moving is the mobile, and when the lives are decreased, the editor see the lives decreasing as well</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon107.gif" slot="action53image">
+                    <span slot ="action54text">In Player.cs, I added the PunRPC attribute to the Shoot method because I want the bullet to sync across the network.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon109.PNG" slot="action54image">
+                    <span slot ="action55text">In Bullet.cs, I removed enabling and disabling code. The bullet would be destroyed after timeBeforeDestroy (in seconds) </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon110.PNG" slot="action55image">
+                    <span slot ="action56text">In Player.cs, in the Update() instead of calling the BulletPoolInstance, I call the RPC function Shoot(). Note that I am using RPCTarget.AllViaServer so that the order of who shot first is correct</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon111.PNG" slot="action56image">
+                    <span slot ="action57text">I made a build and you can see that one player can see the bullets of both players. However, notice that there are some new bugs: score is being increased for both players, the bullet is still shooting even when the player is destroyed.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon112.gif" slot="action57image">
                 </blogcontent-component>
             </section>
 
