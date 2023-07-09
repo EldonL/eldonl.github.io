@@ -157,6 +157,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon113.PNG" slot="action59image">
                     <span slot ="action60text">Now only the score of the player hitting the enemy has its score increased.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon114.gif" slot="action60image">
+                    <span slot ="action61text">To resolve bullets still shooting when player is disabled. The reason is because the root being disabled is the child of the gameobject that the Player.cs is attached to, therefore, Player.cs is still running. Therefore, I can check if root is active in hierarchy or not. Since when the player collides with the enemy, the root gets disabled</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon115.PNG" slot="action61image">
+                    <span slot ="action62text">The result shows the bullets stops shooting when the player is disabled.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon116.gif" slot="action62image">
                 </blogcontent-component>
             </section>
 

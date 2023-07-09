@@ -187,6 +187,8 @@ blogContentTemplate.innerHTML = `
             <div class="aimage"><slot name="action60image"></slot></div>
             <div class="content"><slot name="action61text"></slot></div>
             <div class="aimage"><slot name="action61image"></slot></div>
+            <div class="content"><slot name="action62text"></slot></div>
+            <div class="aimage"><slot name="action62image"></slot></div>
         </div>
 
     </div>
