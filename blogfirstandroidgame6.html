@@ -37,8 +37,12 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This is part 6 of making my first Android Game. If you missed part5, you can find it <a href="blogfirstandroidgame5.html">here</a></span>
-                    <span slot ="action2text"></span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon56.PNG" slot="action2image">
+                    <span slot ="action2text">Time to sync up the explosions on the player when the enemy collides with the player. I will use the same concept that I did for syncing the bullets. I remove ExplosionPoolInstance.cs. In Explosion.cs I removed all the code and kept only the Start() which will tell the Explosion gameobject when it should get destroyed after it is spawned</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon117.PNG" slot="action2image">
+                    <span slot ="action3text">In Player.cs, in the Coroutine called HitByEnemyRoutine which is called by a PunRPC function called HitByEnemy. I would spawn the Explosions prefab</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon118.PNG" slot="action3image">
+                    <span slot ="action4text">I disabled the cannons and big boss so I can test the game more easily with only the potatos enemies. The enemies are not synced up so the enemies spawn position in editor and mobile are different, this goes in my favor because I can see if the explosions are synced up properly. The example is showing the editor's point of view. The mobile player is moving, if the mobile player collides with the enemy in the editor view, no explosions occur. However, if the mobile player collides with an enemy in the mobile the explosions gets synced, even though in the editor view, no enemy has collided with the mobile player. This shows the player explosions are synced up</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon119.gif" slot="action4image">
              
                 </blogcontent-component>
             </section>
