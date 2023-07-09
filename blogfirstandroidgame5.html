@@ -151,6 +151,12 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon111.PNG" slot="action56image">
                     <span slot ="action57text">I made a build and you can see that one player can see the bullets of both players. However, notice that there are some new bugs: score is being increased for both players, the bullet is still shooting even when the player is destroyed.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon112.gif" slot="action57image">
+                    <span slot ="action58text">To resolve the score increasing for both players instead of itself. In Bullet.cs, there is a InitializeBullet function that would assign the Owner property of type Photon.Realtime.Player to owner field that is passed in from the Player.cs script. In OnTriggerEnter2D, instead of adding score the PhotonNetWork.LocalPlayer, I used the Owner property to call the AddScore.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon112.PNG" slot="action58image">
+                    <span slot ="action59text">In Player.cs in the Shoot() function, is where InitializeBullet function is called and the PhotonView.Owner is passed in to InitializeBullet.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon113.PNG" slot="action59image">
+                    <span slot ="action60text">Now only the score of the player hitting the enemy has its score increased.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon114.gif" slot="action60image">
                 </blogcontent-component>
             </section>
 
