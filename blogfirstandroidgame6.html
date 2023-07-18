@@ -53,6 +53,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon123.PNG" slot="action8image">
                     <span slot ="action9text">It did not work, and instead, I spawned double the amount of enemies because PhotonNetwork.Instantiate is called on host and client because of EnemyPoolInstance.cs</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon124.PNG" slot="action9image">
+                    <span slot ="action10text">I decided to look at the Asteroid sample to see how they destroy asteroids when the spaceship's bullet collides with the asteroids. It turns out they approach it with DestroyGlobally if PhotonView.IsMine is true and DestroyLocally is PhotonView.IsMine is false</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon125.PNG" slot="action10image">
+                    <span slot ="action11text">DestroyGlobally() when call PhotonNetWork.Destroy(). While DestroyLocally() will disable the renderer</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon126.PNG" slot="action11image">
              
                 </blogcontent-component>
             </section>
