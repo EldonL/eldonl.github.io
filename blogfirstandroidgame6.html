@@ -63,6 +63,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon128.gif" slot="action13image">
                     <span slot ="action14text">I zoomed out of the scene view and again treated the Editor as the client and the mobile as the master. Turns out, the explosions was spawning, but because I said to spawn the enemy at where the enemy is and the enemy positions are not synced up yet, so the enemy was out of the users view. As you can see the explosions are spawning!</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon129.gif" slot="action14image">
+                    <span slot ="action15text">I want to sync up the potato enemies. The way they spawn is similiar to the asteroid sample, so I go back to the asteroid sample's AsteroidGameManager.cs. In StartGame() function which is called when the timer has reached contains a coroutine named SpawnAsteroid() is called only if PhotonNetwork.IsMasterClient is true. SpawnAsteroid() is also called in OnMasterClientSwitched(Player newMasterClient) which checks if the local player is the new master client. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon130.PNG" slot="action15image">
+                    <span slot ="action16text">The SpawnAsteroid() function will spawn an asteroid between a min time and max time using random.range. Also notice the sample uses PhotonNetwork.InstantiateRoomObject which means that even if the original master drops out, the new master can spawn the asteroid</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon131.PNG" slot="action16image">
              
                 </blogcontent-component>
             </section>
