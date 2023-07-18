@@ -43,6 +43,16 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon118.PNG" slot="action3image">
                     <span slot ="action4text">I disabled the cannons and big boss so I can test the game more easily with only the potatos enemies. The enemies are not synced up so the enemies spawn position in editor and mobile are different, this goes in my favor because I can see if the explosions are synced up properly. The example is showing the editor's point of view. The mobile player is moving, if the mobile player collides with the enemy in the editor view, no explosions occur. However, if the mobile player collides with an enemy in the mobile the explosions gets synced, even though in the editor view, no enemy has collided with the mobile player. This shows the player explosions are synced up</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon119.gif" slot="action4image">
+                    <span slot ="action5text">Next is to sync the explosions on the enemies. I first test on the potato enemies (not the cannon or bigboss yet). I place the potato enemies in Resources folder and attached a photonview component.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon120.PNG" slot="action5image">
+                    <span slot ="action6text">Instead of doing Instantiate, I do PhotonNetwork.Instantiate. This is so the PhotonView.IsMine can be true instead of false all the time. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon121.PNG" slot="action6image">
+                    <span slot ="action7text">Following how I synced up explosions with the player, when enemy colliedes with the bullet, the PunRPC function gets called</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon122.PNG" slot="action7image">
+                    <span slot ="action8text">The PunRPC will spawn the explosion at the location of the enemy</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon123.PNG" slot="action8image">
+                    <span slot ="action9text">It did not work, and instead, I spawned double the amount of enemies because PhotonNetwork.Instantiate is called on host and client because of EnemyPoolInstance.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon124.PNG" slot="action9image">
              
                 </blogcontent-component>
             </section>
