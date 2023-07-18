@@ -57,6 +57,12 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon125.PNG" slot="action10image">
                     <span slot ="action11text">DestroyGlobally() when call PhotonNetWork.Destroy(). While DestroyLocally() will disable the renderer</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon126.PNG" slot="action11image">
+                    <span slot ="action12text">The asteroid sample doesn't really tell me why my PunRPC function is not getting called. So I added a Debug.Log() in two PunRPC functions. One in Player.cs HitByEnemy() which I know is working. Another in EnemyBase.cs EnemyDestroyed() which isn't spawning explosions. I will make the one on mobile the master, and see if the Editor will print the Debug Logs when the mobile player destroys the enemy or gets hit by the enemy. Note: I have wrapped some code where the potato enemies are spawned with PhotonNetwork.IsMasterClient so only the Master will see enemies spawning.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon127.PNG" slot="action12image">
+                    <span slot ="action13text">As you can see from the result the DebugLogs gets printed in Editor even when the mobile is the master. In this case, the enemies are spawned on the mobile's end and the editor is the client which has no enemies spawning. I've also mentioned the DebugLog syncing across the network <a href="https://youtu.be/K_DsqDvoJ7M">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon128.gif" slot="action13image">
+                    <span slot ="action14text">I zoomed out of the scene view and again treated the Editor as the client and the mobile as the master. Turns out, the explosions was spawning, but because I said to spawn the enemy at where the enemy is and the enemy positions are not synced up yet, so the enemy was out of the users view. As you can see the explosions are spawning!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon129.gif" slot="action14image">
              
                 </blogcontent-component>
             </section>
