@@ -79,6 +79,12 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon136.PNG" slot="action21image">
                     <span slot ="action22text">The result below shows a smooth moving enemy. You can also see the results <a href="https://youtu.be/nyDCYpPurso">here</a></span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon137.gif" slot="action22image">
+                    <span slot ="action23text">Next is to destroy the enemies on the master client only. We can do this by checking view.IsMine where view is PhotonView type. This works because the enemy is spawned using PhotonNetwork.Instantiate on the master. The first place to destroy the enemy is when the bullet collides with the enemy. I would do a view.IsMine check, if it is true, call PhotonNetwork.Destroy, otherwise disable the gameobject.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon138.PNG" slot="action23image">
+                    <span slot ="action24text">another place where the enemy gets destroyed is where the enemy goes out of the screen. I am using a timer to time that. If view.IsMine is NOT true, break out of the coroutine, if it is true then call PhotonNetwork.Destroy</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon139.PNG" slot="action24image">
+                    <span slot ="action25text">The results below shows that enemies getting destroyed is synced and the the PhotonNetwork.Destroy is called only when view.IsMine is true which I've checked using Debug.Log. You can see the video version <a href="https://youtu.be/NszsWjfWE-w">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon140.gif" slot="action25image">
              
                 </blogcontent-component>
             </section>
