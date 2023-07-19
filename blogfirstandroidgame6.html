@@ -75,6 +75,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon134.PNG" slot="action19image">
                     <span slot ="action20text">Using the mobile as the master and editor as the client, I tested to see if the enemies are synced up. The positions are synced up, however the enemy on the client is stuttering when moving. The movement on the master is working fine. You can see the result below or see a video <a href="https://youtu.be/brEv_-yg33Q">here</a></span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon135.gif" slot="action20image">
+                    <span slot ="action21text">Turns out the client enemy movement stuttering was due to the Update() function in EnemyBase.cs where I am moving the enemy down. I wrapped in if(PhotonNetwork.IsMasterClient) so only the master control's the enemies movement</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon136.PNG" slot="action21image">
+                    <span slot ="action22text">The result below shows a smooth moving enemy. You can also see the results <a href="https://youtu.be/nyDCYpPurso">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon137.gif" slot="action22image">
              
                 </blogcontent-component>
             </section>
