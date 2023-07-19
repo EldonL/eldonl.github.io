@@ -67,6 +67,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon130.PNG" slot="action15image">
                     <span slot ="action16text">The SpawnAsteroid() function will spawn an asteroid between a min time and max time using random.range. Also notice the sample uses PhotonNetwork.InstantiateRoomObject which means that even if the original master drops out, the new master can spawn the asteroid</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon131.PNG" slot="action16image">
+                    <span slot ="action17text">Using the asteroid sample, I applied the same idea to tomato vs potato. I first added in TomatoGame.cs a const min time and max time that will be used to control when to spawn the enemies which are named POTATO_ENEMY_MIN_SPAWN_TIME and POTATO_ENEMY_MAX_SPAWN_TIME respectively</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon132.PNG" slot="action17image">
+                    <span slot ="action18text">In the Start() of EnemyPoolInstance.cs (where all the object pooling code and enums have been removed), I'll check if the user is the Master and call the SpawnSmallPotatoEnemy() coroutine </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon133.PNG" slot="action18image">           
+                    <span slot ="action19text">The SpawnSmallPotatoEnemy() will choose a time between POTATO_ENEMY_MIN_SPAWN_TIME and POTATO_ENEMY_MAX_SPAWN_TIME, then choose a random position on the x axis between startLocationA and startLocationB. Then use PhotonNetwork.Instantiate to spawn the enemy </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon134.PNG" slot="action19image">
+                    <span slot ="action20text">Using the mobile as the master and editor as the client, I tested to see if the enemies are synced up. The positions are synced up, however the enemy on the client is stuttering when moving. The movement on the master is working fine. You can see the result below or see a video <a href="https://youtu.be/brEv_-yg33Q">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon135.gif" slot="action20image">
              
                 </blogcontent-component>
             </section>
