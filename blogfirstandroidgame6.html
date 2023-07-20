@@ -85,6 +85,16 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon139.PNG" slot="action24image">
                     <span slot ="action25text">The results below shows that enemies getting destroyed is synced and the the PhotonNetwork.Destroy is called only when view.IsMine is true which I've checked using Debug.Log. You can see the video version <a href="https://youtu.be/NszsWjfWE-w">here</a></span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon140.gif" slot="action25image">
+                    <span slot ="action26text">Next is to sync the movement of the cannon enemies. Since the cannon is moved in by DoTween, is would be hard to tell if the movement is synced up properly or if the movement is synced up properly. So in Update(), there is a check for if PhotonView.IsMine, if yes then when I click with the mouse (or tap if on mobile) then make the cannon follow the mouse's horizontal position</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon141.PNG" slot="action26image">
+                    <span slot ="action26text">I moved the cannon enemy prefab into the resources folder, attached PhotonView component, PhotonViewTransformClassic component with Syncronize Position enabled, and dragged in explosionModified prefab into the ExplosionPrefab field on the EnemyCannon component </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon142.PNG" slot="action26image">
+                    <span slot ="action27text">Then making the mobile as the master and editor as the client. You can see when I click on the editor screen, the editor player is moving but the cannon enemy is not. However, when I tap on the mobile, the mobile player and cannon is moving and the editor cannon movement is being synced</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon143.gif" slot="action27image">
+                    <span slot ="action28text">Using the same logic in EnabledEnemy Coroutine(), if PhotonView.IsMine is false, then break out of the coroutine. Otherwise move the cannons down.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon144.PNG" slot="action28image">
+                    <span slot ="action29text">A bug was observed. When the mobile is the master and the editor is the client. The cannon enemy in both editor and mobile goes to the correct end location. However if mobile was the client and editor was the master. The mobile's cannon enemy does not go to the correct location, it appears to stop early</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon145.jpg" slot="action29image">
              
                 </blogcontent-component>
             </section>
