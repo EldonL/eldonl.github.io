@@ -16,6 +16,16 @@ blogRecentTemplate.innerHTML = `
         <div class="recentblog">
         <div class="filterblog">
             <div class="blogcontent">
+                <a href="blogfirstandroidgame7.html"><img class="image" src="images_videos/blog/FirstAndroidGame/enemycannon.PNG"
+                    alt="cover image"></a>
+                <div class="imagetext">Click to see more</div>
+                <div class="bottom">
+                    <p class="title">First Android Game - Part 7 - Photon Transform Classic View Investigation</p>
+                </div>
+            </div>
+        </div>
+        <div class="filterblog">
+            <div class="blogcontent">
                 <a href="blogfirstandroidgame6.html"><img class="image" src="images_videos/blog/FirstAndroidGame/explosion.PNG"
                     alt="cover image"></a>
                 <div class="imagetext">Click to see more</div>
@@ -50,7 +60,7 @@ blogRecentTemplate.innerHTML = `
                         alt="cover image"></a>
                     <div class="imagetext">Click to see more</div>
                     <div class="bottom">
-                        <p class="title">First Android Game - Part 3</p>
+                        <p class="title">First Android Game - Part 3 - Career Fair and Testers</p>
                     </div>
                 </div>
             </div>
