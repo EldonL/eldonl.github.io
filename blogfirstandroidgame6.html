@@ -95,7 +95,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon144.PNG" slot="action28image">
                     <span slot ="action29text">A bug was observed. When the mobile is the master and the editor is the client. The cannon enemy in both editor and mobile goes to the correct end location. However if mobile was the client and editor was the master. The mobile's cannon enemy does not go to the correct location, it appears to stop early</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon145.jpg" slot="action29image">
-             
+                    <span slot ="action30text">I did a test instead of using dotween to move the cannons, I'll automatically make the cannon go to the endposition. The mobile position would be synced up even if it is the client. So it is a dotween issue</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon146.PNG" slot="action30image">
+                    <span slot ="action31text">I decided to implement the cannon shooting the potato enemy first to see if I'll notice the cannons not going to the correct positions later. Instead of calling the object pool to get the potato enemy prefab (which doesn't exist anymore), I call PhotonNetwork.Instantiate.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon147.PNG" slot="action31image">
+                    <span slot ="action32text">I drag the potato enemy prefab into the small potato enemy field on the EnemyCannon component</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon148.PNG" slot="action32image">
+                    <span slot ="action33text">The recording below is from the mobile where the mobile is the client and the editor is the master. The cannon was being spawned. I also noticed that the cannon is slowly moving to the correct position on mobile. So that means the postions are being synced up but at a different rate!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon149.gif" slot="action33image">
                 </blogcontent-component>
             </section>
 
