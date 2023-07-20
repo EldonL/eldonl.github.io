@@ -50,7 +50,13 @@
                     <span slot ="action7text">A comparison of all 5 from left to right: disabled, fixed speed, estimated speed, syncronized value, and lerp</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photontransformviewclassic_all5.gif" slot="action7image">
                     <span slot ="action8text">Based on the comparisons. Disabled or Synchronize values gives the best result. However, this means they keep sending more data over the network and I don't want that. So the next closest is FixedSpeed.</span>
-
+                    <span slot ="action9text">Now applying the same interpolation option - fixed speed - to the enemy boss. First I moved Enemy Boss prefab to resources folder, add Photon View component and add Photon Transform Classic View component and select Fixed Speed option for Interpolation. I first set move towards speed to 1. It seemed a bit slow to reach the destination compared to what is seen on the master</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemybossfixedspeed1.gif" slot="action9image">
+                    <span slot ="action10text">Next I set move towards speed to 2. This seemed like a good speed, and matches closes to what is seen on the master</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemybossfixedspeed2.gif" slot="action10image">
+                    <span slot ="action11text">Lastly, I set move towards speed to 10. This was too fast compared to what is seen on the master</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemybossfixedspeed10.gif" slot="action11image">
+                    <span slot ="action12text">In conclusion, I choose fixed speed for my interpolation on the Photon Transform Classic View. For enemy boss I set Move Towards speed to 2 and the cannon enemy to 2</span>
                     
                 </blogcontent-component>
             </section>
