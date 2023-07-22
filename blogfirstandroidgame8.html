@@ -58,6 +58,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon158.gif" slot="action11image">
                     <span slot ="action12text">My hunch with the issue of the number of coins not getting added was due to PhotonNetwork.Destroy() getting called on the coins on master side before the client player collides with the coin. I thought of this because this issue appears to occur only if the coin collides with the client player head on in the front. This never occurs if the coin collides with the player on the side. Also, the RPC function which gets called on master only that spawns the coin text is always triggered but the coin does not always get added. So I did a test on EnemyBase.cs, if the enemy collides with the player, destroy the enemy. I also disabled the bullet so I can have the player collide with the enemy. In Player.cs, if the player collides with the enemy, print out enemy hit to the console. My hunch was correct as shown in the result. Now the question is how would I resolve this? This issue is occuring for both enemy and coin. Enemy was not noticeable because the bullet destroyed the enemy before hitting the player in the front </span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon159.gif" slot="action12image">
+                    <span slot ="action13text">I thought instead of doing photonnetwork.Destroy() in coin.cs, I can do it on Player.cs when player collides with the coin</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon160.PNG" slot="action13image">
+                    <span slot ="action14text">However, that did not work and I just got errors if the client player tries to destroy the coins using photon.network</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon161.PNG" slot="action14image">
                                        
                 </blogcontent-component>
             </section>
