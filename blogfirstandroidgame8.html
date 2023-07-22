@@ -36,8 +36,24 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This is part 8 of making my first Android Game. If you missed part7, you can find it <a href="blogfirstandroidgame7.html">here</a></span>
-                    <!-- <span slot ="action2text"></span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photontransformviewclassic_disabled.gif" slot="action2image"> -->
+                    <span slot ="action2text">To collect coins I am going to spawn them with the same logic that I spawned the enemeis. In CoinPoolInstance.cs I am using the same spawn location gameobject I used for spawning the enemies. There aren't any coin types anymore and the coin prefabs are on the Instance.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon149.PNG" slot="action2image">
+                    <span slot ="action3text">On CoinPoolInstance.cs, I have the master calling the spawning coins coroutines</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon150.PNG" slot="action3image">
+                    <span slot ="action4text">The coroutines chooses a random location to spawn the coins, just like the enemies</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon151.PNG" slot="action4image">
+                    <span slot ="action5text">On Coin.cs I am getting the PhotonView component. All the Coin prefab have a PhotonView component and a Photon Transform Classics View component with Synchronize Position</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon152.PNG" slot="action5image">
+                    <span slot ="action6text">The OnTriggerEnter2D in Coin.cs checks if view.IsMine, if it is call a RPC function named CoinCollected and Calls PhotonNetwork.Destroy</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon153.PNG" slot="action6image">
+                    <span slot ="action7text">The CoinCollected RPC function spawns the coin text</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon154.PNG" slot="action7image">
+                    <span slot ="action8text">The Coroutine EnabledObject() in Coin.cs checks how long the coin stays before getting destroyed</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon155.PNG" slot="action8image">
+                    <span slot ="action9text">In CoinTExt.cs, it is reduced to the same logic as Explosion.cs where it gets Destroyed after timeBeforeDestroy seconds. In Update(), the text will be translated upwards. I am not worried about the text location getting synced because it will be roughly in the same location as where the coin is</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon156.PNG" slot="action9image">
+                    <span slot ="action10text">After testing, some bugs were noticed: (1) sometimes when two coins are close to each other and are collected at the same time, only one coin amount is added, this occurs on develop branch as well so this bug existed before the changes. (2)On the client side, sometimes the number coins does not get added even though it is collided with the player. I added Debug.Log() in Player.cs where there is a check if Player collides with the coin, and the Debug.Log does not always get printed. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon157.PNG" slot="action10image">
                                        
                 </blogcontent-component>
             </section>
