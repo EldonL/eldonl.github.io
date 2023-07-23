@@ -76,6 +76,12 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon167.PNG" slot="action20image">
                     <span slot ="action21text">PlayerInformation.cs I added debug logs to see when AddCoins is called. I noticed that the client sometimes only has PunRPC getting called. This tells me that the master could call PhotonNetwork.Destroy() first before the client can do anything, including OnTriggerEnter2D</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon168.PNG" slot="action21image">
+                    <span slot ="action22text">I discarded the changes. In Coin.cs, when the coin collides with the player, I would get PhotoView component and call a public RPC function from the Player.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon169.PNG" slot="action22image">
+                    <span slot ="action23text">In Player.cs, the RPC function would add the coins to the players</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon170.PNG" slot="action23image">
+                    <span slot ="action23text">From the result you can see the coins getting added even when it is the client!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon171.gif" slot="action24image">
                                        
                 </blogcontent-component>
             </section>
