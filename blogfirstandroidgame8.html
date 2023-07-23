@@ -84,6 +84,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon171.gif" slot="action24image">
                     <span slot ="action25text">However, a new problem occured, the coins does not always get added on the client when colliding from the side or the collection would be delayed.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon172.gif" slot="action25image">
+                    <span slot ="action26text">This confused me very much so I recorded both the client and the master. Below is the master recording. You can see that the client player did not collide with the treasure chest and the coin the near end so it makes sense the coin is not collected</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon173.gif" slot="action26image">
+                    <span slot ="action27text">However, when I looked at the recording for the client, it looks like the client player collided with the treasure chest and the coin at the end. This now makes sense why the coin was not collected, because in Coin.cs it checks for PhotonView.IsMine before adding the coin. So the problem was not the code, I think it may be the positions of the coins not being synced up</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon174.gif" slot="action27image">
+                    <span slot ="action28text">I took a screen shot of where the treasure chest was on the master</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon175.PNG" slot="action28image">
+                    <span slot ="action29text">I took a screen shot of where the treasure chest was on the client as well. Based on the testing, it seems like it's is because the player movement not being synced up at the exact time cause this mishap</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon176.PNG" slot="action29image">
                                        
                 </blogcontent-component>
             </section>
