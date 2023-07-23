@@ -60,8 +60,22 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon159.gif" slot="action12image">
                     <span slot ="action13text">I thought instead of doing PhotonNetwork.Destroy() in coin.cs, I can do it on Player.cs when player collides with the coin</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon160.PNG" slot="action13image">
-                    <span slot ="action14text">However, that did not work and I just got errors if the client player tries to destroy the coins using PhotonNetwork.Destroy()</span>
+                    <span slot ="action14text">However, that did not work and I just got errors if the client player tries to destroy the coins using PhotonNetwork.Destroy(collision.gameobject)</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon161.PNG" slot="action14image">
+                    <span slot ="action15text">I tried a different approach similar to how I spawn the bullets and assign a Photon.Realtime.Player to the owner. In this case, I assign the the Photon.Realtime.Player to the Coin's Owner in Coin.cs when the coin collides with the player. Player.cs would a property so I can access Photon.Realtime.Player.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon162.PNG" slot="action15image">
+                    <span slot ="action16text">That did not work because on the master, when the client player collides with the coin, the Photon.Realtime.Player is null.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon163.PNG" slot="action16image">
+                    <span slot ="action17text">I thought adding a null check would resolve everything. However, all it resolved was the null error. The issue with the coins not getting added issue still persists. It appears that when the client collides with the coins, PunRPC function gets called, the destroyed, but the AddCoins might not have been sent over in time. However, even this logic would conflict, because it isn't always happening and  the coins only doesn't get added when the coin hits the front of the player but not the side.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon164.PNG" slot="action17image">
+                    <span slot ="action18text">Coin.cs I added debug logs to see when when owner is null or not null gets called.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon165.PNG" slot="action18image">
+                    <span slot ="action19text">Coin.cs I added debug logs to see destroyed(master) and disabled(client) gets called</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon166.PNG" slot="action19image">
+                    <span slot ="action20text">Coin.cs I added debug logs to see when PunRPC gets called</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon167.PNG" slot="action20image">
+                    <span slot ="action21text">PlayerInformation.cs I added debug logs to see when AddCoins is called. I noticed that the client sometimes only has PunRPC getting called. This tells me that the master could call PhotonNetwork.Destroy() first before the client can do anything, including OnTriggerEnter2D</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon168.PNG" slot="action21image">
                                        
                 </blogcontent-component>
             </section>
