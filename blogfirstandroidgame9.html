@@ -26,7 +26,7 @@
     <section class="bg-js-controlled">
         <section class="intro">
             <blogintro-component>
-                <span slot ="title">First Android Game - Part 9 - Fixing Enemy Collisions</span>
+                <span slot ="title">First Android Game - Part 9 - Collect 2+ Coins</span>
                 <span slot="date">July 25, 2023</span>
                 <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLgloHkx0DWFJtN_Min3OEU-T4')">Watch youtube playlist</span>               
             </blogintro-component>
@@ -36,8 +36,12 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This is part 9 of making my first Android Game. If you missed part8, you can find it <a href="blogfirstandroidgame8.html">here</a></span>
-                    <span slot ="action2text">After collecting coins, I found out that there are some bugs with enemy collisions as well since they are the same logic. From the example below you are looking at the master screen. The yellow player is the client and you can see a slight delay with the collisions. Conversly, the red player is the master and you can see there are no delays with the collisions</span>
+                    <span slot ="action2text">There appears to be issues when collecting 2+ coins. You can see the example below the when the player collides with two coins - $25 and $100 - there are two coin text that gets spawned. However, only the $25 got added to the coin amount. </span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon196.gif" slot="action2image">
+                    <span slot ="action3text">Also another problem is the treasure ($100) and triple coin ($25) have layering issues. Let's fix the layering issue first. All 3 types of coins had layering of -3. I changed the triple coin to -4 and treasure to -5</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon197.PNG" slot="action3image">
+                    <span slot ="action4text">The layerting issue is fixed. You can see the triple coin is on top of the treasure chest</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon198.PNG" slot="action4image">
                     
                     
                                        

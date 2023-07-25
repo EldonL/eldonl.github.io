@@ -20,7 +20,7 @@ blogRecentTemplate.innerHTML = `
                     alt="cover image"></a>
                 <div class="imagetext">Click to see more</div>
                 <div class="bottom">
-                    <p class="title">First Android Game - Part 9 - Fixing Enemy Collisions</p>
+                    <p class="title">First Android Game - Part 9 - Collect 2+ Coins</p>
                 </div>
             </div>
         </div>
