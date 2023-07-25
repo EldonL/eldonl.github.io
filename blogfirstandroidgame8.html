@@ -112,6 +112,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon184.gif" slot="action38image">
                     <span slot ="action39text">I then removed the FixedUpdate() and in Update() tried to move the transform.position. However, this gave the same result as if I was using PhotonTransformViewClassic component where the receiver was just a bit slower.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon185.PNG" slot="action39image">
+                    <span slot ="action40text">This got me thinking. If the player is lagging with lag compensation code or PhotonTransformViewClassic component, then wouldn't everything be lagging? I compared the coin movement of the master and client, and I can see that the coin is also lagging a little bit just like the player. So if everything is lagging at the same rate, this means I have to revisit my logic. Maybe having only the master to check if the coin colliding with the player is causing some confusion. I first did a test to see what happens if I try to PhotonNetwork.Destroy() in Coin.cs no matter if it's the client or master. I see that if it is the client that hits the coin then an error would occur</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon186.PNG" slot="action40image">
+                    <span slot ="action41text">This means that for master, I can destroy the gameobject, but on the client I should disable the gameobject.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon187.PNG" slot="action41image">
+                    <span slot ="action42text">Then for all other coin related code such as spawning coin text and adding coins should be in a PunRPC function in Player.cs because I can check PhotonView.IsMine on master and client whereas in Coin.cs, the PhotonView.IsMine is always master due to PhotonNetwork.Instantiate</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon188.PNG" slot="action42image">
+                    <span slot ="action43text">The coins appear to be collecting now! However, the coin text appears to be spawning twice and the coin amount gets added twice. This means the RPC function is getting called twice because both the master and client are colliding with the coin. However, I thought the view.isMine on Player.cs would resolve this issue.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon189.gif" slot="action43image">
                     
                                        
                 </blogcontent-component>
