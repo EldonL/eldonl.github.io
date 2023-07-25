@@ -120,6 +120,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon188.PNG" slot="action42image">
                     <span slot ="action43text">The coins appear to be collecting now! However, the coin text appears to be spawning twice and the coin amount gets added twice. This means the RPC function is getting called twice because both the master and client are colliding with the coin. However, I thought the view.isMine on Player.cs would resolve this issue.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon189.gif" slot="action43image">
+                    <span slot ="action44text">It seems like view.IsMine is checked on all players when being used in a PunRPC, so the view.IsMine would be called on everyone thinking it is true. So in Coin.cs I checked if PhotonNetwork.LocalPlayer is equal to the player the collided with the coin then call the PunRPC </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon190.PNG" slot="action44image">
+                    <span slot ="action45text">Unfortunately, this brought me back to one of the earlier issues where the coins gets destroyed on master from PhotonNetwork.Destroy() before the coin text/coin amount gets added on client's end</span>
+                    <!-- <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon190.PNG" slot="action45image"> -->
                     
                                        
                 </blogcontent-component>
