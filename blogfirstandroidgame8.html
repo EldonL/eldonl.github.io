@@ -94,6 +94,25 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon176.PNG" slot="action29image">
                     <span slot ="action30text">I did consider changing the player's interpolation option on the PhotonTransformClassicView component to disabled or Syncronized Values. However, this just made the opposite player see very choppy movements</span>
                     <!-- <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon176.PNG" slot="action29image"> -->
+                    <span slot ="action31text">I fouund a documentation on <a href="https://doc.photonengine.com/pun/current/gameplay/lagcompensation">lag compensation</a>. So in Player.cs, I added the interface IPunObservable. I then implemented public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info). My first attempt was to get send and receive the transform.position. I removed PhotonTransformClassicView component from the Player other wise it will conflict with the code.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon177.PNG" slot="action31image">
+                    <span slot ="action32text">This did not work since all I'm doing is receiving a position which makes the receiving client look like it's teleporting.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon178.gif" slot="action32image">
+                    <span slot ="action33text">I then tried using the rigidbody2d position and velocity and included the lag compensation time but the result was still choppy</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon179.PNG" slot="action33image">
+                    <span slot ="action34text">I then thought combining the previous two methods where I only send the position, but then have the position multiply lag.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon180.PNG" slot="action34image">
+                    <span slot ="action35text">However there was still noticeable lag, and the receiving client's player y position was lower then where it should be</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon181.PNG" slot="action35image">
+                    <span slot ="action36text">I then tried another approach where the sender is doing same thing in OnPhotonSerializeView. The receiver stores only the velocity information to the Rigidbody component of the object before calculating the time which has passed between sending and receiving the current message. The other information - position - are stored in a variable called networkPosition (Vector2). The receiver then multiplies the rigidbody's velocity by the passed time and adds up the result of this calcuation to the networkPosition variable</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon182.PNG" slot="action36image">
+                    <span slot ="action37text">In FixedUpdate() is where the target position is applied. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon183.PNG" slot="action37image">
+                    <span slot ="action38text">Unfortunately, this caused the receiver player to move slowly - although the bullet is moving closer to the real speed</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon184.gif" slot="action38image">
+                    <span slot ="action39text">I then removed the FixedUpdate() and in Update() tried to move the transform.position. However, this gave the same result as if I was using PhotonTransformViewClassic component where the receiver was just a bit slower.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon185.PNG" slot="action39image">
+                    
                                        
                 </blogcontent-component>
             </section>
