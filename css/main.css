@@ -11,7 +11,7 @@
 body{
    margin:0; 
    background: var(--secondary-color);
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Arial', Helvetica, sans-serif;
 
 }
 
@@ -84,15 +84,26 @@ button{
     padding-left: 0.5em;
 }
 
+.hero-section .container .left-col .hero-theHeaders .hero-subHeaderintro{
+    font-size: 1.5em;
+
+}
+
 .hero-section .container .left-col .hero-theHeaders .hero-header{
     font-size: 5em;
     text-transform: uppercase;
-    margin-bottom: 0;
+    font-weight: bold;
 }
 
 .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
     font-size: 1.5em;
-    margin-top: 0em;
+
+}
+
+.hero-section .container .left-col .hero-theHeaders .hero-subHeader .hero-subheadermultiplepositions{
+    color: var(--primary-color);
+   
+
 }
 
 .about-me-section .container .about-elements{
@@ -423,14 +434,18 @@ ul{
 
     .hero-section .container .left-col{
         text-align: left;
+        display:grid;
+        
     }
 
     .hero-section .container .left-col .hero-theHeaders .hero-header{
         font-size: 7em;
+        padding-bottom:0.25em;
     }
 
     .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
         font-size: 2.5em;
+        padding-bottom:2em;
     }
 
     .hero-section .container .left-col .call-to-action{
