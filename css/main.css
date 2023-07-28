@@ -144,6 +144,7 @@ button{
     display: grid;
     justify-content: left;
     align-items: center;
+
 }
 
 
@@ -154,6 +155,8 @@ button{
    line-height: 0%;    
    font-size: 3em;
    gap: 0.5em;
+
+
 }
 
 .skills-section .container .all-info  .skills-info .subheader .text{
@@ -377,11 +380,12 @@ ul{
     
     .skills-section .container .all-info{
 
-        display: flex;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
         flex-wrap: wrap;
-        justify-content: center;
+
         align-items: flex-start;   
-        column-gap: 3%;
+        column-gap: 0%;
     }
     
     .personal-projects-section .container .personalProjectFilteredContainer{
