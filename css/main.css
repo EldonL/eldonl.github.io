@@ -20,6 +20,14 @@ body .bg-even{
     background: var(--additional-color);
 }
 
+body .bg-odd{
+    background: var(--secondary-color);
+}
+
+body .bg-js-controlled{
+    padding-bottom:1em;
+}
+
 .bi{
     cursor: pointer;
 }
@@ -30,8 +38,10 @@ button{
 
 .container .header{
     font-size: 4em;
-    padding-top: 0.1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.75em;
     text-align: center;
+    margin:0em;
 }
 
 .maintenance .container{
@@ -475,7 +485,7 @@ ul{
     }
   
     .professional-experiences-section .container .all-jobs .jobs .content .btn{
-        margin-top: 7em;
+
         padding: 0.1em 3em;
 
     }

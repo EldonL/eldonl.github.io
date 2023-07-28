@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/blogproject.css">
     <link rel="stylesheet" href="css/blog.css">
+    <script src="js/index.js" defer></script>
     <script src="js/app.js" defer></script>
     <script src="js/filtertab.js" defer></script>
     <script src="js/component/header.js" defer></script>
     <script src="js/component/footer.js" defer></script>
     <script src="js/component/logo.js" defer></script>
     <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <body>
@@ -67,7 +69,7 @@
     <section class="skills-section bg-js-controlled" id="skill">
         <div class="container">
             <h2 class="header">Skills</h2>
-            <ul class="all-info">
+            <ul class="all all-info">
                 <li class="skills-info">
                     <div class="subheader">
                         <div class="image"><i class="bi bi-chat"></i></div>
@@ -133,7 +135,7 @@
     <section class="professional-experiences-section bg-js-controlled" id="professionalexperience">
         <div class="container">
             <h2 class="header">Professional Experiences</h2>
-            <div class="all-jobs">
+            <div class="all all-jobs">
                 <div class="jobs">
                     <img class="work-image" src="images_videos/ProfessionalExperience/virtro/virtro.png" alt="Virtro logo" >
                     <div class="content">
@@ -170,100 +172,103 @@
     <section class="personal-projects-section bg-js-controlled" id="personalproject">
         <div class="container">
             <h2 class="header">Personal Projects</h2>
-            <div class="container-filter-tabs">
-                <div id="tabsContainer" class="filterTabs">
-                    <button class="btnFilterTab active" onclick="filterSelection('all')">All</button>
-                    <button class="btnFilterTab" onclick="filterSelection('android')">Android</button>
-                    <button class="btnFilterTab" onclick="filterSelection('vr')">VR</button>
-                    <button class="btnFilterTab" onclick="filterSelection('webgl')">WebGL</button>
-                    <button class="btnFilterTab" onclick="filterSelection('ar')">AR</button>
-                    <button class="btnFilterTab" onclick="filterSelection('website')">Website</button>
+            <div class="all">
+                <div class="container-filter-tabs">
+                    <div id="tabsContainer" class="filterTabs">
+                        <button class="btnFilterTab active" onclick="filterSelection('all')">All</button>
+                        <button class="btnFilterTab" onclick="filterSelection('android')">Android</button>
+                        <button class="btnFilterTab" onclick="filterSelection('vr')">VR</button>
+                        <button class="btnFilterTab" onclick="filterSelection('webgl')">WebGL</button>
+                        <button class="btnFilterTab" onclick="filterSelection('ar')">AR</button>
+                        <button class="btnFilterTab" onclick="filterSelection('website')">Website</button>
+                    </div>
+                </div>
+    
+                <div class="personalProjectFilteredContainer">
+                    <div class="filterDiv android">
+                        <a href="personaltomatovspotato.html"><img class="image" src="images_videos/blog/FirstAndroidGame/mainmenu.PNG" alt="Tomato vs Potato"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Tomato vs Potato</p>
+                            <p class="date">Jan 2023-present</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv website">
+                        <a href="personalportfolio.html"><img class="image" src="images_videos/PersonalProjects/Portfolio/coverimage.PNG" alt="Lumania"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Portfolio</p>
+                            <p class="date">Sep 2016, Feb 2023</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv vr">
+                        <a href="personaltechstarshunt.html"><img class="image" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" alt="Tech Stars Hunt"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Horizon World-Tech Stars Hunt</p>
+                            <p class="date">May - Jun 2022</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv webgl">
+                        <a href="personalninjagoconcentrationbouncylego.html"><img class="image" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoCoverImage.PNG" alt="Ninjago"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Ninjago Concentration Bouncy Lego</p>
+                            <p class="date">Oct 2021</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv ar">
+                        <a href="personalsportsbookalive.html"><img class="image" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveIntro.PNG" alt="Sports Book Alive"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Life of Kobe Bryant - Sports Book Alive</p>
+                            <p class="date">Mar 2021</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv vr">
+                        <a href="personalbabushakmemories.html"><img class="image" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaPiano.PNG" alt="Babushkas Memories"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Babushka's Memories</p>
+                            <p class="date">Jan 2019</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv vr">
+                        <a href="personalthelatelateanimals.html"><img class="image" src="images_videos/PersonalProjects/TheLateLateAnimals/TheLateLateAnimalsTitle.PNG" alt="LateLateAnimals"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">The Late Late Animals</p>
+                            <p class="date">Dec 2018-Jan 2019</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv ar">
+                        <a href="personalprojectshaperecognitionforar.html"><img class="image" src="images_videos/PersonalProjects/ShapeRecognitionForAR/482SpiderManShape.JPG" alt="ShapeRecognitionAR"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Shape Recognition for AR</p>
+                            <p class="date">Jun-Aug 2018</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv vr">
+                        <a href="personaljustgetoverit.html"><img class="image" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" alt="JustGetOverIt"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">Just Get Over It</p>
+                            <p class="date">Feb 2018</p>
+                        </div>
+                    </div>
+                    <div class="filterDiv vr">
+                        <a href="personalwinningearthback.html"><img class="image" src="images_videos/PersonalProjects/WinningEarthBack/SpideyHeroMainMenuWEBGoodCopy.PNG" alt="WinningEarthBack"></a>
+                        <div class="imagetext">Click to see more</div>
+                        <div class="bottom">
+                            <p class="title">W.E.B Winning earth back</p>
+                            <p class="date">Sep 2017- Sep 2018</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
-
-            <div class="personalProjectFilteredContainer">
-                <div class="filterDiv android">
-                    <a href="personaltomatovspotato.html"><img class="image" src="images_videos/blog/FirstAndroidGame/mainmenu.PNG" alt="Tomato vs Potato"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Tomato vs Potato</p>
-                        <p class="date">Jan 2023-present</p>
-                    </div>
-                </div>
-                <div class="filterDiv website">
-                    <a href="personalportfolio.html"><img class="image" src="images_videos/PersonalProjects/Portfolio/coverimage.PNG" alt="Lumania"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Portfolio</p>
-                        <p class="date">Sep 2016, Feb 2023</p>
-                    </div>
-                </div>
-                <div class="filterDiv vr">
-                    <a href="personaltechstarshunt.html"><img class="image" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" alt="Tech Stars Hunt"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Horizon World-Tech Stars Hunt</p>
-                        <p class="date">May - Jun 2022</p>
-                    </div>
-                </div>
-                <div class="filterDiv webgl">
-                    <a href="personalninjagoconcentrationbouncylego.html"><img class="image" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoCoverImage.PNG" alt="Ninjago"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Ninjago Concentration Bouncy Lego</p>
-                        <p class="date">Oct 2021</p>
-                    </div>
-                </div>
-                <div class="filterDiv ar">
-                    <a href="personalsportsbookalive.html"><img class="image" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveIntro.PNG" alt="Sports Book Alive"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Life of Kobe Bryant - Sports Book Alive</p>
-                        <p class="date">Mar 2021</p>
-                    </div>
-                </div>
-                <div class="filterDiv vr">
-                    <a href="personalbabushakmemories.html"><img class="image" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaPiano.PNG" alt="Babushkas Memories"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Babushka's Memories</p>
-                        <p class="date">Jan 2019</p>
-                    </div>
-                </div>
-                <div class="filterDiv vr">
-                    <a href="personalthelatelateanimals.html"><img class="image" src="images_videos/PersonalProjects/TheLateLateAnimals/TheLateLateAnimalsTitle.PNG" alt="LateLateAnimals"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">The Late Late Animals</p>
-                        <p class="date">Dec 2018-Jan 2019</p>
-                    </div>
-                </div>
-                <div class="filterDiv ar">
-                    <a href="personalprojectshaperecognitionforar.html"><img class="image" src="images_videos/PersonalProjects/ShapeRecognitionForAR/482SpiderManShape.JPG" alt="ShapeRecognitionAR"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Shape Recognition for AR</p>
-                        <p class="date">Jun-Aug 2018</p>
-                    </div>
-                </div>
-                <div class="filterDiv vr">
-                    <a href="personaljustgetoverit.html"><img class="image" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" alt="JustGetOverIt"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Just Get Over It</p>
-                        <p class="date">Feb 2018</p>
-                    </div>
-                </div>
-                <div class="filterDiv vr">
-                    <a href="personalwinningearthback.html"><img class="image" src="images_videos/PersonalProjects/WinningEarthBack/SpideyHeroMainMenuWEBGoodCopy.PNG" alt="WinningEarthBack"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">W.E.B Winning earth back</p>
-                        <p class="date">Sep 2017- Sep 2018</p>
-                    </div>
-                </div>
-                
-            </div>
+            
         </div>
     </section>
 
@@ -271,8 +276,11 @@
     <section class="blogrecent bg-js-controlled" id="blog">
         <div class="container">
             <h2 class="header">Blogs</h2>
-            <blogrecent-component>
-            </blogrecent-component>
+            <div class="blog">
+                <blogrecent-component>
+                </blogrecent-component>
+            </div>
+
 
             <div class="morebutton">
                 <div class="viewmorebutton">
@@ -285,7 +293,7 @@
     <section class="volunteer-section bg-js-controlled" id="volunteer">
         <div class="container">
             <h2 class="header">Volunteer Experience</h2>
-            <div class="all-volunteer">
+            <div class="all all-volunteer">
                 <div class="volunteer">
                     <a href="https://www.kre.is/"><img class="image" src="images_videos/volunteer/kreisimmersive/logo.png" alt="Kreis Immersive"></a>
                     <div class="bottom">
@@ -315,10 +323,15 @@
     </section>
 
     <section class="footer-section bg-js-controlled" id="contact">
-        <footer-component></footer-component>
+        <div class ="footer">
+            <footer-component></footer-component>
+        </div>
+
     </section>
 
 
+ 
+    </section>
 </body>
 
 </html>
