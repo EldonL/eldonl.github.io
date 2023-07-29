@@ -362,7 +362,13 @@ button{
 }
 
 .volunteer-section .container .all-volunteer{
-    display: grid;
+    overflow: hidden;
+    justify-content: center;     
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap:0.5em;
+    row-gap:0.5em;
  
 }
 
@@ -371,9 +377,9 @@ button{
 }
 
 .volunteer-section .container .all-volunteer .volunteer .image{
-    width:12em;
-    height:12em;
-    object-fit:contain;
+    width:7em;
+    height:7em;
+    object-fit: contain;
     opacity:1;
     -webkit-transition: .4s ease-in-out;
     transition:.4s ease-in-out;
@@ -385,18 +391,30 @@ button{
 
 }
 
+.volunteer-section .container .all-volunteer .volunteer .bottom{
+    color:black;
+    width:15em;
+}
+
 
 .volunteer-section .container .all-volunteer .volunteer .bottom .title{
-    font-size: 1.2em;
+    font-size: 1.25em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    font-weight: bold;
 }
 
 .volunteer-section .container .all-volunteer .volunteer .bottom .position{
-    font-size: 1em;
+    font-size: 1.1em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
 
 }
 
 .volunteer-section .container .all-volunteer .volunteer .bottom .date{
     font-size: 1em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
 
 }
 
@@ -455,10 +473,6 @@ ul{
 
     }
 
-    .volunteer-section .container .all-volunteer{
-        grid-template-columns: 50% 50%;
-     
-    }
     
 }
 
@@ -527,10 +541,7 @@ ul{
         height:12em;
     }
 
-    .volunteer-section .container .all-volunteer{
-        grid-template-columns: 33% 33% 33%;
-     
-    }
+
     
 
  
