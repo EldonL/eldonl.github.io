@@ -133,26 +133,28 @@ button{
 
 
 .skills-section .container .all-info{
-    display: grid;
-    justify-content: center;
-    align-items: center;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items:flex-start;   
+    gap: 2em;
 
 }
 
 .skills-section .container .all-info .skills-info{
     display: grid;
-    justify-content: left;
-    align-items: center;
+    justify-content:flex-start;
+    align-items:baseline; 
 }
 
 
 .skills-section .container .all-info  .skills-info .subheader{
    display: flex;
-   justify-content: left;
-   align-items: center;
+   justify-content:flex-start;
+   align-items:baseline; 
    line-height: 0%;    
    font-size: 1.75em;
-   gap: 0.5em;
+   column-gap:0.25em;
 }
 
 .skills-section .container .all-info  .skills-info .subheader .text{
@@ -162,17 +164,21 @@ button{
 
 .skills-section .container .all-info  .skills-info .list .list-info{
     display: flex;
-    gap:0.25em;
+    column-gap:0.5em;
     flex-wrap: wrap;
     font-size:1.5em;
+    margin-bottom: 0em;
+    margin-top: 0em;
 }
 
-.skills-section .container .all-info  .skills-info .list .list-info li{
+.skills-section .container .all-info  .skills-info .list .list-info p{
     background-color: var(--primary-color);
     padding-left: 0.5em;
     padding-right: 0.5em;
     box-shadow: 3px 3px 1.5px grey;
     color: white;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
 }
 
 .personal-projects-section .container .container-filter-tabs{
@@ -380,7 +386,7 @@ ul{
 
     
     .skills-section .container .all-info{
-        display: grid;
+        display: flex;
         justify-content: left;
         align-items: left;   
     }
