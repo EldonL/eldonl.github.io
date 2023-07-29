@@ -292,8 +292,9 @@ button{
 
 .professional-experiences-section .container .all-jobs .jobs .work-image{
     width:var(--professional-exp-work-width-small);
-    height:30em;
-    object-fit: cover;
+    height:17em;
+    object-fit:contain;
+    
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content{
@@ -304,16 +305,22 @@ button{
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content .companyName{
-    font-weight: bold;
-    font-size: 1.75em
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    font-size: 1.4em
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content .jobPosition{
-    font-size: 1.5em
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content .timeLine{
-    font-size: 1.25em
+    font-size: 1.1em;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
 }
 
 .professional-experiences-section .container .all-jobs .jobs .content .btn{
@@ -480,7 +487,7 @@ ul{
 
     .professional-experiences-section .container .all-jobs .jobs .work-image{
         width: var(--professional-exp-work-width-large)
-  
+        
     }
     
    
