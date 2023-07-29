@@ -1,6 +1,6 @@
 ScrollReveal({
     reset:false,
-    distance:'50px',
+    distance:'30px',
     duration: 2000,
     delay: 200
 })
@@ -11,8 +11,8 @@ ScrollReveal().reveal('.about-elements .about-me-img,.hero-section .right-col, .
 
 const multiplepositions= new Typed('.hero-typejs',{
     strings:['work together', "code together", "make each other better", "educate", "entertain",  "engage"],
-    typeSpeed: 100,
-    backSpeed: 100,
+    typeSpeed: 75,
+    backSpeed: 75,
     backDelay: 1000,
     loop:true
 });
