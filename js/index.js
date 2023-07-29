@@ -6,7 +6,7 @@ ScrollReveal({
 })
 
 ScrollReveal().reveal('.about-elements .content,.hero-section .left-col, .header,.filterTabs', {origin:'top'});
-ScrollReveal().reveal('.about-elements .about-me-img,.hero-section .right-col, .all, .blog, .personalProjectFilteredContainer, .volunteer, .skills-info,.jobs', {origin:'bottom'});
+ScrollReveal().reveal('.hero-section .right-col, .all, .blog, .personalProjectFilteredContainer, .skills-info,.jobs', {origin:'bottom'});
 
 
 const multiplepositions= new Typed('.hero-typejs',{
