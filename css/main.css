@@ -417,14 +417,40 @@ ul{
 
     .professional-experiences-section .container .all-jobs .jobs{
 
-        width:var(--professional-exp-work-width-medium);
+        grid-template-columns: repeat(2, var(--professional-exp-work-width-medium)
+        );    
+        justify-content: center;         
+    }
+
+    .professional-experiences-section .container .all-jobs .jobs .work-image{
+        width: var(--professional-exp-work-width-medium);
+        height:12em;
+    }
+
+    .professional-experiences-section .container .all-jobs .jobs.right{
+        grid-template-areas: "left right";
+    
+    }
+    
+    .professional-experiences-section .container .all-jobs .jobs.right .work-image{
+        grid-area: right;
+  
+    }
+
+    .professional-experiences-section .container .all-jobs .jobs .content .companyName{
+        font-size: 1.5em;
 
     }
     
-    .professional-experiences-section .container .all-jobs .jobs .work-image{
-        width:var(--professional-exp-work-width-medium);
+    .professional-experiences-section .container .all-jobs .jobs .content .jobPosition{
+        font-size: 2em;
 
-    }     
+    }
+    
+    .professional-experiences-section .container .all-jobs .jobs .content .timeLine{
+        font-size: 1.25em;
+
+    }
 
     .volunteer-section .container .all-volunteer{
         grid-template-columns: 50% 50%;
@@ -497,38 +523,6 @@ ul{
         width: var(--professional-exp-work-width-large);
         height:12em;
     }
-
-
-    
-   
-    .professional-experiences-section .container .all-jobs .jobs.right{
-        grid-template-areas: "left right";
-    
-    }
-    
-    .professional-experiences-section .container .all-jobs .jobs.right .work-image{
-        grid-area: right;
-  
-    }
-
-
-
-    .professional-experiences-section .container .all-jobs .jobs .content .companyName{
-        font-size: 1.5em;
-
-    }
-    
-    .professional-experiences-section .container .all-jobs .jobs .content .jobPosition{
-        font-size: 2em;
-
-    }
-    
-    .professional-experiences-section .container .all-jobs .jobs .content .timeLine{
-        font-size: 1.25em;
-
-    }
-  
-
 
     .volunteer-section .container .all-volunteer{
         grid-template-columns: 33% 33% 33%;
