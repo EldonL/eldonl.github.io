@@ -93,18 +93,23 @@ button{
     font-size: 5em;
     text-transform: uppercase;
     font-weight: bold;
+    color: var(--primary-color);
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke: 1px #000000;
 }
 
 .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
-    font-size: 1.5em;
+    font-size: 1em;
 
 }
 
-.hero-section .container .left-col .hero-theHeaders .hero-subHeader .hero-subheadermultiplepositions{
-    color: var(--primary-color);
-   
+.hero-section .container .left-col .hero-theHeaders .hero-subHeader2{
+    font-size: 0.9em;
+    padding-bottom:1em;
 
 }
+
+
 
 .about-me-section .container .about-elements{
     display:grid;
@@ -459,8 +464,14 @@ ul{
     }
 
     .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
-        font-size: 2.5em;
+        font-size: 1.6em;
         padding-bottom:2em;
+    }
+
+    .hero-section .container .left-col .hero-theHeaders .hero-subHeader2{
+        font-size: 1.1em;
+        padding-bottom:1em;
+    
     }
 
     .hero-section .container .left-col .call-to-action{

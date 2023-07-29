@@ -9,8 +9,8 @@ ScrollReveal().reveal('.about-elements .content,.hero-section .left-col, .header
 ScrollReveal().reveal('.about-elements .about-me-img,.hero-section .right-col, .all, .blog, .personalProjectFilteredContainer, .volunteer, .skills-info,.jobs', {origin:'bottom'});
 
 
-const multiplepositions= new Typed('.hero-subheadermultiplepositions',{
-    strings:['Software Programmer', "XR Developer", "Systems Engineer"],
+const multiplepositions= new Typed('.hero-typejs',{
+    strings:['work together', "code together", "make each other better", "educate", "entertain",  "engage"],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
