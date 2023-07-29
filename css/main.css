@@ -85,7 +85,7 @@ button{
 }
 
 .hero-section .container .left-col .hero-theHeaders .hero-subHeaderintro{
-    font-size: 1.5em;
+    font-size: 1em;
 
 }
 
@@ -99,14 +99,17 @@ button{
 }
 
 .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
-    font-size: 1em;
+    font-size: 1.5em;
 
 }
 
 .hero-section .container .left-col .hero-theHeaders .hero-subHeader2{
     font-size: 0.9em;
     padding-bottom:1em;
+}
 
+.hero-section .container .left-col .hero-theHeaders .hero-subHeader2 .hero-typejs{
+    color: var(--primary-color);
 }
 
 
