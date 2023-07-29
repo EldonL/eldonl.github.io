@@ -64,9 +64,12 @@
 
 .work-projects-section .container .workProjectFilteredContainer{
     overflow: hidden;
-    padding-left: 1em;        
-    display: grid;
-    grid-template-columns: auto;
+    justify-content: center;     
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap:0.5em;
+    row-gap:0.5em;
 
 }
 
@@ -78,8 +81,8 @@
 
 
 .work-projects-section .container .workProjectFilteredContainer .image{
-    width:20em;
-    height:20em;
+    width:15em;
+    height:15em;
     object-fit: cover;
     opacity:1;
     -webkit-transition: .4s ease-in-out;
@@ -92,30 +95,33 @@
 }
 
 .work-projects-section .container .workProjectFilteredContainer .imagetext{
-    position:relative;
+    display: none;
+    /* position:relative;
     text-align: center;
     bottom: 1.25em;
     font-size: 1.75em;
     color:white;
     font-weight: bold;
-    text-shadow: 0.5px 0.5px #000000;
+    text-shadow: 0.5px 0.5px #000000; */
 
 }
 
 
 .work-projects-section .container .workProjectFilteredContainer .bottom{
-    position:relative;
-    bottom: 3em;
+    color:black;
+    width:15em;
 }
 
 .work-projects-section .container .workProjectFilteredContainer .bottom .title{
-    font-size: 1.5em;
+    font-size: 1.25em;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 
 .work-projects-section .container .workProjectFilteredContainer .bottom .date{
-    font-size: 1.25em;
-    position:relative;
-    bottom: 1em;
+    font-size: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 
 .work-projects-section .container .workProjectFilteredContainer .show{
@@ -125,18 +131,7 @@
 @media screen and (min-width: 1024px){
     
 
-  .work-projects-section .container .workProjectFilteredContainer{
 
-      display: grid;
-      grid-template-columns: 50% 50%;
-
-  }
-  
-  .work-projects-section .container .workProjectFilteredContainer .image{
-      width:25em;
-      height:25em;
-
-  }
 
 
   
@@ -150,12 +145,7 @@
 
       }
 
-      .work-projects-section .container .workProjectFilteredContainer{
 
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        
-    }
 
 }
 

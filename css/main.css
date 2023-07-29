@@ -221,7 +221,8 @@ button{
 
 .personal-projects-section .container .personalProjectFilteredContainer{
     overflow: hidden;
-    padding-left: 1em;        
+    justify-content: center;     
+
     display: flex;
     flex-wrap: wrap;
     column-gap:0.5em;
@@ -231,7 +232,8 @@ button{
 
 .personal-projects-section .container .personalProjectFilteredContainer .filterDiv{
     display:none;
-    text-align: left;
+    text-align: center;
+
 }
 
 
@@ -251,19 +253,27 @@ button{
     opacity:.5;
 }
 
+.personal-projects-section .container .personalProjectFilteredContainer .imagetext{
+    display: none;
+        /* position:relative;
+        text-align: center;
+        bottom: 1.25em;
+        font-size: 1.75em;
+        color:white;
+        font-weight: bold;
+        text-shadow: 0.5px 0.5px #000000; */
+    } 
+
 .personal-projects-section .container .personalProjectFilteredContainer .bottom{
 
     color:black;
-    width:12em;
+    width:15em;
 }
 
 
 
 
- .personal-projects-section .container .personalProjectFilteredContainer .imagetext{
 
-    display:none;
-} 
 
 .personal-projects-section .container .personalProjectFilteredContainer .bottom .title{
     font-size: 1.25em;
@@ -406,19 +416,6 @@ ul{
         align-items: left;   
     }
     
-    /* .personal-projects-section .container .personalProjectFilteredContainer{
-
-        display: grid;
-        grid-template-columns: 50% 50%;
-
-    }
-    
-    .personal-projects-section .container .personalProjectFilteredContainer .image{
-        width:25em;
-        height:25em;
-
-    } */
-
 
     .professional-experiences-section .container .all-jobs .jobs{
 
@@ -490,14 +487,7 @@ ul{
         align-items: center;   
     }
 
-    /* .personal-projects-section .container .personalProjectFilteredContainer{
-
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        
-    } */
-
-       
+      
      .professional-experiences-section .container .all-jobs .jobs{
 
         grid-template-columns: repeat(2, var(--professional-exp-work-width-large)
