@@ -54,9 +54,16 @@
       height:20em;
 
     }
+
+    .intro .star .starimage{
+      width:40em;
+      height:40em;
+
+    }
   }
 
   @media screen and (min-width: 1440px){  
+
 
       
 

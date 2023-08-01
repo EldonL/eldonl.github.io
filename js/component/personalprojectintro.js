@@ -96,13 +96,8 @@ personalProjectIntroTemplate.innerHTML = `
     .descriptionsection .description .content{
       text-align:left;
     }
-
-    
+   
   
-    .descriptionsection .subinfos .content{
-      font-size:2em;
-    }
-
     .descriptionsection .subinfos{
       display:grid;
       justify-content:center;
@@ -166,9 +161,6 @@ personalProjectIntroTemplate.innerHTML = `
     }
     
   
-    .descriptionsection .subinfos .content{
-      font-size:1.5em;
-    }
 
     .descriptionsection .subinfos .subinfo{
       display:flex;
