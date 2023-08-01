@@ -3,8 +3,8 @@
     --secondary-color:#E9F1FA;
     --additional-color: #FFFFFF;
     --professional-exp-work-width-small: 20em;
-    --professional-exp-work-width-medium: 30em;
-    --professional-exp-work-width-large: 30em;
+    --professional-exp-work-width-medium: 31em;
+    --professional-exp-work-width-large: 31em;
 
 }
 
@@ -434,7 +434,7 @@ ul{
 
 @media screen and (min-width: 1024px){
     .container{
-        width:60em;
+        width:75em;
         display: block;
         margin-left: auto;
         margin-right: auto 
