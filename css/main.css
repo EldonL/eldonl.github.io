@@ -56,8 +56,8 @@ button{
 }
 
 .hero-section .container{
-    padding-top:5em;
-    padding-bottom:5em;
+    padding-top:0em;
+    padding-bottom:10em;
 }
 
 .hero-section .container .call-to-action{
@@ -443,7 +443,7 @@ ul{
 
     .hero-section .container{
         padding-top:8em;
-        padding-bottom: 3em;
+        padding-bottom: 5em;
     }
     
     .hero-section .container .row .top-row{
