@@ -35,6 +35,8 @@ button{
     cursor: pointer;
 }
 
+
+
 .container .header{
     font-size: 4em;
     padding-top: 0.5em;
@@ -191,6 +193,8 @@ button{
     margin-bottom: 0.25em;
     margin-top: 0.25em;
 }
+
+
 
 .personal-projects-section .container .container-filter-tabs{
     display:flex;
@@ -429,7 +433,14 @@ ul{
 
 
 @media screen and (min-width: 1024px){
-    
+    .container{
+        width:60em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+    }
+
+
     .hero-section .container{
         padding-top:8em;
         padding-bottom: 3em;
