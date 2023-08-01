@@ -125,27 +125,26 @@ button{
  }
 
 .about-me-section .container .about-elements{
-    display:grid;
-    grid-template-columns: 15em 15em;
+    display:grid;    
     justify-content: center;
-    padding-right:15em;
+    align-items: center;
 }
 
 .about-me-section .container .about-elements .image img{
-    border-radius: 35%;
-    padding-left: 1em;
+    border-radius: 100%;
+
 }
 
 .about-me-section .container .about-elements .content{
     background-color: var(--primary-color);
-    width: 10em;
-    padding: 1em;
+    width: 15em;
+    padding-left: 1em;
+    padding-right: 1em;
     border-radius: 1em;
-    margin-left: 2em;
+
     color:#FFFFFF;
     align-self: center;
     font-size: 1.5em;
-    position:relative;
     bottom:3em;
 }
 
@@ -479,6 +478,16 @@ ul{
 
     .hero-section .container .row .top-row .left-col .call-to-action{
         font-size:2em;
+    }
+
+    .about-me-section .container .about-elements{
+        display:flex;    
+        justify-content: center;  
+        column-gap: 2em; 
+    }
+
+    .about-me-section .container .about-elements .content{
+        width: 18em;
     }
     
     .skills-section .container .all-info{
