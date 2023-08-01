@@ -5,7 +5,7 @@ ScrollReveal({
     delay: 200
 })
 
-ScrollReveal().reveal('.hero-section .left-col, .header,.filterTabs', {origin:'top'});
+ScrollReveal().reveal('.hero-section .left-col, .hero-section .bottom-row,.header,.filterTabs', {origin:'top'});
 ScrollReveal().reveal('.about-elements,.hero-section .right-col, .all, .blog, .personalProjectFilteredContainer, .skills-info,.jobs', {origin:'bottom'});
 
 
