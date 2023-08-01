@@ -13,6 +13,7 @@ body{
    background: var(--secondary-color);
    font-family: 'Arial', Helvetica, sans-serif;
 
+    
 }
 
 
@@ -50,11 +51,13 @@ button{
 
 }
 
-
-
-
 .hero-section{
     text-align: center;
+}
+
+.hero-section .container{
+    padding-top:5em;
+    padding-bottom:5em;
 }
 
 .hero-section .container .call-to-action{
@@ -75,21 +78,21 @@ button{
  }
  
 
-.hero-section .container .right-col .hero-img{
-    border-radius:35%;
-    width: 20em;
+.hero-section .container .row .top-row .right-col .hero-img{
+    border-radius:100%;
+    width:20em;
  }
 
-.hero-section .container .left-col .hero-theHeaders{
+.hero-section .container .row .top-row .left-col .hero-theHeaders{
     padding-left: 0.5em;
 }
 
-.hero-section .container .left-col .hero-theHeaders .hero-subHeaderintro{
+.hero-section .container .row .top-row .left-col .hero-theHeaders .hero-subHeaderintro{
     font-size: 1em;
 
 }
 
-.hero-section .container .left-col .hero-theHeaders .hero-header{
+.hero-section .container .row .top-row .left-col .hero-theHeaders .hero-header{
     font-size: 5em;
     text-transform: uppercase;
     font-weight: bold;
@@ -98,21 +101,23 @@ button{
     -webkit-text-stroke: 1px #000000;
 }
 
-.hero-section .container .left-col .hero-theHeaders .hero-subHeader{
+.hero-section .container .row .top-row .left-col .hero-theHeaders .hero-subHeader{
     font-size: 1.5em;
-
+    padding-bottom:1em;
 }
 
-.hero-section .container .left-col .hero-theHeaders .hero-subHeader2{
+.hero-section .container .row .top-row .left-col .hero-theHeaders .hero-subHeader2{
     font-size: 0.9em;
     padding-bottom:1em;
 }
 
-.hero-section .container .left-col .hero-theHeaders .hero-subHeader2 .hero-typejs{
+.hero-section .container .row .top-row .left-col .hero-theHeaders .hero-subHeader2 .hero-typejs{
     color: var(--primary-color);
 }
 
-
+.hero-section .container .row .bottom-row{
+    padding-top: 3em;
+ }
 
 .about-me-section .container .about-elements{
     display:grid;
@@ -427,7 +432,47 @@ ul{
 
 @media screen and (min-width: 1024px){
     
+    .hero-section .container{
+        padding-top:12em;
+        padding-bottom: 1em;
+    }
+    
+    .hero-section .container .row .top-row{
+        display:flex;
+        justify-content: center;
+        align-items: flex-start;   
+        column-gap: 10em;
 
+    }
+
+    .hero-section .container .row .top-row .left-col{
+        text-align: left;
+        display:grid;
+        
+    }
+
+    .hero-section .container .row .top-row .left-col .hero-theHeaders .hero-header{
+        font-size: 7em;
+
+    }
+
+    .hero-section .container .row .top-row .left-col .hero-theHeaders .hero-subHeader{
+        font-size: 1.6em;
+
+    }
+
+    .hero-section .container .row .top-row .left-col .hero-theHeaders .hero-subHeader2{
+        font-size: 1.1em;    
+    }
+
+    .hero-section .container .row .top-row .left-col .call-to-action{
+        font-size:2em;
+    }
+
+
+    .hero-section .container .row .bottom-row{
+        padding-top: 20em;
+     }
     
     .skills-section .container .all-info{
         display: flex;
@@ -477,50 +522,6 @@ ul{
 }
 
 @media screen and (min-width: 1440px){  
-
-
-
-    
-    .hero-section .container{
-        display:flex;
-        justify-content: center;
-        align-items: flex-start;   
-        column-gap: 10em;
-    }
-
-    .hero-section{
-        padding-top: 6em;
-    }
-
-    .hero-section .container .left-col{
-        text-align: left;
-        display:grid;
-        
-    }
-
-    .hero-section .container .left-col .hero-theHeaders .hero-header{
-        font-size: 7em;
-        padding-bottom:0.25em;
-    }
-
-    .hero-section .container .left-col .hero-theHeaders .hero-subHeader{
-        font-size: 1.6em;
-        padding-bottom:2em;
-    }
-
-    .hero-section .container .left-col .hero-theHeaders .hero-subHeader2{
-        font-size: 1.1em;
-        padding-bottom:1em;
-    
-    }
-
-    .hero-section .container .left-col .call-to-action{
-        font-size:2em;
-    }
-
-    .hero-section .container .right-col .hero-img{
-        font-size:1.5em;
-    }
 
     .skills-section .container .all-info{
         display: flex;

@@ -10,7 +10,7 @@ ScrollReveal().reveal('.hero-section .right-col, .all, .blog, .personalProjectFi
 
 
 const multiplepositions= new Typed('.hero-typejs',{
-    strings:['work together', "code together", "make each other better", "educate", "entertain",  "engage"],
+    strings:['work together', "code together", "make each other better"],
     typeSpeed: 75,
     backSpeed: 75,
     backDelay: 1000,
