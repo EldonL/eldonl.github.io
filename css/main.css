@@ -528,17 +528,7 @@ ul{
     }
 
       
-     .professional-experiences-section .container .all-jobs .jobs{
 
-        grid-template-columns: repeat(2, var(--professional-exp-work-width-large)
-        );    
-        justify-content: center;         
-    }
-
-    .professional-experiences-section .container .all-jobs .jobs .work-image{
-        width: var(--professional-exp-work-width-large);
-        height:12em;
-    }
 
 
     
