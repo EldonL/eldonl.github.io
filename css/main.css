@@ -35,7 +35,12 @@ button{
     cursor: pointer;
 }
 
+.container{
 
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
 
 .container .header{
     font-size: 4em;
@@ -434,10 +439,8 @@ ul{
 
 @media screen and (min-width: 1024px){
     .container{
-        width:75em;
-        display: block;
-        margin-left: auto;
-        margin-right: auto 
+        width:65em;
+
     }
 
 
