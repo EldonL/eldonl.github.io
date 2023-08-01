@@ -76,37 +76,7 @@ workIntroTemplate.innerHTML = `
       padding-right:1em;
     }
 
-      .title .header{
-        text-align:left;
-        clear:both;
-        font-size: 10em;
-
-    }
-
-
-    .descriptionsection{
-      display:flex;
-
-      text-align:left;
-      justify-content:left;
-    }
-
-    .descriptionsection .description {
-      padding-left: 0em;
-      padding-top: 0em;
-      padding-bottom: 0em;
-      display:grid;
-      row-gap:1em;
-
-
-    }
-
-    
-    .descriptionsection .description .content{
-      font-size:1.5em;
-      width:45em;
-      text-align:left;
-    }
+      
   
   
   }
