@@ -70,7 +70,7 @@ workProjectIntroTemplate.innerHTML = `
 
 
   .descriptionsection .subinfos .subtitle{
-    font-size:2em;
+    font-size:1.5em;
     font-weight:bold;
     padding-top: 0.5em;
     padding-bottom: 0.1em;
@@ -96,15 +96,8 @@ workProjectIntroTemplate.innerHTML = `
     .descriptionsection .description .content{
       text-align:left;
     }
-    .descriptionsection .subinfos .subtitle{
-      font-size:2em;
-    }
-    
-  
-    .descriptionsection .subinfos .content{
-      font-size:2em;
-    }
 
+  
     .descriptionsection .subinfos{
       display:grid;
       justify-content:center;
@@ -129,7 +122,7 @@ workProjectIntroTemplate.innerHTML = `
       .title .header{
         text-align:left;
         float:left;
-        font-size: 7em;
+
         padding-left:1rem;
     }
 
@@ -151,27 +144,21 @@ workProjectIntroTemplate.innerHTML = `
 
     
     .descriptionsection .description .header{
-      font-size:3.5em;
+
       text-align:left;
     }
 
     .descriptionsection .description .content{
-      font-size:1.5em;
+
       width:45em;
     }
   
     .descriptionsection .subinfos .subtitle{
-      font-size:1.5em;
       padding-right:0.5em;
       padding-top: 0em;
 
     }
     
-  
-    .descriptionsection .subinfos .content{
-      font-size:1.5em;
-    }
-
     .descriptionsection .subinfos .subinfo{
       display:flex;
       align-items:flex-end;

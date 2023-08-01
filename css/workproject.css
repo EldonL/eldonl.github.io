@@ -9,13 +9,13 @@
 .intro .coverimage{
     width:20em;
     height:12em;
-    object-fit:cover;
+    object-fit:contain;
   }
 
   .intro .covervideo{
     width:20em;
     height:12em;
-    object-fit:cover;
+    object-fit:contain;
   }
 
   .intro button {
@@ -57,18 +57,7 @@
   }
 
   @media screen and (min-width: 1440px){  
-    .intro .coverimage{
-      width:113em;
-      height:45em;
 
-
-    }
-  
-    .intro .covervideo{
-      width:113em;
-      height:45em;
-
-    }
       
 
   }

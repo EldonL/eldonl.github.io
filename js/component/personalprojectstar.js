@@ -11,7 +11,7 @@ personalProjectStarTemplate.innerHTML = `
 
   .starblocks .starblock .title{
     font-weight:bold;
-    font-size: 2.5em;
+    font-size: 2em;
     text-align:center;
   }
 

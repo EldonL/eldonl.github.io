@@ -70,7 +70,7 @@ personalProjectIntroTemplate.innerHTML = `
 
 
   .descriptionsection .subinfos .subtitle{
-    font-size:2em;
+    font-size:1.5em;
     font-weight:bold;
     padding-top: 0.5em;
     padding-bottom: 0.1em;
@@ -96,9 +96,7 @@ personalProjectIntroTemplate.innerHTML = `
     .descriptionsection .description .content{
       text-align:left;
     }
-    .descriptionsection .subinfos .subtitle{
-      font-size:2em;
-    }
+
     
   
     .descriptionsection .subinfos .content{
@@ -129,7 +127,7 @@ personalProjectIntroTemplate.innerHTML = `
       .title .header{
         text-align:left;
         float:left;
-        font-size: 7em;
+
         padding-left:1rem;
     }
 
@@ -151,7 +149,7 @@ personalProjectIntroTemplate.innerHTML = `
 
     
     .descriptionsection .description .header{
-      font-size:3.5em;
+
       text-align:left;
     }
 
@@ -161,7 +159,7 @@ personalProjectIntroTemplate.innerHTML = `
     }
   
     .descriptionsection .subinfos .subtitle{
-      font-size:1.5em;
+
       padding-right:0.5em;
       padding-top: 0em;
 
