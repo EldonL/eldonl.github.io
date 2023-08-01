@@ -4,7 +4,7 @@
     --additional-color: #FFFFFF;
     --professional-exp-work-width-small: 20em;
     --professional-exp-work-width-medium: 30em;
-    --professional-exp-work-width-large: 50em;
+    --professional-exp-work-width-large: 30em;
 
 }
 
@@ -431,7 +431,7 @@ ul{
 @media screen and (min-width: 1024px){
     
     .hero-section .container{
-        padding-top:12em;
+        padding-top:8em;
         padding-bottom: 3em;
     }
     
@@ -468,14 +468,12 @@ ul{
     }
 
 
-    .hero-section .container .row .bottom-row{
-        padding-top: 18em;
-     }
+
     
     .skills-section .container .all-info{
-        display: flex;
-        justify-content: left;
-        align-items: left;   
+        display: grid;
+        justify-content: center;
+        align-items: center;    
     }
     
 
@@ -521,13 +519,14 @@ ul{
 
 @media screen and (min-width: 1440px){  
 
-    .skills-section .container .all-info{
-        display: flex;
-        justify-content: center;
-        align-items: center;   
+    .hero-section .container{
+        padding-top:12em;
+        padding-bottom: 3em;
     }
 
-      
+    .hero-section .container .row .bottom-row{
+        padding-top: 18em;
+     }
 
 
 
