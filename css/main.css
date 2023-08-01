@@ -466,16 +466,12 @@ ul{
     .hero-section .container .row .top-row .left-col .call-to-action{
         font-size:2em;
     }
-
-
-
     
     .skills-section .container .all-info{
         display: grid;
         justify-content: center;
         align-items: center;    
-    }
-    
+    }    
 
     .professional-experiences-section .container .all-jobs .jobs{
 
