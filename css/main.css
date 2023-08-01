@@ -439,7 +439,7 @@ ul{
         display:flex;
         justify-content: center;
         align-items: flex-start;   
-        column-gap: 10em;
+        column-gap: 2em;
 
     }
 
