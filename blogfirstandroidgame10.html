@@ -36,8 +36,19 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This is part 10 of making my first Android Game. If you missed part9, you can find it <a href="blogfirstandroidgame9.html">here</a></span>
-                    <span slot ="action2text">There appears to be issues when collecting 2+ coins. You can see the example below the when the player collides with two coins - $25 and $100 - there are two coin text that gets spawned. However, only the $25 got added to the coin amount. </span>
+                    <span slot ="action2text">I was playing a game made by GameHive called BattleRun, and I noticed that each player will display their name on top. However, if it is yourself, then there will be an arrow. I wanted to implement the same thing</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/battlerun.PNG" slot="action2image">
+                    <span slot ="action3text">In Player.cs, in the Start(), I check if it is the local player, if it is, disable the name which is a TextMeshPro UGUI, and enable the image component which is an arrow pointing at the local player</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon204.PNG" slot="action3image">
+                    <span slot ="action4text">If it is not the local player, meaning your teammates. Then disable the image and enable the name. I would loop through the player list(in case there is ever more then 2 players, but if it is always 2 playerse, this loop is not needed since I already check for local player), and if it is not the local player, change the text to the player's nickname that was created at the start screen. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon205.PNG" slot="action4image">
+                    <span slot ="action5text">In the Player prefab, I create a canvas, set it to world space so that it would follow the player. Child the canvas under root gameobject so if the root gets disabled, so does the canvas. I add a image component and a TextMeshProUGUI component and assign them to the inspector </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon206.PNG" slot="action5image">
+                    <span slot ="action6text">When I test it with the editor and mobile (their nick names are editor and mobile respectively), if I look at the editor, the local player has the arrow image, and the teammate which is the mobile displays the "mobile" nickname </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon207.PNG" slot="action6image">
+                    <span slot ="action7text">if I look at the mobile, the local player has the arrow image, and the teammate which is the editor displays the "editor" nickname </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon208.jpg" slot="action7image">
+                    <span slot ="action8text">That's it for this blog. Stay tuned for the next blog!</span>
 
                     
                     
