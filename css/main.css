@@ -121,7 +121,8 @@ button{
 }
 
 .hero-section .container .row .bottom-row{
-    padding-top: 3em;
+    /* padding-top: 3em; */
+    display:none;
  }
 
 .about-me-section .container .about-elements{
@@ -544,7 +545,9 @@ ul{
     }
 
     .hero-section .container .row .bottom-row{
+        display:block;
         padding-top: 10em;
+        font-size:1.1em;
      }
 
 
