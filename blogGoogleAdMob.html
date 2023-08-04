@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">Google Ad Mob</span>
+                <span slot="date">Aug 4, 2023</span>
+                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLgloHkx0DWFJtN_Min3OEU-T4')">Watch youtube playlist</span>                -->
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">The main goal of this blog is to learn about Google AdMob. If I can implement it, then great, if not at the very least learn what the different google ad types are. I am going to test out Google AdMob in Unity. This was inspired by GameHive's "Battle Run" and "Tap Titans 2" which can be found on google play. They had reward ads. I want to do some test ads to see if I can implement ads into my Tomato vs Potato game. I will be following the <a href="https://developers.google.com/admob/unity/quick-start#android">Get Started</a> documentation</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/googleadmob.jpg" slot="action1image">
+                    <span slot ="action2text">First step is to setup a AdMob account as described here<a href="https://support.google.com/admob/answer/7356219?visit_id=638267658469137076-4007339033&rd=1">Create an Admob Account</a></span> -->
+                    <span slot ="action3text">I downloaded the package <a href="https://github.com/googleads/googleads-mobile-plugins/releases/latest">GoogleMobileAds-v8.4.1.unitypackage from github</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAdsunitypackage.PNG" slot="action3image">
+                    <span slot ="action4text">I opened the Tomato vs Potato project in the Unity editor. Select Assets > Import Package > Custom Package and import the GoogleMobileAdsPlugin.unitypackage file I downloaded. After a window appears, I select "enable". Another window "Resolving Android Dependencies" does not load. I would get errors in the console. At this stage, I haven't figured the errors yet</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds1.PNG" slot="action4image">
+                    <span slot ="action5text">In the Unity editor, select Assets > External Dependency Manager > Android Resolver > Resolve. The Unity External Dependency Manager library will copy the declared dependencies into the Assets/Plugins/Android directory of your Unity app.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds2.PNG" slot="action5image">
+                    <span slot ="action6text">In the Unity editor, select Assets > Google Mobile Ads > Settings from the menu. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds3.PNG" slot="action6image">                   
+                    <span slot ="action7text">Enter the TEST Android AdMob app ID into the Android field. I do not have iOS so I am keeping iOS field empty. The test ID allows me to use test ads. I will not be using the id that I will create in my admob account. Test Id is ca-app-pub-3940256099942544/6300978111 . This is for setting up Banner described <a href="https://developers.google.com/admob/unity/banner">here</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds4.PNG" slot="action7image">
+                    <span slot ="action8text">I did create an app on admob following this <a href="https://www.youtube.com/watch?v=Sc5e7OCYIho">video</a> on youtube. Although I may not end up using it since I am using the test ID, but we'll if the app on admob is needed later</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds5.PNG" slot="action8image">
+                    <span slot ="action9text">I needed to make sure my device is a test device by following these <a href="https://support.google.com/admob/answer/9691433">instructions</a></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds6.PNG" slot="action9image">
+                    <span slot ="action10text">The iOS error keeps coming back. This window keeps popping up but stays at 0%</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds7.PNG" slot="action10image">
+                    <span slot ="action11text">Build Settings > Enable "Build App Bundle (Google Player)"</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds8.PNG" slot="action11image">
+                    <span slot ="action12text">Project Settings > Android > Set Minimum API Level to 31 > Scripting Backend to IL2CPP > Enable ARM64</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds9.PNG" slot="action12image">
+                    <span slot ="action13text">For setting up Banner described <a href="https://developers.google.com/admob/unity/banner">here</a> I copied and pasted the code into a script called GoogleMobileAdsDemoScript.cs and attached it to a empty gameobject in the main menu scene</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds10.PNG" slot="action13image">
+                    <span slot ="action14text">Pressing play in Editor, nothing occurs besides a new gameobject getting created. Making a build instead, the file type is aab instead of apk this time.</span>
+                    <!-- <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds10.PNG" slot="action14image"> -->
+                    <span slot ="action15text">I want to see if I can sideload aab builds. I may need to use a converstion tool because Android App Bundles is the default publishing format for apps on the Google Play Store. But Android devices require .apk files to install applications. I've been waiting for the build for over 4 hours now</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GoogleMobileAds11.PNG" slot="action15image">
+                    <span slot ="action16text">While I was waiting, I thought about making a Google play console account, but it requires $25 USD payment. Depending on if I can sideload or not, I may or may not purchase this</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/GooglePlayConsolePaymentPage.PNG" slot="action16image">
+                    <span slot ="action17text">While I wait. Let's see what types of Google AdMob ads there are based on the Get Started Documentation. First one is <a href="https://developers.google.com/admob/unity/banner">Banner ads</a>. According to the documentation "rectangular image or text ads that occupy a spot on screen. They stay on screen while users are interacting with the app, and can refresh automatically after a certain period of time".</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/bannerads.png" slot="action17image">
+                    <span slot ="action18text">Next is the <a href="https://developers.google.com/admob/android/interstitial">Interstitial ads</a>. According to the documentation, these "are full-screen ads that cover the interface of their host app. They're typically displayed at natural transition points in the flow of an app, such as between activities or during the pause between levels in a game. When an app shows an interstitial ad, the user has the choice to either tap on the ad and continue to its destination or close it and return to the app." </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/interstitialads.PNG" slot="action18image">
+                    <span slot ="action19text">Next is the <a href="">native ads</a>. "Native ads are ad assets that are presented to users through UI components that are native to the platform. They're shown using the same types of views with which you're already building your layouts, and can be formatted to match your app's visual design" </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/nativeads.PNG" slot="action19image">
+                    <span slot ="action20text">Lastly, my favourite one, <a href="https://developers.google.com/admob/android/rewarded">rewards ads</a> These ads "reward users for watching short videos and interacting with playable ads and surveys. Used for monetizing free-to-play apps" which is used in games like "Battle Run" and "Tap Titans 2". For example, in Battle Run after you finish a game, you can press a button called "Bonus Rewards" watch an add to get coins</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/BattleRunRewardAd.jpg" slot="action20image">
+                    <span slot ="action21text">Tap titans 2 has reward ads when you go back into the game. They will have a "Welcome back" message and  if you press the "Extra rewards" button, it let you watch ads to get the rewards</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/TapTitanWelcomeBackRewardAd.jpg" slot="action21image">
+                    <span slot ="action22text">Tap titans 2 also has reward ads during the game. There will be fairy carrying a treasure chest, when you tap on the fairy, a window will appear asking if you want to watch ads to get rewards like coins or gems or power ups</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/TapTitansRewardAd.jpg" slot="action22image">
+                    <span slot ="action23text">It's been 6 hours and the aab is still building. I wonder if I make an apk build, will the ads still appear if implmeneted correctly? I'll keep waiting in the mean time...</span>
+                    <!-- <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/TapTitansRewardAd.jpg" slot="action22image"> -->
+                    
+
+                    
+                    
+                                       
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
