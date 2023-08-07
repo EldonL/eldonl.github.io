@@ -40,7 +40,7 @@ blogIntroTemplate.innerHTML = `
       .title .header{
         text-align:left;
         float:left;
-        font-size: 7em;
+
         padding-left:1rem;
     }
 
