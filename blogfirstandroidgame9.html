@@ -54,7 +54,15 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon202.PNG" slot="action9image">
                     <span slot ="action10text">This would add the coin correctly for a player. However, it would add the same amount of coin to the other player. The actual coin amount is not sent across the network. This is expected because of the static variable, so when the other player collides with the coin, it will send the coin amount across but because of the static variable, the local player will think their partner has the same coin amoun. However, doing this shows me that CustomProperties was delayed in getting the coin result. So I need to find a way to have GetCoin() return the most update to date result and send the coin amount across the network when the player collides with 2+ coins </span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon203.gif" slot="action10image">
-                    <span slot ="action11text">This blog will be revisisted. In the mean time, checkout my next blog part 10 <a href="blogfirstandroidgame10.html">here</a></span>
+                    <span slot ="action11text">Since GetCoin() is causing trouble. I thought I can create my own add coin method. In ScoreManager.cs, I would create an AddCoinToPlayer() method that takes in the new coin amount to to display on the scoreboard and the Player</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/collidetwopluscoin2.PNG" slot="action11image">
+                    <span slot ="action12text">In Player.cs, the CollectCoin() method would check if view.IsMine, then add new amount of coins to current coins and call AddCoinToPlayer(). However, this only added the coin amount to view.IsMine player, because AddCoinToPlayer() method is local. If I moved that part of the code out of view.IsMine, the the LocalPlayer would be whoever was playing on that device so the coin amount would be added to each player locally</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/collidetwopluscoin.PNG" slot="action12image">
+                    <span slot ="action13text">It then occurred to me. When AddCoin() calls GetCoin(), that's when the issue occurs. Why don't I just call SetCoin() instead?</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/collidetwopluscoin3.PNG" slot="action13image">
+                    <span slot ="action14text">Voila, the coins are updating correctly when colliding with 2+ coins</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/collidetwopluscoins4.gif" slot="action14image">
+                    <span slot ="action15text">This is part 9. Checkout my next blog part 10 <a href="blogfirstandroidgame10.html">here</a></span>
                     <!-- <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photon203.gif" slot="action10image"> -->
                     
                     
