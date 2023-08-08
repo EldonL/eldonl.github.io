@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 12 - Enemy Life Point</span>
+                <span slot="date">Aug 8, 2023</span>
+                <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLgloHkx0DWFJtN_Min3OEU-T4')">Watch youtube playlist</span>               
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 12 of making my first Android Game. If you missed part11, you can find it <a href="blogfirstandroidgame11.html">here</a></span>
+                    <span slot ="action2text">I want to display enemy's lifepoint above the enemies so the users know how much damage they need to apply. My first attempt was to add a slider and text. However that looked very messy and took too much space</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhp.PNG" slot="action2image">
+                    <span slot ="action3text">So I removed the slider and only used the text</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhptext.PNG" slot="action3image">
+                    <span slot ="action4text">The life point is displayed by setting TextMeshProUGUI text to the current life in Awake()</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhpawakecode.PNG" slot="action4image">
+                    <span slot ="action5text">As well as in OnTriggerEnter</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhpontriggercode.PNG" slot="action5image">
+                    <span slot ="action6text">A lifepoint canvas prefab is created and attached to each enemy. The text size needs to be adjusted for each. The canvas is set to world space, and the canvas layer needs to be set so that the life point text is in front of the background but behind the scoreboard</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhpprefab.PNG" slot="action6image">
+                    <span slot ="action7text">That's it for this blog. Stay tuned for the next one</span>
+
+
+
+
+
+                    
+                    
+                                       
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
