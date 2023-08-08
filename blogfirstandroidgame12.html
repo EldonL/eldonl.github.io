@@ -46,7 +46,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhpontriggercode.PNG" slot="action5image">
                     <span slot ="action6text">A lifepoint canvas prefab is created and attached to each enemy. The text size needs to be adjusted for each. The canvas is set to world space, and the canvas layer needs to be set so that the life point text is in front of the background but behind the scoreboard</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhpprefab.PNG" slot="action6image">
-                    <span slot ="action7text">That's it for this blog. Stay tuned for the next one</span>
+                    <span slot ="action7text">I wanted to add some sort of color change when the enemy gets hit such as what operation graduation does <a href="https://www.youtube.com/watch?v=vR5gRGiH8Ys">here</a>. Or even animation. However, while I was searching up for ways to get a response. I noticed that in Evasion <a href="https://www.youtube.com/watch?v=f2DYNHbnphM">here, they make the lifepoints appear only if the enemy gets hit. This would help me resolve the mess I mentioned at the beginning!</a>. So first thing in Awake is to disable the lifepoints gameobject - text and slider</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhplifepointappear2.PNG" slot="action7image">
+                    <span slot ="action8text">Then update the lifepoints and call a coroutine if the lifepoint is greater then 0</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhplifepointappear3.PNG" slot="action8image">
+                    <span slot ="action9text">The coroutine will enable the lifepoints slider and text. After x amount of seconds it will disable the the lifepoints. Note that the coroutine is only called if the lifepoints is not enabled</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhplifepointappear4.PNG" slot="action9image">
+                    <span slot ="action10text">Here is the result. It is not as messy!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyhplifepointappear.gif" slot="action10image">
 
 
 
