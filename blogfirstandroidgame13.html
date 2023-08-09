@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 13 - Adding Scores</span>
+                <span slot="date">Aug 9, 2023</span>
+                <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/tGB5wsb0eSE')">Watch on youtube</span>               
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 13 of making my first Android Game. If you missed part12, you can find it <a href="blogfirstandroidgame12.html">here</a></span>
+                    <span slot ="action2text">I want to add scores to the player only when the player has destroyed the enemy. Currently the score is added everytime the bullet hits the enemy. In Bullet.cs, I made no changes where the bullet would check if it collided with the enemy</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyaddscore.PNG" slot="action2image">
+                    <span slot ="action3text">In EnemyBase.cs, I made changes to the Score Property of Get. Instead of returning the score, I would check if the currentLife is greater then or equal to 1. If yes, then return the score, otherwise return 0</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyaddscore1.PNG" slot="action3image">
+                    <span slot ="action4text">After testing, only the player that destroys the enemy and only if the enemy gets destroyed will the score get added to that player. Check out the youtube video to see the results!</span>                  
+                    
+                                       
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
