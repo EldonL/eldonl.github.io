@@ -26,22 +26,20 @@
     <section class="bg-js-controlled">
         <section class="intro">
             <blogintro-component>
-                <span slot ="title">First Android Game - Part 13 - Adding Scores</span>
-                <span slot="date">Aug 9, 2023</span>
-                <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/tGB5wsb0eSE')">Watch on youtube</span>               
+                <span slot ="title">First Android Game - Part 14 - Syncing Levels</span>
+                <span slot="date">Aug 10, 2023</span>
+                <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLgloHkx0DWFJtN_Min3OEU-T4')">Watch youtube playlist</span>          
             </blogintro-component>
         </section>
     
     
             <section class="diarypost">
                 <blogcontent-component>
-                    <span slot ="action1text">This is part 13 of making my first Android Game. If you missed part12, you can find it <a href="blogfirstandroidgame12.html">here</a></span>
+                    <span slot ="action1text">This is part 14 of making my first Android Game. If you missed part13, you can find it <a href="blogfirstandroidgame13.html">here</a></span>
                     <span slot ="action2text">I want to add scores to the player only when the player has destroyed the enemy. Currently the score is added everytime the bullet hits the enemy. In Bullet.cs, I made no changes where the bullet would check if it collided with the enemy</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyaddscore.PNG" slot="action2image">
-                    <span slot ="action3text">In EnemyBase.cs, I made changes to the Score Property of Get. Instead of returning the score, I would check if the currentLife is greater then or equal to 1. If yes, then return the score, otherwise return 0</span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyaddscore1.PNG" slot="action3image">
-                    <span slot ="action4text">After testing, only the player that destroys the enemy and only if the enemy gets destroyed will the score get added to that player. Check out the youtube video to see the results!</span>                  
-                    <span slot ="action5text">See the next blog part 14 <a href="blogfirstandroidgame14.html">here</a></span>
+                    
+                    
                                        
                 </blogcontent-component>
             </section>
