@@ -36,8 +36,20 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This is part 14 of making my first Android Game. If you missed part13, you can find it <a href="blogfirstandroidgame13.html">here</a></span>
-                    <span slot ="action2text">I want to add scores to the player only when the player has destroyed the enemy. Currently the score is added everytime the bullet hits the enemy. In Bullet.cs, I made no changes where the bullet would check if it collided with the enemy</span>
-                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/enemyaddscore.PNG" slot="action2image">
+                    <span slot ="action2text">I want to have a way to sync the background images and level increase across the network. I only want the master client to send this. In ScoreManager.cs, I added back the AddLevel() function</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg.PNG" slot="action2image">
+                    <span slot ="action3text">The AddLevel() function would call the RPC function called AddLevelRPC that increases the level text and invokes the event LevelIncreaseEvent. This event has the background change subscribed to it</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg1.PNG" slot="action3image">
+                    <span slot ="action4text">To test if this works, in Update(), when I press "A" I would call the AddLevel() function</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg2.PNG" slot="action4image">
+                    <span slot ="action5text">Since the photonview is needed and the ScoreManager.cs is attached to the ScoreBoard prefab, the prefab must be put into the resources folder</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg3.PNG" slot="action5image">
+                    <span slot ="action6text">The scoreboard prefab has PhotonView component attached to it</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg4.PNG" slot="action6image">
+                    <span slot ="action7text">To change the background, I am looping through an array. To make sure I don't get index out of range, I would do a check to see if spriteIndex has passed the sprite array count</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg5.PNG" slot="action7image">
+                    <span slot ="action8text">Using the "A" key to test. The background changes, level increases, and it gets synced across the network</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg6.gif" slot="action8image">
                     
                     
                                        
