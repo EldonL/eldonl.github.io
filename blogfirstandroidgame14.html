@@ -28,7 +28,7 @@
             <blogintro-component>
                 <span slot ="title">First Android Game - Part 14 - Syncing Levels</span>
                 <span slot="date">Aug 10, 2023</span>
-                <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLgloHkx0DWFJtN_Min3OEU-T4')">Watch youtube playlist</span>          
+                <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/_LgKzlqb2NA')">Watch on youtube</span>       
             </blogintro-component>
         </section>
     
@@ -50,6 +50,18 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg5.PNG" slot="action7image">
                     <span slot ="action8text">Using the "A" key to test. The background changes, level increases, and it gets synced across the network</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncbg6.gif" slot="action8image">
+                    <span slot ="action9text">Now I need to choose when to incrase a level. Level 2 occurs if 5 potato enemies gets destroyed. In ScoreManager, I created a int property called PotatoEnemyDestroyed that checks if 5 potato enemies get destroyed, then call AddLevel()</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/synclevel.PNG" slot="action9image">
+                    <span slot ="action10text">The Enemy getting destroyed in EnemyBase.cs was modified so that there is a virtual EnemyDestroyed that will call EnemyDestroyedRPC function. The RPC function logic is the same as before where it spawns the explosion</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/synclevel1.PNG" slot="action10image">
+                    <span slot ="action11text">The Enemy.cs that inherits from EnemyBase.cs will override EnemyDestroyed, in here I will set the property PotatoEnemyDestroyed to 1, so that the number of enemy destroyed will increase by 1</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/synclevel2.PNG" slot="action11image">
+                    <span slot ="action12text">I uncommented Level2() and Level3() in EnemyCannonSpawnInstance.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/synclevel3.PNG" slot="action12image">
+                    <span slot ="action13text">Level2Routine() and Level3Routine() in EnemyCannonSpawnInstance.cs is modified so that I check if the anywhere in the list is null, since we destroy the enemy instead of disabling the enemy which was done when this game was only 1 player</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/synclevel4.PNG" slot="action13image">
+                    <span slot ="action14text">Check out the youtube video button above to see the results!</span>
+
                     
                     
                                        
