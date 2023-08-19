@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 15 - Changing Masters</span>
+                <span slot="date">Aug 19, 2023</span>
+                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/_LgKzlqb2NA')">Watch on youtube</span>        -->
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 15 of making my first Android Game. If you missed part14, you can find it <a href="blogfirstandroidgame14.html">here</a></span>
+                    <span slot ="action2text">When I looked at the DemoAsteroid from PUN2 example. They will spawn asteroids in Start() if it is the master client. Then they will have a callback OnMasterClientSwitched to check if the master dropped out and spawn asteroids their instead. So I applied the same logic for spawning coins</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer1.PNG" slot="action2image">
+                    <span slot ="action3text">From the result below you can see that the mobile is the master, the editor is the client. The editor is what is being recorded. When the mobile drops out by closing the app - the player and any objects that was spawned gets destroyed. However, the client is now the new master and continues spawning the coins. Note I haven't handled if the user selects "Quit". Currently that makes both client and master go to login screen, this could be due to the start game logic in the room scene where I force both player to change scenes</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer2.gif" slot="action3image">
+                    
+
+                    
+                    
+                                       
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
