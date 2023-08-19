@@ -40,6 +40,8 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer1.PNG" slot="action2image">
                     <span slot ="action3text">From the result below you can see that the mobile is the master, the editor is the client. The editor is what is being recorded. When the mobile drops out by closing the app - the player and any objects that was spawned gets destroyed. However, the client is now the new master and continues spawning the coins. Note I haven't handled if the user selects "Quit". Currently that makes both client and master go to login screen, this could be due to the start game logic in the room scene where I force both player to change scenes</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer2.gif" slot="action3image">
+                    <span slot ="action4text">Recall that only on the master is the coin getting destroyed using PhotonNetwork.Destroy(). The client will disable the coin. So I double checked that when the master drops out, the new master destroys the coin. Now I apply the same logic for spawning the coin to the small potato enemies. It appears to work, however, for level 1 to go to level 2, I need to destroy 5 enemies. If the master drops out, no matter how many enemeis was destroyed before master dropped out, the count appears to reset to 0. My guess is because the PotatoEnemyDestroyed property is local to each client, so when the master drops out, the new master's PotatoEnemyDestroyed property is 0</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer3.PNG" slot="action4image">
                     
 
                     
