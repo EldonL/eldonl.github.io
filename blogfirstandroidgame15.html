@@ -36,7 +36,7 @@
             <section class="diarypost">
                 <blogcontent-component>
                     <span slot ="action1text">This is part 15 of making my first Android Game. If you missed part14, you can find it <a href="blogfirstandroidgame14.html">here</a></span>
-                    <span slot ="action2text">When I looked at the DemoAsteroid from PUN2 example. They will spawn asteroids in Start() if it is the master client. Then they will have a callback OnMasterClientSwitched to check if the master dropped out and spawn asteroids their instead. So I applied the same logic for spawning coins</span>
+                    <span slot ="action2text">I originally thought I had to change the PhotonView component's Onwership Transfer field from "fixed" to "Request". However, a request may be more useful when the master wants to pass on an object that they are holding to the client. When I looked at the DemoAsteroid from PUN2 example, the asteroids PhotonView component were all fixed. They will spawn asteroids in Start() if it is the master client. Then they will have a callback OnMasterClientSwitched to check if the master dropped out and spawn asteroids their instead. So I applied the same logic for spawning coins</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer1.PNG" slot="action2image">
                     <span slot ="action3text">From the result below you can see that the mobile is the master, the editor is the client. The editor is what is being recorded. When the mobile drops out by closing the app - the player and any objects that was spawned gets destroyed. However, the client is now the new master and continues spawning the coins. Note I haven't handled if the user selects "Quit". Currently that makes both client and master go to login screen, this could be due to the start game logic in the room scene where I force both player to change scenes</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer2.gif" slot="action3image">
@@ -44,6 +44,12 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer3.PNG" slot="action4image">
                     <span slot ="action5text">Another problem is when the master drops out on level 2 - which is where the cannon is shooting the potatos. The new master will not have the cannons shooting the potatos. The canon will shoot potatos if the master drops out in level 1 when the cannon has not appeared yet.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer4.gif" slot="action5image">
+                    <span slot ="action6text">Let's first tackle the canon not shooting potatoes problem. In OnEnable(), the EnabledEnemy() coroutine gets called only if view.isMine. This coroutine when move the canon and make the canon shoot potatoes. When the master drops out, the EnabledEnemy() coroutine was never called on the client. So applying the same logic I did with the Coins and Potato enemies, I will call the coroutine using the callback OnMasterClientSwitched in EnemyBase.cs </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer5.PNG" slot="action6image">
+                    <span slot ="action7text">This made the canon enemy continue shooting, but it also moved the canon enemy again because EnemyCanon.cs calls DoMove</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer6.PNG" slot="action7image">
+                    <span slot ="action8text">This created an undesired result where the enemy moves again after the master drops out</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer7.gif" slot="action8image">
                     
 
                     
