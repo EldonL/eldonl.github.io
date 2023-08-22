@@ -28,7 +28,7 @@
             <blogintro-component>
                 <span slot ="title">First Android Game - Part 15 - Changing Masters</span>
                 <span slot="date">Aug 19, 2023</span>
-                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/_LgKzlqb2NA')">Watch on youtube</span>        -->
+                <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/GOhDQG00Npo')">Watch on youtube</span>       
             </blogintro-component>
         </section>
     
@@ -58,6 +58,24 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer10.gif" slot="action11image">
                     <span slot ="action12text">You may have noticed that the enemies and coins gets destroyed along with the master when the master drops out. This is because I am using PhotonNetwork.Instantiate. I changed all of that to PhotonNetwork.InstantiateRoomObject so that the object is based on the room. This allowed this enemies and coins to stay in the game.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer11.gif" slot="action12image">
+                    <span slot ="action13text">Now let's circle back and tackle the  problem with the PotatoEnemyDestroyed property becoming 0 when the master drops out. This is because the properties are local. I am not sending this data over the network. To do that, I applied the same logic that I did to setting the coin and score over the network. However, instead of using Photon.Realtime.Player.SetCustomProperties, the PotatoEnemyDestroyedProperty is a shared data not a individual player data. Therefore, I decided to try using PhotonNetwork.CurrentRoom.SetCustomProperties. I created a new script called PlayerSharedInformation.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer12.PNG" slot="action13image">
+                    <span slot ="action14text">I have a Set function that will set the PotatoEnemyDestroyed over the network</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer13.PNG" slot="action14image">
+                    <span slot ="action15text">I have a Get function that will Get the PotatoEnemyDestroyed from the network</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer14.PNG" slot="action15image">
+                    <span slot ="action16text">The Get and Set are called from the PotatoEnemyDestroyed property from ScoreManager.cs. When I tested with the editor and mobile, the data is being sent. However, getting the data, it was alway 1 number lower. So instead of having 5 enemies destroyed before AddLevel(), it was 6 enemies destroyed then AddLevel(). This is wrong </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer15.PNG" slot="action16image">
+                    <span slot ="action17text">The next thing I tried was add a AddPotatoEnemyDestroyed. This would add the number of enemy destroyed to the current amount and call SetPotatoEnemyDestroyed </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer16.PNG" slot="action17image">
+                    <span slot ="action18text">I added OnRoomPropertiesUpdate() function, this is a callback that gets called when the properties changes. I can then set the PotatoEnemyDestroyed property to what is on the network</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer17.PNG" slot="action18image">
+                    <span slot ="action19text">The PotatoEnemyDestroyed property Get and Set implementation is changed back to the original implementation instead of calling functions from PlayerSharedInformation.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer18.PNG" slot="action19image">
+                    <span slot ="action20text">When the PotatoEnemy is destroyed in Enemy.cs, I would call the PlayerSharedInformationExtensions.AddPotatoEnemyDestroyed(1) from PlayerSharedInformation.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer19.PNG" slot="action20image">
+                    <span slot ="action21text">From the result below you can see that when the master drops out, the new master picks up where the number of potato enemy was left off and the level increases at a total of 5 destroyed enemies from both players. Click the youtube video button to watch the full results</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mastertransfer20.gif" slot="action21image">
                     
 
                     
