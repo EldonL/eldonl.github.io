@@ -16,7 +16,7 @@ blogRecentTemplate.innerHTML = `
         <div class="recentblog">
         <div class="filterblog">
             <div class="blogcontent">
-                <a href="blogfirstandroidgame18.html"><img class="image" src="images_videos/blog/FirstAndroidGame/syncgameovermenu6.gif"
+                <a href="blogfirstandroidgame18.html"><img class="image" src="images_videos/blog/FirstAndroidGame/syncgameovermenu11.PNG"
                 alt="cover image"></a>
                 <div class="imagetext">Click to see more</div>
                 <div class="bottom">
