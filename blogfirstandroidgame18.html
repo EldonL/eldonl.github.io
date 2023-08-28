@@ -58,6 +58,8 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncgameovermenu10.PNG" slot="action11image">
                     <span slot ="action12text">Now the text in PlayerGameOverInfo.prefab scale looks perfect</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncgameovermenu11.PNG" slot="action12image">
+                    <span slot ="action13text">I removed the restart. The Quit button the GameOverMenu calls "PhotonNetwork.Disconnect();" instead of LoadScene(). This works because remember in GameManager.cs, the OnLeftRoom() callback calls UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenuScene). ONLeftRoom() gets called when PhotonNetwork.Disconnect() is called.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncgameovermenu12.PNG" slot="action13image">
                                  
                 </blogcontent-component>
             </section>
