@@ -28,7 +28,7 @@
             <blogintro-component>
                 <span slot ="title">First Android Game - Part 18 - Syncing Gameover</span>
                 <span slot="date">Aug 23, 2023</span>
-                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/h7jDj1yzmGM')">Watch on youtube</span>        -->
+                <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLgloHkx0DWFJtN_Min3OEU-T4')">Watch youtube playlist</span>   
             </blogintro-component>
         </section>
     
@@ -60,6 +60,7 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncgameovermenu11.PNG" slot="action12image">
                     <span slot ="action13text">I removed the restart. The Quit button the GameOverMenu calls "PhotonNetwork.Disconnect();" instead of LoadScene(). This works because remember in GameManager.cs, the OnLeftRoom() callback calls UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenuScene). ONLeftRoom() gets called when PhotonNetwork.Disconnect() is called.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/syncgameovermenu12.PNG" slot="action13image">
+                    <span slot ="action14text">See part 19 <a href="blogfirstandroidgame19.html">here</a></span>
                                  
                 </blogcontent-component>
             </section>

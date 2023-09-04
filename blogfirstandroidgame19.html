@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 19 - Adding ready to play</span>
+                <span slot="date">Sep 03, 2023</span>
+                <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLgloHkx0DWFJtN_Min3OEU-T4')">Watch youtube playlist</span>   
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 19 of making my first Android Game. If you missed part18, you can find it <a href="blogfirstandroidgame18.html">here</a></span>
+                    <span slot ="action2text">In the asteroid example, there is a "Ready" button for all the players. If all the players are ready to play then there will be a "start game" button that appears on the master</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay1.PNG" slot="action2image">
+                    <span slot ="action3text">In the Tomato vs Potato game, on the PlayerItem prefab, I added a ready to play button. The navigation arrows are enabled by default</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay2.PNG" slot="action3image">
+                    <span slot ="action4text">In TomtatoVsPotato.cs, I added the const string Player_Ready. This will be used for the hashtable</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay3.PNG" slot="action4image">
+                    <span slot ="action5text">In PlayerItem.cs, I added 4 variables. One for the player ready button, player ready text, a boolean to check if player is ready and the actor number.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay4.PNG" slot="action5image">
+                    <span slot ="action6text">In PlayerItem.cs. I removed ApplyLocalChanges(). Instead, in the Start() I will check if the ActorNumber matches the local player. If no, disable Start Game Button and the navigation arrows. otherwise set the hashtable for IsPlayeReady, set the score and coins</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay5.PNG" slot="action6image">
+                    <span slot ="action7text">In SetPlayerInfo(), the actor number is assigned</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay6.PNG" slot="action7image">
+                    <span slot ="action8text">OnReadyButtonClicked() sets the isPlayerReady boolean and calls SetPlayerReady() in PlayerItem.cs and if it's the master - LocalPlayerPropertiesUpdated() from LobbyMaanger.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay7.PNG" slot="action8image">
+                    <span slot ="action9text">SetPlayerReady sets the player ready text depending on the isPlayerReady boolean.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay8.PNG" slot="action9image">
+                    <span slot ="action10text">The LocalPlayerPropertiesUpdated() from LobbyManager.cs will call a boolean function CheckPlayersReady(), this boolean will tell me if the Start Game Button should be enabled or disabled</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay9.PNG" slot="action10image">
+                    <span slot ="action11text">The CheckPlayerReady() will return false if it is not the master, if Player_Ready property is not found or if PlayerReady is false. Otherwise return true</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay10.PNG" slot="action11image">
+                    <span slot ="action12text">In UpdatePlayerList(), added logic to loop through all the players and if the PlayerReady property is found, set the text by calling SetPlayerReady() from PlayerItem.cs</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay11.PNG" slot="action12image">
+                    <span slot ="action13text">In LobbyManager.cs, CheckPlayersReady() is also called in OnPlayerLeftRoom() and OnPlayerEnteredRoom()</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay12.PNG" slot="action13image">
+                    <span slot ="action14text">In LobbyManager.cs, CheckPlayersReady() is also called in OnPlayerJoinedRoom()</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay13.PNG" slot="action14image">
+                    <span slot ="action15text">However, some bugs occured. First bug is when I enter the room, the PlayerIsReady text hasn't changed yet. Upon further investigation, it seems that in LobbyMaanger.cs -> UpdatePlayerList(), there is no PlayerReadyValue() yet when I first enter the room. However, if I leave the room and reenter, the property is there. In addition, the value does not reset if I leave and reenter the room</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay14.gif" slot="action15image">
+                    <span slot ="action16text">The second bug is that the Start Game Button appears at the wrong time. It appears when "Ready?" is displayed. Upon further investigation, it seems that in LobbyManager.cs -> CheckPlayerReady(), the check for if(!(bool) isPlayerReady) enables the StartGameButton even though the boolean is false</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay15.gif" slot="action16image">
+
+                                 
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
