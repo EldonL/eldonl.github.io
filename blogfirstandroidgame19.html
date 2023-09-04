@@ -66,6 +66,10 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay14.gif" slot="action15image">
                     <span slot ="action16text">The second bug is that the Start Game Button appears at the wrong time. It appears when "Ready?" is displayed. Upon further investigation, it seems that in LobbyManager.cs -> CheckPlayerReady(), the check for if(!(bool) isPlayerReady) enables the StartGameButton even though the boolean is false</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay15.gif" slot="action16image">
+                    <span slot ="action17text">To resolve the first bug, The OnPlayerPropertiesUpdate() calls UpdatePlayerItem() from PlayerItem.cs. Therefore, when properties changes, I can update the text in UpdatePlayerItem.cs.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay16.PNG" slot="action17image">
+                    <span slot ="action18text">This appears to resolve the value resetting as well when leaving the room and reentering the room</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/readytoplay17.gif" slot="action18image">
 
                                  
                 </blogcontent-component>
