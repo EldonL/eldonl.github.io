@@ -26,7 +26,7 @@
     <section class="bg-js-controlled">
         <section class="intro">
             <blogintro-component>
-                <span slot ="title">ARCore Plane detection</span>
+                <span slot ="title">ARCore</span>
                 <span slot="date">Sep 16, 2023</span>
                 <button slot="vlogbutton" onclick="OnLinkClick('https://www.youtube.com/playlist?list=PLJJXiMHWLglpYhw7GosceJfx6WHpyw9bt')">Watch Playlist</span>               
             </blogintro-component>
@@ -35,7 +35,7 @@
     
             <section class="diarypost">
                 <blogcontent-component>
-                    <span slot ="action1text">Using Unity 2021.3.16f1, AR foundation 4.2. The main goal is to have plane detection and when the user tap on the plane, a cube will appear. I will be following the <a href="https://github.com/Unity-Technologies/arfoundation-samples/tree/4.2">ar foundation sample</a> from github</span>
+                    <span slot ="action1text">Using Unity 2021.3.16f1, AR foundation 4.2. The main goal is to learn ARCore. First is to have plane detection and when the user tap on the plane, a cube will appear. I will be following the <a href="https://github.com/Unity-Technologies/arfoundation-samples/tree/4.2">ar foundation sample</a> from github</span>
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/arcore.jpg" slot="action1image">
                     <span slot ="action2text">I created an empty scene called SampleAR. I deleted the main camera. I right click the hierarchy > XR > AR Session. As described in this <a href="https://developers.google.com/ar/develop/unity-arf/session-config">documentation</a> "All AR processes, such as motion tracking, environmental understanding, and lighting estimation, happen inside an ARCore session. ARSession is the main entry point to the ARCore API. It manages the AR system state and handles the session lifecycle, allowing the app to create, configure, start, or stop a session. Most importantly, it enables the app to receive frames that allow access to the camera image and device pose" in short an AR Session " Controls the lifecycle of an AR experience"</span>
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/arsession.PNG" slot="action2image">
@@ -70,6 +70,12 @@
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/planetoggle2.PNG" slot="action16image">
                     <span slot ="action17text">The AR Default plane has a Mesh Renderer component attached to it, so I can change the material. To make sure that material really does change the mesh,I changed it to a frog material that I have in the project</span>
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/planetoggle3.jpg" slot="action17image">
+                    <span slot ="action18text">Next is to do facetracking. Start of simple and have a Red nose! I created a new scene and added AR Session and AR Session Origin to the scene. Since By default the AR Face Manager instantiates the prefab at the origin point which is defined as the Center of a user's head (located inside the skull behind the nose), all I need to do is attach the AR Face Manager component to AR Session Origin. The face prefab I attached is a Red sphere - which I had to lower the scale to 0.05 on all axis</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking.PNG" slot="action18image">
+                    <span slot ="action19text">I made a bulid but the camera was facing the wrong way and I couldn't change the camera orientation. Turns out on AR Camera Manager component that is attached to the AR Camera gameobject, I had to change facing direction to User.</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking2.PNG" slot="action19image">
+                    <span slot ="action20text">Here's the result!</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking1.gif" slot="action20image">
                     
                     
                     

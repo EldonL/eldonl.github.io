@@ -20,7 +20,7 @@ blogRecentTemplate.innerHTML = `
                 alt="cover image"></a>
                 <div class="imagetext">Click to see more</div>
                 <div class="bottom">
-                    <p class="title">ARCore Plane detection</p>
+                    <p class="title">ARCore</p>
                 </div>
             </div>
         </div>        
