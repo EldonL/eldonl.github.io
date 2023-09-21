@@ -84,6 +84,12 @@
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking5.PNG" slot="action23image">
                     <span slot ="action24text">However, when I click the button, the prefab does change, I had to point the camera away from the face and then back to the face for the prefab to spawn. This is NOT what I want! I want the prefab to change immediately when the button is clicked</span>
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking6.gif" slot="action24image">
+                    <span slot ="action25text">I tried accessing the facePrefab.MeshFilter to change the filter. However, it was still the same result where I need to point the camera away then point at the face for the meshfilter to update</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking7.PNG" slot="action25image">
+                    <span slot ="action26text">Then I tried changing the meshfilter by using ARFace from the ARFaceManager.trackables. This changed the meshfilter immediately!</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking8.PNG" slot="action26image">
+                    <span slot ="action27text">The result below shows the meshfilter changing! But what if I have different materials for each gameobject?</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking9.gif" slot="action27image">
                     
                     
                     
