@@ -76,6 +76,14 @@
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking2.PNG" slot="action19image">
                     <span slot ="action20text">Here's the result!</span>
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking1.gif" slot="action20image">
+                    <span slot ="action21text">Next step is to press buttonss and change the face prefab on run time. I created a script called <code>ARFacePrefabController.cs</code> and attached it to the AR Session Origin. The logic is when a button is clicked, it will loop through all the faces being tracked and change the prefab</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking3.PNG" slot="action21image">
+                    <span slot ="action22text">I also attached ARFace to the all the face prefabs that will be used</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking4.PNG" slot="action22image">
+                    <span slot ="action23text">I added an OnClick for all the buttons. Dragged in ARSessionOrigin, linked the <code>FacePrefabOnClickChange()</code> and dragged in the prefab that will be spawned</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking5.PNG" slot="action23image">
+                    <span slot ="action24text">However, when I click the button, the prefab does change, I had to point the camera away from the face and then back to the face for the prefab to spawn. This is NOT what I want! I want the prefab to change immediately when the button is clicked</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/facetracking6.gif" slot="action24image">
                     
                     
                     
