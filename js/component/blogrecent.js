@@ -16,6 +16,16 @@ blogRecentTemplate.innerHTML = `
         <div class="recentblog">
         <div class="filterblog">
             <div class="blogcontent">
+                <a href="blogattachunitydebugger.html"><img class="image" src="images_videos/blog/UnityDebugger//attachunitydebugger4.PNG"
+                alt="cover image"></a>
+                <div class="imagetext">Click to see more</div>
+                <div class="bottom">
+                    <p class="title">Unity Debugger for Android</p>
+                </div>
+            </div>
+        </div>        
+        <div class="filterblog">
+            <div class="blogcontent">
                 <a href="blogarfoundationsimplearplane.html"><img class="image" src="images_videos/blog/ARFoundationSamples/arcore.jpg"
                 alt="cover image"></a>
                 <div class="imagetext">Click to see more</div>
