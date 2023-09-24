@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">Unity Debugger for Android</span>
+                <span slot="date">Sep 23, 2023</span>
+                <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/3EaJo4q0xbM')">Watch on Youtube</span>               
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">Quick explanation on how to attach Unity Debugger so you can put breakpoints in Visual Studio while playing an android game. Go to build settings > Switch to Android Platform > Enable Development Builds > Enable Script Debugging > Enable Wait For Managed Debugger </span>
+                    <img class="diarypostimage" src="images_videos/blog/UnityDebugger//attachunitydebugger1.PNG" slot="action1image">
+                    <span slot ="action2text">Press build. If this is your first time building this way, it can take a while. Once it's built, sideload to your app. Open the app and you will see a message "You can attach a managed debugger now if you want"</span>
+                    <img class="diarypostimage" src="images_videos/blog/UnityDebugger//attachunitydebugger2.jpg" slot="action2image">
+                    <span slot ="action3text">Go into Visual Studios > Debug > Attach Unity Debugger</span>
+                    <img class="diarypostimage" src="images_videos/blog/UnityDebugger//attachunitydebugger3.PNG" slot="action3image">
+                    <span slot ="action4text">An window will open and it should display your phone. Select it and press ok. In your app, press ok and play the app, your breakpoints should be getting hit!</span>
+                    <img class="diarypostimage" src="images_videos/blog/UnityDebugger//attachunitydebugger4.PNG" slot="action4image">
+                    
+                    
+                    
+                                       
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
