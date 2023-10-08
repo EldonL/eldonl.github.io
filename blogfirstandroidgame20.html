@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 20 - Save data - MySQL</span>
+                <span slot="date">Oct 08, 2023</span>
+                <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/fHY3aUUX3r4')">Watch on youtube</span>   
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 20 of making my first Android Game. If you missed part19, you can find it <a href="blogfirstandroidgame19.html">here</a>. There are weapons that the user can buy. If the user starts the game over and come back into the game, it would be great if what they bought are carried over. It can be frustrating for the user if all the weapons are gone. We will be exploring different ways to save data. The first one we will explore is MySQL. I will be following this <a href="https://www.youtube.com/watch?v=SKbY-0zt2VE&list=PL5KbKbJ6Gf99mcmE1ptsn0oXO1_vnKDlS&index=3">Tutorial playlist by BoardToBits</a></span>
+                    <span slot ="action2text">To create a database I will need to setup a local server. Therefore, I will download MAMP from this <a href="https://www.mamp.info/en/windows/">site</a>. When I open MAMP, I will first go to MAMP > Preferences > Server and change the Document Root. This is where all the PHP files will be stored</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql1.PNG" slot="action2image">
+                    <span slot ="action3text">I'll need setup the database. Select the Open WebStartPage. A http://localhost/MAMP/ will open. localhost refers to the root that we set in Web Server Document Root. MAMP is the splash page that MAMP made. We will select the hyper link that says phpMyAdmin</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql2.PNG" slot="action3image">
+                    <span slot ="action4text">At the home page select user accounts. You will see a "root" user account. This is the default. If you decide to make your application for public to use, you should create your own user account with a new user name and password</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql3.PNG" slot="action4image">
+                    <span slot ="action5text">Now we need to create a database to connect. Select database, I will name my database unity-sql-learning. Select create</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql4.PNG" slot="action5image">
+                    <span slot ="action6text">Create a table for the database. Name it player and set number of columns to 5</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql5.PNG" slot="action6image">
+                    <span slot ="action7text">There are 5 rows where we need to populate information about them. Each row we will need to provide information about them. Those are the name, type, length/values, default, coaliation, Null, index, A_I, and comments.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql6.PNG" slot="action7image">
+                    <span slot ="action8text">The first information is a unique identifier called id. We want the id to differentiate the players. Type is int, give a length 10. We won't worry about default, coliation and attributes. NULL is false. The index will be PRIMARY. A_I is autoincrement, set that to true. Next one is username, type is VARCHAR which is a combination of letters and numbers. Max length is 16 character. Skip default(because we want someone to populate this field), coaliation, attribute, null. Index needs to be unique. Skip A_I. Next is password, but we won't store password as plain text for security reasons. We will use hash and salt. Set both to VARCHAR because a good password have different characters. Length is 100 and 50 respectively. Skip the rest. Lastly is the score - this is the game data we want to store. Type is INT. Length is 10. Default as As defined and set to 0 because by default the score is 0. Skip the rest. Make sure you save. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql7.PNG" slot="action8image">
+                    <span slot ="action9text">I will be using sublime text to code my php. Sublime can be downloaded <a href="https://www.sublimetext.com/">here</a>. In Unity, we will create 4 scenes: Main Menu, Login, Register, Game. Main Menu will have 3 buttons: RegisterMenu, Login, Play Game  and a text that tells us if the user is logged in. RegisterMenu has a button that says register and two input fields that lets user enter their username and password. Login Scene has the same two inputfields as Register but the button will say Log in. Game Scene will have a button the increments the score and a button that exits the game and go back to Main Menu scene. </span>
+                    
+
+
+                                 
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
