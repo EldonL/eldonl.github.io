@@ -86,8 +86,22 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql24.PNG" slot="action25image">
                     <span slot="action26text">In <code>MainMenu.cs</code>, we can check if the user is logged in by displaying the logged in user text and also enable/disable the buttons depending on if the users are logged in.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql25.PNG" slot="action26image">
-                    <span slot="action27text">Now we want to save user data in the game scene. Specifically we want to save the user's score. A <code>Game.cs</code> is created and attached to the canvas in the Game scene. </span>
-                    <!-- <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql25.PNG" slot="action27image"> -->
+                    <span slot="action27text">Now we want to save user data in the game scene. Specifically we want to save the user's score. A <code>Game.cs</code> is created and attached to the canvas in the Game scene. We will have two text field, one for the player's name and one for the score.  </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql26.PNG" slot="action27image">
+                    <span slot="action28text">There will be a button to increment the score by one. This will be assigned and added to <code>DBManager.score</code></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql27.PNG" slot="action28image">
+                    <span slot="action29text">There will be an exit button. When the exit button is selected, it will send a POST request to <code>savedata.php</code> to save the score to the user we want to save to. The form will be storing username and score. Again if the request fails, we print to the console the error</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql28.PNG" slot="action29image">
+                    <span slot="action30text">If the request succeeds, we check that the php did not echo 0. If it is not 0 then something went wrong. Otherwise logout and go to main menu scene. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql29.PNG" slot="action30image">
+                    <span slot="action31text">In <code>savedata.php</code>, we again first connect to our database and make sure there are not connection error. We create two variables and check for name and score because that's what the form from Unity was sending</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql30.PNG" slot="action31image">
+                    <span slot="action32text">Our query will be checking if the username from player table matches the username being sent from the form. If the username does not exist, print out an error code. Otherwise if the username exist then we will use the Update query like this to store the score to the matching username <code> "UPDATE players SET score = " . $newscore . " WHERE username = '" . $username . "';"</code>. This query is stored in the variable<code>updatequery</code>. We then send it to our database where the variable <code>con</code> has our database info <code>mysqli_query($con, $updatequery)</code>. We will also do a <code>or die("7: Save query failed")</code> if something failed.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql31.PNG" slot="action32image">
+                    <span slot="action33text">Below shows how register works in game and in the database</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql32.gif" slot="action33image">
+                    <span slot="action34text">Below shows how login and saving score works in game and in the database</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/mysql32.gif" slot="action34image">
 
                                  
                 </blogcontent-component>
