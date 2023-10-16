@@ -176,6 +176,10 @@
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/multipleimageprefab5.gif" slot="action69image">
                     <span slot ="action70text">I did one more test, by zooming the Logo image and zomming out the logo to see if that affects the size of the prefab...it does. I also did see the red cylinder once (not in recording) and the cylinder was out of position like the flower prefab</span>
                     <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/multipleimageprefab6.gif" slot="action70image">
+                    <span slot ="action71text">Since the size of the image matters. I had to change the scale of the tracked images. When the the <code>added</code> are detected, I would have to create a size like this<code>var minLocalScalar = Mathf.Min(trackedImages.size.x, trackedImages.size.y) / 2;</code> then set the trackedImages localscale <code>trackedImages.transform.localScale = new Vector3(minLocalScalar, minLocalScalar, minLocalScalar);</code></span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/multipleimageprefab7.PNG" slot="action71image">
+                    <span slot ="action72text">This caused the cylinder and the flower prefab to appear on the image! However, this also reduced the size of the spider/wolf.</span>
+                    <img class="diarypostimage" src="images_videos/blog/ARFoundationSamples/multipleimageprefab8.gif" slot="action72image">
                     
                                        
                 </blogcontent-component>
