@@ -40,9 +40,14 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerpref0.PNG" slot="action2image">
                     <span slot ="action3text">On windows 10, when I save this value, it will appear in register editor Computer\HKEY_CURRENT_USER\SOFTWARE\Unity\UnityEditor\Company Name\Product Name. Company name and Product name are the names set in Player Settings</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerpref1.PNG" slot="action3image">
-
-
-                                 
+                    <span slot ="action4text">What if I want to save more data using JSON? Following the tutorial <a href="https://bootcamp.uxdesign.cc/unity-feature-101-basic-saving-using-playerprefs-2fc737d1ac7b">here</a>< First I add a custom class so and make it System.Serizlizable to that JSON can read it</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerpref2.PNG" slot="action4image">
+                    <span slot ="action5text">In Update() when I press "J", I would create a new instance of the class and hardcode the values of player's name, health and score. I would set the results to a key called SavedPlayer and save the key. When I press "L" I would display the values on to the screen</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerpref3.PNG" slot="action5image">
+                    <span slot ="action6text">I'll double check in UnityRegistry that the SavedPlayer key is actually saved</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerpref4.PNG" slot="action6image">
+                    <span slot ="action7text">I exit play mode and enter play mode, but this time I press "L" to load the values because I've already pressed "J" on the last play session so the SavedPlayer key should be saved locally. As you can see from the iamge below, the values are still saved!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/playerpref5.PNG" slot="action7image">                 
                 </blogcontent-component>
             </section>
 
