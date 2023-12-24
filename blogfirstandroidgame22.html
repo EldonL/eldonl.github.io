@@ -87,6 +87,8 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase23.PNG" slot="action26image">
                     <span slot ="action27text">NOTE THIS PART IS FOR ANDROID ONLY: Then I make a build, sideload. I want to see my log events in Firebase DebugView. To do that, I needed to do somethings in the command line. First we need to set the events from the device to firebase. Events are cached and sent to firebase in batches. With this property set, we send it automatically <code> adb shell setprop debug.firebase.analytics.app insert-your-package-name</code>. Secondly, to actually print analytics information to the terminal <code>adb shell setprop log.tag.FA VERBOSE</code>. And then thirdly <code>adb shell setprop log.tag.FA-SVC VERBOSE</code>. Fourth, now launch the app. Then you need to contract FA and FA-SVC tag.  <code>adb logcat -s "FA","FA-SVC"</code>. Lastly, when you are done debugging <code>adb shell setprop debug.firebase.analytics.app .none</code> In Firebase DebugView, I will see the events! So at least I know events are working. Now to wait 24 hours. Stay tuned...</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase24.PNG" slot="action27image">
+                    <span slot ="action28text">I checked after 12 hours. The LevelStart and LevelEnd event exists!!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase25.PNG" slot="action28image">
                 </blogcontent-component>
             </section>
 
