@@ -123,10 +123,22 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase41.PNG" slot="action44image">
                     <span slot ="action45text">I then imported the Firebase.Firestore package so that I can use the Firebase.Firestore namespace later</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase42.PNG" slot="action45image">
-                    <span slot ="action46text">I added the <code>using Firebase.Firestore;</code> and <code>using Firebase.Extensions;</code>. I added the code if user press D, Create a new collection and a document </span>
+                    <span slot ="action46text">I added the <code>using Firebase.Firestore;</code> and <code>using Firebase.Extensions;</code>. I added the code if user press D, Create a new collection and a document. Note that when adding data, as the Get started says "Cloud Firestore stores data in Documents, which are stored in Collections. Cloud Firestore creates collections and documents implicitly the first time you add data to the document. You do not need to explicitly create collections or documents" </span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase43.PNG" slot="action46image">
-                    <span slot ="action47text">In Cloud firestore, you can see the data is added</span>
+                    <span slot ="action47text">In Cloud firestore, you can see the data is added. The alovelace document is added to the users collection</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase44.PNG" slot="action47image">
+                    <span slot ="action48text">Now I want to add data to the aturing document in the users collection.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase45.PNG" slot="action48image">
+                    <span slot ="action49text">In Cloud Firestore we see the users collection contains the aturing document. Notice that this document includes a key-value pair (middle name) that does not appear in the first document. Documents in a collection can contain different sets of information</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase46.PNG" slot="action49image">
+                    <span slot ="action50text">Note that if the same document name is sent, it will replace the data. For example. If I pass in aturing document again and change Born value to a different year. On Cloud Firestore, I will see the Born value is different</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase47.PNG" slot="action50image">
+                    <span slot ="action51text">If I select Query builder. The users collection will display these information. Notice all the key value are displayed. However, the "middle" name for alovelace DocumentID doesn't exist</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase48.PNG" slot="action51image">
+                    <span slot ="action52text">If I manually add a Middle name field to the alovelace document like this in Cloud firestore</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase49.PNG" slot="action52image">
+                    <span slot ="action53text">If I go to query builder, I can see the "Middle" field is added!</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase50.PNG" slot="action53image">
                 </blogcontent-component>
             </section>
 
