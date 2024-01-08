@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 23 - Firebase APIs</span>
+                <span slot="date">Jan 07, 2024</span>
+                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/fHY3aUUX3r4')">Watch on youtube</span>    -->
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 23 of making my first Android Game. If you missed part22, you can find it <a href="blogfirstandroidgame22.html">here</a>. </span>
+                    <span slot ="action2text">NOTE: I am using firebase SDK v 11.6.0. Before we continue adding more data. I want to know if I can manually create emails, verify emails and so forth using APIs. I am following this <a href="https://firebase.google.com/docs/reference/rest/auth">Firebase Auth Rest API</a> First I can link an email/password to a current user by issuing an HTTP POST request to the Auth setAccountInfo endpoint. This will allow the email to be registered and appear in Firebase Authentication. The endpoint is <code>https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]</code> The sample request looks like the below</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase51.PNG" slot="action2image">
+                    <span slot ="action3text">The API_KEY which refers to the Web API Key, which can be obtained on the project settings page in your admin console. </span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase53.PNG" slot="action3image">
+                    <span slot ="action4text">I replaced the API key,email and password.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase52.PNG" slot="action4image">
+                    <span slot ="action5text">I would a get a response. Containing idtoken, email, refresh token,expires in and local id.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase54.PNG" slot="action5image">
+                    <span slot ="action6text">Firebase Authentication would show the email I just created</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase55.PNG" slot="action6image">
+                    <span slot ="action7text">The id token is the Firebase id token of this user. I can use this token to send a verification email. The endpoint for verification email is <code>https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=[API_KEY]</code> The sample request is as shown below</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase56.PNG" slot="action7image">
+                    <span slot ="action8text">I placed the sample code in a txt file and give the file name with a json extension. This is the response</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase57.PNG" slot="action8image">
+                    <span slot ="action9text">I would see the email verification. Notice in the email there is oobCode key in the email link. I can use this oob to manually verify the email - we won't get to that yet as I want to do more testings before the email is verified</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase58.PNG" slot="action9image">
+
+
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
