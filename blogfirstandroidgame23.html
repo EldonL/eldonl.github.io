@@ -58,8 +58,12 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase60.PNG" slot="action11image">
                     <span slot ="action12text">Using the id token I run the send verification email api discussed earlier. I can then manually confirm the verification email if I get the oobCode as discussed earlier which can be found in the verification email. The endpoint for confirming verification endpoint is <code>https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]</code></span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase61.PNG" slot="action12image">
-                    <span slot ="action13text">Using the id token I run the send verification email api discussed earlier. I can then manually confirm the verification email if I get the oobCode as discussed earlier which can be found in the verification email. The endpoint for confirming verification endpoint is <code>https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]</code></span>
+                    <span slot ="action13text">The response I get is as shown below</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase62.PNG" slot="action13image">
+                    <span slot ="action14text">I can also check if a user has verified their email. This is part of retrieving user's information. The endpoint for that is <code>https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=[API_KEY]</code> The sample request is as shown below</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase63.PNG" slot="action14image">
+                    <span slot ="action15text">As you can see, the response I get for a user that has verified their email, the emailVerified is set to true</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase64.PNG" slot="action15image">
 
 
                 </blogcontent-component>
