@@ -50,8 +50,16 @@
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase56.PNG" slot="action7image">
                     <span slot ="action8text">I placed the sample code in a txt file and give the file name with a json extension. This is the response</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase57.PNG" slot="action8image">
-                    <span slot ="action9text">I would see the email verification. Notice in the email there is oobCode key in the email link. I can use this oob to manually verify the email - we won't get to that yet as I want to do more testings before the email is verified</span>
+                    <span slot ="action9text">I would see the email verification. Notice in the email there is oobCode key in the email link. I can use this oob to manually verify the email - we won't get to that yet as I want to do more testings before the email is verified. Will do it after I try signing in.</span>
                     <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase58.PNG" slot="action9image">
+                    <span slot ="action10text">It's great I can send email verification after I sign up a user. What if I already signed up and want to get the id token? I can SIGN IN instead! The end point for that is <code>https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]</code> The sample request is shown below</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase59.PNG" slot="action10image">
+                    <span slot ="action11text">The response I get after I run the response is as shown below. Side note - I'm using a different email that's why the email in the image is different</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase60.PNG" slot="action11image">
+                    <span slot ="action12text">Using the id token I run the send verification email api discussed earlier. I can then manually confirm the verification email if I get the oobCode as discussed earlier which can be found in the verification email. The endpoint for confirming verification endpoint is <code>https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]</code></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase61.PNG" slot="action12image">
+                    <span slot ="action13text">Using the id token I run the send verification email api discussed earlier. I can then manually confirm the verification email if I get the oobCode as discussed earlier which can be found in the verification email. The endpoint for confirming verification endpoint is <code>https://identitytoolkit.googleapis.com/v1/accounts:update?key=[API_KEY]</code></span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/firebase62.PNG" slot="action13image">
 
 
                 </blogcontent-component>
