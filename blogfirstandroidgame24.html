@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Android Game - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/blogproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/blogintro.js" defer></script>
+    <script src="js/component/blogcontent.js" defer></script>
+    <script src="js/component/blogrecent.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <section class="bg-js-controlled">
+        <header-component></header-component>
+    </section>
+    
+    <section class="bg-js-controlled">
+        <section class="intro">
+            <blogintro-component>
+                <span slot ="title">First Android Game - Part 24 - Photon Fusion</span>
+                <span slot="date">Feb 4, 2024</span>
+                <!-- <button slot="vlogbutton" onclick="OnLinkClick('https://youtu.be/fHY3aUUX3r4')">Watch on youtube</span>    -->
+            </blogintro-component>
+        </section>
+    
+    
+            <section class="diarypost">
+                <blogcontent-component>
+                    <span slot ="action1text">This is part 24 of making my first Android Game. If you missed part23, you can find it <a href="blogfirstandroidgame23.html">here</a>. </span>
+                    <span slot ="action2text">Photon Fusion 2.0 is Unity Verified! Read all about Photon Fusion <a href="https://doc.photonengine.com/fusion/current/fusion-intro">here</a>. The unfortunate news for us is that Photon PUN is deprecated. The great news is I get to learn more new topics! There are different modes to use as shown in the quadrant below. We will focus on Fusion only.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photonfusion.jpg" slot="action2image">
+                    <span slot ="action3text">First there is Server mode. According to the documentation: This means the server has full and exclusive State Authoriy over all objects. In other words, the server controls all the spawned objects. The clients can MODIFY networked objects by sending their inpu to the server, the server reacts to that input or by requesting a change using an RPC. Photon does not provide servers for hosting a dedicated Fusion server application, therefore the developers must create a server machine or a cloud hosted server.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photonfusion2.jpg" slot="action3image">
+                    <span slot ="action4text">Second is Host mode. The host acts as both server and a client. Whoever is the first to join the game usually becomes the host. The host has state authority over all the network objects. If the host loses connection, you can trasnfer state authority to a new client. This is NOT automatic in HOST mode and requries spcial handling in the client code</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/photonfusion3.PNG" slot="action4image">
+                    <span slot ="action5text">Third is Shared mode. I will most likely use this mode as it is simliar to Photon PUN which I used for tomato vs potato. How is it similar? Each client initially has State Authority over objects they spawn and can release the State Authority to other clients. Clients may be allowed to take State Authority at will. For instance, when each player joins a game like the tomato vs potato game, each player can spawn bullets. Each bullet is owned by that player.</span>
+                    <img class="diarypostimage" src="images_videos/blog/FirstAndroidGame/collidetwopluscoins4.gif" slot="action5image">
+                    
+
+
+                </blogcontent-component>
+            </section>
+
+            <section class="blogrecent">
+                <blogrecent-component>
+                    <span slot="recentblogs">Recent blogs</span>
+                    <span slot="seeallblogs"><a href="index.html#blog">See all blogs</a></span>
+                </blogrecent-component>
+
+            </section>
+    </section>
+    
+
+ 
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
+
