@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato vs Potato- Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">DuoLingo XR</span>
+            <!-- <img class="coverimage" src="images_videos/PersonalProjects/DuoLingoXR/medium.png" slot="webpageImage"> -->
+            <video class="covervideo" poster="images_videos/PersonalProjects/DuoLingoXR/medium.png" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/DuoLingoXR/aA_FinalVideoDuolingoXR_XRDC_2024-25.mp4" type="video/mp4" >your browser does not support the video
+            </video>
+            <!-- <button slot="websiteButton" onclick="OnLinkClick('https://www.oculus.com/vr/5299600303432788/')">Play game</button> -->
+            <button slot="videoButton" onclick="OnLinkClick('https://devpost.com/software/duolingo-xr')">Watch video</button>>
+            <span slot ="description">DuolingoXR is more than just a mixed reality port of Duolingo—it’s an exploration of what happens when Duo,the mascot of Duolingo, escapes from your phone.</span>
+            <span slot ="platform">Meta Quest</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity, ShapesXR, Figma, Github, Notion</span>
+            <span slot ="timeline">Dec 2024-Jan 2025</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">I wanted to expand my platform experience by creating an Android game. I've been a fan of the kids next door: Operation G.R.A.D.U.A.T.E.S, so I wanted to make something like that.</span>
+                <span slot ="task">I wanted to do proper design where I would create tasks in Jira and design UIs in Figma. I would also do whiteboxing before adding in final UIs </span>
+                <span slot ="action1text">My first few actions was to make sure I can make an android build. All my process would be to document as I finish each task</span>
+              
+                
+                <span slot ="result1text">As of now, I have been documenting my process in the blog section. <a href="blogfirstandroidgame.html">See results and process here</a></span>
+                <!-- <img class="starimage" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" slot="result1image"> -->
+
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
