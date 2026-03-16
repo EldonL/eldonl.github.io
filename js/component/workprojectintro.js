@@ -42,11 +42,31 @@ workProjectIntroTemplate.innerHTML = `
 
   .websiteButtons{
     padding-left:1em;
+    
+        align-items: center;
   }
 
   .websiteButtons .websiteButton{
       padding-top: 1em;
   }
+
+  .websiteButtons ::slotted(img[slot="appstorebutton"]) {
+    margin-top: 1em; /* tweak as needed */
+}
+
+  .websiteButtons ::slotted(img[slot="appstorebutton"]),
+.websiteButtons ::slotted(img[slot="googleplaybutton"]) {
+    height: 3em;       /* normalize height */
+    width: auto;       /* keep aspect ratio */
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.websiteButtons ::slotted(img[slot="appstorebutton"]:hover),
+.websiteButtons ::slotted(img[slot="googleplaybutton"]:hover) {
+    transform: scale(1.1);
+}
 
   .descriptionsection .description{
     padding-left: 1em;
@@ -136,6 +156,7 @@ workProjectIntroTemplate.innerHTML = `
       column-gap:1em;
     }
 
+
     .descriptionsection{
       display:flex;
       justify-content:space-between;
@@ -215,6 +236,12 @@ workProjectIntroTemplate.innerHTML = `
               </div>    
               <div class="websiteButton">
                   <slot name="videoButton"></slot>
+              </div>
+              <div class="websiteButtonn">
+                <slot name="appstorebutton"></slot>
+              </div>
+              <div class="websiteButton">
+                  <slot name="googleplaybutton"></slot>
               </div>
           </div>
           <div class="subinfos">

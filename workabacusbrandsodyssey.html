@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Interview Simulations BeConfident - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/workproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/workprojectintro.js" defer></script>
+    <script src="js/component/workprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <workprojectintro-component>
+            <span slot ="title">Odyssey XR:Includes ESPN, National Geographic and DK</span>
+            <img class="coverimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/odysseyxrbanner.png" slot="webpageImage">
+
+
+            <!-- <video class="covervideo" poster="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntVideo.mp4" type="video/mp4" >your browser does not support the video
+            </video> -->
+            <img slot="appstorebutton" src="images_videos/appstore.png" onclick="OnLinkClick('https://apps.apple.com/us/app/odyssey-xr/id6476524894')"></img>
+            <img slot="googleplaybutton" src="images_videos/googleplay.png" onclick="OnLinkClick('https://play.google.com/store/apps/details?id=com.abacus.booboosbandage&hl=en_CA')"></img>
+            <span slot ="description">Discover the thrill and excitement of sports in immersive virtual reality! Go behind the scenes at ESPN and learn your favorite sports like never before. This deluxe gift set includes an interactive 128-page DK book, 20+ VR experiences, and a set of championship medals!</span>
+            <span slot ="platform">iOS, Android</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity, Firebase, Addressables</span>
+            <span slot ="timeline">Dec 2024 - March 2026</span>
+        </workprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <workprojectstar-component>
+            <span slot="situation">
+            Before I joined, each DK pack was their own app. I helped create a system so that we could centralize an app for all DK, ESPN, and National Geographic apps. Using Addressables to download 360 videos. Using Firebase for login, analytics, storing user information such as which in-app purchases they bought, or experiences they played.
+            </span>
+            
+            <span slot="task">
+            One of my proudest projects at Abacus Brands Inc. I had the opportunity to work on this project from the very start. Originally we used MaxstAR for this project. Due to Google Play's 16KB issue, I was tasked with a complete overhaul of our AR system. Switching from MaxstAR to ARFoundation. I set up an easy system so we could add image targets easily. I was also in charge of setting up subscriptions, in-app purchases, Addressables, login, and collaborating with artists so that the UI in the app looks like the design in Figma.
+            </span>
+            
+            <span slot="action1text">
+            First I set up in-app purchases - for bundles and individual packs. Testing to make sure it works on both iOS and Android and that it will display the correct localized price.
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/dkpack.jpg" slot="action1image">                
+            
+            <span slot="action2text">
+            Then I set up tabs so users can go between All Packs, DK Packs, and National Geographic Packs. Below shows the National Geographic tab with its tabs.
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/natgeopack.jpg" slot="action2image">                
+            
+            <span slot="action3text">
+            Each pack can be expanded to display a detailed description. These descriptions were localized so we could change them without having a new build.
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/espnpack.jpg" slot="action3image">                
+            
+            <span slot="action4text">
+            When the user purchases and owns the pack, they can select the pack to open in AR "scanning" mode or in Virtual mode if they don't have the book with them. Below shows an example in Virtual mode.
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/espn.jpg" slot="action4image">                
+            
+            <span slot="action5text">
+            After selecting an experience you will be brought to an experience either 360 video, 2D video, or an interactive scene.
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/extinction.jpg" slot="action5image">                
+            
+            <span slot="result1text">
+            All these systems implemented together helped our app reach number 3 in Top Free Education on Boxing Day! Next to Duolingo and Simply Piano.
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/result1.png" slot="result1image">
+
+
+            </workprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>

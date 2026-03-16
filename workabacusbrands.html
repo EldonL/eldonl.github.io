@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtro Technology - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/work.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/filtertab.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/workintro.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <div class="container">
+            <workintro-component>
+                <div slot="title">Abacus Brands Inc</div>
+                <div slot="description">    As the first in-house Unity developer at Abacus Brands Inc., I'm responsible for developing and maintaining <strong>Unity</strong> based applications for <strong>Android</strong>  and <strong>iOS</strong> .<br><br>
+
+    I have experience using <strong>ARFoundation</strong>, <strong>Vuforia</strong>, and <strong>MaxstAR</strong> for our AR applications.<br><br>
+
+    I implemented <strong>login systems</strong>, <strong>in-app purchases</strong>, and <strong>push notifications</strong> across platforms.<br>
+    Using <strong>Addressables</strong>, I managed downloading heavy <strong>360° video assets</strong> efficiently.<br><br>
+
+    I also ensure proper documentation is set up in the README for smoother onboarding of new developers.<br>
+    Additionally, I helped our app "Odyssey XR" reach <strong>#3 in Top Free Education</strong> on Google Play. </div>
+                <button slot="websiteButton" onclick="OnLinkClick('https://www.abacusbrands.com')">Visit Site</button>
+                <img class="worklogo" src="images_videos/ProfessionalExperience/abacusbrandsinc/abacusbrandslogo.png" slot="workimage">
+            </workintro-component>
+        </div>
+    </section>
+
+
+    <section class="work-projects-section bg-js-controlled" id="workproject">
+        <div class="container">
+            <h2 class="header">Projects</h2>
+            <div class="container-filter-tabs">
+                <div id="tabsContainer" class="filterTabs">
+                    <button class="btnFilterTab active" onclick="filterSelection('all')">All</button>
+                    <button class="btnFilterTab" onclick="filterSelection('mobile')">Mobile</button>
+                    <button class="btnFilterTab" onclick="filterSelection('ar')">AR</button>
+                </div>
+            </div>
+
+            <div class="workProjectFilteredContainer TabsContainer">
+                <div class="filterDiv ar mobile">
+                    <a href="workabacusbrandsodyssey.html"><img class="image" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/odysseyxrlogo.png" alt="odyssey logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Odyssey XR</p>
+                        <p class="date">Dec 2024 - present</p>
+                    </div>
+                </div>
+                <div class="filterDiv vr webgl">
+                    <a href="workvirtroprojectlinclingo.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/linclingo/linclingologo.jpg" alt="linclingo logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">LincLingo</p>
+                        <p class="date">Nov 2020 - present</p>
+                    </div>
+                </div>                
+                <div class="filterDiv vr">
+                    <a href="workvirtroprojectdnd.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/dnd/dndlogo.png" alt="DND logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">IDEaS Challenge: Beyond the classroom</p>
+                        <p class="date">Sep 2020 - Dec 2022</p>
+                    </div>
+                </div>
+                <div class="filterDiv webgl">
+                    <a href="workvirtroprojectwblc.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/wblc/wblclogo.jpg" alt="wblc logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">WBLC</p>
+                        <p class="date">May 2022 - Dec 2022</p>
+                    </div>
+                </div>
+                <div class="filterDiv vr">
+                    <a href="workvirtroprojecthca.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/hca/hcalogo.PNG" alt="hca logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Immersive Healthcare</p>
+                        <p class="date">Jul 2021 - March 2022</p>
+                    </div>
+                </div>    
+                <div class="filterDiv vr">
+                    <a href="workvirtroprojectjuzzle.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/juzzle/juzzlelogo.webp" alt="juzzle logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Juzzle</p>
+                        <p class="date">Nov - Dec 2020</p>
+                    </div>
+                </div> 
+                <div class="filterDiv vr">
+                    <a href="workvirtroprojectzombiedonuts.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/zombiedonuts/zombiedonutslogo.png" alt="zombie donuts logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Zombie Donuts</p>
+                        <p class="date">Dec 2018, Dec 2020</p>
+                    </div>
+                </div>        
+                <div class="filterDiv vr">
+                    <a href="workvirtroprojectargolingo.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/argolingo/argolingologo.jpg" alt="argolingo logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">ArgoLingo</p>
+                        <p class="date">Jun 2019 - Jul 2020</p>
+                    </div>
+                </div>
+                <div class="filterDiv pc">
+                    <a href="workvirtroprojectihs.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/ihs/ihslogo.jpg" alt="ihs logo"></a>
+                    <div class="imagetext">Click to see more</div>
+                    <div class="bottom">
+                        <p class="title">Intelligent Haptronics Solutions</p>
+                        <p class="date">Nov 2018 - Aug 2019</p>
+                    </div>
+                </div>                                            
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
