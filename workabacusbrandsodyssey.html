@@ -40,37 +40,52 @@
         <section class="star bg-js-controlled">
             <workprojectstar-component>
             <span slot="situation">
-            Before I joined, each DK pack was their own app. I helped create a system so that we could centralize an app for all DK, ESPN, and National Geographic apps. Using Addressables to download 360 videos. Using Firebase for login, analytics, storing user information such as which in-app purchases they bought, or experiences they played.
+            Before I joined Abacus Brands Inc, each DK pack was their own app. I helped create a system so that we could centralize an app for all DK, ESPN, and National Geographic apps. Using Addressables to download 360 videos. Using Firebase for login, analytics, storing user information such as which in-app purchases they bought, or experiences they played.
             </span>
             
             <span slot="task">
             One of my proudest projects at Abacus Brands Inc. I had the opportunity to work on this project from the very start. Originally we used MaxstAR for this project. Due to Google Play's 16KB issue, I was tasked with a complete overhaul of our AR system. Switching from MaxstAR to ARFoundation. I set up an easy system so we could add image targets easily. I was also in charge of setting up subscriptions, in-app purchases, Addressables, login, and collaborating with artists so that the UI in the app looks like the design in Figma.
             </span>
-            
+
             <span slot="action1text">
-            First I set up in-app purchases - for bundles and individual packs. Testing to make sure it works on both iOS and Android and that it will display the correct localized price.
+            First I set up the intro using the animator. By controller the background, it created a smooth transition to welcome the user into the app. When user enters the app, they require an activation code. So to make it understandable we added a video for the user to watch. I setup the video using a renderer and included a play button to be replayed
             </span>
-            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/dkpack.jpg" slot="action1image">                
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/Intro.gif" slot="action1image">       
             
             <span slot="action2text">
-            Then I set up tabs so users can go between All Packs, DK Packs, and National Geographic Packs. Below shows the National Geographic tab with its tabs.
+            I also setup a login and register system using Firebase. Also included a guest account so users can try the app without having to create an account - a requirement by playstore
             </span>
-            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/natgeopack.jpg" slot="action2image">                
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/login.gif" slot="action2image">           
             
             <span slot="action3text">
-            Each pack can be expanded to display a detailed description. These descriptions were localized so we could change them without having a new build.
+            I also setup in-app purchases - for bundles and individual packs. Testing to make sure it works on both iOS and Android and that it will display the correct localized price. When user presses the buy button, the native in app purchase UI will appear. 
             </span>
-            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/espnpack.jpg" slot="action3image">                
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/inapppurchase.gif" slot="action3image">                
             
             <span slot="action4text">
-            When the user purchases and owns the pack, they can select the pack to open in AR "scanning" mode or in Virtual mode if they don't have the book with them. Below shows an example in Virtual mode.
+            Then I set up tabs so users can go between All Packs, DK Packs, and National Geographic Packs. The pack is in a vertial layout group and it can be scrolled. Depending on the tab selected, I enable or disable the pack. Each pack can also be expanded to show a description of what the pack is before the user purchases. I used Dotween the control the scale and anchor of each gameobject.
             </span>
-            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/espn.jpg" slot="action4image">                
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/switchtabs.gif" slot="action4image">                
             
             <span slot="action5text">
+            Here's an example of how I use Dotween to control where the buttons anchor and scale goes when the pack is expanded. Notice depending on the state of the pack, it is either in play or lock mode.
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/dotween.gif" slot="action5image">                
+   
+            <span slot="action6text">
+            The user can then download the content. I use addressables so that the initial app download is small and user can download the content they choose. We display the size of how much they are downloading so user can decide if they have space or not on their device. 
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/download.gif" slot="action6image">  
+
+            <span slot="action7text">
+            When the user purchases and owns the pack, they can select the pack to open in AR "scanning" mode or in Virtual mode if they don't have the book with them. They can also decide to choose goggle mode or handheld mode. 
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/oceaninvr.gif" slot="action7image">                
+            
+            <span slot="action8text">
             After selecting an experience you will be brought to an experience either 360 video, 2D video, or an interactive scene.
             </span>
-            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/extinction.jpg" slot="action5image">                
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/extinction.jpg" slot="action8image">                
             
             <span slot="result1text">
             All these systems implemented together helped our app reach number 3 in Top Free Education on Boxing Day! Next to Duolingo and Simply Piano.
