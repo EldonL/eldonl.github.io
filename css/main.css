@@ -75,17 +75,27 @@ button{
     gap:1em;
     flex-wrap:wrap;
 }
+.hero-platforms img {
+    width: 6em;
+    height: 6em;
+    object-fit: contain;
+}
 
-.hero-platforms img{
-    width:6em;
-    height:6em;
-    object-fit:contain;
+.hero-platforms a {
+
     transition:0.3s;
 }
 
-.hero-platforms img:hover{
+.hero-platforms a:hover {
     transform:scale(1.1);
 }
+
+.hero-platforms .combined-project {
+    display: flex;
+    gap: 10px; /* space between logos */
+    align-items: center;
+}
+
 
 .hero-section{
     text-align: center;
