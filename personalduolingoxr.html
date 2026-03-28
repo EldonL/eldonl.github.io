@@ -20,31 +20,64 @@
     <header-component></header-component>
     <section class="intro bg-js-controlled">
         <personalprojectintro-component>
-            <span slot ="title">DuoLingo XR</span>
+            <span slot ="title">DuoLingo XR - <span style="color: #EEC643; font-weight: bold;">WINNER of Mobile App to XR App AND Best Use of ShapesXR for Immersive Insiders XR Design Challenge</span></span>
             <!-- <img class="coverimage" src="images_videos/PersonalProjects/DuoLingoXR/medium.png" slot="webpageImage"> -->
             <video class="covervideo" poster="images_videos/PersonalProjects/DuoLingoXR/DevPostWinnerBadge.png" slot="webpageVideo" controls>
                 <source src="images_videos/PersonalProjects/DuoLingoXR/aA_FinalVideoDuolingoXR_XRDC_2024-25.mp4" type="video/mp4" >your browser does not support the video
-            </video>
-            <!-- <button slot="websiteButton" onclick="OnLinkClick('https://www.oculus.com/vr/5299600303432788/')">Play game</button> -->
+            </video>           
             <button slot="videoButton" onclick="OnLinkClick('https://devpost.com/software/duolingo-xr')">Watch video</button>>
+            <button slot="websiteButton" onclick="OnLinkClick('https://drive.google.com/drive/folders/1pDZjMf38pfhNkuY_hukajSgVvbBJtcvW?usp=sharing')">Play game</button>
+            <button slot="websiteButton" onclick="OnLinkClick('https://github.com/EldonL/LemonSharks')">Github Repo</button>
             <span slot ="description">DuolingoXR is more than just a mixed reality port of Duolingo—it’s an exploration of what happens when Duo,the mascot of Duolingo, escapes from your phone.</span>
             <span slot ="platform">Meta Quest</span>
             <span slot ="languages">C#</span>
-            <span slot ="tools">Unity, ShapesXR, Figma, Github, Notion</span>
+            <span slot ="tools">Unity, Meta hand tracking, ShapesXR, Figma, Github, Notion</span>
             <span slot ="timeline">Dec 2024-Jan 2025</span>
         </personalprojectintro-component>
 
 
         <section class="star bg-js-controlled">
             <personalprojectstar-component>
-                <span slot ="situation">I wanted to expand my platform experience by creating an Android game. I've been a fan of the kids next door: Operation G.R.A.D.U.A.T.E.S, so I wanted to make something like that.</span>
-                <span slot ="task">I wanted to do proper design where I would create tasks in Jira and design UIs in Figma. I would also do whiteboxing before adding in final UIs </span>
-                <span slot ="action1text">My first few actions was to make sure I can make an android build. All my process would be to document as I finish each task</span>
-              
-                
-                <span slot ="result1text">As of now, I have been documenting my process in the blog section. <a href="blogfirstandroidgame.html">See results and process here</a></span>
-                <!-- <img class="starimage" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" slot="result1image"> -->
-
+                <span slot ="situation">As the lead developer with 5 other memebers consisting of audio designer and 3d artists, we were tasked with mobile to XR app. Education was  something that came up in our discussion alot and we decided to choose Duolingo as the app to prototype into XR  </span>
+                <span slot ="task">My job was to take artists 3d animations and models into Unity. Setup Meta Hand tracking sdk and make sure there is a working prototype that users can interact with </span>
+                <span slot ="action1text">We had to make sure artists and myself as a developer are aligned. We would create figma designs to make sure we know the art direction, and the feel want to go with. This also helped us narrow the scope and features we want to use. Below is just one tiny part of the figma design. Includes somethings that we translated into Unity which I will explain how I did it!</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/Figma.png" slot="action1image"> 
+                <span slot ="action2text">We made visuals of how hand interactions would work in Figma</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/Figma2.png" slot="action2image"> 
+                <span slot ="action3text">We would create storyboards to make sure the Golden path is established</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/Figma3.png" slot="action3image">
+                <span slot ="action4text">We also did our research and all signed up to Duolingo to make sure we understand what works in 2D and what can be translated into 3D</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/Figma4.png" slot="action4image">
+                <span slot ="action5text">First I worked on hand recognition. When I put my hand out and have one finger pointing out, Duo would fly towards my finger and stay on my finger. Then using my hand to do a swipe action as if I'm petting, Duo would play an animation. Sticking out other fingers, Duo would not stay on my finger anymore. One challenge was making sure the Owl goes towards and stops at my finger. I did this by checking when Duo has reached my hand, once it reaches my hand, if I am still pointing with one finger, Duo will be childed to the finger until that's not the case. Since there were different hand poses going, I first tried to make sure the swiping was working. I did this by checking if Duo's poses would change everytime I swipe</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/DuoPettingAttempt1.gif" slot="action5image"> 
+                <span slot ="action6text">Next is the hand pose. I need to make sure Duo can fly towards my finger NO MATTER which hand I am using.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/PoseInMixedRealityAttempt2.gif" slot="action6image">    
+                <span slot ="action7text">Finally, I combine the petting and Duo flying towards my finger together! This time with the final Duo animation</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/DuoPettingAttempt2.gif" slot="action7image">    
+                <span slot ="action8text">Next task was to create a journey table. In Duolingo, you can scroll up and down the journey to see which lesson you are on. Since we are creating an XR app, we need to convert this 2D journey into a 3D version. We thought of a rotating journey table. The table required scaling discs and the user turning the table. First was figuring out how to scale the discs. Here was an early attempt with just up down arrows and a gameobject. When the object was close to the edge, it scales down. If the object was further away from the edge, it scales up.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/ScalingDiscAttempt2.gif" slot="action8image">
+                <span slot ="action9text">Now that using a dummy object worked. It was time to test it on the real model. As you can see, the models scales up and down depending if it's closer to the middle or the edge</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/ScalingDiscAttempt3.gif" slot="action9image">  
+                <span slot ="action10text">With the scaling object issue resolved. It is time for a way for the user to scale them up...since there are no up down arrows in a headset. First we tried to see if having the user rotate the object by pinching the edge of the journey table would feel natural.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/MixedRealityRotateDisc.gif" slot="action10image">  
+                <span slot ="action11text">Pinching the edge of the table did not feel natural. We decided to use the flag handle to rotate. I did this by treating the journey table like opening and closing a door. Where there is a "hinge" and the handle is like the doorknob. This felt way more natural. Additionally, instead of up down, the rotation is controlling when the objects on the table is moving, since the objects moving is isolated from other scripts, the scaling up and down logic wasn't affected</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/JourneyTableRotation.gif" slot="action11image">    
+                <span slot ="action12text">The journey table was working but the scale or position of the table may not be where the user wants. We needed a way for the user to move or scale the table. We tried to think of a way and decided to use a common VR practice which was adding a bar with visual color change feedback when the user has touched the bar. This was a good affordance for the user to understand how to move and scale the table </span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/JourneyTableHandleBar.gif" slot="action12image">    
+                <span slot ="action13text">Next was the Language Transition. We wanted a fun and interactive way for users to pick there langauge. What better way then to pick a language then for the user to grab the beak and have it tap on a language. When a language is tapped, a border would appear to signify the user has interacted with it. Once the user decides on a language, the user can let go of the beak while hovering on the language. The beak will SNAP back to Duo. This snapping was a feature in meta hand tracking which we utilized</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/LanguageTransition.gif" slot="action13image">
+                <span slot ="action14text">There was also level transition which we continued utilizing the snapping affect. We can grab a level and snap it on to the journey table</span>
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/LevelTransitionSnapping.gif" slot="action14image">                   
+                <span slot ="result1text">We were announced as the winner for Best Mobile app to XR app and Best use of Shapes XR.</a></span>                
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/DevPostWinner.PNG" slot="result1image">
+                <span slot ="result2text">Best use of ShapesXR winner annoucment</a></span>                
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/ShapesXRWinner.PNG" slot="result2image">
+                <span slot ="result3text">Best Mobile App to XR App</a></span>                
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/MobileToXRAppwinner.PNG" slot="result3image">
+                <span slot ="result4text">We even got a shout out from ShapesXR on LinkedIn!</a></span>                
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/ShapesXRLinkedin.PNG" slot="result4image">
+                <span slot ="result5text">Not only that, but NathieVR even posted it on his Youtube channel <a href="https://www.youtube.com/shorts/bLzO2m821xM">here</a> was the person to introduce us at AWE!</a></span>                
+                <img class="starimage" src="images_videos/PersonalProjects/DuoLingoXR/NathieVR.PNG" slot="result5image">
             </personalprojectstar-component>
         </section>
 
