@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato vs Potato- Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Cubeats</span>
+            <!-- <img class="coverimage" src="images_videos/PersonalProjects/DuoLingoXR/medium.png" slot="webpageImage"> -->
+            <video class="covervideo" poster="images_videos/PersonalProjects/Cubeats/Cover_Art.png" slot="webpageVideo" controls>
+            <source src="images_videos/PersonalProjects/Cubeats/Cubeats_Demo_Video.mp4" type="video/mp4" >your browser does not support the video</video>           
+            <button slot="videoButton" onclick="OnLinkClick('https://www.youtube.com/watch?v=BrrEg51D3SU')">Watch video</button>>
+            <!-- <button slot="websiteButton" onclick="OnLinkClick('https://drive.google.com/drive/folders/1pDZjMf38pfhNkuY_hukajSgVvbBJtcvW?usp=sharing')">Play game</button> -->
+            <button slot="websiteButton" onclick="OnLinkClick('https://devpost.com/software/cubeats')">Devpost</button>
+            <span slot ="description">VR rhythm puzzle game where the player acts as a music engineer. The goal is to rebuild a target musical sequence using physical, tactile objects instead of traditional graphs or charts</span>
+            <span slot ="platform">Meta Quest 2/3</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity, Meta hand tracking,Github, ShapesXR</span>
+            <span slot ="timeline">Nov - Dec 2025</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">As the lead developer with 2 other team members consisting of 3D artist and another developer. We were tasked with creating a casual game that is  "Accessible, single-player games designed for quick, engaging fun" for the Meta Horizon Start Competition</span>
+                <span slot ="task">My job was to delegate tasks, manage the devleopment process, Setup github, Unity and anything hand tracking related where it requires interacting with an object was my main focus.</span>
+                <span slot ="action1text">First we had design meetings and try to figure out our golden path. Here is a small part of our mood board meetings</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/moodboard.png" slot="action1image"> 
+                <span slot ="action2text">After that, I went into ShapesXR and try to animate why was in our design meeting and turn it into a 3D space. This helps everyone visualize and get on the same page</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/1ShapesXRPrototype.gif" slot="action2image"> 
+                <span slot ="action3text">There were a lot interactables in our project. First and most common one is buttons. So I needed to make sure buttons are working. To also help myself and the user visualize a button was successfully pressed (besides button going down), we added a testing light above it (for now, a cylinder with color change to simulate a light)</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/Light.gif" slot="action3image">
+                <span slot ="action4text">However, from the previous one, you see the hand was going through the button. I needed to make sure the proximity field and surface were setup correctly - including right distance from where I want the poke to start and end.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/poke.gif" slot="action4image">
+                <span slot ="action5text">Now it was time to apply it on to the real model</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/pokereal.gif" slot="action5image"> 
+                <span slot ="action6text">With the button poking setup, I used the same logic on every other buttons. If the buttons were simliar just different color/logos, I would create a prefab. First were the cassette buttons which can play and pause the cassette</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/CasetteButtons.gif" slot="action6image">    
+                <span slot ="action7text">Then there was the sequencer buttons. These can play and pause the cubeats from playing music. </span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/SequencerButtons.gif" slot="action7image">    
+                <span slot ="action8text">Next I wanted to be able to grab and rotate a lever. This will spawn a Cubeat from our Cubeat Maker. I needed to make sure the lever can be grabbed. Setting up the grab interaction was straight forward, I just had to make sure the Rotate transformer was set up properly including the min/max angle, and the pivot point. This was important because the user can only turn the lever towards himself at a 45 degrees.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/RotateLever.gif" slot="action8image">
+                <span slot ="action9text">However, as you see that I was ableo to rotate the lever by pinching or grabbing. In addition, my hand was not on the lever the whole time. Luckily there is hand pose where I can create a hand shape near the lever and take a "picture". That pose will be my grab pose. So now I have to completey close my hand to grab the lever - at least that's what it will look like in VR!</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/leverhandpose.gif" slot="action9image">  
+                <span slot ="action10text">Now that I have grabbing already figured out. I can start figuring how to grab Cubeats, notes and Cassettes. The idea for all of them are the same - Grab and snap them to a surface. I had to make sure a SnapInteractable was setup properly AND make sure the correct objects can snap to the correct interactables. First was grabbing the cubeats and snapping it on to the sequencer. It was important to have an indication for the user where to place the cubeats</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/SilouhetteTest.gif" slot="action10image">  
+                <span slot ="action11text">The indication was working, but I didn't like how it looked. I wanted a silhouette of the cube. So I asked our amazing artist to create a silhouette the cubeats as an indicator</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/silohuettecubeat.gif" slot="action11image">    
+                <span slot ="action12text">Similarily, the when I place the cassette into the cassette box. Setup was the same with Grab interaction and Snap interactions. A silouhette was also added </span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/cassettesilouhette.gif" slot="action12image">    
+                <span slot ="action13text">I also added snap interaction from the notes on to the cubeats. </span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/notessilouhette.gif" slot="action13image">
+                <span slot ="action14text">So grabbing was working...but the problem was I could still grab the cassette while it was in the cassette box and closed. I was able to add a check, when the cassette box is playing something - meaning it is closed, I disable the collider on the cassette tape - but more specifically the cassette tape that is in the cassette box. If the cassette box is not playing anything, then it is opened and cassette tape collider is reenabled!</span>
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/cassettecollider.gif" slot="action14image">                   
+                <span slot ="result1text">At the end, all the objects were interactable, pokable and grabbable! With the help of my other team members, we created a fun and engaging VR Rhythm puzzle!</a></span>                
+                <img class="starimage" src="images_videos/PersonalProjects/Cubeats/final.gif" slot="result1image">
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
