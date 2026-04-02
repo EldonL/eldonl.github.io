@@ -172,10 +172,13 @@ button{
     align-items: center;
 }
 
+
 .about-me-section .container .about-elements .image img{
     border-radius: 100%;
+    width:16em;
 
 }
+
 
 .about-me-section .container .about-elements .content{
     background-color: var(--primary-color);
@@ -532,6 +535,12 @@ ul{
         width: 18em;
     }
     
+.about-me-section .container .about-elements .image img{
+    border-radius: 100%;
+width: auto;
+}
+
+    
     .skills-section .container .all-info{
         display: grid;
         justify-content: center;
@@ -590,6 +599,10 @@ ul{
         font-size:1.1em;
      }
 
+.about-me-section .container .about-elements .image img{
+    border-radius: 100%;
+    width: auto;
+    }
 
 
  
