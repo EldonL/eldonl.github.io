@@ -172,6 +172,10 @@ button{
     align-items: center;
 }
 
+.about-me-section .container .about-elements .image {
+    display: flex;
+    justify-content: center;
+}
 
 .about-me-section .container .about-elements .image img{
     border-radius: 100%;
