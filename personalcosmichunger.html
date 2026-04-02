@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Stars Hunt - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">Cosmic Hunger -- <span style="color: #EEC643; font-weight: bold;">Grant from Meta Horizon World Creator Program</span></span>
+            <img class="coverimage" src="images_videos/PersonalProjects/CosmicHunger/logo.png" slot="webpageImage">
+            <!-- <video class="covervideo" poster="images_videos/PersonalProjects/TheResistance/Thumbnail.jpg" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/TheResistance/Aa_SubmissionVideoTheResistance.mp4" type="video/mp4" >your browser does not support the video
+            </video> -->
+            <button slot="websiteButton" onclick="OnLinkClick('https://horizon.meta.com/world/937463606107518/?hwsh=JXOhGnp0at')">Play game</button>
+            <!-- <button slot="videoButton" onclick="OnLinkClick('https://devpost.com/software/the-resistance-mwyrp4')">See Submission</button>> -->
+            <span slot ="description">An intense mobile endless runner where you play as an asteroid, devouring everything smaller than you to grow massive and survive collision with anything larger.Jump in! .</span>
+            <span slot ="platform">Android/iOS</span>
+            <span slot ="languages">Typescript</span>
+            <span slot ="tools">Horizon World Desktop Editor</span>
+            <span slot ="timeline">July - Dec 2025</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">With funding from Meta Horizon World Creator Program. my team and I wanted to create an endless runner game where user can swipe left and right from lane to lane. The user would collect and dodge outer space objects as an asteroid.</span>
+                <span slot ="task">Create an endless runner game for Meta Horizon world using Meta Desktop Editor. In a team of 3 with an artist and a developer.</span>
+                <span slot ="action1text">My job as the developer was to figure out the how much to increase the asteroid size depending on what objects was collecteed, object pooling to decide what types of lanes to spawn, what types of outer space objects to spawn, how to use the super power "wormhole", and create powerups such as lasers, jump boost and magnetic fields. Biggest issue was figuring out when to retrieve and put the objects back to the object pool. For example, if the user is in the wormhole to bypass all the outer space objects, those objects should be put back in the object pool. Below is one example of how I put the outer space objects back into the pool even when user is the wormhole.</span>
+                <img class="starimage" src="images_videos/PersonalProjects/CosmicHunger/2025-11-23_21-04-57.gif" slot="action1image">  
+                <span slot ="result1text">At the end I was able to spawn different lanes, out space objects and implement power ups such as the magntic field where it can attract close by objects towards the player in a certain time</span>
+                <img class="starimage" src="images_videos/PersonalProjects/CosmicHunger/screen-20251129-1912154.gif" slot="result1image">
+
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>

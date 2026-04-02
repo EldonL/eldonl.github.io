@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Stars Hunt - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/personalproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/personalprojectintro.js" defer></script>
+    <script src="js/component/personalprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <personalprojectintro-component>
+            <span slot ="title">The Resistance</span>
+            <!-- <img class="coverimage" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageImage"> -->
+            <video class="covervideo" poster="images_videos/PersonalProjects/TheResistance/Thumbnail.jpg" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/TheResistance/aa-submissionvideotheresistance_SYifmJ8F.mp4" type="video/mp4" >your browser does not support the video
+            </video>
+            <button slot="websiteButton" onclick="OnLinkClick('https://horizon.meta.com/world/10162247323945733/?hwsh=CSgFUp4onc')">Play game</button>
+            <button slot="videoButton" onclick="OnLinkClick('https://devpost.com/software/the-resistance-mwyrp4')">See Submission</button>>
+            <span slot ="description">Earth is under attack by alien mechs. About 50 years ago, a child sent a radio broadcast into space that messed these aliens up big time! To make things worse, they came across some of our old space messages, and now they think we’re hostile! We know it’s a misunderstanding. They don't. Now they’re attacking Earth, and it’s up to you and your team to defend it.  Join THE RESISTANCE.</span>
+            <span slot ="platform">Android/iOS</span>
+            <span slot ="languages">Typescript</span>
+            <span slot ="tools">Horizon World Desktop Editor</span>
+            <span slot ="timeline">March - July 2025</span>
+        </personalprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <personalprojectstar-component>
+                <span slot ="situation">Mobile Horizon Creator Submission: Mobile Genre Showdown/ Elevate Your World.</span>
+                <span slot ="task">Create an action adventure game for Meta Horizon world using Meta Desktop Editor. In a team of 3 with a designer and a artist.</span>
+                <span slot ="action1text">My job as the developer was to implement the core gameplay mechanics and integrate the visual assets</span>
+                <span slot ="result1text">I succesfullky implemented using typescript the following: Shooting, explosions, UIs to display time/health/collectables/instructions, health collecting, enemy movements. Below shows the final moments of winning the game(Sorry for the spoiler)!</span>
+                <img class="starimage" src="images_videos/PersonalProjects/TheResistance/FinalQuest2.gif" slot="result1image">
+
+            </personalprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
