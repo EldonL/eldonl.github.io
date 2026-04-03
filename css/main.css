@@ -103,7 +103,7 @@ button{
 
 .hero-section .container{
     padding-top:0em;
-    padding-bottom:10em;
+    padding-bottom:3em;
 }
 
 .hero-section .container .call-to-action{
@@ -126,7 +126,7 @@ button{
 
 .hero-section .container .row .top-row .right-col .hero-img{
     border-radius:100%;
-    width:20em;
+    width:15em;
  }
 
 .hero-section .container .row .top-row .left-col .hero-theHeaders{
@@ -139,7 +139,7 @@ button{
 }
 
 .hero-section .container .row .top-row .left-col .hero-theHeaders .hero-header{
-    font-size: 5em;
+    font-size: 3em;
     text-transform: uppercase;
     font-weight: bold;
     color: var(--primary-color);
@@ -203,7 +203,7 @@ button{
     flex-wrap: wrap;
     justify-content:flex-start;
     align-items:flex-start;   
-    gap: 2em;
+    gap: 1em;
 
 }
 
@@ -368,7 +368,7 @@ button{
 
 .professional-experiences-section .container .all-jobs .jobs .work-image{
     width:var(--professional-exp-work-width-small);
-    height:17em;
+    height:10em;
     object-fit:contain;
 
 }
@@ -493,8 +493,8 @@ ul{
 
 
     .hero-section .container{
-        padding-top:8em;
-        padding-bottom: 5em;
+        padding-top:2em;
+        padding-bottom: 2em;
     }
     
     .hero-section .container .row .top-row{
@@ -526,7 +526,7 @@ ul{
     }
 
     .hero-section .container .row .top-row .left-col .call-to-action{
-        font-size:2em;
+        font-size:1em;
     }
 
     .about-me-section .container .about-elements{
@@ -541,7 +541,7 @@ ul{
     
 .about-me-section .container .about-elements .image img{
     border-radius: 100%;
-width: auto;
+width: 16em;
 }
 
     
@@ -593,19 +593,19 @@ width: auto;
 @media screen and (min-width: 1440px){  
 
     .hero-section .container{
-        padding-top:12em;
-        padding-bottom: 10em;
+        padding-top:4em;
+        padding-bottom: 4em;
     }
 
     .hero-section .container .row .bottom-row{
         display:block;
-        padding-top: 10em;
+        padding-top: 2em;
         font-size:1.1em;
      }
 
 .about-me-section .container .about-elements .image img{
     border-radius: 100%;
-    width: auto;
+    width: 16em;
     }
 
 
