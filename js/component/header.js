@@ -9,7 +9,9 @@ headerTemplate.innerHTML = `
 }
 
 .navbar {
-    padding: 1em 1em 0em 1em;
+   padding: 1em 1em 0em 1em;
+
+
 }
 
 
@@ -42,11 +44,11 @@ headerTemplate.innerHTML = `
 }
 
 .navbar .container .mobile-menu-container .bi-list{
-    font-size: 4em;
+    font-size: 2em;
 }
 
 .navbar .container nav .exit-circle{   
-    font-size: 4em;
+    font-size: 2em;
     text-align: right;
 
 
@@ -79,10 +81,14 @@ ul{
 
 
 @media screen and (min-width: 1440px){  
+
+
+
     .navbar .container{
         display:flex;
         justify-content: space-between;
         align-items: center;
+
         
     }
 
@@ -132,13 +138,13 @@ ul{
             <i id="mobile-exit" class="bi bi-x-circle-fill" onclick="OnMobileExitClick()"></i>
         </div>
         <ul class="navigation">
-            <li><a href="index.html#about" onclick="OnMobileExitClick()">About</a></li>
+            <li><a href="index.html#personalproject" onclick="OnMobileExitClick()">Projects</a></li>
+           <li><a href="index.html#about" onclick="OnMobileExitClick()">About</a></li>
             <li><a href="index.html#skill" onclick="OnMobileExitClick()">Skills</a></li>                    
-            <li><a href="index.html#professionalexperience" onclick="OnMobileExitClick()">Professional Experience</a></li>
-            <li><a href="index.html#personalproject" onclick="OnMobileExitClick()">Featured Projects</a></li>
+            <li><a href="index.html#professionalexperience" onclick="OnMobileExitClick()">Work Experiences</a></li>
             <li><a href="index.html#blog" onclick="OnMobileExitClick()">Blogs</a></li>
 
-            <li><a href="#contact" onclick="OnMobileExitClick()">Contact</a></li>
+            <!-- <li><a href="#contact" onclick="OnMobileExitClick()">Contact</a></li> -->
         </ul>
     </nav>
 </div>

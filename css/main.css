@@ -125,7 +125,7 @@ button{
  
 
 .hero-section .container .row .top-row .right-col .hero-img{
-    border-radius:100%;
+    /* border-radius:100%; */
     width:15em;
  }
 
@@ -178,9 +178,10 @@ button{
 }
 
 .about-me-section .container .about-elements .image img{
-    border-radius: 100%;
+     /* border-radius: 100%; */
     width:10em;
-
+    /* height: 10em;  */
+    /* object-fit: cover; */ */
 }
 
 
@@ -189,7 +190,7 @@ button{
     width: 15em;
     padding-left: 1em;
     padding-right: 1em;
-    border-radius: 1em;
+    /* border-radius: 1em; */
 
     color:#FFFFFF;
     align-self: center;
@@ -539,11 +540,12 @@ ul{
         width: 18em;
     }
     
-.about-me-section .container .about-elements .image img{
-    border-radius: 100%;
-width: 16em;
+.about-me-section .container .about-elements .image img {
+    /* border-radius: 100%; */
+    width: 16em;
+    /* height: 16em;
+    object-fit: cover; */
 }
-
     
     .skills-section .container .all-info{
         display: grid;
@@ -604,8 +606,10 @@ width: 16em;
      }
 
 .about-me-section .container .about-elements .image img{
-    border-radius: 100%;
-    width: 16em;
+    /* border-radius: 100%; */
+        width: 16em;
+        /* height: 16em;
+        object-fit: cover; */
     }
 
 

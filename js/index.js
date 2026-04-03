@@ -1,8 +1,8 @@
 ScrollReveal({
     reset:false,
-    distance:'30px',
-    duration: 2000,
-    delay: 200
+    distance:'10px',
+    duration: 1000,
+    delay: 100
 })
 
 ScrollReveal().reveal('.hero-section .left-col, .hero-section .bottom-row,.header,.filterTabs', {origin:'top'});
