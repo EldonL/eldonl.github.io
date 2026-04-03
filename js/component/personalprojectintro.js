@@ -42,11 +42,35 @@ personalProjectIntroTemplate.innerHTML = `
 
   .websiteButtons{
     padding-left:1em;
+    
+        align-items: center;
   }
 
   .websiteButtons .websiteButton{
       padding-top: 1em;
   }
+
+  .websiteButtons ::slotted(img[slot="appstorebutton"]) {
+    margin-top: 1em; /* tweak as needed */
+}
+
+  .websiteButtons ::slotted(img[slot="appstorebutton"]),
+.websiteButtons ::slotted(img[slot="googleplaybutton"]),
+.websiteButtons ::slotted(img[slot="metabutton"]),
+.websiteButtons ::slotted(img[slot="metahorizonbutton"]) {
+    height: 3em;       /* normalize height */
+    width: auto;       /* keep aspect ratio */
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.websiteButtons ::slotted(img[slot="appstorebutton"]:hover),
+.websiteButtons ::slotted(img[slot="googleplaybutton"]:hover),
+.websiteButtons ::slotted(img[slot="metabutton"]),
+.websiteButtons ::slotted(img[slot="metahorizonbutton"]) {
+    transform: scale(1.1);
+}
 
   .descriptionsection .description{
     padding-left: 1em;
@@ -220,6 +244,22 @@ personalProjectIntroTemplate.innerHTML = `
                   <slot name="videoButton"></slot>
               </div>
           </div>
+              <div class="websiteButton">
+                  <slot name="videoButton"></slot>
+              </div>
+              <div class="websiteButtonn">
+                <slot name="appstorebutton"></slot>
+              </div>
+              <div class="websiteButton">
+                  <slot name="googleplaybutton"></slot>
+              </div>
+               <div class="websiteButton">
+                  <slot name="metabutton"></slot>
+              </div>
+               <div class="websiteButton">
+                  <slot name="metahorizonbutton"></slot>
+                    
+              </div>
           <div class="subinfos">
               <div class="platform subinfo">
                   <div class="subtitle">Platform:</div>

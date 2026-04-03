@@ -55,7 +55,9 @@ workProjectIntroTemplate.innerHTML = `
 }
 
   .websiteButtons ::slotted(img[slot="appstorebutton"]),
-.websiteButtons ::slotted(img[slot="googleplaybutton"]) {
+.websiteButtons ::slotted(img[slot="googleplaybutton"]),
+.websiteButtons ::slotted(img[slot="metabutton"]),
+.websiteButtons ::slotted(img[slot="metahorizonbutton"]) {
     height: 3em;       /* normalize height */
     width: auto;       /* keep aspect ratio */
     object-fit: contain;
@@ -64,7 +66,9 @@ workProjectIntroTemplate.innerHTML = `
 }
 
 .websiteButtons ::slotted(img[slot="appstorebutton"]:hover),
-.websiteButtons ::slotted(img[slot="googleplaybutton"]:hover) {
+.websiteButtons ::slotted(img[slot="googleplaybutton"]:hover),
+.websiteButtons ::slotted(img[slot="metabutton"]),
+.websiteButtons ::slotted(img[slot="metahorizonbutton"]) {
     transform: scale(1.1);
 }
 
@@ -242,6 +246,12 @@ workProjectIntroTemplate.innerHTML = `
               </div>
               <div class="websiteButton">
                   <slot name="googleplaybutton"></slot>
+              </div>
+               <div class="websiteButton">
+                  <slot name="metabutton"></slot>
+              </div>
+               <div class="websiteButton">
+                  <slot name="metahorizonbutton"></slot>
               </div>
           </div>
           <div class="subinfos">
