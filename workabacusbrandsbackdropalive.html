@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Interview Simulations BeConfident - Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/workproject.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/component/header.js" defer></script>
+    <script src="js/component/footer.js" defer></script>
+    <script src="js/component/logo.js" defer></script>
+    <script src="js/component/workprojectintro.js" defer></script>
+    <script src="js/component/workprojectstar.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header-component></header-component>
+    <section class="intro bg-js-controlled">
+        <workprojectintro-component>
+            <span slot ="title">Backdrop Alive</span>
+            <img class="coverimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/backdropalive/cover.png" slot="webpageImage">
+
+
+            <!-- <video class="covervideo" poster="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" slot="webpageVideo" controls>
+                <source src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntVideo.mp4" type="video/mp4" >your browser does not support the video
+            </video> -->
+            <img slot="appstorebutton" src="images_videos/appstore.png" onclick="OnLinkClick('https://apps.apple.com/ca/app/backdrop-alive/id6502370550')"></img>
+            <img slot="googleplaybutton" src="images_videos/googleplay.png" onclick="OnLinkClick('https://play.google.com/store/apps/details?id=com.abacus.backdrop')"></img>
+            <button slot="videoButton" onclick="OnLinkClick('https://backdrop.com/pages/backdropalive-augmented-reality-backdrop-activations')">See demo</button>>
+            <span slot ="description">Description from the store: "Backdrop Alive is the official companion app for AR-enabled backdrops from Backdrop.com and TradeShowBooth.com. Designed for trade shows, retail activations, and live events, the app transforms static displays into dynamic, interactive experiences that attract attention and drive engagement. With a quick scan, attendees can unlock animations, play branded mini-games, and receive custom rewards such as discounts, samples, or other gifts—making your booth both memorable and shareable.
+Beyond audience interaction, Backdrop Alive helps brands capture leads effortlessly. Each scan is linked to a specific backdrop and event, allowing for detailed tracking and performance analysis. Built-in analytics offer insight into engagement metrics, helping you measure success and optimize your displays over time. The app also includes access to a growing AR game library, giving you more ways to engage your audience and drive real-time participation."</span>
+            <span slot ="platform">iOS, Android</span>
+            <span slot ="languages">C#</span>
+            <span slot ="tools">Unity, ARFoundation, in app purchases, MySQL</span>
+            <span slot ="timeline">Dec 2024 - March 2026</span>
+        </workprojectintro-component>
+
+
+        <section class="star bg-js-controlled">
+            <workprojectstar-component>
+            <span slot="situation">
+            At Abacus Brands Inc, our company goes to many trade shows and events. We wanted to create an app the would allow us to create interactive experiences for our backdrops. We also wanted to be able to track the performance of each backdrop and capture leads. Therefore, we created Backdrop Alive, an app that allow users to scan the backdrop and unlock AR Experiences, mini games, and rewards. We also have a backend system that allows us to track the performance of each backdrop and capture leads.
+            </span>
+            
+            <span slot="task">
+            I was one of the developers on this project, and I was responsible for implementing the core gameplay mechanics, integrating the visual assets, and assisting with the backend system for tracking and lead capture. I also had to make sure the app was optimized for both iOS and Android, and that it was easy for users to scan the backdrops and unlock the experiences. I also had to work closely with the artists and designers to make sure the app looked good and was easy to use. 
+            </span>
+
+            <span slot="action1text">
+            I used ARFoundation(ARCore for android, ARKit for iOS) to implement the scanning of the backdrops. I set up a system that allowed us to easily add new backdrops without having to update the app. I also helped setup a system where user can customize their minigames by setting up a color palette, where selecting a color changes a minigame's primary and secondary colors. 
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/backdropalive/color.gif" slot="action1image">       
+            
+            <span slot="action2text">
+            I set up a place where user caan create a new lead, edit the leads, name, notes, image and priority. The user can archive, delete and read the leads. 
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/backdropalive/lead.gif" slot="action2image">           
+            
+            <span slot="action3text">
+            In addition to the lead. It is also important for user to know which event they found the lead in. User can create an event and choose the date by interacting with a calendar, edit the name of the event and choose a location. They can also archive, delete and read the event as well. 
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/backdropalive/events.gif" slot="action3image">                
+            
+                               
+            <span slot="result1text">
+            Due to proprietary reasons, I cannot share the actual scanning part, but you can visit the <a href="https://backdrop.com/pages/backdropalive-augmented-reality-backdrop-activations" target="_blank">website</a> to see an example. Below is a screenshot (from companies website) of a representative showing an example of a prize wheel coming alive when scanning a backdrop at a tradeshow. All other content shared above are eitheralready public on the app stores or websites. 
+            </span>
+            <img class="starimage" src="images_videos/ProfessionalExperience/abacusbrandsinc/backdropalive/result.png" slot="result1image">
+
+
+            </workprojectstar-component>
+        </section>
+
+    </section>
+
+
+
+    <section class="footer-section bg-js-controlled" id="contact">
+        <footer-component></footer-component>
+    </section>
+
+
+    
+    
+</body>
+</html>
