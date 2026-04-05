@@ -1,67 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style>
-body {
-  margin: 0;
-  background: #fff;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">    
+    <script src="js/headset.js" defer></script>
 
-/* Scroll space */
-.section {
-  height: 200rem;
-}
-
-/* Sticky scene */
-.scene {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Container that holds both content and headset */
-.vr-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transform-origin: center;
-}
-
-/* Content inside headset */
-.vr-world {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  z-index: 1;
-}
-
-/* Headset overlay on top of content */
-.headset {
-  width: 900px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  opacity: 0;
-  width:5000px;
-}
-
-h1 {
-  background-color: yellow;
-  height: 20rem;
-  margin: 0;
-}
-</style>
-</head>
 <body>
-
+    <noscript>You need to enable javascript to run this site</noscript>
 <div class="section">
   <div class="scene">
     <div class="vr-container">
@@ -84,33 +33,7 @@ h1 {
   <h1>Featured Projects</h1>
 </div>
 
-<script>
-const container = document.querySelector(".vr-container");
-const headset = document.querySelector(".headset");
 
-window.addEventListener("scroll", () => {
-  const section = document.querySelector(".section");
-  const rect = section.getBoundingClientRect();
-
-  // 0 → 1 progress through scroll
-  const raw = Math.min(Math.max(-rect.top / (rect.height - window.innerHeight), 0), 1);
-
-  const delay = 0.15;
-  const progress = Math.max((raw - delay) / (1 - delay), 0);
-
-  // Scale from 1 → 0.1 as you scroll
-  const scale = 1 - progress * 0.9;
-
-  // Optional upward movement
-  const translateY = 30 - progress * 30;
-
-  // Scale the container (content + headset together)
-  container.style.transform = `translate(-50%, -50%) translateY(${translateY}px) scale(${scale})`;
-
-  // Headset fades in
-  headset.style.opacity = progress;
-});
-</script>
 
 </body>
 </html>
