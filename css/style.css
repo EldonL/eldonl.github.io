@@ -2,17 +2,18 @@
     --primary-color: #00ABEF;
     --secondary-color:#E9F1FA;
     --additional-color: #FFFFFF;
-    --small-font-size: 1rem;
-    --medium-font-size: 3rem;
-    --big-font-size:10rem;
+    --xsmall-font-size: 1rem;
+    --small-font-size: 1.25rem;
+    --medium-font-size: 2rem;
+    --big-font-size:8rem;
 }
 
 
 body {
-  margin: 0;
+  margin: 0 1rem 0 1rem;
   background: #fff;
-  overflow-x: hidden;
-  font-family: Arial, sans-serif;
+
+  font-family: 'Arial', Helvetica, sans-serif;;
 }
 
 .section {
@@ -32,8 +33,22 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(2);
   transform-origin: center;
+  background-image: url('../images_videos/PersonalProjects/Cubeats/cassettesilouhette.gif');
+  background-size: cover;
+
+}
+
+.section .scene .vr-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255, 0.5);
+  z-index: 0;
 }
 
 .section .scene .vr-container .vr-world{
@@ -50,21 +65,29 @@ body {
   z-index: 2;
   opacity: 0;
   width:5000px;
+  pointer-events: none;
 }
 
 .section .scene .vr-container .vr-world .hero-section{
   display:flex;
   flex-wrap: wrap;
   gap:2rem;
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .section .scene .vr-container .vr-world .hero-section .hero-content{
-    align-items: left;
+  text-align: left;
 
 }
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .hero-header{
-    font-size:var(--big-font-size);
+  font-size: var(--big-font-size);
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: -0.035em; /*due to large font size causes an indent, so removing indent*/
 }
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .hero-subheader{
@@ -75,10 +98,26 @@ body {
     font-size:var(--small-font-size);
 }
 
+.section .scene .vr-container .vr-world .hero-section .hero-content .hero-details{
+    font-size:var(--xsmall-font-size);
+}
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms{
+    display:flex;
+    gap:1rem;
+}
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .platform-icon{
+    width: 5rem;
+    height: auto;
+    object-fit: contain;;
+}
+
 .section .scene .vr-container .vr-world .hero-section .hero-image{
   max-width: 10rem;
   width: auto;
   height: auto;
+  object-fit:contain;
 }
 
 

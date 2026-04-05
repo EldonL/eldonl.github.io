@@ -11,8 +11,8 @@ window.addEventListener("scroll", () => {
   const delay = 0.15;
   const progress = Math.max((raw - delay) / (1 - delay), 0);
 
-  // Scale from 1 → 0.1 as you scroll
-  const scale = 1 - progress * 0.9;
+
+  const scale = 2 - progress * 1.9;
 
   // Optional upward movement
   const translateY = 30 - progress * 30;
