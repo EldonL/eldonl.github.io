@@ -15,9 +15,9 @@ window.addEventListener("scroll", () => {
   const screenWidth = window.innerWidth;
   let endScale;
   if (screenWidth >= 1440) {
-    endScale = 0.4;
-  } else if (screenWidth >= 1024) {
     endScale = 0.5;
+  } else if (screenWidth >= 1024) {
+    endScale = 0.55;
   } else {
     endScale = 0.85; // end at 0.3 for smaller screens
   }
