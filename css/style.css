@@ -173,31 +173,10 @@ body {
   object-fit:contain;
 }
 
-@media screen and (max-width: 1024px) {
-  :root{
-    --xsmall-font-size: 0.5rem;
-    --small-font-size: 0.625rem;
-    --medium-font-size: 1rem;
-    --big-font-size:3rem;
-  }
 
-  .section .scene .vr-container .vr-world .hero-section .hero-content {
-    flex-direction: column;
-    align-items: center;
-  }
-  .section .scene .vr-container .vr-world .hero-section .hero-content .left-side{
-    text-align: center;
-  }
-
-  .section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms{
-
-    justify-content: center;
-
-}
-}
 
 /* Tablet: 1024px to 1439px */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1280px) {
   :root {
     --big-font-size:4rem;
     --hero-scale: 1.2;
@@ -213,21 +192,37 @@ body {
   }
 }
 
-/* Desktop: 1440px and above */
-@media screen and (min-width: 1440px) {
-  :root {
-    --hero-scale: 1.9;
+@media screen and (max-width: 666px) {
+  :root{
+    --xsmall-font-size: 0.5rem;
+    --small-font-size: 0.625rem;
+    --medium-font-size: 1rem;
+    --big-font-size:2rem;
+
+    
   }
 
-  .section .scene .vr-container {
-    width: 5000px;
-    height: 1300px;
+
+  .section .scene .vr-container .vr-world .hero-section .hero-content {
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .section .scene .vr-container .vr-world .hero-section .hero-content .left-side{
+    text-align: center;
   }
 
-  .section .scene .vr-container .headset {
-    width: 5000px;
-  }
+  .section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms{
+
+    justify-content: center;
+
+ }
 }
+
+
+
+
+
 
 
 
