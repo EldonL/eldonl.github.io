@@ -2,6 +2,9 @@
     --primary-color: #00ABEF;
     --secondary-color:#E9F1FA;
     --additional-color: #FFFFFF;
+    --small-font-size: 1rem;
+    --medium-font-size: 3rem;
+    --big-font-size:10rem;
 }
 
 
@@ -12,13 +15,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Scroll space */
 .section {
   height: 200rem;
 }
 
 /* Sticky scene */
-.scene {
+.section .scene {
   position: sticky;
   top: 0;
   height: 100vh;
@@ -26,7 +28,7 @@ body {
 }
 
 /* Container that holds both content and headset */
-.vr-container {
+.section .scene .vr-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -34,18 +36,12 @@ body {
   transform-origin: center;
 }
 
-/* Content inside headset */
-.vr-world {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.section .scene .vr-container .vr-world{
   z-index: 1;
 }
 
 /* Headset overlay on top of content */
-.headset {
+.section .scene .vr-container .headset {
 
   position: absolute;
   top: 50%;
@@ -56,8 +52,36 @@ body {
   width:5000px;
 }
 
-h1 {
-  background-color: yellow;
-  height: 20rem;
-  margin: 0;
+.section .scene .vr-container .vr-world .hero-section{
+  display:flex;
+  flex-wrap: wrap;
+  gap:2rem;
 }
+
+.section .scene .vr-container .vr-world .hero-section .hero-content{
+    align-items: left;
+
+}
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .hero-header{
+    font-size:var(--big-font-size);
+}
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .hero-subheader{
+    font-size:var(--medium-font-size);
+}
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .hero-description{
+    font-size:var(--small-font-size);
+}
+
+.section .scene .vr-container .vr-world .hero-section .hero-image{
+  max-width: 10rem;
+  width: auto;
+  height: auto;
+}
+
+
+
+
+
