@@ -11,8 +11,11 @@ window.addEventListener("scroll", () => {
   const delay = 0.15;
   const progress = Math.max((raw - delay) / (1 - delay), 0);
 
+  // Read baseScale from CSS variable and clamp to min 0.1
+  const root = document.documentElement;
+  const baseScale = Math.max(0.1, parseFloat(getComputedStyle(root).getPropertyValue('--current-hero-scale').trim()) || 1);
 
-  const scale = 1 - progress * 0.9;
+  const scale = baseScale - progress * (baseScale - 0.1);
 
   // Optional upward movement
   const translateY = 30 - progress * 30;
