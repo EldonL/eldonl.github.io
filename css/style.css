@@ -6,8 +6,7 @@
     --small-font-size: 1.25rem;
     --medium-font-size: 2rem;
     --big-font-size:8rem;
-    --hero-scale-1440: 1.8;
-    --hero-scale-1024: 0.7;
+    --hero-scale: 1.9;
 }
 
 
@@ -84,6 +83,7 @@ body {
   position: relative;
   width: auto;
   height: auto;
+  transform: scale(var(--hero-scale));
   transform-origin: center;
 }
 
@@ -131,9 +131,9 @@ body {
 }
 
 /* Tablet: 1024px to 1439px */
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
+@media screen and (min-width: 1024px) {
   :root {
-    --current-hero-scale: var(--hero-scale-1024);
+    --hero-scale: 1.2;
   }
 
   .section .scene .vr-container {
@@ -144,16 +144,12 @@ body {
   .section .scene .vr-container .headset {
     width: 3200px;
   }
-
-  .section .scene .vr-container .vr-world .hero-section {
-    transform: scale(var(--current-hero-scale));
-  }
 }
 
 /* Desktop: 1440px and above */
 @media screen and (min-width: 1440px) {
   :root {
-    --current-hero-scale: var(--hero-scale-1440);
+    --hero-scale: 1.9;
   }
 
   .section .scene .vr-container {
@@ -163,10 +159,6 @@ body {
 
   .section .scene .vr-container .headset {
     width: 5000px;
-  }
-
-  .section .scene .vr-container .vr-world .hero-section {
-    transform: scale(var(--current-hero-scale));
   }
 }
 
