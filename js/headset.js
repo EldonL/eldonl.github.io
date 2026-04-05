@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
   const progress = Math.max((raw - delay) / (1 - delay), 0);
 
 
-  const scale = 2 - progress * 1.9;
+  const scale = 1 - progress * 0.9;
 
   // Optional upward movement
   const translateY = 30 - progress * 30;
