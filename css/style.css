@@ -1,14 +1,18 @@
 :root{
-    --primary-color: #00ABEF;
-    --secondary-color:#E9F1FA;
-    --additional-color: #FFFFFF;
-    --xsmall-font-size: 1rem;
-    --small-font-size: 1.25rem;
-    --medium-font-size: 2rem;
-    --big-font-size:8rem;
+    --primary-color: #0B1026;
+    --secondary-color:#00E5FF;
+    --additional-color: #F7C948;
+    --button-font-size: 0.6265rem;
+    --xsmall-font-size: 0.5rem;
+    --small-font-size: 0.625rem;
+    --medium-font-size: 1rem;
+    --big-font-size:6rem;
     --hero-scale: 1.9;
 }
 
+html {
+  font-size:16px;
+}
 
 body {
   margin: 0 1rem 0 1rem;
@@ -77,8 +81,10 @@ body {
 }
 
 .section .scene .vr-container .vr-world .hero-section{
-  display:flex;
-  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap:2rem;
   position: relative;
   width: auto;
@@ -87,10 +93,25 @@ body {
   transform-origin: center;
 }
 
+
+
 .section .scene .vr-container .vr-world .hero-section .hero-content{
-  text-align: left;
+
+  flex-wrap:wrap;
+  display:flex;
+}
+
+.section .scene .vr-container .vr-world .hero-section .scroll-down{
+   font-size: var(--xsmall-font-size);
 
 }
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .left-side{
+  text-align: left;
+}
+
+
+
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .hero-header{
   font-size: var(--big-font-size);
@@ -120,7 +141,27 @@ body {
 .section .scene .vr-container .vr-world .hero-section .hero-content .platform-icon{
     width: 5rem;
     height: auto;
-    object-fit: contain;;
+    object-fit: contain;
+}
+
+
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .call-to-action-buttons .call-to-action{
+  background-color: var(--primary-color);
+  text-align: center;
+  cursor: pointer;
+  border:none;
+  padding: 0.5rem 0.5rem;
+  font-size: var(--button-font-size);
+
+  color: white;
+}
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .call-to-action-buttons .call-to-action:hover{
+ outline-width: 2px;
+ outline-style: solid;
+ outline-color: var(--additional-color);
+
 }
 
 .section .scene .vr-container .vr-world .hero-section .hero-image{
@@ -129,6 +170,8 @@ body {
   height: auto;
   object-fit:contain;
 }
+
+
 
 /* Tablet: 1024px to 1439px */
 @media screen and (min-width: 1024px) {
