@@ -11,7 +11,18 @@ window.addEventListener("scroll", () => {
   const delay = 0.15;
   const progress = Math.max((raw - delay) / (1 - delay), 0);
 
-  const scale = 1 - progress * 0.9;
+  // Set different end scales based on screen width
+  const screenWidth = window.innerWidth;
+  let endScale;
+  if (screenWidth >= 1440) {
+    endScale = 0.4;
+  } else if (screenWidth >= 1024) {
+    endScale = 0.5;
+  } else {
+    endScale = 0.85; // end at 0.3 for smaller screens
+  }
+
+  const scale = 1 - progress * endScale;
 
   // Optional upward movement
   const translateY = 30 - progress * 30;
