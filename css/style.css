@@ -295,25 +295,25 @@ body {
    color: inherit;
   }
 
-  .work-experiences .experiences .experience{
-   display: flex;
-    gap: 10rem;   
-    padding: 1rem 0rem;
-  }
+.work-experiences .experiences .experience {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
 
+.work-experiences .experiences .experience .left-side {
+    flex: 0 0 12rem; 
+}
 
-
-
-  .work-experiences .experiences .experience .left-side{
-width: 40rem; 
-  }
-
-  .work-experiences .experiences .experience .right-side{
-    display:flex;
+.work-experiences .experiences .experience .right-side {
+    flex: 1 1 20rem; 
+    display: flex;
     flex-direction: column;
-    gap:1rem;
-   
-  }
+    gap: 1rem;
+    min-width: 0; 
+}
 
   .work-experiences .experiences .experience .right-side .title{
     font-size: 2rem;
