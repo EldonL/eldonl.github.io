@@ -88,7 +88,7 @@ body {
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .description{
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
 
 }
 
@@ -214,9 +214,6 @@ body {
 
 }
 
-
-
-
 .section .scene .vr-container .vr-world .hero-section .hero-content .hero-header{
   font-size: var(--big-font-size);
   font-family: 'Courier New', Courier, monospace;
@@ -286,8 +283,84 @@ body {
   object-fit:contain;
 }
 
+ .work-experiences .experiences{
+   display: flex;
+    justify-content: start;
+    flex-direction: column;
+
+  }
+
+   .work-experiences .experiences a{
+   text-decoration: none;
+   color: inherit;
+  }
+
+  .work-experiences .experiences .experience{
+   display: flex;
+    gap: 10rem;   
+    padding: 1rem 0rem;
+  }
 
 
+
+
+  .work-experiences .experiences .experience .left-side{
+width: 40rem; 
+  }
+
+  .work-experiences .experiences .experience .right-side{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+   
+  }
+
+  .work-experiences .experiences .experience .right-side .title{
+    font-size: 2rem;
+  }
+
+ 
+  
+  .work-experiences .experiences .experience .right-side .company{
+    font-size: 1.5rem;
+  }
+
+  .work-experiences .experiences .experience .right-side .company:hover{
+    opacity:0.5;
+   
+  }
+
+  .work-experiences .experiences .experience .right-side .description{
+    font-size: 1rem;
+  }
+
+  .work-experiences .experiences .experience .right-side .apps{
+    display:flex;
+    gap:1rem;
+  }
+
+  .work-experiences .experiences .experience .right-side .apps a{
+    font-size: 1rem; 
+    
+  }
+  .work-experiences .experiences .experience .right-side .apps a:hover{
+    opacity:0.5;
+  }
+
+ .work-experiences .experiences .experience .right-side  .skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.work-experiences .experiences .experience .right-side  .skills .skill{
+    background-color: var(--additional-color);
+    color: var(--primary-color);
+        font-size: 1rem;
+    padding:0.5rem 1rem;
+
+}
 
 
 @media screen and (max-width: 1280px) {
@@ -333,6 +406,8 @@ body {
     justify-content: center;
 
  }
+
+
 }
 
 
