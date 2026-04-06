@@ -47,12 +47,14 @@ body {
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .image {
   position: relative; 
+  background-color: black;
+
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .image img{
-  
+
     width: var(--featured-project-size);
-    height: auto;
+    height: var(--featured-project-size);
     object-fit: contain;  
  
 }
