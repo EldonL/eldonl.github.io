@@ -35,15 +35,19 @@ body {
 
 }
 
-.featured-projects .featured-projects-showcases .featured-projects-showcase{
-  
+.featured-projects .featured-projects-showcases .featured-projects-showcase {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%; 
-  
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); /* cool soft shadow */
 }
+
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .image {
   position: relative; 
@@ -64,18 +68,18 @@ body {
  
 }
 
-.featured-projects .featured-projects-showcases .featured-projects-showcase .content{
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: var(--featured-project-size);
-  text-align: left;
-  gap: 0.5rem 0rem;
-
+.featured-projects .featured-projects-showcases .featured-projects-showcase .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%; 
+    text-align: left;
+    gap: 0.5rem 0;
+    padding: 1rem;
+    box-sizing: border-box; 
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .title{
-
     font-size: 1.5rem;
     font-weight: bold;
 }
