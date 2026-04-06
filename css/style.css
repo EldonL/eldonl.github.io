@@ -8,6 +8,7 @@
     --medium-font-size: 2rem;
     --big-font-size:6rem;
     --hero-scale: 1.9;
+    --featured-project-size:28rem;
 }
 
 html {
@@ -26,21 +27,21 @@ body {
 }
 
 .featured-projects .featured-projects-showcases{
-  display: grid;
-
-  grid-template-columns: repeat(2, 25rem);
-  justify-content: center;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--featured-project-size));
+  
+    gap: 1rem;
+    width: 100%;
 
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase{
   
-
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: flex-start;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .image {
@@ -50,7 +51,7 @@ body {
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .image img{
   
-    width: 25rem;
+    width: var(--featured-project-size);
     height: auto;
     object-fit: contain;  
  
@@ -60,7 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25rem;
+  width: var(--featured-project-size);
   text-align: center;
 
 }
@@ -270,6 +271,7 @@ body {
     --medium-font-size: 2rem;
     --big-font-size:4rem;
     --hero-scale: 1.2;
+    --featured-project-size:18rem;
   }
 
   .section .scene .vr-container {
@@ -288,7 +290,7 @@ body {
     --small-font-size: 0.625rem;
     --medium-font-size: 1rem;
     --big-font-size:2rem;
-
+    --featured-project-size:15rem;
     
   }
 
