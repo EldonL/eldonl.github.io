@@ -21,6 +21,77 @@ body {
   font-family: 'Arial', Helvetica, sans-serif;;
 }
 
+.btn{
+    cursor: pointer;
+}
+
+.featured-projects .featured-projects-showcases{
+  display: grid;
+
+  grid-template-columns: repeat(2, 25rem);
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase{
+  
+
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;  
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .image {
+  position: relative; 
+
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .image img{
+  
+    width: 25rem;
+    height: auto;
+    object-fit: contain;  
+ 
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  text-align: center;
+
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .title{
+
+    font-size: var(--medium-font-size);
+    font-weight: bold;
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .location{
+
+    font-size: 1rem;
+
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .description{
+    text-align: left;
+    font-size: 0.8rem;
+
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .play .btn img{
+    width: 10rem;  
+    height: auto;
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase  .play .btn:hover{
+    opacity: 0.5;
+}
+
 .section {
   height: 200rem;
 }
@@ -168,7 +239,7 @@ body {
 .section .scene .vr-container .vr-world .hero-section .hero-content .call-to-action-buttons .call-to-action{
   background-color: var(--primary-color);
   text-align: center;
-  cursor: pointer;
+
   border:none;
   padding: 0.5rem 0.5rem;
   font-size: var(--button-font-size);
@@ -189,6 +260,8 @@ body {
   height: auto;
   object-fit:contain;
 }
+
+
 
 
 
