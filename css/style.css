@@ -68,6 +68,7 @@ body {
   align-items: left;
   width: var(--featured-project-size);
   text-align: left;
+  gap: 0.5rem 0rem;
 
 }
 
@@ -97,6 +98,22 @@ body {
 .featured-projects .featured-projects-showcases .featured-projects-showcase  .play .btn:hover{
     opacity: 0.5;
 }
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .tags .tag{
+    background-color: var(--additional-color);
+    color: var(--primary-color);
+        font-size: 1rem;
+    padding:0.5rem 1rem;
+
+}
+
 
 .section {
   height: 200rem;
