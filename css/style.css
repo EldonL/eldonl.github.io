@@ -99,6 +99,9 @@ body {
 
   flex-wrap:wrap;
   display:flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
   
 }
 
@@ -109,6 +112,9 @@ body {
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .left-side{
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 
@@ -128,20 +134,30 @@ body {
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .hero-description{
     font-size:var(--small-font-size);
+    color:#494949;
+    max-width: 15rem;
 }
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .hero-details{
     font-size:var(--xsmall-font-size);
+    color:#808080
 }
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms{
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+.section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms .hero-platform-icon{
     display:flex;
     justify-content: left;
     gap:1rem;
 }
 
-.section .scene .vr-container .vr-world .hero-section .hero-content .platform-icon{
-    width: 5rem;
+.section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms .hero-platform-icon .platform-icon{
+    width: 3rem;
     height: auto;
     object-fit: contain;
 }
@@ -160,9 +176,9 @@ body {
 }
 
 .section .scene .vr-container .vr-world .hero-section .hero-content .call-to-action-buttons .call-to-action:hover{
- outline-width: 2px;
- outline-style: solid;
- outline-color: var(--additional-color);
+
+ background-color:var(--additional-color);
+ color:var(--primary-color);
 
 }
 
@@ -212,7 +228,7 @@ body {
     text-align: center;
   }
 
-  .section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms{
+  .section .scene .vr-container .vr-world .hero-section .hero-content .hero-platforms .hero-platform-icon{
 
     justify-content: center;
 
