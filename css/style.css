@@ -5,7 +5,7 @@
     --button-font-size: 0.6265rem;
     --xsmall-font-size: 0.5rem;
     --small-font-size: 0.625rem;
-    --medium-font-size: 1rem;
+    --medium-font-size: 2rem;
     --big-font-size:6rem;
     --hero-scale: 1.9;
 }
@@ -100,7 +100,7 @@ body {
   flex-wrap:wrap;
   display:flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1rem;
 
   
 }
@@ -115,6 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
 }
 
 
@@ -191,9 +192,9 @@ body {
 
 
 
-/* Tablet: 1024px to 1439px */
 @media screen and (max-width: 1280px) {
   :root {
+    --medium-font-size: 2rem;
     --big-font-size:4rem;
     --hero-scale: 1.2;
   }
