@@ -39,14 +39,14 @@ body {
   
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%; 
+  
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .image {
   position: relative; 
-
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .image img{
@@ -54,6 +54,11 @@ body {
     width: var(--featured-project-size);
     height: auto;
     object-fit: contain;  
+ 
+}
+
+.featured-projects .featured-projects-showcases .featured-projects-showcase .image img:hover{
+  opacity: 0.5;
  
 }
 
