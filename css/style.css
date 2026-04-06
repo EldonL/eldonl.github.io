@@ -60,15 +60,15 @@ body {
 .featured-projects .featured-projects-showcases .featured-projects-showcase .content{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   width: var(--featured-project-size);
-  text-align: center;
+  text-align: left;
 
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .title{
 
-    font-size: var(--medium-font-size);
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -85,7 +85,7 @@ body {
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .play .btn img{
-    width: 10rem;  
+    width: 7rem;  
     height: auto;
 }
 
