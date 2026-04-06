@@ -112,10 +112,13 @@ body {
 }
 
 .featured-projects .featured-projects-showcases .featured-projects-showcase .tags .tag{
-    background-color: var(--additional-color);
-    color: var(--primary-color);
-        font-size: 1rem;
-    padding:0.5rem 1rem;
+    background: rgba(11, 16, 38, 0.05); 
+    color: var(--primary-color);       
+    font-size: 0.95rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 0.4rem;            
+    border: 1px solid rgba(11, 16, 38, 0.3); 
+    font-weight: 500;
 
 }
 
@@ -363,11 +366,14 @@ body {
 
 }
 
-.work-experiences .experiences .experience .right-side  .skills .skill{
-    background-color: var(--additional-color);
-    color: var(--primary-color);
-        font-size: 1rem;
-    padding:0.5rem 1rem;
+.work-experiences .experiences .experience .right-side .skills .skill {
+    background: rgba(11, 16, 38, 0.05); 
+    color: var(--primary-color);       
+    font-size: 0.95rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 0.4rem;            
+    border: 1px solid rgba(11, 16, 38, 0.3); 
+    font-weight: 500;
 
 }
 
