@@ -28,8 +28,7 @@ body {
 
 .featured-projects .featured-projects-showcases{
     display: grid;
-    grid-template-columns: repeat(auto-fill, var(--featured-project-size));
-  
+    grid-template-columns: repeat(auto-fill, var(--featured-project-size));  
     gap: 1rem;
     width: 100%;
 
@@ -44,8 +43,8 @@ body {
     background-color: #fff;
     border-radius: 0.5rem;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); /* cool soft shadow */
+  
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -292,19 +291,25 @@ body {
     justify-content: start;
     flex-direction: column;
 
+      gap: 2rem;
+
   }
 
    .work-experiences .experiences a{
    text-decoration: none;
    color: inherit;
+ 
   }
 
 .work-experiences .experiences .experience {
     display: flex;
     gap: 2rem;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     align-items: flex-start; 
     flex-wrap: wrap; 
+    
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); 
 }
 
 .work-experiences .experiences .experience .left-side {
