@@ -264,7 +264,7 @@ body {
 
 
 
-.section .scene .vr-container .vr-world .hero-section .hero-content .call-to-action-buttons .call-to-action{
+.call-to-action{
   background-color: var(--primary-color);
   text-align: center;
 
@@ -275,7 +275,7 @@ body {
   color: white;
 }
 
-.section .scene .vr-container .vr-world .hero-section .hero-content .call-to-action-buttons .call-to-action:hover{
+ .call-to-action:hover{
 
  background-color:var(--additional-color);
  color:var(--primary-color);
