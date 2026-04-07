@@ -2,7 +2,7 @@ const container = document.getElementsByClassName("vr-container")[0];
 const headset = document.getElementsByClassName("headset")[0];
 
 window.addEventListener("scroll", () => {
-  const section = document.getElementsByClassName("section")[0];
+  const section = document.getElementsByClassName("hero")[0];
   const rect = section.getBoundingClientRect();
 
   // 0 → 1 progress through scroll
