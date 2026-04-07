@@ -123,6 +123,11 @@ body {
 
 }
 
+.header{
+  position:fixed;
+  opacity:0;
+}
+
 
 .hero {
   height: 200rem;

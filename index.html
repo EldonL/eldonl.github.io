@@ -5,502 +5,359 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eldon Lin Portfolio</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/blogproject.css">
-    <link rel="stylesheet" href="css/blog.css">
-    <script src="js/index.js" defer></script>
-    <script src="js/app.js" defer></script>
-    <script src="js/filtertab.js" defer></script>
-    <script src="js/component/header.js" defer></script>
-    <script src="js/component/footer.js" defer></script>
-    <script src="js/component/logo.js" defer></script>
-    <script src="js/component/blogrecent.js" defer></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Eldon Lin Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">    
+    <script src="js/headset.js" defer></script>
+    <script src="js/component/footer2.js"></script>
+    <!-- <script src="js/component/header.js"></script> -->
+</head>
 <body>
     <noscript>You need to enable javascript to run this site</noscript>
 
-    <!-- <section class="maintenance bg-js-controlled">
-        <div class="container">
-            <i class="bi bi-tools"></i>
-            <h1>This site is going through a facelift, check back later</h1>
+    <!-- <section class="header"><header-component></header-component></section> -->
+<section class="hero">
+  <div class="scene">
+    <div class="vr-container">      
+      <div class="vr-world">
+        <div class="hero-section">          
+          <div class="hero-content">
+            <div class="left-side">
+              <div class="hero-header">ELDON LIN</div>
+              <div class="hero-subheader">XR and Game Developer</div>
+              <div class="hero-description">I design and build immersive experiences that train,educate and entertain</div>
 
-
+              <div class="hero-platforms">
+                <div class="hero-details">I have developed and published apps on</div>
+                <div class="hero-platform-icon">
+                  <img class="platform-icon" src="images_videos/meta.png" alt="meta">
+                  <img class="platform-icon" src="images_videos/googleplay.png" alt="google play">
+                  <img class="platform-icon" src="images_videos/appstore.png" alt="appstore">
+                </div>                 
+              </div>
+              <div class="call-to-action-buttons">
+                <a href="https://www.linkedin.com/in/eldon-lin-38a181b0"><button class="call-to-action btn">Contact (LinkedIn)</button></a>
+                <a href="#featuredproject"><button class="call-to-action btn">View Projects</button></a>
+              </div> 
+            </div>  
+              <img class="hero-image" src="images_videos/headshotpro.jpg" />
+          </div>  
+            <p class="scroll-down">Scroll down to see projects<i class="bi bi-mouse"></i></p>
         </div>
-    </section> -->
+      </div>
+       <img class="headset" src="images_videos/vrgoogles.png" />      
+    </div>
+  </div>
+</section>
 
-
-    <header-component></header-component>
-
+<section class="featured-projects" id="featuredproject">
+  <h1 class="featured-projects-header">Featured Projects</h1>
+  <div class="featured-projects-tabs">
     
-    <section class="hero-section bg-js-controlled">
-        <div class="container">
-            <div class="row">
-                <div class="top-row">
-                    <div class="left-col">
-                        <div class="hero-theHeaders">
-                            <div class="hero-subHeaderintro">Hello world, it's me</div>
-                            <div class="hero-header">Eldon Lin</div>
-                            <div class="hero-subHeader">I'm a Unity | XR | Android | iOS developer</div>
-                            <div class="hero-subHeader2">Let's <span class="hero-typejs"></span></div>
-                        </div>
-                        
-                        <a href="https://www.linkedin.com/in/eldon-lin-38a181b0"><button class="call-to-action">Contact (LinkedIn)</button></a>
-                    </div>
-                    <div class="right-col">
-                        <img src="images_videos/headshotpro.jpg" class="hero-img" alt="Selfie">
-                    </div>
-                </div>
-                 <div class="hero-platforms-wrapper">
-                
-                    <div class="hero-platforms-title">Published on</div>
-                    <div class="hero-platforms">
-                       
-                            <img src="images_videos/meta.png" alt="meta">
-                        
-                            <img src="images_videos/googleplay.png" alt="google play">
-                
-                            <img src="images_videos/appstore.png" alt="appstore">
-                      
-                
-                    </div>
-                </div>
-                <div class="bottom-row">
-                    <div class="scrolldown">Scroll down to view projects<i class="bi bi-mouse"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <section class="personal-projects-section bg-js-controlled" id="personalproject">
-        <div class="container">
-            <h2 class="header">Featured Projects</h2>
-
-                <div class="container-filter-tabs">
-                    <div id="tabsContainer" class="filterTabs">
-                        <button class="btnFilterTab active" onclick="filterSelection('all')">All</button>
-                        <button class="btnFilterTab" onclick="filterSelection('mobile')">Mobile</button>
-                        <button class="btnFilterTab" onclick="filterSelection('xr')">XR</button>
-                        <button class="btnFilterTab" onclick="filterSelection('vr')">VR</button>
-                        <button class="btnFilterTab" onclick="filterSelection('ar')">AR</button>
-                        <button class="btnFilterTab" onclick="filterSelection('webgl')">WebGL</button>
-                        <!-- <button class="btnFilterTab" onclick="filterSelection('website')">Website</button> -->
-                    </div>
-                </div>
-    
-                <div class="personalProjectFilteredContainer">
-                    <div class="filterDiv xr vr">
-                        <a href="personalcubeats.html"><img class="image" src="images_videos/PersonalProjects/Cubeats/cubeats.png" alt="Cubeats XR"></a>
-                        <div class="imagetext">Click to see more</div>
-                        <div class="bottom">
-                            <p class="title">Cubeats</p>
-                            <p class="date">Unity, Meta hand Tracking</p>
-                        </div>
-                    </div>
-                    <div class="filterDiv xr vr">
-                        <a href="personalduolingoxr.html"><img class="image" src="images_videos/PersonalProjects/DuoLingoXR/DevPostWinnerBadge.png" alt="DuoLingo XR"></a>
-                        <div class="imagetext">Click to see more</div>
-                        <div class="bottom">
-                            <p class="title">DuoLingo XR - <span style="color: #EEC643; font-weight: bold;">WINNER of Best Mobile to XR App</span></p>
-                            <p class="date">Unity, Meta hand tracking</p>
-                        </div>
-                    </div>
-                    <div class="filterDiv ar mobile">
-                    <a href="workabacusbrandsodyssey.html"><img class="image" src="images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/odysseyxrlogo.png" alt="odyssey logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Odyssey XR</p>
-                        <p class="date">Unity, ARFoundation, Addressables, in app purchase</p>
-                    </div>
-                </div>
-                <div class="filterDiv ar mobile">
-                    <a href="workabacusbrandsbackdropalive.html"><img class="image" src="images_videos/ProfessionalExperience//abacusbrandsinc/backdropalive/backdropalive.jpg" alt="backdrop alive logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Backdrop Alive</p>
-                        <p class="date">Unity, ARFoundation,in app purchase, MySQL</p>
-                    </div>
-                </div>                
-                <div class="filterDiv ar mobile">
-                    <a href="https://www.abacusbrands.com/products/cold-case-vr-fatal-follower"><img class="image" src="images_videos/ProfessionalExperience/abacusbrandsinc/coldcase/logo.png" alt="cold case logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Cold Case VR</p>
-                        <p class="date">Unity, MaxstAR, addressables</p>
-                    </div>
-                </div>
-                <div class="filterDiv mobile">
-                    <a href="https://www.abacusbrands.com/collections/bill-nye"><img class="image" src="images_videos/ProfessionalExperience/abacusbrandsinc/billnyesciencesquad/billnyesciencesquad.png" alt="bill nye science squad logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Bill Nye Science Squad</p>
-                        <p class="date">Unity, addressables, in app purchase</p>
-                    </div>
-                </div>
-                    <div class="filterDiv mobile">
-                        <a href="personalcosmichunger.html"><img class="image" src="images_videos/PersonalProjects/CosmicHunger/logo.png" alt="Cosmic Hunger"></a>
-                        <div class="imagetext">Click to see more</div>
-                        <div class="bottom">
-                            <p class="title">Cosmic Hunger -<span style="color: #EEC643; font-weight: bold;">Grant from Meta Horizon World Creator Program</span></p></p>
-                            <p class="date">TypeScript, Meta Horizon Desktop Editor</p>
-                        </div>
-                    </div>
-                    <div class="filterDiv vr mobile">
-                        <a href="personaltheresistance.html"><img class="image" src="images_videos/PersonalProjects/TheResistance/Thumbnail.jpg" alt="Cosmic Hunger"></a>
-                        <div class="imagetext">Click to see more</div>
-                        <div class="bottom">
-                            <p class="title">The Resistance - Meta Horizon Creator Competition</p>
-                            <p class="date">TypeScript, Meta Horizon Desktop Editor</p>
-                        </div>
-                    </div>
-                    <!-- <div class="filterDiv android">
-                            <a href="personaltomatovspotato.html"><img class="image" src="images_videos/blog/FirstAndroidGame/mainmenu.PNG" alt="Tomato vs Potato"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Tomato vs Potato</p>
-                                <p class="date">Jun 2023-Jan 2024</p>
-                            </div>
-                    </div> -->
-                    <!-- <div class="filterDiv website">
-                            <a href="personalportfolio.html"><img class="image" src="images_videos/PersonalProjects/Portfolio/coverimage.PNG" alt="Lumania"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Portfolio</p>
-                                <p class="date">Sep 2016, Feb 2023</p>
-                            </div>                      
-                    </div> -->
-                    <!-- <div class="filterDiv vr">
-                            <a href="personaltechstarshunt.html"><img class="image" src="images_videos/PersonalProjects/TechStarsHunt/TechStarsHuntCoverImage.PNG" alt="Tech Stars Hunt"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Horizon World-Tech Stars Hunt</p>
-                                <p class="date">May - Jun 2022</p>
-                            </div>
-                    </div>
-                    <div class="filterDiv webgl">
-                            <a href="personalninjagoconcentrationbouncylego.html"><img class="image" src="images_videos/PersonalProjects/NinjagoConcentrationBouncyLego/NinjagoCoverImage.PNG" alt="Ninjago"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Ninjago Concentration Bouncy Lego</p>
-                                <p class="date">Oct 2021</p>
-                            </div>
-                    </div> -->
-                    <!-- <div class="filterDiv ar">
-                            <a href="personalsportsbookalive.html"><img class="image" src="images_videos/PersonalProjects/SportsBookAlive/BookAliveIntro.PNG" alt="Sports Book Alive"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Life of Kobe Bryant - Sports Book Alive</p>
-                                <p class="date">Mar 2021</p>
-                            </div>                       
-                    </div> -->
-                     <div class="filterDiv vr webgl">
-                    <a href="workvirtroprojectjis.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/jis/jislogo.jpg" alt="beconfident logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Job Interviews Simulation - BeConfident</p>
-                        <p class="date">Unity, Oculus Integration</p>
-                    </div>
-                </div>
-                <!-- <div class="filterDiv vr webgl">
-                    <a href="workvirtroprojectlinclingo.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/linclingo/linclingologo.jpg" alt="linclingo logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">LincLingo</p>
-                        <p class="date">Unity, Oculus Integration</p>
-                    </div>
-                </div>                
-                <div class="filterDiv vr">
-                    <a href="workvirtroprojectdnd.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/dnd/dndlogo.png" alt="DND logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">IDEaS Challenge: Beyond the classroom</p>
-                        <p class="date">Unity, Oculus Integration</p>
-                    </div>
-                </div>     -->
-                <div class="filterDiv vr">
-                    <a href="workvirtroprojectzombiedonuts.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/zombiedonuts/zombiedonutslogo.png" alt="zombie donuts logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Zombie Donuts</p>
-                        <p class="date">Unity, Oculus Integration</p>
-                    </div>
-                </div>        
-                <!-- <div class="filterDiv pc">
-                    <a href="workvirtroprojectihs.html"><img class="image" src="images_videos/ProfessionalExperience/virtro/ihs/ihslogo.jpg" alt="ihs logo"></a>
-                    <div class="imagetext">Click to see more</div>
-                    <div class="bottom">
-                        <p class="title">Intelligent Haptronics Solutions</p>
-                        <p class="date">Unity, Oculus Integration</p>
-                    </div>
-                </div>                    -->
-                    <div class="filterDiv vr">
-                            <a href="personalbabushakmemories.html"><img class="image" src="images_videos/PersonalProjects/BabushkaMemories/BabushkaPiano.PNG" alt="Babushkas Memories"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Babushka's Memories</p>
-                                <p class="date">Unity, Oculus Integration</p>
-                            </div>
-                    </div>
-                    <!-- <div class="filterDiv vr">
-                            <a href="personalthelatelateanimals.html"><img class="image" src="images_videos/PersonalProjects/TheLateLateAnimals/TheLateLateAnimalsTitle.PNG" alt="LateLateAnimals"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">The Late Late Animals</p>
-                                <p class="date">Unity, Oculus Integration</p>
-                            </div>
-                    </div> -->
-                    <!-- <div class="filterDiv ar">
-                            <a href="personalprojectshaperecognitionforar.html"><img class="image" src="images_videos/PersonalProjects/ShapeRecognitionForAR/482SpiderManShape.JPG" alt="ShapeRecognitionAR"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Shape Recognition for AR</p>
-                                <p class="date">Jun-Aug 2018</p>
-                            </div>
-                    </div> -->
-                    <!-- <div class="filterDiv vr">
-                            <a href="personaljustgetoverit.html"><img class="image" src="images_videos/PersonalProjects/JustGetOverIt/LoveathonMainMenu.PNG" alt="JustGetOverIt"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">Just Get Over It</p>
-                                <p class="date">Unity, Oculus Integration</p>
-                            </div>
-                    </div> -->
-                    <div class="filterDiv vr">
-                            <a href="personalwinningearthback.html"><img class="image" src="images_videos/PersonalProjects/WinningEarthBack/SpideyHeroMainMenuWEBGoodCopy.PNG" alt="WinningEarthBack"></a>
-                            <div class="imagetext">Click to see more</div>
-                            <div class="bottom">
-                                <p class="title">W.E.B Winning earth back</p>
-                                <p class="date">Unity, Oculus Integration</p>
-                            </div>
-                    </div>
-                    
-                </div>
-
-            
-        </div>
-    </section>
-
-    <section class="about-me-section bg-js-controlled" id="about">
-        <div class="container">
-            <h2 class="header">About Me</h2>
-            <div class="about-elements">
-                <div class="image">
-                    <img src="images_videos/selfie.PNG" class="about-me-img" alt="Selfie-cartoon">
-                </div>
-                <div class="content">
-                    <p>I am passionate about building applications that educate, entertain and engage audiences about all the fantastic innovations the tech industry has to offer</p>
-                    <p>Here you can find all the tools and platforms I have developed on. This includes lots of Unity projects using C# for multiple platforms such as VR, Android, iOS, WebGL and PC. Learn more about me on <a href="https://www.linkedin.com/in/eldon-lin-38a181b0">LinkedIn</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills-section bg-js-controlled" id="skill">
-        <div class="container">
-            <h2 class="header">Skills</h2>
-            <ul class="all-info">
-                <li class="skills-info">
-                    <div class="subheader">
-                        <div class="image"><i class="bi bi-code-slash"></i></div>
-                        <div class="text"><h3>Languages</h3></div>
-                    </div>
-                    <div class="list">
-                        <div class="list-info">
-                            <p>C#</p>
-                            <p>C++</p>
-                            <p>HTML, CSS</p>
-                            <p>Typescript</p>
-                            <p>Javascript</p>
-                            <p>Python</p>
-                            <p>SQL</p>                            
-                        </div>
-                    </div>
-
-                </li>
-              
-                <li class="skills-info">
-                    <div class="subheader">
-                        <div class="image"><i class="bi bi-cpu"></i></div>
-                        <div class="text"><h3>Platforms</h3></div>
-                    </div>
-                    <div class="list">
-                        <div class="list-info">
-                            <p>Meta Quest</p>
-                            <p>Android</p>
-                            <p>iOS</p>
-                            <p>WebGL</p>
-                            <p>Oculus Rift</p>
-                            <p>PC</p>
-                        </div>
-                    </div>
-                </li>  
-                <li class="skills-info">
-                    <div class="subheader">
-                        <div class="image"><i class="bi bi-tools"></i></div>
-                        <div class="text"><h3>Tools and Frameworks</h3></div>
-                    </div>
-                    <div class="list">
-                        <div class="list-info">
-                            <p>Unity</p>
-                            <p>Addressables</p>
-                            <p>ARKit/ARCore</p>
-                            <p>Vuforia</p>
-                            <p>MaxstAR</p>
-                            <p>Git</p>
-                            <p>Gitlab</p>
-                            <p>Github</p>
-                            <p>Azure</p>                           
-                        </div>
-                    </div>
-                </li> 
-                <li class="skills-info">
-                    <div class="subheader">
-                        <div class="image"><i class="bi bi-database"></i></div>
-                        <div class="text"><h3>Database and Integrations</h3></div>
-                    </div>
-                    <div class="list">
-                        <div class="list-info">
-                            <p>Firebase</p>
-                            <p>Login system</p>
-                            <p>Push notifications</p>
-                            <p>In app purchases</p>
-                            <p>cdn</p>
-                            <p>MySQL</p>
-		                    <p>Photon</p>                           
-                        </div>
-                    </div>
-                </li>     
-                <li class="skills-info">
-                    <div class="subheader">
-                        <div class="image"><i class="bi bi-kanban"></i></div>
-                        <div class="text"><h3>Collaboration and Design</h3></div>
-                    </div>
-                    <div class="list">
-                        <div class="list-info">
-                            <p>Jira</p>
-                            <p>Monday</p>
-                            <p>Zstream</p>
-		                    <p>Figma</p>                           
-                        </div>
-                    </div>
-                </li>                     
-            </ul>
-        </div>
-    </section>
-    
-
-    
-    <section class="professional-experiences-section bg-js-controlled" id="professionalexperience">
-        <div class="container">
-            <h2 class="header">Work Experiences</h2>
-            <div class="all-jobs">
-                <div class="jobs right">
-                    <img class="work-image" src="images_videos/ProfessionalExperience/abacusbrandsinc/abacusbrandslogo.png" alt="Abacus Brands Inc logo" >
-                    <div class="content">
-                        <p class="jobPosition">Unity VR/AR Developer</p>
-                        <p class="companyName">Abacus Brands Inc</p>
-                        <p class="timeLine">Oct 2023 -March 2026</p>
-                        <a href="workabacusbrands.html"><button class="btn"><p class="text">More info</p></button></a>					
-                    </div>
-                </div>
-                <div class="jobs">
-                    <img class="work-image" src="images_videos/ProfessionalExperience/virtro/virtro.png" alt="Virtro logo" >
-                    <div class="content">
-                        <p class="jobPosition">XR Developer</p>
-                        <p class="companyName">Virtro Technology Inc</p>
-                        <p class="timeLine">Sep 2018-Oct 2023</p>
-                        <a href="workvirtro.html"><button class="btn"><p class="text">More info</p></button></a>					
-                    </div>
-                </div>
-                <div class="jobs right">				
-                    <img class="work-image" src="images_videos/ProfessionalExperience/utg/underthegui.png" alt="UTG logo" >
-                    <div class="content">
-                        <p class="jobPosition">Instructor</p>
-                        <p class="companyName">Under The GUI Academy</p>
-                        <p class="timeLine">Sep 2019-Jun 2021</p>
-                        <a href="workutg.html"><button class="btn"><p class="text">More info</p></button></a>					
-                    </div>
-                </div>
-                <div class="jobs">
-                    <img class="work-image" src="images_videos/ProfessionalExperience/plannetlogix/plannet-logix.png" alt="PlanNetLogix Logo" >
-                    <div class="content">
-                        <p class="jobPosition">Quality Assurance</p>
-                        <p class="companyName">PlanNet Logix (Co-op)</p>
-                        <p class="timeLine">Sep 2016-Aug 2017</p>
-                        <a href="workplannetlogix.html"><button class="btn"><p class="text">More info</p></button></a>			
-                    </div>
-                </div>
+  </div>
+  <div class="featured-projects-showcases">
+    <div class="featured-projects-showcase">           
+      <div class="image">
+        <a href="https://devpost.com/software/cubeats"><img src='images_videos/PersonalProjects/Cubeats/logo.png' alt="cubeats"></a>
+      </div>
+       <div class="content">
+      <div class="title">Cubeats - Coming soon to Meta</div>
+      <div class="location">Meta Horizon Developer Start Competition</div>
+      <div class="description">As the lead developer. My job was to delegate tasks, manage the devleopment process, Setup github, Unity and anything hand tracking related where it requires interacting with an object was my main focus</div>
+      <div class="tags">
+        <div class="tag">Unity</div>
+        <div class="tag">C#</div>
+        <div class="tag">Meta Hand Tracking</div>
+        <div class="tag">Github</div>
+        <div class="tag">ShapesXR</div>
+        <div class="tag">Meta Quest</div>
+      </div>
+      <div class="play">      
+      </div>
+      </div>
+    </div>
+    <div class="featured-projects-showcase">
+      <div class="image">
+        <a href="https://devpost.com/software/duolingo-xr"><img src='images_videos/PersonalProjects/DuoLingoXR/DevPostWinnerBadge.png' alt="duolingo"></a>
+      </div>
+      <div class="content">
+      <div class="title">Duolingo - <span style="color: #EEC643; font-weight: bold;">Best Mobile to XR App</span></div>
+      <div class="location">GDCC XR Design Challenge</div>
+      <div class="description">Being the lead developer. My job was to take artists 3d animations and models into Unity. Setup Meta Hand tracking sdk and make sure there is a working prototype that users can interact with</div>
+      <div class="tags">
+        <div class="tag">Unity</div>
+        <div class="tag">C#</div>
+        <div class="tag">Meta Hand Tracking</div>
+        <div class="tag">Github</div>
+        <div class="tag">ShapesXR</div>
+        <div class="tag">Meta Quest</div>
+      </div>
+      <div class="play">
         
-            </div>
-			
+      </div>
         </div>
-    </section>
-
    
-
-
-    <section class="blogrecent bg-js-controlled" id="blog">
-        <div class="container">
-            <h2 class="header">Blogs</h2>
-            <div class="blog">
-                <blogrecent-component>
-                </blogrecent-component>
-            </div>
-
-
-            <div class="morebutton">
-                <div class="viewmorebutton">
-                    <button onclick="ViewAllBlog()">See all blogs</button>
-                </div>
-            </div>
+   </div>
+   <div class="featured-projects-showcase">
+      <div class="image">
+        <a href="https://www.abacusbrands.com/collections/dk-premium-gift-sets"><img src='images_videos/ProfessionalExperience/abacusbrandsinc/odysseyxr/odysseyxrlogo.png' alt="odysseyxr"></a>
+      </div>
+      <div class="content">
+      <div class="title">OdysseyXR</div>
+      <div class="location">Work:Abacus Brands Inc</div>
+      <div class="description">
+Before I joined Abacus Brands Inc, each DK pack was their own app. I helped create a system so that we could centralize an app for all DK, ESPN, and National Geographic apps. Using Addressables to download 360 videos. Using Firebase for login, analytics, storing user information such as which in-app purchases they bought, or experiences they played.</div>
+      <div class="tags">
+        <div class="tag">Unity</div>
+        <div class="tag">C#</div>
+        <div class="tag">Firebase</div>
+        <div class="tag">Addressables</div>
+        <div class="tag">In App Purchases</div>
+        <div class="tag">Push Notifications</div>
+        <div class="tag">Analytics</div>
+        <div class="tag">ARFoundation</div>
+        <div class="tag">Git</div>
+        <div class="tag">Android</div>
+        <div class="tag">iOS</div>
+      </div>
+      <div class="play">
+        <a href="https://play.google.com/store/apps/details?id=com.abacus.booboosbandage&hl=en" class="btn">
+          <img src="images_videos/googleplay.png" alt="Google Play">
+        </a>
+        <a href="https://apps.apple.com/us/app/odyssey-xr/id6476524894" class="btn">
+          <img src="images_videos/appstore.png" alt="App Store">
+        </a>
+      </div>
         </div>
-    </section>
-
-    <!-- <section class="volunteer-section bg-js-controlled" id="volunteer">
-        <div class="container">
-            <h2 class="header">Volunteer Experience</h2>
-            <div class="all-volunteer">
-                <div class="volunteer">
-                    <a href="https://www.kre.is/"><img class="image" src="images_videos/volunteer/kreisimmersive/logo.png" alt="Kreis Immersive"></a>
-                    <div class="bottom">
-                        <p class="title">Kreis Immersive at BCIT-Shakespeare in the Metaverse</p>
-                        <p class="position">Showcase attendant</p>
-                        <p class="date">July 2023</p>
-                    </div>
-                </div>
-                <div class="volunteer">
-                    <a href="https://frl.nyu.edu/"><img class="image" src="images_videos/volunteer/nyufuturerealitylab/logo.png" alt="NYU Future Reality Lab"></a>
-                    <div class="bottom">
-                        <p class="title">NYU Future Reality Lab at Siggraph- Cave</p>
-                        <p class="position">Docents</p>
-                        <p class="date">Aug 2018</p>
-                    </div>
-                </div>
-                <div class="volunteer">
-                    <a href="https://www.thevrara.com/"><img class="image" src="images_videos/volunteer/vrarassocation/logo.jpg" alt="VR AR Association"></a>
-                    <div class="bottom">
-                        <p class="title">VR AR Association</p>
-                        <p class="position">Greeter</p>
-                        <p class="date">Jun 2018</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+     <div class="featured-projects-showcase">
+      <div class="image">
+        <a href="https://backdrop.com/pages/backdropalive-augmented-reality-backdrop-activations?srsltid=AfmBOopjtKjOYm9irJq4coVi7SBMtWsN5QeREEyzUcJr0A__0_hN8nM1"><img src='images_videos/ProfessionalExperience/abacusbrandsinc/backdropalive/backdroplogo.png' alt="backdropalive"></a>
+      </div>
+      <div class="content">
+      <div class="title">Backdrop Alive</div>
+      <div class="location">Work:Abacus Brands Inc</div>
+      <div class="description">
+I was one of the developers on this project, and I was responsible for implementing the core gameplay mechanics, integrating the visual assets, and assisting with the backend system for tracking and lead capture. I also had to make sure the app was optimized for both iOS and Android, and that it was easy for users to scan the backdrops and unlock the experiences. I also had to work closely with the artists and designers to make sure the app looked good and was easy to use. </div>
+      <div class="tags">
+        <div class="tag">Unity</div>
+        <div class="tag">C#</div>
+        <div class="tag">MySQL</div>
+        <div class="tag">Addressables</div>
+        <div class="tag">In App Purchases</div>
+        <div class="tag">ARFoundation</div>
+        <div class="tag">Git</div>
+        <div class="tag">Android</div>
+        <div class="tag">iOS</div>
+      </div>
+      <div class="play">
+        <a href="https://play.google.com/store/apps/details?id=com.abacus.backdrop" class="btn">
+          <img src="images_videos/googleplay.png" alt="Google Play">
+        </a>
+        <a href="https://apps.apple.com/ca/app/backdrop-alive/id6502370550" class="btn">
+          <img src="images_videos/appstore.png" alt="App Store">
+        </a>
+      </div>
         </div>
-    </section> -->
+    </div>
+     <div class="featured-projects-showcase">
+      <div class="image">
+        <a href="https://horizon.meta.com/world/937463606107518/?hwsh=S8nMuSXxgz"><img src='images_videos/PersonalProjects/CosmicHunger/logo.png' alt="cosmichunger"></a>
+      </div>
+      <div class="content">
+      <div class="title">Cosmic Hunger</div>
+      <div class="location">Meta Horizon Worlds</div>
+      <div class="description">With funding from Meta Horizon World Creator Program. my team and I wanted to create an endless runner game where user can swipe left and right from lane to lane. The user would collect and dodge outer space objects as an asteroid.</div>
+      <div class="tags">
+        <div class="tag">Typescript</div>
+        <div class="tag">Meta Horizon Desktop Editor</div>
+        <div class="tag">Android</div>
+        <div class="tag">iOS</div>
+      </div>
+      <div class="play">
+        <a href="https://horizon.meta.com/world/937463606107518/?hwsh=S8nMuSXxgz" class="btn">
+          <img src="images_videos/meta.png" alt="Meta">
+        </a>
 
-    <section class="footer-section bg-js-controlled" id="contact">
-        <div class ="footer">
-            <footer-component></footer-component>
+      </div>
+    </div>
+
+    </div>
+    <div class="featured-projects-showcase">
+      <div class="image">
+       <a href="https://devpost.com/software/the-resistance-mwyrp4"><img src='images_videos/PersonalProjects/TheResistance/Thumbnail.jpg' alt="theResistance"></a>
+      </div>
+      <div class="content">
+      <div class="title">The Resistance</div>
+      <div class="location">Mobile Horizon Creator Submission: Mobile Genre Showdown/ Elevate Your World.</div>
+      <div class="description">My job as the developer was to implement the core gameplay mechanics and integrate the visual assets</div>
+      <div class="tags">
+        <div class="tag">Typescript</div>
+        <div class="tag">Meta Horizon Desktop Editor</div>
+        <div class="tag">Android</div>
+        <div class="tag">iOS</div>
+      </div>
+      <div class="play">
+        <a href="https://horizon.meta.com/world/10162247323945733/?hwsh=zcynkYSfJl" class="btn">
+          <img src="images_videos/meta.png" alt="Meta">
+        </a>
+      </div>
+   </div>   
+   </div>
+    <div class="featured-projects-showcase">
+      <div class="image">
+       <a href="https://www.meta.com/experiences/job-interview-humans-canada-usa/3777634755681278/"><img src='images_videos/ProfessionalExperience/virtro/jis/jislogo.jpg' alt="jis"></a>
+      </div>
+      <div class="content">
+      <div class="title">Job Interview Simulation</div>
+      <div class="location">Work:Virtro Technologies Inc</div>
+      <div class="description">As the lead developer. My job was to delegate tasks, manage the devleopment process, Setup github, Unity and anything hand tracking related where it requires interacting with an object was my main focus</div>
+      <div class="tags">
+        <div class="tag">Unity</div>
+        <div class="tag">C#</div>
+        <div class="tag">Addressables</div>
+        <div class="tag">Git</div>
+        <div class="tag">Meta Quest</div>
+        <div class="tag">WebGL</div>
+      </div>
+      <div class="play">
+        <a href="https://www.meta.com/experiences/job-interview-humans-canada-usa/3777634755681278/?ranking_trace=0_3777634755681278_QUESTSEARCH_10cdb64a-1146-4c37-a4a3-bd3d8422dfe0&utm_source=eldonl.github.io&utm_medium=oculusredirect" class="btn">
+          <img src="images_videos/meta.png" alt="Meta">
+        </a>
+      </div>
+   </div>
+  </div>
+
+  
+    <div class="featured-projects-showcase">
+      <div class="image">
+       <a href="https://www.meta.com/experiences/zombie-donuts-2/3510484932332486/?ranking_trace=0_3510484932332486_SEARCH_67f52bb5-17ba-4e78-86d5-eea0db9ab1a0&utm_source=www.virtrogames.com&utm_medium=oculusredirect"><img src='images_videos/ProfessionalExperience/virtro/zombiedonuts/zombiedonutslogo.png' alt="zombiedonuts"></a>
+      </div>
+      <div class="content">
+      <div class="title">Zombie Donuts 2</div>
+      <div class="location">Work:Virtro Technologies Inc</div>
+      <div class="description">
+There were 2 updates. One in 2018 where I was tasked to add bonus points if the user hits bonus candies. Another in 2020, where I had to check if the leaderboards was still functioning and upload to the Oculus Store</div>
+      <div class="tags">
+        <div class="tag">Unity</div>
+        <div class="tag">C#</div>
+        <div class="tag">Git</div>
+        <div class="tag">Oculus</div>
+        <div class="tag">Leaderboards</div>
+      </div>
+      <div class="play">
+        <a href="https://www.meta.com/experiences/zombie-donuts-2/3510484932332486/?ranking_trace=0_3510484932332486_SEARCH_67f52bb5-17ba-4e78-86d5-eea0db9ab1a0&utm_source=www.virtrogames.com&utm_medium=oculusredirect" class="btn">
+          <img src="images_videos/meta.png" alt="Meta">
+        </a>
+      </div>
+      </div>
+  </div>
+</div>
+</section>
+
+<section class="work-experiences" id="workexperience">
+  <h1 class="work-experience-header">Work Experiences</h1>
+  <div class="experiences">
+
+    <div class="experience">
+    
+      <div class="left-side">
+        <div class="date">Oct 2023-March 2026</div>
+      </div>
+      <div class="right-side">
+        <div class="title">Unity XR Developer</div>
+        <div class="company"> <a href="https://www.abacusbrands.com/">Abacus Brands Inc <i
+              class="bi bi-box-arrow-up-right"></i></a></div>
+        <div class="description">As the first in-house Unity developer at Abacus Brands Inc., I'm responsible for developing
+          and maintaining Unity based applications for Android and iOS .
+          I have experience using ARFoundation, Vuforia, and MaxstAR for our AR applications.
+          I implemented login systems, in-app purchases, and push notifications across platforms.
+          Using Addressables, I managed downloading heavy 360° video assets efficiently.
+          I also ensure proper documentation is set up in the README for smoother onboarding of new developers.
+          Additionally, I helped our app "Odyssey XR" reach #3 in Top Free Education on Google Play. </div>
+        <div class="apps">
+          <a href="https://www.abacusbrands.com/collections/dk-premium-gift-sets">Odyssey XR <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="https://backdrop.com/pages/backdropalive-augmented-reality-backdrop-activations?srsltid=AfmBOorjpp4hZpCQF-yTGEjEARz6pJ31DsIpnNPRkLtxC1Xf8f6Rl6A_">Backdrop Alive <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="https://www.abacusbrands.com/collections/bill-nye">Bill Nye Science Squad <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="https://www.abacusbrands.com/collections/cold-case-vr">Cold Case VR <i class="bi bi-box-arrow-up-right"></i></a>
         </div>
+        <div class="skills">
+          <div class="skill">Unity</div>
+          <div class="skill">C#</div>
+          <div class="skill">ARFoundation</div>
+          <div class="skill">Vuforia</div>
+          <div class="skill">MaxstAR</div>
+          <div class="skill">Addressables</div>
+          <div class="skill">Firebase</div>
+          <div class="skill">Git</div>
+          <div class="skill">Android</div>
+          <div class="skill">iOS</div>
+          <div class="skill">MySQL</div>
+          <div class="skill">In App Purchases</div>
+          <div class="skill">Push Notifications</div>
+          <div class="skill">Login</div>
+        </div>
+      </div>
+    </div>
 
-    </section>
+    <div class="experience">
+    
+      <div class="left-side">
+        <div class="date">Sep 2018-Oct 2023</div>
+      </div>
+      <div class="right-side">
+        <div class="title">Unity VR Developer</div>
+        <div class="company"> <a href="https://www.linkedin.com/company/virtro/">Virtro Technologies Inc <i class="bi bi-box-arrow-up-right"></i></a></div>
+        <div class="description">With over 4 years of experience as an XR Developer at Virtro Technology, I've honed my skills in project management and integration to deliver innovative apps for VR and WebXR. I have also used STT and NLP technologies to develop multiple training simulations. As my duties increased, I helped my company to become SOC2 compliant, standardized steps for Unity Android and WebGL builds, setup ArborXR - device management system - for our clients, manage and update all current and past Oculus apps, become the mergemaster for Unity projects and help prioritize tasks for my team members </div>
+        <div class="apps">
+          <a href="https://www.meta.com/experiences/job-interview-humans-canada-usa/3777634755681278/">BeConfident: Job Interview Simulation <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="https://www.meta.com/experiences/zombie-donuts-2/3510484932332486/">Zombie Donuts <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="https://www.meta.com/experiences/juzzle/2281308988561276">Juzzle <i class="bi bi-box-arrow-up-right"></i></a>
+          <a href="https://vancouver.citynews.ca/video/2019/12/13/virtual-language-learning/">Argo Lingo <i class="bi bi-box-arrow-up-right"></i></a>
+        </div>
+        <div class="skills">
+          <div class="skill">Unity</div>
+          <div class="skill">C#</div>
+          <div class="skill">Meta Quest</div>
+          <div class="skill">WebGL</div>
+          <div class="skill">Git</div>
+          <div class="skill">Addressables</div>
+          <div class="skill">Login</div>
+        </div>
+      </div>
+    </div>
+
+      <div class="experience">
+    
+      <div class="left-side">
+        <div class="date">Sep 2019-Jun 2021</div>
+      </div>
+      <div class="right-side">
+        <div class="title">Coding Instructor</div>
+        <div class="company"> <a href="https://utgacademy.com/">Under The GUI Academy <i class="bi bi-box-arrow-up-right"></i></a></div>
+        <div class="description">I was an instructor teaching Unity to high school students and Python to primary school students. I prepared each week's lesson for my classes that I teach. This allowed the students to learn at least 3 new topics and get to apply what they learned into their games. </div>
+        <div class="apps">
+          <a href="https://pixelpad.io/app/gmjxoisaayv/">Sample Lesson <i class="bi bi-box-arrow-up-right"></i></a>
+        </div>
+        <div class="skills">
+          <div class="skill">Unity</div>
+          <div class="skill">C#</div>
+          <div class="skill">Python</div>
+          <div class="skill">PC</div>
+          <div class="skill">WebGL</div>
+          <div class="skill">Pixelpad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <section class="footer2-section">
+    <div class="footer2">
+      <footer2-component></footer2-component>
+    </div>
+   </section>
 
 
- 
-    </section>
 </body>
-
 </html>

@@ -1,5 +1,6 @@
 const container = document.getElementsByClassName("vr-container")[0];
 const headset = document.getElementsByClassName("headset")[0];
+// const header = document.getElementsByClassName("header")[0];
 
 window.addEventListener("scroll", () => {
   const section = document.getElementsByClassName("hero")[0];
@@ -45,4 +46,5 @@ window.addEventListener("scroll", () => {
   opacity = Math.min(Math.max(opacity, 0), 1);
 
   headset.style.opacity = opacity;
+  // header.style.opacity = opacity;
 });
