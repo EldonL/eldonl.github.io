@@ -271,7 +271,9 @@ body {
     object-fit: contain;
 }
 
-
+.individual-section {
+   padding-top: 2rem;
+}
 
 .call-to-action{
   background-color: var(--primary-color);

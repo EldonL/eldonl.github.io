@@ -21,7 +21,7 @@ header2template.innerHTML=`
   text-decoration: none;
   font-size: 1rem; 
   line-height: 1rem;
-  border-radius: 1rem;
+
 
 
 }
@@ -34,12 +34,12 @@ header2template.innerHTML=`
 
 .header a:hover {
   background-color: #ddd;
-  color: black;
+
 }
 
 .header a.active {
-  background-color: dodgerblue;
-  color: white;
+
+  color: blue;
 }
 
 .header-right {
@@ -78,21 +78,6 @@ customElements.define("header2-component",Header2);
 
 
 
-// const header = document.getElementsByClassName("header2")[0];
-
-// header.style.opacity = 0;
-
-// window.addEventListener("scroll", () => {
-
-//   const scrollY = window.scrollY;
-
-//   // fade in over first 200px
-//   const opacity = Math.min(scrollY / 5000, 1);
-
-//   header.style.opacity = opacity;
-
-// });
-
 const hero = document.querySelector(".hero");//get the headset scroll progress so progress in hdaer2 matches headset
 const header = document.querySelector(".header2");
 
@@ -102,7 +87,7 @@ window.addEventListener("scroll", () => {
 
   const raw = Math.min(Math.max(-rect.top / (rect.height - window.innerHeight), 0), 1);
 
-  const delay = 0.15;
+  const delay = 0.7;
   const progress = Math.max((raw - delay) / (1 - delay), 0);
 
   header.style.opacity = progress;
