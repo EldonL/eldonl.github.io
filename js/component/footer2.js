@@ -25,6 +25,15 @@ footer2Template.innerHTML =`
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    padding:5rem;
+
+  }
+
+  .footer2-section .container .ready-to-talk{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
   }
 
   .footer2-section .container .contact-links{
@@ -36,8 +45,29 @@ footer2Template.innerHTML =`
   }
 
 .footer2-section .container .contact-links a {
-  color: inherit;      
+    color: #0B1026;
+    font-size: 3rem;
+
+    width: 5rem;
+    height: 5rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    background:white;
+
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
+
+    transition: all .2s ease;
+    text-decoration: none; 
 }
+
+.footer2-section .container .contact-links a:hover{
+    transform: translateY(-5px);
+    opacity: 0.7;
+  }
 
   </style>
 
