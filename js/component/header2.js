@@ -7,7 +7,7 @@ header2template.innerHTML=`
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #f1faff;
 
 
 }
@@ -17,10 +17,13 @@ header2template.innerHTML=`
   color: black;
   text-align: center;
   padding: 1rem;
+
   text-decoration: none;
   font-size: 1rem; 
   line-height: 1rem;
   border-radius: 1rem;
+
+
 }
 
 .header a.logo {
@@ -41,6 +44,7 @@ header2template.innerHTML=`
 
 .header-right {
   float: right;
+    padding-top: 1rem;
 }
 
 

@@ -9,6 +9,7 @@
     --big-font-size:6rem;
     --hero-scale: 1.9;
     --featured-project-size:28rem;
+    --page-margin: 1rem;
 }
 
 html {
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-  margin: 0 1rem 0 1rem;
+  margin: 0 var(--page-margin);
   background: #fff;
 
   font-family: 'Arial', Helvetica, sans-serif;;

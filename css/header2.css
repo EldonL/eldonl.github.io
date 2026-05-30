@@ -1,6 +1,9 @@
 .header2{
-  position:sticky; 
+  position:fixed; 
   top:0;
+  left:  var(--page-margin); 
+  right:  var(--page-margin); 
   z-index:999;
   opacity: 0;
+
 }
