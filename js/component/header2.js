@@ -103,7 +103,7 @@ header2template.innerHTML=`
   transition: all ease-in-out 0.2s;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 750px){
     .nav_hamburger{
       display:flex; 
       
