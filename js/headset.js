@@ -26,7 +26,7 @@ window.addEventListener("scroll", () => {
   const scale = 1 - progress * endScale;
 
   // Optional upward movement
-  const translateY = 30 - progress * 30;
+  const translateY =progress * 30;
 
   // Scale the container (content + headset together)
   container.style.transform = `translate(-50%, -50%) translateY(${translateY}px) scale(${scale})`;

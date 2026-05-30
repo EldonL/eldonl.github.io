@@ -128,6 +128,9 @@ body {
 
 
 
+
+
+
 .hero {
   height: 200rem;
 }
@@ -429,15 +432,7 @@ body {
     --hero-scale: 1.2;
     --featured-project-size:18rem;
   }
-
-  .hero .scene .vr-container {
-    width: 2500px;
-    height: 650px;
-  }
-
-  .hero .scene .vr-container .headset {
-    width: 2500px;
-  }
+ 
 }
 
 @media screen and (max-width: 666px) {
