@@ -120,6 +120,7 @@ header2template.innerHTML=`
       transition: all ease-in-out 0.4s;
       z-index:-1;
       padding-top: 0rem;
+      transition: all ease-in-out 0.2s;
     }
 
     .nav{
@@ -139,6 +140,7 @@ header2template.innerHTML=`
 
     .nav_menu.active{
       right:0;
+      transition: all ease-in-out 0.2s;
     }
 
     .nav_hamburger.active :nth-child(1){
