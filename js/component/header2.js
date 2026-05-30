@@ -106,20 +106,25 @@ window.addEventListener("scroll", () => {
   header.style.opacity = progress;
 
   
-  // Detect which section is in view
-  let currentSection = null;
-  
-  for (const sectionId of sectionIds) {
-    const sectionEl = document.getElementById(sectionId);
-    if (sectionEl) {
-      const rectsection = sectionEl.getBoundingClientRect();
-      // Check if section is in viewport (top of section is in view)
-      if (rectsection.top <= window.innerHeight / 8 && rectsection.bottom > window.innerHeight / 8) {
-        currentSection = sectionId;
-        break;
-      }
-    }
+let currentSection = null;
+const triggerPoint = window.innerHeight / 2;
+
+for (const sectionId of sectionIds) {
+  const sectionEl = document.getElementById(sectionId);
+  if (!sectionEl) continue;
+
+  const rect = sectionEl.getBoundingClientRect();
+
+  if (rect.top <= triggerPoint && rect.bottom >= triggerPoint) {
+    currentSection = sectionId;
+    break;
   }
+}
+
+// Fallback: if near bottom of page → force Contact active
+if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 5) {
+  currentSection = "contact";
+}
   
   // Update active class
   const navLinks = getNavLinks();
