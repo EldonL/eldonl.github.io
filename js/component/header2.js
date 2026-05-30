@@ -27,6 +27,7 @@ header2template.innerHTML=`
   font-size: 2rem;
   font-weight: bold;
   float: left;
+  padding:1rem 1rem;
 }
 
 .nav_header a:hover {
@@ -46,9 +47,31 @@ header2template.innerHTML=`
 .nav_menu ul li{
   list-style: none;
 }
+  
+.nav_menu ul a {
+  position: relative;
+  text-decoration: none;
+}
 
 .nav_menu ul a.active {
-  background-color: #d4d4d4;
+  color: #3b82f6;
+}
+
+.nav_menu ul a.active::after {
+  width: 100%;
+  background: #3b82f6;
+}
+
+
+.nav_menu ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: transparent;
+  transition: width 0.25s ease, background 0.25s ease;
 }
 
 .nav_hamburger{
