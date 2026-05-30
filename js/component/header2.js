@@ -74,6 +74,13 @@ header2template.innerHTML=`
   transition: width 0.25s ease, background 0.25s ease;
 }
 
+.nav_menu ul .nav_menu_link{
+  justify-content: center;
+  display:flex;
+  align-items:center;
+  
+}
+
 .nav_hamburger{
   width:2.625rem;
   height:1.8382rem;
