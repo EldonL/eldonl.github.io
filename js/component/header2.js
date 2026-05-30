@@ -142,7 +142,7 @@ header2template.innerHTML=`
     }
 
     .nav_hamburger.active :nth-child(1){
-      transform:rotate(45deg) translate(0.45rem, 0.2625rem);
+      transform:rotate(45deg) translate(0.45rem, 0.45rem);
     }
 
     .nav_hamburger.active :nth-child(2){
@@ -150,7 +150,7 @@ header2template.innerHTML=`
     }
 
     .nav_hamburger.active :nth-child(3){
-      transform:rotate(-45deg) translate(0.45rem, -0.2625rem);
+      transform:rotate(-45deg) translate(0.45rem, -0.45rem);
     }
 }
 
@@ -158,11 +158,11 @@ header2template.innerHTML=`
 
     <nav class="nav_header">
       <a href="index.html" class="nav_logo">ELDON LIN</a>
-      <button class="nav_hamburger" type="button">
+       <i class="nav_hamburger">
         <span class="nav_hamburger_line"></span>
         <span class="nav_hamburger_line"></span>
         <span class="nav_hamburger_line"></span>
-      </button>
+      </i>
       <div class="nav_menu">
         <ul>
           <li class="nav_menu_link"><a href="index.html#featuredproject">Featured Projects</a></li>
