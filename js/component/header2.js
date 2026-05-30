@@ -37,9 +37,8 @@ header2template.innerHTML=`
 
 }
 
-.header a.active {
-
-  color: blue;
+.header-right a.active {
+  background-color: #d4d4d4;
 }
 
 .header-right {
@@ -81,6 +80,20 @@ customElements.define("header2-component",Header2);
 const hero = document.querySelector(".hero");//get the headset scroll progress so progress in hdaer2 matches headset
 const header = document.querySelector(".header2");
 
+
+const sectionIds = ['featuredproject', 'techstacksection', 'workexperience', 'contact'];
+
+function getNavLinks() {
+  const headerComponent = document.querySelector('header2-component');
+  if (!headerComponent || !headerComponent.shadowRoot) return {};
+  
+  const links = {};
+  sectionIds.forEach(id => {
+    links[id] = headerComponent.shadowRoot.querySelector(`.header-right a[href="index.html#${id}"]`);
+  });
+  return links;
+}
+
 window.addEventListener("scroll", () => {
 
   const rect = hero.getBoundingClientRect();
@@ -92,4 +105,27 @@ window.addEventListener("scroll", () => {
 
   header.style.opacity = progress;
 
+  
+  // Detect which section is in view
+  let currentSection = null;
+  
+  for (const sectionId of sectionIds) {
+    const sectionEl = document.getElementById(sectionId);
+    if (sectionEl) {
+      const rectsection = sectionEl.getBoundingClientRect();
+      // Check if section is in viewport (top of section is in view)
+      if (rectsection.top <= window.innerHeight / 8 && rectsection.bottom > window.innerHeight / 8) {
+        currentSection = sectionId;
+        break;
+      }
+    }
+  }
+  
+  // Update active class
+  const navLinks = getNavLinks();
+  Object.entries(navLinks).forEach(([sectionId, link]) => {
+    if (link) {
+      link.classList.toggle('active', sectionId === currentSection);
+    }
+  });
 });
