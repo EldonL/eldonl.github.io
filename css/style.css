@@ -301,16 +301,13 @@ body {
 }
 
 
-.tech-stacks{
-  display:flex;
-  flex-direction: column;
-  gap:1rem;
-}
+
 
 .tech-stack {
   display: flex;
   flex-direction: column;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 1rem;
+  gap: 1rem;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
 
@@ -323,7 +320,7 @@ body {
 
 }
 
-.tech-stacks .tech-stack .tech-stack-skills p{
+.tech-stacks .tech-stack .tech-stack-skills .tech-stack-skill{
       background: rgba(11, 16, 38, 0.05); 
     color: var(--primary-color);       
     font-size: 0.95rem;
