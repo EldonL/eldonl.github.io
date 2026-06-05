@@ -75,7 +75,7 @@ footer2Template.innerHTML =`
         <div class="container">
             <div class="ready-to-talk">
                 <h1>Ready to create immersive experiences together?</h1>
-                <a href="https://www.linkedin.com/in/eldon-lin-38a181b0"><button class="call-to-action btn">Contact (LinkedIn)</button></a>
+                <a href="https://www.linkedin.com/in/eldon-lin"><button class="call-to-action btn">Contact (LinkedIn)</button></a>
             </div>
 
 
