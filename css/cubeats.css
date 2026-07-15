@@ -27,6 +27,10 @@ body {
     cursor: pointer;
 }
 
+.about{
+    text-align: center;
+}
+
 
 .cubeats-hero {
   height: 200rem;
