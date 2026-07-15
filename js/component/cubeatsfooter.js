@@ -1,8 +1,8 @@
-const footer2Template = document.createElement('template');
+const cubeatsfooterTemplate = document.createElement('template');
 
-footer2Template.innerHTML =`
+cubeatsfooterTemplate.innerHTML =`
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="css/style.css">   
+<link rel="stylesheet" href="css/cubeats.css">   
 <style>
   .bi{
     cursor:pointer;
@@ -20,7 +20,7 @@ footer2Template.innerHTML =`
   }
 
 
-  .footer2-section .container{
+  .cubeats-footer-section .container{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -29,14 +29,14 @@ footer2Template.innerHTML =`
 
   }
 
-  .footer2-section .container .ready-to-talk{
+  .cubeats-footer-section .container .ready-to-talk{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
   }
 
-  .footer2-section .container .contact-links{
+  .cubeats-footer-section .container .contact-links{
     display:flex; 
     justify-content:center; 
     gap:5rem;
@@ -44,7 +44,7 @@ footer2Template.innerHTML =`
     text-decoration:none;
   }
 
-.footer2-section .container .contact-links a {
+.cubeats-footer-section .container .contact-links a {
     color: #0B1026;
     font-size: 3rem;
 
@@ -64,24 +64,24 @@ footer2Template.innerHTML =`
     text-decoration: none; 
 }
 
-.footer2-section .container .contact-links a:hover{
+.cubeats-footer-section .container .contact-links a:hover{
     transform: translateY(-5px);
     opacity: 0.7;
   }
 
   </style>
 
-  <section class="footer2-section" id="contact">
+  <section class="cubeats-footer-section" id="contact">
         <div class="container">
             <div class="ready-to-talk">
-                <h1>Ready to create immersive experiences together?</h1>
-                <a href="https://www.linkedin.com/in/eldon-lin"><button class="call-to-action btn">Contact (LinkedIn)</button></a>
+                <h1>Want more Cubeats? Contacts us!</h1>
             </div>
 
-
             <div class="contact-links">                
+                <a href="https://www.linkedin.com/in/eldon-lin"><i class="bi bi-linkedin"></i></a>
                 <a href="https://www.youtube.com/channel/UC-igukaTIJFHYS8TNkcJ4lA"><i class="bi bi-youtube"></i></a>
-                <a href="https://github.com/EldonL"><i class="bi bi-github"></i></a>
+                <a href="https://x.com/ErrorPowerVRAR"><i class="bi bi-twitter-x"></i></a>
+                <a href="mailto:vrgameseldon@gmail.com"><i class="bi bi-envelope"></i></a>
             </div>
 
 
@@ -90,17 +90,17 @@ footer2Template.innerHTML =`
 `;
 
 
-class Footer2 extends HTMLElement{
+class CubeatsFooter extends HTMLElement{
  constructor() {
       super();
       const shadowRoot = this.attachShadow({ mode: 'open' });
   
-      shadowRoot.appendChild(footer2Template.content);
-      var node = footer2Template;
+      shadowRoot.appendChild(cubeatsfooterTemplate.content);
+      var node = cubeatsfooterTemplate;
       var clone = node.cloneNode(true);
 
       
     }
 }
 
-customElements.define('footer2-component', Footer2);
+customElements.define('cubeats-footer-component', CubeatsFooter);

@@ -5,27 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title>Cubeats</title>
-    <link rel="stylesheet" href="css/style.css">    
-    <link rel="stylesheet" href="css/header2.css">
-    <script src="js/headset.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Cubeats</title> 
+    <link rel="stylesheet" href="css/cubeats.css">
+    <script src="js/component/cubeatsfooter.js" defer></script>
+    <script src="js/cubeatsheadset.js" defer></script>
 
 </head>
 <body>
     <noscript>You need to enable javascript to run this site</noscript>
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BrrEg51D3SU?si=DiGxXqs9qehmLawi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<section class="cubeats-hero"> 
+  <div class="scene">
+    <div class="vr-container">      
+      <div class="vr-world">
+        <div class="cubeats-hero-section">       
+          <div class="cubeats-hero-content">
+            <div class="left-side">
+              <div class="cubeats-hero-header">Cubeats</div>
+              <div class="cubeats-hero-subheader">Coming in Q4 2026</div>
+              <div class="cubeats-hero-description">VR rhythm puzzle game where you're the music engineer</div>
+              <div class="cubeats-hero-platforms">
+                <div class="cubeats-hero-details">Coming soon to</div>
+                <div class="cubeats-hero-platform-icon">
+                  <img class="platform-icon" src="images_videos/meta.png" alt="meta">
+                </div>                 
+              </div>
 
-
+            </div>  
+              <img class="cubeats-hero-image" src="images_videos/PersonalProjects/Cubeats/cubeats.png" />
+          </div>  
+            <p class="scroll-down">Scroll down to see trailer<i class="bi bi-mouse"></i></p>
+        </div>
+      </div>
+       <img class="headset" src="images_videos/vrgoogles.png" />      
+    </div>
+  </div>
+</section>
   
+<section class="video-trailer">
+<iframe src="https://www.youtube.com/embed/BrrEg51D3SU?si=DiGxXqs9qehmLawi"></iframe>
+</section>
 
 
-
-
-
+   <section class="cubeats-footer-section" id="contact">
+    <div class="cubeats-footer">
+      <cubeats-footer-component></cubeats-footer-component>
+    </div>
+   </section>
 
 </body>
 </html>

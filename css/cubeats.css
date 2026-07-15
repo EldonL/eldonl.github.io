@@ -1,0 +1,245 @@
+:root{
+    --primary-color: #0B1026;
+    --secondary-color:#00E5FF;
+    --additional-color: #F7C948;
+    --button-font-size: 0.6265rem;
+    --xsmall-font-size: 0.5rem;
+    --small-font-size: 0.625rem;
+    --medium-font-size: 2rem;
+    --big-font-size:6rem;
+    --cubeats-hero-scale: 1.9;
+
+    --page-margin: 1rem;
+}
+
+html {
+  font-size:16px;
+}
+
+body {
+  margin: 0 var(--page-margin);
+  background: #fff;
+
+  font-family: 'Arial', Helvetica, sans-serif;;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+
+.cubeats-hero {
+  height: 200rem;
+}
+
+
+.cubeats-hero .scene {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.cubeats-hero .scene .vr-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  background-image: url('../images_videos/PersonalProjects/Cubeats/movingbackgroundcubeats.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 5000px;
+  height: 1300px;
+}
+
+.cubeats-hero .scene .vr-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255, 0.7);
+  z-index: 0;
+}
+
+.cubeats-hero .scene .vr-container .vr-world{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Headset overlay on top of content */
+.cubeats-hero .scene .vr-container .headset {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  width:5000px;
+  pointer-events: none;
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+  position: relative;
+  width: auto;
+  height: auto;
+  transform: scale(var(--cubeats-hero-scale));
+  transform-origin: center;
+}
+
+
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content{
+
+  flex-wrap:wrap;
+  display:flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .scroll-down{
+   font-size: var(--xsmall-font-size);
+
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .left-side{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-header{
+  font-size: var(--big-font-size);
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: -0.035em; /*due to large font size causes an indent, so removing indent*/
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-subheader{
+    font-size:var(--medium-font-size);
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-description{
+    font-size:var(--small-font-size);
+    color:#494949;
+    max-width: 16rem;
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-details{
+    font-size:var(--xsmall-font-size);
+    color:#808080
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-platforms{
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-platforms .cubeats-hero-platform-icon{
+    display:flex;
+    justify-content: left;
+    gap:1rem;
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-platforms .cubeats-hero-platform-icon .platform-icon{
+    width: 3rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-image{
+  max-width: 10rem;
+  width: auto;
+  height: auto;
+  object-fit:contain;
+}
+
+
+
+
+.video-trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 4rem 0;
+}
+
+.video-trailer iframe {
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --medium-font-size: 2rem;
+    --big-font-size:4rem;
+    --hero-scale: 1.2;
+    --featured-project-size:18rem;
+  }
+ 
+}
+
+@media screen and (max-width: 666px) {
+  :root{
+    --xsmall-font-size: 0.5rem;
+    --small-font-size: 0.625rem;
+    --medium-font-size: 1rem;
+    --big-font-size:2rem;
+    --featured-project-size:15rem;
+    
+  }
+
+
+  .cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content {
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .left-side{
+    text-align: center;
+  }
+
+  .cubeats-hero .scene .vr-container .vr-world .cubeats-hero-section .cubeats-hero-content .cubeats-hero-platforms .cubeats-hero-platform-icon{
+
+    justify-content: center;
+
+ }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

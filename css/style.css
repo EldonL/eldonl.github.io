@@ -271,6 +271,13 @@ body {
     object-fit: contain;
 }
 
+.hero .scene .vr-container .vr-world .hero-section .hero-image{
+  max-width: 10rem;
+  width: auto;
+  height: auto;
+  object-fit:contain;
+}
+
 .individual-section {
    padding-top: 2rem;
 }
@@ -293,12 +300,7 @@ body {
 
 }
 
-.hero .scene .vr-container .vr-world .hero-section .hero-image{
-  max-width: 10rem;
-  width: auto;
-  height: auto;
-  object-fit:contain;
-}
+
 
 
 
