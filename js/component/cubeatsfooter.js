@@ -39,7 +39,7 @@ cubeatsfooterTemplate.innerHTML =`
   .cubeats-footer-section .container .contact-links{
     display:flex; 
     justify-content:center; 
-    gap:5rem;
+    gap:1rem;
     font-size: 3rem;
     text-decoration:none;
   }
@@ -55,10 +55,6 @@ cubeatsfooterTemplate.innerHTML =`
     align-items:center;
     justify-content:center;
 
-    border-radius:50%;
-    background:white;
-
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
 
     transition: all .2s ease;
     text-decoration: none; 
