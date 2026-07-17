@@ -35,6 +35,10 @@ cubeatsfooterTemplate.innerHTML =`
     gap: 2rem;
     align-items: center;
   }
+  
+    .cubeats-footer-section .container .ready-to-talk img{
+    width:20rem;
+}
 
   .cubeats-footer-section .container .contact-links{
     display:flex; 
