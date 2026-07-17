@@ -37,7 +37,10 @@ body {
   align-items: center;
   background-color: var(--secondary-color);
   margin-bottom: 2rem;
+}
 
+.header .right-side a{
+    text-decoration: none;
 }
 
 .header img{
