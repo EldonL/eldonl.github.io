@@ -35,6 +35,7 @@ cubeatsHeadertemplate.innerHTML=`
 .nav_menu {
   float: right;
   padding-top: 0.5rem;
+  dislpay: block;
 }
 
 .nav_menu ul{
@@ -105,39 +106,41 @@ cubeatsHeadertemplate.innerHTML=`
       
     }
 
-    .nav_menu{
-      position:absolute; 
-      display:flex;
-      align-items: center; 
-      background: #f3f4ff;
-      right: -100rem;
-      width:50%; 
-      height: 100vh;
-      transition: all ease-in-out 0.4s;
-      z-index:100;
-      padding-top: 0rem;
-      transition: all ease-in-out 0.2s;
-    }
+.nav_menu{
+  position:absolute; 
 
+  align-items:center; 
+  background:#f3f4ff;
+  right:0;
+  width:50%; 
+  height:100vh;
+
+  z-index:100;
+  padding-top:0;
+  display:none;
+}
     .nav{
       flex-direction:column;
       align-items:flex-start;
     }
+
+    
 
     .nav_menu ul{
       flex-direction:column;
       width:100%; 
     }
 
+
+
     .nav_menu ul li{
       text-align: center; 
       padding-bottom: 2rem;
     }
 
-    .nav_menu.active{
-      right:0;
-      transition: all ease-in-out 0.2s;
-    }
+.nav_menu.active{
+  display:block;
+}
 
     .nav_hamburger.active :nth-child(1){
       transform:rotate(45deg) translate(0.45rem, 0.45rem);
@@ -162,10 +165,11 @@ cubeatsHeadertemplate.innerHTML=`
         <span class="nav_hamburger_line"></span>
       </i>
       <div class="nav_menu">
-        <ul>
+        <ul id="myLinks">
           <li class="nav_menu_link"><a href="cubeats.html#project">Projects</a></li>
           <li class="nav_menu_link"><a href="cubeats.html#contact">Contact</a></li>
         </ul>
+        
       </div>
     </nav>
 
@@ -264,3 +268,4 @@ if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 5) {
     }
   });
 });
+
