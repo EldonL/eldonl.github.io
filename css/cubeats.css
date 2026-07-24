@@ -5,7 +5,7 @@
     --button-font-size: 0.6265rem;
     --xsmall-font-size: 0.5rem;
     --small-font-size: 0.625rem;
-    --medium-font-size: 2rem;
+    --medium-font-size: 1.75rem;
     --big-font-size:6rem;
     --cubeats-hero-scale: 1.9;
 
@@ -29,6 +29,8 @@ body {
 
 .about{
     text-align: center;
+    margin: 0rem 20rem;
+    
 }
 
 .header{
@@ -36,7 +38,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--secondary-color);
-  margin-bottom: 2rem;
+
 }
 
 .header .right-side a{
@@ -56,19 +58,45 @@ body {
   margin-right:2rem;
 }
 
-.hero {
-  text-align:center;
 
-  
+.hero {
+  --bg-image: url("../images_videos/PersonalProjects/Cubeats/movingbackgroundcubeats.gif");
+  --bg-image-opacity:0.25;
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  display:grid;
+
+
 }
 
-.hero .cover-image img{
-  width: 50rem;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0rem;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity:var(--bg-image-opacity);
+  z-index: -1;
+}
+
+.hero .title{
+  margin-top: 2rem;
+}
+
+.hero .title img{
+    max-width:90%;
 }
 
 .hero .platforms-it-is-on{
   text-align: center;
   margin-top:2rem;
+}
+
+.hero .subtitle{
+  font-size: var(--medium-font-size);
 }
 
 .hero .platforms-it-is-on img{
@@ -96,16 +124,17 @@ body {
 
 @media screen and (max-width: 1280px) {
   :root {
-    --medium-font-size: 2rem;
+    --medium-font-size: 1.5rem;
     --big-font-size:4rem;
     --hero-scale: 1.2;
     --featured-project-size:18rem;
   }
 
-  .hero .cover-image img{
-  width: 40rem;
+ .about{
+    text-align: center;
+    margin: 0rem 5rem;
+    
 }
- 
 }
 
 @media screen and (max-width: 666px) {
@@ -118,9 +147,7 @@ body {
     
   }
 
-.hero .cover-image img{
-  width: 20rem;
-}
+
 
 
 
