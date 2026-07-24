@@ -1,5 +1,5 @@
-const header2template = document.createElement('template');
-header2template.innerHTML=`
+const cubeatsHeadertemplate = document.createElement('template');
+cubeatsHeadertemplate.innerHTML=`
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 <style>
@@ -23,16 +23,14 @@ header2template.innerHTML=`
 
 }
 
-.nav_header a.nav_logo {
-  font-size: 2rem;
-  font-weight: bold;
-  float: left;
-  padding:1rem 1rem;
+
+
+.nav_header img {
+  width: 5rem;
+  height: auto;
 }
 
-.nav_header a:hover {
-  background-color: #ddd;
-}
+
 
 .nav_menu {
   float: right;
@@ -89,12 +87,10 @@ header2template.innerHTML=`
   justify-content: space-around;
   position:absolute;
   cursor:pointer;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-
+  right:1rem;
+  top:1rem;
 }
-
+  
 .nav_hamburger_line{
   height:0.188rem;
   width: 100%; 
@@ -116,9 +112,9 @@ header2template.innerHTML=`
       background: #f3f4ff;
       right: -100rem;
       width:50%; 
-      height: 100vh; //rely on the viewport full screen
+      height: 100vh;
       transition: all ease-in-out 0.4s;
-      z-index:-1;
+      z-index:100;
       padding-top: 0rem;
       transition: all ease-in-out 0.2s;
     }
@@ -159,7 +155,7 @@ header2template.innerHTML=`
 </style>
 
     <nav class="nav_header">
-      <a href="index.html" class="nav_logo">ELDON LIN</a>
+       <a href=cubeats.html><img src="images_videos/PersonalProjects/Cubeats/ConfusedPizza.png"></a>
        <i class="nav_hamburger">
         <span class="nav_hamburger_line"></span>
         <span class="nav_hamburger_line"></span>
@@ -167,10 +163,8 @@ header2template.innerHTML=`
       </i>
       <div class="nav_menu">
         <ul>
-          <li class="nav_menu_link"><a href="index.html#featuredproject">Featured Projects</a></li>
-          <li class="nav_menu_link"><a href="index.html#techstacksection">Tech Stack</a></li>
-          <li class="nav_menu_link"><a href="index.html#workexperience">Work Experiences</a></li>
-          <li class="nav_menu_link"><a href="index.html#contact">Contact</a></li>
+          <li class="nav_menu_link"><a href="cubeats.html#project">Projects</a></li>
+          <li class="nav_menu_link"><a href="cubeats.html#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -183,24 +177,24 @@ class CubeatsHeader extends HTMLElement{
     constructor(){
         super();
         const shadow = this.attachShadow({mode:"open"});
-        shadow.appendChild(header2template.content);
+        shadow.appendChild(cubeatsHeadertemplate.content);
 
     }
 }
-customElements.define("header2-component",CubeatsHeader);
+customElements.define("cubeats-header-component",CubeatsHeader);
 
 
 
 
-const hero = document.querySelector(".hero");//get the headset scroll progress so progress in hdaer2 matches headset
-const header = document.querySelector(".header2");
-const headerComponent = document.querySelector("header2-component");
+
+const header = document.querySelector(".cubeatsHeader");
+const headerComponent = document.querySelector("cubeats-header-component");
 const shadow = headerComponent.shadowRoot;
 const hamburger = shadow.querySelector(".nav_hamburger");
 const linksContainer = shadow.querySelector(".nav_menu");
 const links = shadow.querySelectorAll(".nav_menu_link");
 
-const sectionIds = ['featuredproject', 'techstacksection', 'workexperience', 'contact'];
+const sectionIds = ['project', 'contact'];
 
 
 hamburger.addEventListener("click",()=>{
@@ -230,28 +224,18 @@ function closeMenu(){
 
 
 function getNavLinks() {
-  const headerComponent = document.querySelector('header2-component');
+  const headerComponent = document.querySelector('cubeats-header-component');
   if (!headerComponent || !headerComponent.shadowRoot) return {};
   
   const links = {};
   sectionIds.forEach(id => {
-    links[id] = headerComponent.shadowRoot.querySelector(`.nav_menu a[href="index.html#${id}"]`);
+    links[id] = headerComponent.shadowRoot.querySelector(`.nav_menu a[href="cubeats.html#${id}"]`);
   });
   return links;
 }
 
 window.addEventListener("scroll", () => {
 
-  const rect = hero.getBoundingClientRect();
-
-  const raw = Math.min(Math.max(-rect.top / (rect.height - window.innerHeight), 0), 1);
-
-  const delay = 0.7;
-  const progress = Math.max((raw - delay) / (1 - delay), 0);
-
-  header.style.opacity = progress;
-
-  
 let currentSection = null;
 const triggerPoint = window.innerHeight / 2;
 
