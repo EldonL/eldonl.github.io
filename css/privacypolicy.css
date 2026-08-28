@@ -1,0 +1,29 @@
+:root{
+    --primary-color: #00ABEF;
+    --secondary-color:#E9F1FA;
+    --additional-color: #FFFFFF;
+    --professional-exp-work-width-small: 20em;
+    --professional-exp-work-width-medium: 31em;
+    --professional-exp-work-width-large: 31em;
+
+}
+
+body{
+   margin:0; 
+   background: var(--secondary-color);
+   font-family: 'Arial', Helvetica, sans-serif;
+
+    
+}
+.privacypolicysection {
+    max-width: 1600px;
+    margin: 0 auto 40px auto;
+}
+
+.privacypolicysection h1 {
+    text-align: center;
+}
+
+.privacypolicysection p {
+    text-align: left;
+}

@@ -85,6 +85,10 @@ cubeatsfooterTemplate.innerHTML =`
                 <a href="mailto:vrgameseldon@gmail.com"><i class="bi bi-envelope"></i></a>
             </div>
 
+            <div class="virtualrealitychecks">
+              <a href="privacypolicy.html">Privacy Policy</a>
+            </div>
+
 
         </div>
     </section>
