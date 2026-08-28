@@ -74,7 +74,7 @@ cubeatsfooterTemplate.innerHTML =`
   <section class="cubeats-footer-section" id="contact">
         <div class="container">
             <div class="ready-to-talk">
-                <h1>Want more Cubeats? Contacts us!</h1>
+                <h1>Want more Cubeats?</h1>
                 <img src='images_videos/PersonalProjects/Cubeats/logo.png'>
             </div>
 
