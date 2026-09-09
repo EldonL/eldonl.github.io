@@ -105,9 +105,34 @@ body {
   font-size: var(--medium-font-size);
 }
 
-.hero .platforms-it-is-on img{
-  width: 7rem;
+.hero .platforms-it-is-on .details {
+    font-weight: 900;
+    font-size: var(--medium-font-size);
 }
+
+/* .hero .platforms-it-is-on .wishlist-button {
+    background-color: rgb(253, 252, 252);
+    padding: 0rem 3rem;
+
+    display: inline-block;
+} */
+
+.hero .platforms-it-is-on .wishlist-button img{
+    width: 5rem;
+    background-color: rgb(253, 252, 252);
+    padding: 0rem 5rem;
+}
+
+.hero .platforms-it-is-on .wishlist-button img:hover{
+    background-color: rgb(173, 215, 255);
+}
+
+.hero  .feedback-form-button{
+
+    padding-top:2rem;
+
+}
+
 
 
 
