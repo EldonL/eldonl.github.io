@@ -107,7 +107,7 @@ body {
 
 .hero .platforms-it-is-on .details {
     font-weight: 900;
-    font-size: var(--medium-font-size);
+    font-size: 1.75rem;
 }
 
 /* .hero .platforms-it-is-on .wishlist-button {
