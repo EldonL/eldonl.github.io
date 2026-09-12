@@ -81,8 +81,7 @@ cubeatsfooterTemplate.innerHTML =`
             <div class="contact-links">                
                 <a href="https://www.linkedin.com/in/eldon-lin"><i class="bi bi-linkedin"></i></a>
                 <a href="https://www.youtube.com/channel/UC-igukaTIJFHYS8TNkcJ4lA"><i class="bi bi-youtube"></i></a>
-                <a href="https://x.com/ErrorPowerVRAR"><i class="bi bi-twitter-x"></i></a>
-                <a href="mailto:vrgameseldon@gmail.com"><i class="bi bi-envelope"></i></a>
+                <a href="https://x.com/confusedpizzaVR"><i class="bi bi-twitter-x"></i></a>
             </div>
 
             <div class="virtualrealitychecks">
