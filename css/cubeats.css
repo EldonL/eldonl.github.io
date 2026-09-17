@@ -105,6 +105,13 @@ body {
   font-size: var(--medium-font-size);
 }
 
+.hero .platforms{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 .hero .platforms-it-is-on .details {
     font-weight: 900;
     font-size: 1.75rem;
@@ -119,13 +126,17 @@ body {
 
 .hero .platforms-it-is-on .wishlist-button img{
     width: 5rem;
+    height: 3rem;
     background-color: rgb(253, 252, 252);
     padding: 0rem 5rem;
+    object-fit: cover;
 }
 
 .hero .platforms-it-is-on .wishlist-button img:hover{
     background-color: rgb(173, 215, 255);
 }
+
+
 
 .hero  .feedback-form-button{
 
